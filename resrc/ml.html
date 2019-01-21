@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - Machine Learning</title>
+  <link rel="stylesheet" href="static/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/gallery.css" type="text/css" />
+  <script src="static/js/modernizr.min.js"></script>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bee6e9034f83599f524d47d96877e93c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</head>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="../index.htm" aria-label="Yue's Group"><img src="../static/img/logos/nlp-logo-small.png"
+          alt="" style="width: 30px;height: 30px;">&nbsp &nbsp Tsinghua University - Yue's Group</a>
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="../index.htm">home</a>
+          </li>
+
+          <li>
+            <a href="../people/index.htm">people</a>
+          </li>
+
+          <li class="active">
+            <a href="../resrc/index">research</a>
+          </li>
+
+          <li>
+            <a href="../pubs/index.htm">publications</a>
+          </li>
+
+          <li>
+            <a href="../blog/index.htm">news</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+
+  </div>
+</div>
+
+
+<body class="pytorch-body">
+
+
+  <div>
+
+
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="pytorch-left-menu" id="pytorch-left-menu">
+      <div class="pytorch-side-scroll">
+        <div class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+          <br>
+          <br>
+          <h2>Research</h2>
+          <br>
+          <p class="caption"><span class="caption-text">Computer Vision</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">3D Object Recognition and Retrieval</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">Activity Recognition</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">Computer Vision in Social Media</a></li>
+          </ul>
+
+
+          <p class="caption"><span class="caption-text">Medical Image Analysis</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">Diagnosis of Brain Degenerated Disease</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">High-Order Brain Network</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">Cardiovascular Disease Diagnosis</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">Medical Image Segmentation</a></li>
+          </ul>
+
+          <p class="caption"><span class="caption-text">Machine Learning</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">Graph/Hypergraph Learning</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">Metric Learning</a></li>
+          </ul>
+          <!-- <p class="caption"><span class="caption-text">工业互联网安全</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">TIE submission</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">基于代价敏感学习的分类方法（AAAI）</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">不平衡数据分类（IJCAI）</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">SDP</a></li>
+          </ul>
+ -->
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="pytorch-container">
+
+      <section data-toggle="wy-nav-shift" class="pytorch-content-wrap">
+        <div class="pytorch-page-level-bar" id="pytorch-page-level-bar">
+          <div class="pytorch-breadcrumbs-wrapper">
+
+            <div role="navigation" aria-label="breadcrumbs navigation">
+
+              <ul class="pytorch-breadcrumbs">
+
+                <li>
+                  <a href="index.htm">
+                    Research
+                  </a> &gt;
+                </li>
+                <li>Machine Learning</li>
+              </ul>
+
+
+            </div>
+          </div>
+
+          <div class="pytorch-shortcuts-wrapper" id="pytorch-shortcuts-wrapper">
+            Shortcuts
+          </div>
+        </div>
+
+        <div class="pytorch-content-left">
+
+          <div class="rst-content">
+
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+              <article itemprop="articleBody" class="pytorch-article">
+                <div class="sphx-glr-example-title section" id="finetuning-torchvision-models">
+                  <span id="sphx-glr-beginner-finetuning-torchvision-models-tutorial-py"></span>
+
+
+
+
+
+                  <h1>Machine Learning<a class="headerlink" href="#" title="Machine Learning">¶</a></h1>
+
+                  <p>Complex data correlation modelling and representation plays an important role in many
+                    applications, such as social media analysis, data classification and medical diagnosis. Here, we
+                    focus on graph/hypergraph based learning, hypergraph neural networks, multi-modal data fusion,
+                    metric learning and cost-sensitive learning methods, and their applications on visual
+                    classification, software defect prediction, and social media data filtering and recommendation.</p>
+
+
+
+
+                  <div class="section" id="hl">
+                    <h2>Graph/Hypergraph Learning<a class="headerlink" href="#hl" title="Permalink to this headline">¶</a></h2>
+                    <p>The hypergraph is a generalization of a graph, which is composed of a vertex set and a hyperedge
+                      set. In a hypergraph, each hyperedge can connect any number of vertices, and the hyperedge can be
+                      easily expanded, which leads to a flexible edge degree for hypergraph. Therefore, the hypergraph
+                      model is able to formulate the high-order correlation of data compared with the simple graph and
+                      other linear comparison methods. Due to this advantage, hypergraph learning method has attracted
+                      much attention in recent years and has been applied in many tasks, such as image retrieval,
+                      object classification, image segmentation, multimedia recommendation and visual tracking.</p>
+
+                    <div class="section" id="Hypergraph-Analysis">
+                      <h3>3-D Object Retrieval and Recognition With Hypergraph Analysis<a class="headerlink" href="#Hypergraph-Analysis"
+                          title="Permalink to this headline">¶</a></h3>
+                      <p>In our work, we propose a hypergraph analysis approach for 3-D object retrieval and
+                        recognition. In particular, we construct multiple hypergraphs for a set of 3-D objects based on
+                        their 2-D views. Therefore, our method can explore the higher order relationship among objects
+                        and does not use the distance between objects. We conduct experiments on the National Taiwan
+                        University 3-D model dataset and the ETH 3-D object collection. Experimental results
+                        demonstrate the effectiveness of the proposed method by comparing with the state-of-the-art
+                        methods.</p>
+                    </div>
+
+                    <div class="section" id="Relevance-Learning">
+                      <h3>Visual-Textual Joint Relevance Learning for Tag-Based Social Image Search<a class="headerlink"
+                          href="#Relevance-Learning" title="Permalink to this headline">¶</a></h3>
+                      <p>Due to the popularity of social media websites, extensive research efforts have been dedicated
+                        to tag-based social image search. In our work, we propose an approach that simultaneously
+                        utilizes both visual and textual information to estimate the relevance of user tagged images.
+                        The relevance estimation is determined with a hypergraph learning approach. Comparative results
+                        of the experiments conducted on a dataset including 370+ images are presented, which
+                        demonstrate the effectiveness of the proposed approach.</p>
+                    </div>
+
+
+                    <div class="section" id="Dynamic-Hypergraph">
+                      <h3>Dynamic Hypergraph<a class="headerlink" href="#Dynamic-Hypergraph" title="Permalink to this headline">¶</a></h3>
+                      <p>In all existing works, the performance of hypergraph learning highly depends on the generated
+                        hypergraph structure. In our work, we propose the first dynamic hypergraph structure learning
+                        method. Given the originally generated hypergraph structure, the objective of our work is to
+                        simultaneously optimize the label projection matrix (the common task in hypergraph learning)
+                        and the hypergraph structure itself. We have applied the proposed method in the tasks of 3D
+                        shape recognition and gesture recognition. Experimental results on four public datasets show
+                        better performance compared with the state-of-the-art methods.</p>
+                    </div>
+
+
+                    <div class="section" id="Hypergraph-tensor">
+                      <h3>Hypergraph Structure With Tensor<a class="headerlink" href="#Hypergraph-tensor" title="Permalink to this headline">¶</a></h3>
+                      <p>In our work, we introduce tensor to represent the hypergraph structure, which is more flexible
+                        and easier for optimization than the incidence matrix. Furthermore, we propose a dynamic
+                        hypergrpah learning method to jointly optimize the label projection matrix and the hypergraph
+                        structure based on the tensor representation. Experimental results on four public benchmarks
+                        substantiate the superiority of the proposed method over the state-of-the-art methods and
+                        traditional hypergraph learning.</p>
+                    </div>
+
+
+                    <div class="section" id="Cross-Diffusion">
+                      <h3>Cross Diffusion<a class="headerlink" href="#Cross-Diffusion" title="Permalink to this headline">¶</a></h3>
+                      <p>In our work, we aim to conduct 3D object recognition using multi-modal information through a
+                        cross diffusion process on multi-hypergraph structure. Given multi-modal representations of 3D
+                        objects, the correlation among these objects is formulated using the multi-hypergraph
+                        structure. We propose a cross diffusion process on multi-hypergraph, in which the label
+                        information is propagated from multiple hypergraphs alternatively. We have applied the proposed
+                        method in 3D object recognition using multiple representations. Experimental results
+                        demonstrate that the proposed method can achieve satisfied multi-modal combination performance
+                        and outperform the current state-of-the-art methods.</p>
+                    </div>
+
+                    <div class="section" id="HGNN">
+                      <h3>Hypergraph Neural Networks<a class="headerlink" href="#HGNN" title="Permalink to this headline">¶</a></h3>
+                      <img src="hnn.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p></p>
+                      <p>In this paper, we present a hypergraph neural networks (HGNN) framework for data
+                        representation
+                        learning, which can encode high-order data correlation in a hypergraph structure. Confronting
+                        the
+                        challenges of learning representation for complex data in real practice, we propose to
+                        incorporate such data structure in a hypergraph, which is more flexible on data modeling,
+                        especially when dealing with complex data. In this method, a hyperedge convolution operation is
+                        designed to handle the data correlation during representation learning. In this way,
+                        traditional
+                        hypergraph learning procedure can be conducted using hyperedge convolution operations
+                        efficiently. HGNN is able to learn the hidden layer representation considering the high-order
+                        data structure, which is a general framework considering the complex data correlations. We have
+                        conducted experiments on citation network classification and visual object recognition tasks
+                        and
+                        compared HGNN with graph convolutional networks and other traditional methods. Experimental
+                        results demonstrate that the proposed HGNN method outperforms recent state-of-the-art methods.
+                        We
+                        can also reveal from the results that the proposed HGNN is superior when dealing with
+                        multi-modal
+                        data compared with existing methods.</p>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+                  <div class="section" id="MetricLearning">
+                    <h2>Metric Learning<a class="headerlink" href="#MetricLearning" title="Permalink to this headline">¶</a></h2>
+
+                    <div class="section" id="EMD">
+                      <h3>Earth Mover’s Distance (EMD)<a class="headerlink" href="#EMD" title="Permalink to this headline">¶</a></h3>
+                      <p>Earth Mover’s Distance (EMD), targeting at measuring the many-to-many distances, has shown its
+                        superiority and been widely applied in computer vision tasks. However, there is still little
+                        effort concentrated on optimizing the EMD metric towards better matching performance. To tackle
+                        this issue, we propose an EMD metric learning algorithm in this work. This method is able to
+                        generate a discriminative ground distance matrix which can further improve the EMD distance
+                        measurement. We then apply our EMD metric learning method on two tasks, i.e., multiview object
+                        classification and document classification. The experimental results have shown better
+                        performance of our proposed EMD metric learning method compared with the traditional EMD method
+                        and the state-of-the-art methods. It is noted that the proposed EMD metric learning method can
+                        be also used in other applications.</p>
+                    </div>
+
+                    <div class="section" id="KL">
+                      <h3>Kullback-Leibler divergence (KLD)<a class="headerlink" href="#KL" title="Permalink to this headline">¶</a></h3>
+                      <p>Kullback-Leibler divergence (KLD), which is widely used to measure the similarity between two
+                        distributions, plays an important role in machine learning. However, in practice, the
+                        conventional KLD may not always obtain a satisfying performance on measuring the similarity
+                        between two distributions because the current observed distributions may not be the best
+                        representation for the data. To address this problem, we propose a KLD metric learning
+                        algorithm, which aims at learning a best linear mapping and obtaining the best KLD to well
+                        express the similarity of data distributions by optimizing such linear mapping. Such learned
+                        KLD metric achieves better performance on measuring the difference between distributions, i.e.,
+                        makes the data distributions easier to classify. Also, we develop an intrinsic steepest descent
+                        method, which preserves the manifold structure of the metric in the iteration to solve this
+                        optimization task.</p>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+              </article>
+
+            </div>
+            <footer>
+              <hr />
+
+              <div role="contentinfo">
+                <p>
+                  &copy; Copyright 2018, Tsinghua University - Yue's Group.
+                </p>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+
+        <div class="pytorch-content-right" id="pytorch-content-right">
+          <div class="pytorch-right-menu" id="pytorch-right-menu">
+            <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
+
+
+              <ul>
+                <li><a class="reference internal" href="#">Machine Learning</a>
+                  <ul>
+
+                    <!-- <li><a class="reference internal" href="#HGNN">HGNN</a>
+                    </li> -->
+                    <li><a class="reference internal" href="#hl">Graph/Hypergraph Learning</a>
+                      <ul>
+                        <li><a class="reference internal" href="#Hypergraph-Analysis">Hypergraph Analysis</a></li>
+                        <li><a class="reference internal" href="#Relevance-Learning">Relevance Learning</a></li>
+                        <li><a class="reference internal" href="#Dynamic-Hypergraph">Dynamic Hypergraph</a></li>
+                        <li><a class="reference internal" href="#Hypergraph-tensor">Hypergraph Structure With Tensor</a></li>
+                        <li><a class="reference internal" href="#Cross-Diffusion">Cross Diffusion</a></li>
+                        <li><a class="reference internal" href="#HGNN">HGNN</a></li>
+
+                      </ul>
+                    </li>
+
+
+                    <li><a class="reference internal" href="#MetricLearning">Metric Learning</a>
+                      <ul>
+                        <li><a class="reference internal" href="#EMD">Earth Mover’s Distance</a></li>
+                        <li><a class="reference internal" href="#KL">Kullback-Leibler divergence</a></li>
+                      </ul>
+                    </li>
+
+
+
+
+                  </ul>
+                </li>
+              </ul>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script type="text/javascript" src="static/js/jquery.js"></script>
+  <script type="text/javascript" src="static/js/underscore.js"></script>
+  <script type="text/javascript" src="static/js/doctools.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+  <script type="text/javascript" src="static/js/popper.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="static/js/theme.js"></script>
+
+  <script type="text/javascript">
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+    });
+  </script>
+
+
+  <!-- Begin Footer -->
+
+  <div class="container-fluid docs-tutorials-resources" id="docs-tutorials-resources">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h4>THU - Yue's Group</h4>
+          School of Software
+          <br> Tsinghua, Beijing 100084
+          <br>
+          <a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-3-3.html">Directions</a>
+        </div>
+        <div class="col-sm-3">
+          <div class="indent30">
+            <h4>Copyright</h4>
+            All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+  <script type="text/javascript" src="static/js/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    mobileMenu.bind();
+    mobileTOC.bind();
+    pytorchAnchors.bind();
+
+    $(window).on("load", function () {
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+    })
+
+    // Add class to links that have code blocks, since we cannot create links in code blocks
+    $("article.pytorch-article a span.pre").each(function (e) {
+      $(this).closest("a").addClass("has-code");
+    });
+  </script>
+</body>
+
+</html>

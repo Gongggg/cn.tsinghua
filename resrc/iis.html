@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - Industrial internet security</title>
+  <link rel="stylesheet" href="static/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/gallery.css" type="text/css" />
+  <script src="static/js/modernizr.min.js"></script>
+</head>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="../index.htm" aria-label="Yue's Group"><img src="../static/img/logos/nlp-logo-small.png"
+          alt="" style="width: 30px;height: 30px;">&nbsp &nbsp Tsinghua University - Yue's Group</a>
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="../index.htm">home</a>
+          </li>
+
+          <li>
+            <a href="../people/index.htm">people</a>
+          </li>
+
+          <li class="active">
+            <a href="../resrc/index">research</a>
+          </li>
+
+          <li>
+            <a href="../pubs/index.htm">publications</a>
+          </li>
+
+          <li>
+            <a href="../blog/index.htm">news</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+
+  </div>
+</div>
+
+
+<body class="pytorch-body">
+
+
+  <div>
+
+
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="pytorch-left-menu" id="pytorch-left-menu">
+      <div class="pytorch-side-scroll">
+        <div class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          <!-- <div class="pytorch-left-menu-search">
+
+            <div class="version">
+              1.0.0.dev20180918
+            </div>
+
+            <div role="search">
+              <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </div>
+
+
+          </div> -->
+
+          <p class="caption"><span class="caption-text">Computer Vision</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">3D Object Recognition and Retrieval</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">Activity Recognition</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">Computer Vision in Social Media</a></li>
+          </ul>
+
+          <p class="caption"><span class="caption-text">Machine Learning</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">Graph/Hypergraph Learning</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">Metric Learning</a></li>
+          </ul>
+
+          <p class="caption"><span class="caption-text">Medical Image Analysis</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">Diagnosis of Brain Degenerated Disease</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">High-Order Brain Network</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">心血管疾病诊断</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">Medical Image Segmentation</a></li>
+          </ul>
+
+          <p class="caption"><span class="caption-text">工业互联网安全</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">TIE submission</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">基于代价敏感学习的分类方法（AAAI）</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">不平衡数据分类（IJCAI）</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">SDP</a></li>
+          </ul>
+
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="pytorch-container">
+
+      <section data-toggle="wy-nav-shift" class="pytorch-content-wrap">
+        <div class="pytorch-page-level-bar" id="pytorch-page-level-bar">
+          <div class="pytorch-breadcrumbs-wrapper">
+
+            <div role="navigation" aria-label="breadcrumbs navigation">
+
+              <ul class="pytorch-breadcrumbs">
+
+                <li>
+                  <a href="index.htm">
+                    Research
+                  </a> &gt;
+                </li>
+                <li>Computer Vision</li>
+              </ul>
+
+
+            </div>
+          </div>
+
+          <div class="pytorch-shortcuts-wrapper" id="pytorch-shortcuts-wrapper">
+            Shortcuts
+          </div>
+        </div>
+
+        <div class="pytorch-content-left">
+
+          <div class="rst-content">
+
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+              <article itemprop="articleBody" class="pytorch-article">
+                <div class="sphx-glr-example-title section" id="finetuning-torchvision-models">
+                  <span id="sphx-glr-beginner-finetuning-torchvision-models-tutorial-py"></span>
+
+
+
+
+
+                  <h1>Computer Vision<a class="headerlink" href="#" title="Computer-Vision">¶</a></h1>
+                  
+                  <p>cv的整体介绍，我会把research的index.html的内容拿过来，这部分暂时不用管。In this document we will perform two types of transfer learning:
+                    finetuning and feature extraction. In <strong>finetuning</strong>, we start with a
+                    pretrained model and update <em>all</em> of the model’s parameters for our new
+                    task, in essence retraining the whole model. In <strong>feature extraction</strong>,
+                    we start with a pretrained model and only update the final layer weights
+                    from which we derive with a pretrained model and only update the final layer weights
+                    from which we derive predictions. It is called feature extraction
+                    because we use the pretrained CNN as a fixed feature-extractor, and only
+                    change the output with a pretrained model and only update the final layer weights
+                    from which we derive predictions. It is called feature extraction
+                    because we use the pretrained CNN as a fixed feature-extractor, and only
+                    change the output predictions. It is called feature extraction
+                    because we use the pretrained CNN as a fixed feature-extractor, and only
+                    change the output layer. For more technical information about transfer
+                    learning see</p>
+
+
+
+
+
+
+
+
+                  <div class="section" id="3D-Object-Recognition-and-Retrieval">
+                    <h2>3D Object Recognition and Retrieval<a class="headerlink" href="#3D-Object-Recognition-and-Retrieval" title="Permalink to this headline">¶</a></h2>
+                    <p>昊轩负责。In this document we will perform two types of transfer learning:
+                      finetuning and feature extraction. In <strong>finetuning</strong>, we start with a
+                      pretrained model and update <em>all</em> of the model’s parameters for our new
+                      task, in essence retraining the whole model. In <strong>feature extraction</strong>,
+                      we start with a pretrained model and only update the final layer weights
+                      from which we derive with a pretrained model and only update the final layer weights
+                      from which we derive predictions. It is called feature extraction
+                      because we use the pretrained CNN as a fixed feature-extractor, and only
+                      change the output with a pretrained model and only update the final layer weights
+                      from which we derive predictions. It is called feature extraction
+                      because we use the pretrained CNN as a fixed feature-extractor, and only
+                      change the output predictions. It is called feature extraction
+                      because we use the pretrained CNN as a fixed feature-extractor, and only
+                      change the output layer. For more technical information about transfer
+                      learning see</p>
+
+                    <div class="section" id="GVCNN">
+                      <h3>GVCNN<a class="headerlink" href="#GVCNN" title="Permalink to this headline">¶</a></h3>
+                      <p>一帆负责。Resnet was introduced in the paper There are several
+                        variants of different sizes, including Resnet18, Resnet34, Resnet50,
+                        Resnet101, and Resnet152, all of which are available from torchvision
+                        models. Here we use Resnet18, as our dataset is small and only has two
+                        classes. When we print the model, we see that the last layer is a fully
+                        connected layer as shown below:</p>
+                    </div>
+
+                    <div class="section" id="MLVCNN">
+                      <h3>MLVCNN<a class="headerlink" href="#MLVCNN" title="Permalink to this headline">¶</a></h3>
+                      <p>建文负责。Resnet was introduced in the paper There are several
+                        variants of different sizes, including Resnet18, Resnet34, Resnet50,
+                        Resnet101, and Resnet152, all of which are available from torchvision
+                        models. Here we use Resnet18, as our dataset is small and only has two
+                        classes. When we print the model, we see that the last layer is a fully
+                        connected layer as shown below:</p>
+                    </div>
+
+                    <div class="section" id="MeshNet">
+                      <h3>MeshNet<a class="headerlink" href="#MeshNet" title="Permalink to this headline">¶</a></h3>
+                      <p>玉彤负责。Resnet was introduced in the paper There are several
+                        variants of different sizes, including Resnet18, Resnet34, Resnet50,
+                        Resnet101, and Resnet152, all of which are available from torchvision
+                        models. Here we use Resnet18, as our dataset is small and only has two
+                        classes. When we print the model, we see that the last layer is a fully
+                        connected layer as shown below:</p>
+                    </div>
+
+
+                    <div class="section" id="PVNet">
+                        <h3>PVNet<a class="headerlink" href="#PVNet" title="Permalink to this headline">¶</a></h3>
+                        <p>昊轩负责。Resnet was introduced in the paper There are several
+                          variants of different sizes, including Resnet18, Resnet34, Resnet50,
+                          Resnet101, and Resnet152, all of which are available from torchvision
+                          models. Here we use Resnet18, as our dataset is small and only has two
+                          classes. When we print the model, we see that the last layer is a fully
+                          connected layer as shown below:</p>
+                      </div>
+
+
+                      <div class="section" id="retrieval">
+                          <h3>？？？？<a class="headerlink" href="#retrieval" title="Permalink to this headline">¶</a></h3>
+                          <p>正跃负责。Resnet was introduced in the paper There are several
+                            variants of different sizes, including Resnet18, Resnet34, Resnet50,
+                            Resnet101, and Resnet152, all of which are available from torchvision
+                            models. Here we use Resnet18, as our dataset is small and only has two
+                            classes. When we print the model, we see that the last layer is a fully
+                            connected layer as shown below:</p>
+                        </div>
+                    
+                  </div>
+
+
+
+
+
+                  <div class="section" id="Activity-Recognition">
+                    <h2>Activity Recognition<a class="headerlink" href="#Activity-Recognition" title="Permalink to this headline">¶</a></h2>
+                    <p>建文负责。In this document we will perform two types of transfer learning:
+                      finetuning and feature extraction. In <strong>finetuning</strong>, we start with a
+                      pretrained model and update <em>all</em> of the model’s parameters for our new
+                      task, in essence retraining the whole model. In <strong>feature extraction</strong>,
+                      we start with a pretrained model and only update the final layer weights
+                      from which we derive with a pretrained model and only update the final layer weights
+                      from which we derive predictions. It is called feature extraction
+                      because we use the pretrained CNN as a fixed feature-extractor, and only
+                      change the output with a pretrained model and only update the final layer weights
+                      from which we derive predictions. It is called feature extraction
+                      because we use the pretrained CNN as a fixed feature-extractor, and only
+                      change the output predictions. It is called feature extraction
+                      because we use the pretrained CNN as a fixed feature-extractor, and only
+                      change the output layer. For more technical information about transfer
+                      learning see</p>
+                  </div>
+
+
+
+
+                  <div class="section" id="Computer-Vision-in-Social-Media">
+                      <h2>Computer Vision in Social Media<a class="headerlink" href="#Computer-Vision-in-Social-Media" title="Permalink to this headline">¶</a></h2>
+                      <p>徐阳、俊杰负责，总的介绍。In this document we will perform two types of transfer learning:
+                        finetuning and feature extraction. In <strong>finetuning</strong>, we start with a
+                        pretrained model and update <em>all</em> of the model’s parameters for our new
+                        task, in essence retraining the whole model. In <strong>feature extraction</strong>,
+                        we start with a pretrained model and only update the final layer weights
+                        from which we derive with a pretrained model and only update the final layer weights
+                        from which we derive predictions. It is called feature extraction
+                        because we use the pretrained CNN as a fixed feature-extractor, and only
+                        change the output with a pretrained model and only update the final layer weights
+                        from which we derive predictions. It is called feature extraction
+                        because we use the pretrained CNN as a fixed feature-extractor, and only
+                        change the output predictions. It is called feature extraction
+                        because we use the pretrained CNN as a fixed feature-extractor, and only
+                        change the output layer. For more technical information about transfer
+                        learning see</p>
+  
+                      <div class="section" id="Data-collection">
+                        <h3>Data collection<a class="headerlink" href="#Data-collection" title="Permalink to this headline">¶</a></h3>
+                        <p>徐阳负责。Resnet was introduced in the paper There are several
+                          variants of different sizes, including Resnet18, Resnet34, Resnet50,
+                          Resnet101, and Resnet152, all of which are available from torchvision
+                          models. Here we use Resnet18, as our dataset is small and only has two
+                          classes. When we print the model, we see that the last layer is a fully
+                          connected layer as shown below:</p>
+                      </div>
+  
+                      <div class="section" id="Data-filtering">
+                        <h3>Data filtering<a class="headerlink" href="#Data-filtering" title="Permalink to this headline">¶</a></h3>
+                        <p>徐阳负责。Resnet was introduced in the paper There are several
+                          variants of different sizes, including Resnet18, Resnet34, Resnet50,
+                          Resnet101, and Resnet152, all of which are available from torchvision
+                          models. Here we use Resnet18, as our dataset is small and only has two
+                          classes. When we print the model, we see that the last layer is a fully
+                          connected layer as shown below:</p>
+                      </div>
+  
+                      <div class="section" id="Event-classification">
+                        <h3>Event classification<a class="headerlink" href="#Event-classification" title="Permalink to this headline">¶</a></h3>
+                        <p>俊杰负责。Resnet was introduced in the paper There are several
+                          variants of different sizes, including Resnet18, Resnet34, Resnet50,
+                          Resnet101, and Resnet152, all of which are available from torchvision
+                          models. Here we use Resnet18, as our dataset is small and only has two
+                          classes. When we print the model, we see that the last layer is a fully
+                          connected layer as shown below:</p>
+                      </div>
+  
+  
+                      <div class="section" id="Emotional-calculation">
+                          <h3>Emotional calculation<a class="headerlink" href="#Emotional-calculation" title="Permalink to this headline">¶</a></h3>
+                          <p>俊杰负责。Resnet was introduced in the paper There are several
+                            variants of different sizes, including Resnet18, Resnet34, Resnet50,
+                            Resnet101, and Resnet152, all of which are available from torchvision
+                            models. Here we use Resnet18, as our dataset is small and only has two
+                            classes. When we print the model, we see that the last layer is a fully
+                            connected layer as shown below:</p>
+                        </div>
+                      
+                    </div>
+  
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+              </article>
+
+            </div>
+            <footer>
+              <hr />
+
+              <div role="contentinfo">
+                <p>
+                  &copy; Copyright 2018, Tsinghua University - Yue's Group.
+                </p>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+
+        <div class="pytorch-content-right" id="pytorch-content-right">
+          <div class="pytorch-right-menu" id="pytorch-right-menu">
+            <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
+
+
+              <ul>
+                <li><a class="reference internal" href="#">Computer Vision</a>
+                  <ul>
+                    
+                    
+                    <li><a class="reference internal" href="#3D-Object-Recognition-and-Retrieval">3D Object Recognition and Retrieval</a>
+                      <ul>
+                        <li><a class="reference internal" href="#GVCNN">GVCNN</a></li>
+                        <li><a class="reference internal" href="#MLVCNN">MLVCNN</a></li>
+                        <li><a class="reference internal" href="#MeshNet">MeshNet</a></li>
+                        <li><a class="reference internal" href="#PVNet">PVNet</a></li>
+                        <li><a class="reference internal" href="#retrieval">？？？？</a></li>
+                      </ul>
+                    </li>
+                    
+                    <li><a class="reference internal" href="#Activity-Recognition">Activity Recognition</a>
+                    </li>
+
+
+
+                    <li><a class="reference internal" href="#Computer-Vision-in-Social-Media">Computer Vision in Social Media</a>
+                      <ul>
+                          <li><a class="reference internal" href="#Data-collection">Data collection</a></li>
+                          <li><a class="reference internal" href="#Data-filtering">Data filtering</a></li>
+                          <li><a class="reference internal" href="#Event-classification">Event classification</a></li>
+                          <li><a class="reference internal" href="#Emotional-calculation">Emotional calculation</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- <ul>
+
+
+
+
+                    <li><a class="reference internal" href="#Computer-Vision-in-Social-Media">Computer Vision in Social
+                        Media</a>
+                      <ul>
+                        <li><a class="reference internal" href="#resnet">Resnet</a></li>
+                        <li><a class="reference internal" href="#alexnet">Alexnet</a></li>
+                        <li><a class="reference internal" href="#vgg">VGG</a></li>
+                        <li><a class="reference internal" href="#squeezenet">Squeezenet</a></li>
+                        <li><a class="reference internal" href="#densenet">Densenet</a></li>
+                        <li><a class="reference internal" href="#inception-v3">Inception v3</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+              </ul> -->
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+
+
+
+  <script type="text/javascript" src="static/js/jquery.js"></script>
+  <script type="text/javascript" src="static/js/underscore.js"></script>
+  <script type="text/javascript" src="static/js/doctools.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+  <script type="text/javascript" src="static/js/popper.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="static/js/theme.js"></script>
+
+  <script type="text/javascript">
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+    });
+  </script>
+
+
+  <!-- Begin Footer -->
+
+  <div class="container-fluid docs-tutorials-resources" id="docs-tutorials-resources">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h4>THU - Yue's Group</h4>
+          School of Software
+          <br> Tsinghua, Beijing 100084
+          <br>
+          <a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-3-3.html">Directions</a>
+        </div>
+        <div class="col-sm-3">
+          <div class="indent30">
+            <h4>Copyright</h4>
+            All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+  <script type="text/javascript" src="static/js/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    mobileMenu.bind();
+    mobileTOC.bind();
+    pytorchAnchors.bind();
+
+    $(window).on("load", function () {
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+    })
+
+    // Add class to links that have code blocks, since we cannot create links in code blocks
+    $("article.pytorch-article a span.pre").each(function (e) {
+      $(this).closest("a").addClass("has-code");
+    });
+  </script>
+</body>
+
+</html>

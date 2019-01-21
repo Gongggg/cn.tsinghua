@@ -1,0 +1,67 @@
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #977EBD;
+    color: #FFFFFF;
+}
+navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #FFFF00;
+    color: #FFC0CB;
+}
+/* p {
+    text-indent: 20px;
+} */
+p.clean {
+    text-indent: 0px;
+}
+h1 a {
+    
+    text-shadow: 2px 2px #000000 !important;
+    color: #ffffff !important;
+}
+
+footer {
+  background-color: #171f24;
+}
+
+
+blockquote {
+    font-size: 96%;
+}
+
+th, td {
+    padding:2px 3px 2px 3px;
+    padding:2px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f6eeee;
+}
+
+tr:nth-child(even) {
+    background-color: #eddede;
+}
+
+dd { 
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+th {
+    background-color: #8C1515;
+    color: #ffffff;
+}
+
+
+
+/* make code blocks wrap */
+pre code {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ word-wrap: normal;
+ white-space: pre;
+ overflow-wrap: normal;
+ overflow: auto;
+
+}

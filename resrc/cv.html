@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - Computer Vision</title>
+  <link rel="stylesheet" href="static/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/gallery.css" type="text/css" />
+  <script src="static/js/modernizr.min.js"></script>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bee6e9034f83599f524d47d96877e93c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</head>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="../index.htm" aria-label="Yue's Group"><img src="../static/img/logos/nlp-logo-small.png"
+          alt="" style="width: 30px;height: 30px;">&nbsp &nbsp Tsinghua University - Yue's Group</a>
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="../index.htm">home</a>
+          </li>
+
+          <li>
+            <a href="../people/index.htm">people</a>
+          </li>
+
+          <li class="active">
+            <a href="../resrc/index">research</a>
+          </li>
+
+          <li>
+            <a href="../pubs/index.htm">publications</a>
+          </li>
+
+          <li>
+            <a href="../blog/index.htm">news</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+
+  </div>
+</div>
+
+
+<body class="pytorch-body">
+
+
+  <div>
+
+
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="pytorch-left-menu" id="pytorch-left-menu">
+      <div class="pytorch-side-scroll">
+        <div class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+          <br>
+          <br>
+          <h2>Research</h2>
+          <br>
+          <p class="caption"><span class="caption-text">Computer Vision</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">3D Object Recognition and Retrieval</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">Activity Recognition</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">Computer Vision in Social Media</a></li>
+          </ul>
+
+          <p class="caption"><span class="caption-text">Medical Image Analysis</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">Diagnosis of Brain Degenerated Disease</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">High-Order Brain Network</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">Cardiovascular Disease Diagnosis</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">Medical Image Segmentation</a></li>
+          </ul>
+
+          <p class="caption"><span class="caption-text">Machine Learning</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">Graph/Hypergraph Learning</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">Metric Learning</a></li>
+          </ul>
+
+          <!-- <p class="caption"><span class="caption-text">工业互联网安全</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">TIE submission</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">基于代价敏感学习的分类方法（AAAI）</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">不平衡数据分类（IJCAI）</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">SDP</a></li>
+          </ul> -->
+
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="pytorch-container">
+
+      <section data-toggle="wy-nav-shift" class="pytorch-content-wrap">
+        <div class="pytorch-page-level-bar" id="pytorch-page-level-bar">
+          <div class="pytorch-breadcrumbs-wrapper">
+
+            <div role="navigation" aria-label="breadcrumbs navigation">
+
+              <ul class="pytorch-breadcrumbs">
+
+                <li>
+                  <a href="index.htm">
+                    Research
+                  </a> &gt;
+                </li>
+                <li>Computer Vision</li>
+              </ul>
+
+
+            </div>
+          </div>
+
+          <div class="pytorch-shortcuts-wrapper" id="pytorch-shortcuts-wrapper">
+            Shortcuts
+          </div>
+        </div>
+
+        <div class="pytorch-content-left">
+
+          <div class="rst-content">
+
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+              <article itemprop="articleBody" class="pytorch-article">
+                <div class="sphx-glr-example-title section" id="finetuning-torchvision-models">
+                  <span id="sphx-glr-beginner-finetuning-torchvision-models-tutorial-py"></span>
+
+
+
+
+
+                  <h1>Computer Vision<a class="headerlink" href="#" title="Computer-Vision">¶</a></h1>
+
+                  <p>How to observe and understand the world is one essential task in computer vision. Our team works
+                    on finding solutions to 3D visual understanding, especially on 3D object recognition and retrieval.
+                    Current projects include multi-view object recognition for self-driving vehicle, 3D multi-modal
+                    (point cloud, multi-view, volumetric and mesh) data fusion, high-speed visual reconstruction and
+                    visual detection.</p>
+
+
+
+
+
+                  <div class="section" id="3D-Object-Recognition-and-Retrieval">
+                    <h2>3D Object Recognition and Retrieval<a class="headerlink" href="#3D-Object-Recognition-and-Retrieval"
+                        title="Permalink to this headline">¶</a></h2>
+                    <p>3D data recognition and analysis is surely a fundamental and intriguing problem in the field of
+                      computer vision. With the popular of 3D sensors, 3D data processing has broad applications
+                      spanning from environment understanding to self-driving. Thus, how to understand 3D data, such as
+                      recognizing and retrieving 3D shapes, has attracted much attention of community of computer
+                      vision in recent years. 3D data mainly have four kind of representation: voxel, multi-view, point
+                      cloud, mesh. Our works widely lie in the recognition and retrieval tasks of above modalities.</p>
+
+                    <div class="section" id="GVCNN">
+                      <h3>GVCNN: Group-View Vonvolutional Neural Network<a class="headerlink" href="#GVCNN" title="Permalink to this headline">¶</a></h3>
+                      <img src="gvcnn.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p></p>
+                      <p>3D shape recognition has attracted much attention recently. Its recent advances advocate the
+                        usage of deep features and achieve the state-of-the-art performance. However, existing deep
+                        features for 3D shape recognition are restricted to a view-to-shape setting, which learns the
+                        shape descriptor from the view-level feature directly. Despite the exciting progress on
+                        view-based 3D shape description, the intrinsic hierarchical correlation and discriminability
+                        among views have not been well exploited, which is important for 3D shape representation. To
+                        tackle this issue, in this paper, we propose a group-view convolutional neural network (GVCNN)
+                        framework for hierarchical correlation modeling towards discriminative 3D shape description.
+                        The proposed GVCNN framework is composed of a hierarchical view-group-shape architecture, i.e.,
+                        from the view level, the group level and the shape level, which are organized using a grouping
+                        strategy. Concretely, we first use an expanded CNN to extract a view level descriptor. Then, a
+                        grouping module is introduced to estimate the content discrimination of each view, based on
+                        which all views can be splitted into different groups according to their discriminative level.
+                        A group level description can be further generated by pooling from view descriptors. Finally,
+                        all group level descriptors are combined into the shape level descriptor according to their
+                        discriminative weights. Experimental results and comparison with state-of-the-art methods show
+                        that our proposed GVCNN method can achieve a significant performance gain on both the 3D shape
+                        classification and retrieval tasks.</p>
+                    </div>
+
+                    <div class="section" id="MLVCNN">
+                      <h3>Multi-Loop-View Convolutional Neural Network<a class="headerlink" href="#MLVCNN" title="Permalink to this headline">¶</a></h3>
+                      <img src="mlvcnn.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p></p>
+                      <p>The proposed Multi-Loop-View Convolutional Neural Network (MLVCNN) framework introduces a
+                        hierarchical view-loop-shape architecture, to conduct 3D shape representation from different
+                        scales. The proposed Loop Normalization and LSTM are utilized for considering the intrinsic
+                        associations of the different views in the same loop.</p>
+                    </div>
+
+                    <div class="section" id="MeshNet">
+                      <h3>MeshNet<a class="headerlink" href="#MeshNet" title="Permalink to this headline">¶</a></h3>
+                      <img src="meshnet.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p></p>
+                      <p>Mesh is an important and powerful type of data for 3D shapes. Due to the complexity and
+                        irregularity of mesh data, there is little effort on using mesh data for 3D shape
+                        representation in recent years. We propose a mesh neural network, named MeshNet, to learn 3D
+                        shape representation directly from mesh data. Face-unit and feature splitting are introduced to
+                        solve the complexity and irregularity problem. We have applied MeshNet in the applications of
+                        3D shape classification and retrieval. Experimental results and comparisons with the
+                        state-of-the-art methods demonstrate that MeshNet can achieve satisfying 3D shape
+                        classification and retrieval performance, which indicates the effectiveness of the proposed
+                        method on 3D shape representation.</p>
+                        <img src="meshnet2.jpg" style="width:90%;height: 90%;margin: 6px;">
+
+                    </div>
+
+
+                    <div class="section" id="PVNet">
+                      <h3>PVNet<a class="headerlink" href="#PVNet" title="Permalink to this headline">¶</a></h3>
+                      <img src="pvnet.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p></p>
+                      <p>Point cloud and multi-view data are individually two typical representations of 3D shape.
+                        Recently, various deep neural networks are proposed to process them. Our PVNet is the first
+                        neural network to jointly employ the point cloud data and multi-view data for 3D shape
+                        representation. The embedding attention fusion is introduced to exploit the complementary of
+                        two modalities. Experiments are conducted on ModelNet40 dataset. Experimental results and
+                        comparisons with state-of-the-art methods demonstrate that our framework can achieve superior
+                        performance.</p>
+                    </div>
+
+
+                    <div class="section" id="retrieval">
+                      <h3>DeepCCFV: Camera Constraint-Free Multi-View Convolutional Neural Network for 3D Object
+                        Retrieval<a class="headerlink" href="#retrieval" title="Permalink to this headline">¶</a></h3>
+                      <img src="ccfv.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p></p>
+                      <p>In 3D object retrieval, projected views based approaches have shown superior performance
+                        compared with other methods in recent years. However, most of existing methods require a fix
+                        predefined camera position setting, which is impractical in real application. Fixed camera
+                        positions during the training procedure will also lead to over-fitting to the complete set of
+                        features obtained from these positions. To deal with these problems, we propose a camera
+                        constraint-free multiview convolutional neural network for 3D object retrieval. In this method,
+                        we proposed a feature augmentation method named Dropmax assembled in traditional multi-view
+                        convolutional neural network to eliminate the camera constraints. To evaluate the proposed
+                        method, we have conducted experiments on both intramodal and cross-modal retrieval tasks.
+                        Experimental results and comparison with existing state-of-the-art 3D object retrieval methods
+                        demonstrate the effectiveness of the proposed method.</p>
+                    </div>
+
+                  </div>
+
+
+
+
+
+                  <div class="section" id="Activity-Recognition">
+                    <h2>ActivityNet Spatio-temporal Action Localization (AVA)<a class="headerlink" href="#Activity-Recognition"
+                        title="Permalink to this headline">¶</a></h2>
+                    <p>We obtained the first place of AVA (Both of CV Only Track and Full Modality Track) in the
+                      ActivityNet2018 Challenge (CVPR 2018). This task is intended to evaluate the ability of
+                      algorithms to localize human actions in space and time. Each labeled video segment can contain
+                      multiple subjects, each performing potentially multiple actions. The goal is to identify these
+                      subjects and actions over continuous 15-minute video clips extracted from movies.</p>
+                    <img src="ava.jpg" style="width:90%;height: 90%;margin: 6px;">
+                  </div>
+
+
+
+
+                  <div class="section" id="Computer-Vision-in-Social-Media">
+                    <h2>Computer Vision in Social Media<a class="headerlink" href="#Computer-Vision-in-Social-Media"
+                        title="Permalink to this headline">¶</a></h2>
+                    <p>Images play a crucial role now and heightened by the bombardment of images or videos that people
+                      experience today. Innovations in computer vision can reduce the costs of using images and videos
+                      as data. We build on computer vision methods for data gathering and filtering from social media
+                      streams, then apply these data for event classification and personalized emotion recognition.</p>
+
+                    <div class="section" id="Data-collection">
+                      <h3>Brand Data Gathering From Live Social Media Streams<a class="headerlink" href="#Data-collection"
+                          title="Permalink to this headline">¶</a></h3>
+                      <img src="bsndataset.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p></p>
+                      <p>We proposed a new method to gather data from social media streams and set up a large scale
+                        microblog dataset for evaluation in this paper. For the new multi-faceted brand tracking
+                        method, it gathers relevant data based on not just evolving keywords(the traditional keywords
+                        based approach), but also social factors (users, relations and locations) as well as visual
+                        contents as increasing number of social media posts are in multimedia form.
+                      </p>
+                      <img src="bdg.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p>For evaluation, we set up a large scale microblog dataset (Brand-Social-Net) on brand/product
+                        information, containing 3 million microblogs with over 1.2 million images for 100 famous
+                        brands. </p>
+                    </div>
+
+                    <div class="section" id="Data-filtering">
+                      <h3>Filtering of Brand-Related Microblogs Using Social-Smooth Multiview Embedding<a class="headerlink"
+                          href="#Data-filtering" title="Permalink to this headline">¶</a></h3>
+                      <img src="mfm.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p></p>
+                      <p>We developed an accurate classifier to filter out noise by taking into account the multimedia
+                        content and social nature of brand-related data.</p>
+                      <p>In particular, we developed a microblog filtering method based on a discriminative
+                        social-aware multi view embedding, and we also incorporate the brand and social relations among
+                        the microblogs to learn a discriminative and social-aware embedding Besides the conventional
+                        content-based features.</p>
+                      <p>Moreover, we trained an off-the-shelf classifer such as SVM and applied them to microblog
+                        filtering. After verifying the efficacy of our method on noise filtering in the brand data
+                        gathering task on the Brand-Social-Net dataset, we found that our approach is able to achieve
+                        significantly better filtering performance and improve the quality of brand data gathering.</p>
+
+                    </div>
+
+                    <div class="section" id="Event-classification">
+                      <h3>Event classification<a class="headerlink" href="#Event-classification" title="Permalink to this headline">¶</a></h3>
+                      <img src="ec.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p></p>
+                      <p>Large-scale social media data has been increased rapidly due to the explosive development of
+                        social media platforms. With remarkable societal and marketing values, it is essential to
+                        extract important events in live social media streams. In our work, we utilize deep learning
+                        and social tracking to address two main challenges for event classification tasks, i.e., the
+                        short/conversational nature and the incompatible meanings between the text and the
+                        corresponding image in social posts, and the rapidly evolving contents. We first present a
+                        Multi-modal Multi-instance Deep Network (M2DN) architecture to handle the weakly labeled
+                        microblogs data. Then, we propose to employ social tracking to enrich the testing sample.
+                        Experimental results shows better performance for the event classification task compared with
+                        the state of art. Related work was published in ACM Transactions on Intelligent Systems and
+                        Technology.</p>
+                    </div>
+
+
+                    <div class="section" id="Emotional-calculation">
+                      <h3>Emotion recognition<a class="headerlink" href="#Emotional-calculation" title="Permalink to this headline">¶</a></h3>
+                      <img src="emotioncal.jpg" style="width:90%;height: 90%;margin: 6px;">
+                      <p></p>
+                      <p>Emotion recognition (ER) plays an important role in both interpersonal and human-computer
+                        interaction. Due to the complex expression nature of human emotions, many ER methods employ a
+                        multi-modal framework by considering multiple physiological signals. Unlike the existing
+                        methods, we propose to investigate the influence of personality on emotional behavior in a
+                        hypergraph learning framework. First, given the subjects and stimuli that are used to evoke
+                        emotions in subjects, we generate the compound tuple vertex (subject, stimuli). Second, we
+                        construct the multi-modal hyperedges to formulate the personality correlation among different
+                        subjects and the physiological correlation among corresponding stimuli. Finally, we obtain the
+                        personalized emotion recognition (PER) results after the joint learning of the vertex-weighted
+                        multi-modal multi-task hypergraphs. The experimental results demonstrate the superiority of the
+                        proposed method. Related work was published in IJCAI-18.</p>
+                    </div>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+              </article>
+
+            </div>
+            <footer>
+              <hr />
+
+              <div role="contentinfo">
+                <p>
+                  &copy; Copyright 2018, Tsinghua University - Yue's Group.
+                </p>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+
+        <div class="pytorch-content-right" id="pytorch-content-right">
+          <div class="pytorch-right-menu" id="pytorch-right-menu">
+            <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
+
+
+              <ul>
+                <li><a class="reference internal" href="#">Computer Vision</a>
+                  <ul>
+
+
+                    <li><a class="reference internal" href="#3D-Object-Recognition-and-Retrieval">3D Object Recognition
+                        and Retrieval</a>
+                      <ul>
+                        <li><a class="reference internal" href="#GVCNN">GVCNN</a></li>
+                        <li><a class="reference internal" href="#MLVCNN">MLVCNN</a></li>
+                        <li><a class="reference internal" href="#MeshNet">MeshNet</a></li>
+                        <li><a class="reference internal" href="#PVNet">PVNet</a></li>
+                        <li><a class="reference internal" href="#retrieval">DeepCCFV</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a class="reference internal" href="#Activity-Recognition">Activity Recognition</a>
+                    </li>
+
+
+
+                    <li><a class="reference internal" href="#Computer-Vision-in-Social-Media">Computer Vision in Social
+                        Media</a>
+                      <ul>
+                        <li><a class="reference internal" href="#Data-collection">Data gathering</a></li>
+                        <li><a class="reference internal" href="#Data-filtering">Data filtering</a></li>
+                        <li><a class="reference internal" href="#Event-classification">Event classification</a></li>
+                        <li><a class="reference internal" href="#Emotional-calculation">Emotion recognition</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+
+
+
+  <script type="text/javascript" src="static/js/jquery.js"></script>
+  <script type="text/javascript" src="static/js/underscore.js"></script>
+  <script type="text/javascript" src="static/js/doctools.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+  <script type="text/javascript" src="static/js/popper.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="static/js/theme.js"></script>
+
+  <script type="text/javascript">
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+    });
+  </script>
+
+
+  <!-- Begin Footer -->
+
+  <div class="container-fluid docs-tutorials-resources" id="docs-tutorials-resources">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h4>THU - Yue's Group</h4>
+          School of Software
+          <br> Tsinghua, Beijing 100084
+          <br>
+          <a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-3-3.html">Directions</a>
+        </div>
+        <div class="col-sm-3">
+          <div class="indent30">
+            <h4>Copyright</h4>
+            All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+  <script type="text/javascript" src="static/js/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    mobileMenu.bind();
+    mobileTOC.bind();
+    pytorchAnchors.bind();
+
+    $(window).on("load", function () {
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+    })
+
+    // Add class to links that have code blocks, since we cannot create links in code blocks
+    $("article.pytorch-article a span.pre").each(function (e) {
+      $(this).closest("a").addClass("has-code");
+    });
+  </script>
+</body>
+
+</html>
