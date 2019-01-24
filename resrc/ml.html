@@ -176,26 +176,26 @@
                     </div>
 
                     <div class="section" id="Relevance-Learning">
-                      <h3>Visual-Textual Joint Relevance Learning for Tag-Based Social Image Search<a class="headerlink"
+                      <h3>视觉-文本联合关联学习在基于标签的社交图片搜索中的应用<a class="headerlink"
                           href="#Relevance-Learning" title="Permalink to this headline">¶</a></h3>
                       <p>由于社交媒体网站越来越流行，许多研究开始关注基于标签的社交图片搜索。该工作同时使用视觉和文本信息来评估带有标签的图片的相关性，这种相关性评估是由超图学习方法实现的。实验结果证明了方法的有效性。</p>
                     </div>
 
 
                     <div class="section" id="Dynamic-Hypergraph">
-                      <h3>Dynamic Hypergraph<a class="headerlink" href="#Dynamic-Hypergraph" title="Permalink to this headline">¶</a></h3>
+                      <h3>动态超图 Dynamic Hypergraph<a class="headerlink" href="#Dynamic-Hypergraph" title="Permalink to this headline">¶</a></h3>
                       <p>本文针对数据的复杂关联建模难题，以超图结构作为数据复杂关联建模基础，研究超图结构的动态更新方法，实现自适应非线性数据建模及相似性计算。不同于传统的静态超图学习方法，本文在学习数据标签投影矩阵的同时同步学习超图结构。这种动态超图结构可以更好地反映复杂数据的相关性，具有更佳的数据适应性，同步得到的标签投影矩阵在分类及检索等任务上也能获得更加的性能。</p>
                     </div>
 
 
                     <div class="section" id="Hypergraph-tensor">
-                      <h3>Hypergraph Structure With Tensor<a class="headerlink" href="#Hypergraph-tensor" title="Permalink to this headline">¶</a></h3>
-                      <p>在这个工作中，我们引入张量来表示动态超图结构，相较于传统的邻接矩阵，这种表示方法更加灵活简便。此外，我们提出了动态超图上的学习方法，同时预测数据标签并更新超图结构，在四个数据集上的实验结果都表明了方法的有效性。</p>
+                      <h3>基于张量的超图结构 Hypergraph Structure With Tensor<a class="headerlink" href="#Hypergraph-tensor" title="Permalink to this headline">¶</a></h3>
+                      <p>在这个工作中，我们引入张量来表示超图结构，相较于传统的邻接矩阵，这种表示方法更加灵活简便。此外，我们提出了基于张量表示的超图学习方法，同时预测数据标签并更新超图结构，在四个数据集上的实验结果都表明了方法的有效性。</p>
                     </div>
 
 
                     <div class="section" id="Cross-Diffusion">
-                      <h3>Cross Diffusion<a class="headerlink" href="#Cross-Diffusion" title="Permalink to this headline">¶</a></h3>
+                      <h3>超图上的交叉扩散 Cross Diffusion<a class="headerlink" href="#Cross-Diffusion" title="Permalink to this headline">¶</a></h3>
                       <p>近年来随着3D电影、虚拟现实等技术的发展，三维数据呈现爆炸式的增长。由于三维模型数据有视图、点云、网格等多种表示，如何融合多模态数据提高识别准确率是一个急需解决的问题。本文使用多超图建立多模态数据的复杂关联，并通过基于多超图的交叉扩散过程实现多模态数据的融合，在三维对象识别任务上得到了很好的性能。</p>
                     </div>
 
@@ -221,16 +221,7 @@
 
                     <div class="section" id="EMD">
                       <h3>测地距离 (EMD)<a class="headerlink" href="#EMD" title="Permalink to this headline">¶</a></h3>
-                      <p>Earth Mover’s Distance (EMD), targeting at measuring the many-to-many distances, has shown its
-                        superiority and been widely applied in computer vision tasks. However, there is still little
-                        effort concentrated on optimizing the EMD metric towards better matching performance. To tackle
-                        this issue, we propose an EMD metric learning algorithm in this work. This method is able to
-                        generate a discriminative ground distance matrix which can further improve the EMD distance
-                        measurement. We then apply our EMD metric learning method on two tasks, i.e., multiview object
-                        classification and document classification. The experimental results have shown better
-                        performance of our proposed EMD metric learning method compared with the traditional EMD method
-                        and the state-of-the-art methods. It is noted that the proposed EMD metric learning method can
-                        be also used in other applications.</p>
+                      <p>本文针对传统EMD度量可辨识性上的局限，研究基于有标记样本的EMD度量辨识性更新学习，实现精准的两组多维分布数据的距离计算。不同于传统EMD度量直接使用欧氏距离作为测地距离，本文引入有标签样本作为训练数据，通过学习测地距离度量来更新测地距离矩阵，从而优化EMD度量。我们使用交替优化的方式对模型进行优化，直到得到稳定的EMD。该方法在基于多视的三维对象分类和文本分类上取得了很好的性能。</p>
                     </div>
 
                     <div class="section" id="KL">
@@ -287,10 +278,10 @@
                     <li><a class="reference internal" href="#hl">超图学习</a>
                       <ul>
                         <li><a class="reference internal" href="#Hypergraph-Analysis">超图分析</a></li>
-                        <li><a class="reference internal" href="#Relevance-Learning">Relevance Learning</a></li>
-                        <li><a class="reference internal" href="#Dynamic-Hypergraph">Dynamic Hypergraph</a></li>
-                        <li><a class="reference internal" href="#Hypergraph-tensor">Hypergraph Structure With Tensor</a></li>
-                        <li><a class="reference internal" href="#Cross-Diffusion">Cross Diffusion</a></li>
+                        <li><a class="reference internal" href="#Relevance-Learning">关联学习</a></li>
+                        <li><a class="reference internal" href="#Dynamic-Hypergraph">动态超图</a></li>
+                        <li><a class="reference internal" href="#Hypergraph-tensor">基于张量的超图结构</a></li>
+                        <li><a class="reference internal" href="#Cross-Diffusion">超图上的交叉扩散</a></li>
                         <li><a class="reference internal" href="#HGNN">HGNN</a></li>
 
                       </ul>
