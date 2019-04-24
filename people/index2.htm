@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>iMoon</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../static/carousel.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+  <!-- Bootstrap styles
+  <link rel="stylesheet" href="../static/css/vendor/bootstrap/bootstrap.css"> -->
+
+  <!-- Glyphicons -->
+  <link rel="stylesheet" href="../static/css/vendor/glyphicons/glyphicons.css">
+  <link rel="stylesheet" href="../static/css/vendor/glyphicons/filetypes.css">
+  <link rel="stylesheet" href="../static/css/vendor/glyphicons/social.css">
+
+  <!-- Google Webfonts -->
+  <link href="../fonts.googleapis.com/css-family=Open+Sans-400,700,600.css" rel='stylesheet' type='text/css'>
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../static/css/bootstrap-markdown.min.css" type="text/css">
+
+  <!-- LayerSlider styles -->
+  <link rel="stylesheet" href="../static/css/vendor/layerslider/layerslider.css" type="text/css">
+
+  <!-- Grove Styles (switch for different color schemes, e.g. "styles-cleanblue.css") -->
+  <link rel="stylesheet" href="../static/css/styles-cleanred.css" id="grove-styles">
+
+  <link rel="stylesheet" href="../cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" type="text/css">
+
+  <!-- table highlighting -->
+  <!--<link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.7/features/searchHighlight/dataTables.searchHighlight.css">-->
+
+  <!-- site-wide custom css -->
+  <link rel="stylesheet" href="../static/css/nlp.css" id="nlp-styles">
+
+  <script src="../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../static/js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+  <!-- jQuery with jQuery Easing, and jQuery Transit JS -->
+
+  <!-- LayerSlider from Kreatura Media with Transitions -->
+  <script src="../static/js/vendor/layerslider/greensock.js" type="text/javascript"></script>
+  <script src="../static/js/vendor/layerslider/layerslider.transitions.js" type="text/javascript"></script>
+  <script src="../static/js/vendor/layerslider/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+
+  <!-- Bootstrap Markdown for Blog editing-->
+  <script src="../static/js/markdown.js" type="text/javascript"></script>
+  <script src="../static/js/to-markdown.js" type="text/javascript"></script>
+  <script src="../static/js/bootstrap-markdown.js" type="text/javascript"></script>
+
+  <!-- Grove Layerslider initiation script -->
+  <script src="../static/js/grove-slider.js" type="text/javascript"></script>
+
+  <!-- DataTables.net for publications -->
+  <script src="../cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+
+  <!-- highlighting for tables -->
+  <script
+    src="../cdn.datatables.net/plug-ins/1.10.7/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+  <script src="../bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+
+  <!-- fancy select boxes -->
+  <link href="../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <script src="../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bee6e9034f83599f524d47d96877e93c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+<!-- NAVBAR
+================================================== -->
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-default grove-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="grove-toggle collapsed" data-toggle="collapse" data-target=".grove-nav">
+            <i class="glyphicons show_lines"></i>
+          </a>
+          <img class="navbar-brand navbar-left hidden-xs" src="../static/img/logos/nlp-logo-small.png" alt="">
+          <a class="navbar-brand navbar-left" href="index.htm">
+            <h3 class="hidden-xs">iMoon: 智能媒体与认知研究组</h3>
+            <h3 class="hidden-sm hidden-md hidden-lg hidden-xl">iMoon</h3>
+          </a>
+        </div>
+
+        <div class="navbar-collapse grove-nav collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="index.htm">主页</a>
+            </li>
+            <li>
+              <a href="people/index.htm">团队</a>
+            </li>
+            <li>
+              <a href="resrc/index.htm">研究方向</a>
+            </li>
+            <li>
+              <a href="pubs/index.htm">论文与出版物</a>
+            </li>
+            <li>
+              <a href="blog/index.htm">最新资讯</a>
+            </li>
+            <li>
+              <a style="color:rgb(130, 49, 142)" href="../en_tsinghua/index.htm"><b>English</b></a>
+            </li>
+
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+  </header>
+
+<!--   
+  <div class="navbar-wrapper">
+    <div class="container">
+    </div>
+	</div> -->
+	
+
+	<div class="widewrapper pagetitle">
+		<div class="container">
+			<h1>团队</h1>
+		</div>
+	</div>
+	
+
+
+
+
+	 <div class="widewrapper">
+		<div class="container content">
+			<!--<div class="headline top">People</div>-->
+
+			<!--<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-right: 1px solid #ccc;">-->
+			<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+
+
+
+
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="showroom-controls">
+							<div class="links">教授</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 team-member">
+								<div style="text-align:center">
+									<img style="margin-left:auto;margin-right:auto;width:auto;height:auto;max-height:200px;max-width:200px" src="yue.jpg"
+									 class="img-responsive img-rounded">
+
+									<div class="description" style="border-radius: 10px">
+										<a href="../people/gaoyue_index.html">
+											<h4>高 跃</h4>
+										</a>
+										<p class="clean">
+											长聘副教授, 博士生导师<br />
+											清华大学, 软件学院
+										</p>
+									</div>
+								</div>
+								<br />
+							</div>
+						</div>
+					</div>
+					<!-- <div class="col-sm-6">
+						<div class="showroom-controls">
+							<div class="links">Staff</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 team-member">
+								<div style="text-align:left">
+									<img style="margin-left:auto;margin-right:auto;width:auto;height:auto;max-height:150px;max-width:150px" src="yue.jpg" class="img-responsive img-rounded">
+
+									<div class="description" style="border-radius: 10px">
+										<a href="http://www.gaoyue.org/">
+											<h4>Yue Gao</h4>
+										</a>
+										<p class="clean">
+											<del> natural language processing, natural language understanding and deep learning </del>
+										</p>
+									</div>
+								</div>
+								<br/>
+							</div>
+						</div>
+					</div> -->
+
+				</div>
+
+				<br />
+
+
+				<div class="showroom-controls">
+					<div class="links">助理研究员</div>
+				</div>
+				<div class="row">
+
+					<div class="col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="margin-left:auto;margin-right:auto;height:150px;width:auto" src="haoxuan.jpg" class="img-responsive img-rounded">
+							<div class="description" style="border-radius: 10px">
+
+								<a href="Haoxuan You.html">
+									<b>有昊轩</b>
+								</a>
+							</div>
+						</div>
+						<br />
+					</div>
+				</div>
+
+				<br />
+
+				<div class="showroom-controls">
+					<div class="links">学生</div>
+				</div>
+
+
+
+				<div class="row">
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="wangnan.png" class="img-responsive img-rounded">
+
+							
+								<b>王楠</b>
+							
+
+							<br /> 2016 博士生
+						</div>
+						<br />
+					</div>
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="yubo.jpg" class="img-responsive img-rounded">
+							
+								<b>张宇博</b>
+							
+
+
+							<br /> 2017 博士生
+						</div>
+						<br />
+					</div>
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="ruozhou.jpg" class="img-responsive img-rounded">
+
+							
+								<b>梁若舟</b>
+							
+
+
+							<br /> 2017 博士生
+						</div>
+						<br />
+					</div>
+
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="zizhao.jpg" class="img-responsive img-rounded">
+
+							
+								<b>张子昭</b>
+							
+
+
+							<br /> 2018 博士生
+						</div>
+						<br />
+					</div>
+
+					
+					
+					
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+								<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="xuyang.jpg" class="img-responsive img-rounded">
+								
+								
+								<b>徐阳</b>
+								
+								
+								
+								<br /> 2018 博士生
+							</div>
+							<br />
+						</div>
+						
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="junjie.jpg" class="img-responsive img-rounded">
+
+								<a href="Junjie Zhu.html">
+										<b>朱俊杰</b>
+								</a>									
+
+
+							<br /> 2018 博士生
+						</div>
+						<br />
+					</div>
+
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="zilin.jpg" class="img-responsive img-rounded">
+
+							
+								<b>王梓霖</b>
+							
+							<br />博士生
+						</div>
+						<br />
+					</div>
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="haoyi.jpg" class="img-responsive img-rounded">
+
+							
+								<b>樊好义</b>
+							
+							<br />博士生
+						</div>
+						<br />
+					</div>
+
+
+					
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="shuyi.jpg" class="img-responsive img-rounded">
+
+							
+								<b>吉书仪</b>
+							
+
+
+							<br /> 2019 博士生
+						</div>
+						<br />
+					</div>
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="siqi.jpg" class="img-responsive img-rounded">
+
+							
+								<b>李思奇</b>
+							
+							<br />2019 博士生
+						</div>
+						<br />
+					</div>
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="xuancheng.jpg" class="img-responsive img-rounded">
+
+							
+								<b>张轩诚</b>
+							
+							<br />2019 博士生
+						</div>
+						<br />
+					</div>
+
+					
+
+
+				</div>
+
+
+				<div class="showroom-controls">
+					<div class="links"></div>
+				</div>
+
+				<div class="row">
+
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="jianwen.jpg" class="img-responsive img-rounded">
+
+							
+								<b>蒋建文</b>
+							
+
+
+							<br /> 2017 硕士生
+						</div>
+						<br />
+					</div>
+
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="baodi.jpg" class="img-responsive img-rounded">
+
+							
+								<b>包迪</b>
+							
+
+
+							<br /> 2017 硕士生
+						</div>
+						<br />
+					</div>
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="linhang.jpg" class="img-responsive img-rounded">
+
+							
+								<b>林航</b>
+							
+
+
+							<br /> 2017 硕士生
+						</div>
+						<br />
+					</div>
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="linyi.JPG" class="img-responsive img-rounded">
+
+							
+								<b>林翊</b>
+							
+							<br />2017 硕士生
+						</div>
+						<br />
+					</div>
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="haojie.jpg" class="img-responsive img-rounded">
+
+							
+								<b>林浩杰</b>
+							
+
+
+							<br /> 2018 硕士生
+						</div>
+						<br />
+					</div>
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="ziqiang.jpg" class="img-responsive img-rounded">
+
+							
+								<b>陈自强</b>
+							
+
+
+							<br /> 2018 硕士生
+						</div>
+						<br />
+					</div>
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="zhengyue.jpg" class="img-responsive img-rounded">
+
+							
+								<b>黄正跃</b>
+							
+							<br />
+							2018 硕士生
+						</div>
+						<br />
+					</div>
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+								<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="yifan.jpg" class="img-responsive img-rounded">
+								
+								
+								<b>丰一帆</b>
+								
+								<br />2018 硕士生
+							</div>
+							<br />
+						</div>
+						
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="gongbiao.jpg" class="img-responsive img-rounded">
+							
+								<b>龚镖</b>
+							
+							<br />2018 硕士生
+						</div>
+						<br />
+					</div>
+
+					
+					
+				</div>
+
+				<div class="row">								
+						
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="yutong.jpg" class="img-responsive img-rounded">
+
+							
+								<b>冯玉彤</b>
+							
+							<br /> 2019 硕士生
+						</div>
+						<br />
+					</div>
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="yuxuan.jpg" class="img-responsive img-rounded">
+
+							
+								<b>魏宇轩</b>
+							
+							<br />2019 硕士生
+						</div>
+						<br />
+					</div>							
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="baijunjie.jpg" class="img-responsive img-rounded">
+
+							
+								<b>白俊杰</b>
+							
+							<br />2019 硕士生
+						</div>
+						<br />
+					</div>
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="benyuan.jpg" class="img-responsive img-rounded">
+
+							
+								<b>陆犇圆</b>
+							
+							<br />2019 硕士生
+						</div>
+						<br />
+					</div>
+					
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="yufeng.jpg" class="img-responsive img-rounded">
+
+							
+								<b>陈瑜峰</b>
+							
+							<br />2019 硕士生
+						</div>
+						<br />
+					</div>		
+					
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="wangyan.jpg" class="img-responsive img-rounded">
+
+							
+								<b>王焱</b>
+							
+							<br />硕士生
+						</div>
+						<br />
+					</div>								
+
+				</div>
+
+
+
+
+				<!-- <br /> -->
+
+
+
+				<div class="showroom-controls">
+					<div class="links"></div>
+				</div>
+
+				<div class="row">
+
+					<!-- <div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="shuyi.jpg" class="img-responsive img-rounded">
+
+							
+								<b>Shuyi Ji</b>
+							
+
+
+							<br /> 2015 本科生
+						</div>
+						<br />
+					</div> -->
+
+
+
+					<!-- <div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="yutong.jpg" class="img-responsive img-rounded">
+
+							
+								<b>Yutong Feng</b>
+							
+							<br /> 2015 本科生
+						</div>
+						<br />
+					</div> -->
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="yangmin.jpg" class="img-responsive img-rounded">
+
+							
+								<b>杨敏</b>
+							
+							<br />2015 本科生
+						</div>
+						<br />
+					</div>
+
+					<!-- <div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="yuxuan.jpg" class="img-responsive img-rounded">
+
+							
+								<b>Yuxuan Wei</b>
+							
+							<br />2015 本科生
+						</div>
+						<br />
+					</div> -->
+
+					<!-- <div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="baijunjie.jpg" class="img-responsive img-rounded">
+
+							
+								<b>Junjie Bai</b>
+							
+							<br />2015 本科生
+						</div>
+						<br />
+					</div> -->
+
+
+<!-- 
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="siqi.jpg" class="img-responsive img-rounded">
+
+							
+								<b>Siqi Li</b>
+							
+							<br />2015 本科生
+						</div>
+						<br />
+					</div> -->
+
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="sichao.jpg" class="img-responsive img-rounded">
+
+							
+								<b>沈思超</b>
+							
+							<br />2015 本科生
+						</div>
+						<br />
+					</div>
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="zhehui.jpg" class="img-responsive img-rounded">
+
+							
+								<b>赵哲晖</b>
+							
+							<br /> 2016  本科生
+						</div>
+						<br />
+					</div>
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="jiani.jpg" class="img-responsive img-rounded">
+
+							
+								<b>王佳妮</b>
+							
+							<br /> 2016  本科生
+						</div>
+						<br />
+					</div>
+					
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="dingzheng.jpg" class="img-responsive img-rounded">
+
+							
+								<b>丁郑</b>
+							
+							<br />2016  本科生
+						</div>
+						<br />
+					</div>
+
+					<div class="col-md-2 col-sm-3 team-member">
+							<div style="text-align:center">
+								<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="qintian.jpg" class="img-responsive img-rounded">
+
+								
+									<b>李沁恬</b>
+								
+								<br />2016 本科生
+							</div>
+							<br />
+						</div>							
+					
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="xinqi.jpg" class="img-responsive img-rounded">
+
+							
+								<b>金昕祺</b>
+							
+							<br /> 2017  本科生
+						</div>
+						<br />
+					</div>
+
+
+
+
+
+					<!-- <div class="co2-sm-3 team-member">
+						<div style="text-align:left">
+							<img style="height:160px;width:120px" src="dehong.jpg" class="img-responsive img-rounded">
+
+							
+
+								<b>Dehong Xu</b>
+							
+							<br />2015 本科生
+						</div>
+						<br />
+					</div> -->
+
+
+
+
+
+
+
+					<div class="col-md-2 col-sm-3 team-member">
+						<div style="text-align:center">
+							<img style="height:140px;width:105px;margin-left:auto;margin-right:auto" src="jingzhi.jpg" class="img-responsive img-rounded">
+
+							
+								<b>邵璟之</b>
+							
+							<br />2017  本科生
+						</div>
+						<br />
+					</div>
+
+
+
+
+				</div>
+
+				<br />
+
+
+
+				<div class="showroom-controls">
+					<div class="links">毕业生</div>
+				</div>
+
+				<div class="col-sm-5">
+
+					Wenhui Guo</a>,
+					<i>2013 本科生</i>
+				</div>
+
+				<div class="col-sm-7">
+					<br />
+				</div>
+
+
+				<div class="col-sm-5">
+
+					曹智林</a>,
+					<i>2014 - 2018 本科生</i>
+				</div>
+
+				<div class="col-sm-7">
+					现就读于卡内基·梅隆大学.
+				</div>
+
+
+				<div class="col-sm-5">
+
+					周恒光</a>,
+					<i>本科生</i>
+				</div>
+
+				<div class="col-sm-7">
+					现就读于多伦多大学.
+				</div>
+
+
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="widewrapper footer">
+    <div class="container">
+
+      <div class="row footer">
+
+        <div class="col-sm-3">
+          <h4>THU - Yue's Group</h4>
+          School of Software
+          <br> Tsinghua, Beijing 100084
+          <br>
+          <a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-3-3.html">Directions</a>
+        </div>
+
+
+
+        <div class="col-sm-3">
+          <div class="indent30">
+            <h4>Copyright</h4>
+            All Rights Reserved.
+          </div>
+        </div>
+
+        <!-- 
+        <div class="col-sm-3">
+          <div class="indent30">
+            <h4>Affiliated Groups</h4>
+            <ul class="grove-list">
+              <li>
+                <a href="https://www.google.com/">XXXXXXX</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/">XXXXX</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/">XX</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        <div class="col-sm-3">
+          <div class="indent30">
+            <h4>Connect</h4>
+            <ul class="grove-list">
+              <li>
+                <a href="https://www.google.com/">Github</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/">Twitter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="col-sm-3">
+          <div class="indent30">
+            <h4>Local links</h4>
+            <div class="small" style="text-align:left">
+              <a href="https://www.google.com/">AI lunch</a> ·
+              <a href="https://www.google.com/">AI Reading Group</a>
+              <br>
+              <a href="https://www.google.com/">AI Seminar</a> ·
+              <a href="https://www.google.com/">Calendar</a>
+              <br>
+              <a href="https://www.google.com/">AI Speakers</a> ·
+              <a href="https://www.google.com/">Q&amp;A</a>
+            </div>
+          </div>
+
+
+        </div> -->
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+
+</body>
+
+</html>

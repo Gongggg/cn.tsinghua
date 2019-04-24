@@ -1465,12 +1465,12 @@ th {
 }
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
-    background-color: #f6eeee;
+    background-color: #ffffff;
 }
 
 .table-striped > tbody > tr:nth-child(even) > td,
 .table-striped > tbody > tr:nth-child(even) > th {
-    background-color: #eddede;
+    background-color: #ffffff;
 }
 
 .table-hover > tbody > tr:hover > td,
