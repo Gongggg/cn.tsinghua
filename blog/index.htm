@@ -151,7 +151,7 @@
 
 
 			<div class="widewrapper pagetitle">
-				<div class="container">
+				<div class="container" id="back">
 					<h1>最新资讯</h1>
 				</div>
 			</div>
@@ -292,6 +292,8 @@
 			var html = converter.makeHtml(mddata);
 			$("#showmarkdown").empty();
 			$("#showmarkdown")[0].innerHTML = html;
+
+			$("#back h1").html("最新资讯 <a href=\"../blog/index.htm\"><button type=\"button\" class=\"btn btn-default\">返回</button></a>")
 		}
 
 		$('document').ready(function () {
