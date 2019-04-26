@@ -162,11 +162,11 @@
           <img class="first-slide" src="static/img/group1.jpg" alt="First slide">
         </div>
         <div class="container">
-          <div class="carousel-caption" style="color: rgb(66, 66, 66)">
+          <div class="carousel-caption" style="color: rgb(49, 49, 49)">
+            <div style="background:rgba(255, 255, 255, 0.699);border-radius:10px">
             <h1>多模态的3D数据显示</h1>
-            <div style="background:rgba(255, 252, 252, 0.603);border-radius:10px">
               <p>
-                多模态三维数据在三维重建、三维数据生成等领域有重要应用。我们制作了一套多模态3D数据库。共包含13个类别，35658个物体，每个物体具有24个对应视角的视图、点云、残缺点云，共计104万个视图与对应完整点云，208万个残缺点云。该数据库在多模态数据融合、跨模态数据生成等领域有重要意义。
+                针对点云数据稀疏及缺失等挑战，实验室建立了包含13类别、共计35658个物体，每个物体具有24个视图、点云及残缺点云的数据库，共计104万完整点云及208万个残缺点云，可用于点云数据增强评测。设计了基于视图的点云增强算法，实现了媲美初始点云精度的点云数据增强。
               </p>
             </div>
             <p><a class="btn btn-lg btn-primary" href="#" role="button">详细内容</a></p>
@@ -178,16 +178,16 @@
           <img class="second-slide" src="static/img/group2.png" alt="Second slide">
         </div>
         <div class="container">
-          <div class="carousel-caption" style="color: rgb(66, 66, 66)">
-            <h1>从数据到超图的一个建模及优化示意</h1>
-            <div style="background:rgba(255, 252, 252, 0.803);border-radius:10px">
+          <div class="carousel-caption" style="color: rgb(49, 49, 49)">
+            <div style="background:rgba(255, 255, 255, 0.699);border-radius:10px">
+            <h1>超图建模及超图神经网络模型</h1>
               <p>
-                这里使用论文引用图结构，论文作者信息，及论文的文本特征组成的数据，任务是做论文类型的分类如：自然语言处理，机器人，哈希等。构建出的超图结构由两部分组成：论文相互引用及同一作者所写的论文。然后将构建出来的超图结构与论文的文本特征输入到超图神经网络中获得每个论文所属的类别。
+                通过超图结构建立数据之间复杂关联，设计了超图神经网络模型，通过超边卷积汇聚顶点特征，生成超边特征，并通过顶点卷积生成顶点新的数据表示，实现基于数据复杂关联的优化表示学习，与传统图神经网络相比具有更佳的可扩展性和表示能力。
               </p>
             </div>
             <p><a class="btn btn-lg btn-primary" href="#" role="button">详细内容</a></p>
           </div>
-        </div>
+        </div>        
       </div>
       <!-- <div class="item">
         <div class="item">
@@ -211,9 +211,9 @@
           </div>
           <div class="container">
             <div class="carousel-caption">
-              <h1 style="color: rgb(0, 0, 0);text-shadow: 2px 2px 3px rgb(255, 255, 255);">情感计算及脑区差异</h1>
+              <h1 style="color: rgb(0, 0, 0);text-shadow: 2px 2px 3px rgb(255, 255, 255);">基于生理信号的情感计算</h1>
               <div style="background:rgba(82, 82, 82, 0.603);border-radius:10px">
-                <p>结合多模态生理信号实现用户内在的情绪状态的有效感知，此外通过对脑网络建模实现对不同脑区功能的探究，最终对如ASD等脑区疾病进行辅助诊断治疗。</p>
+                <p>结合多模态生理信号实现个体内在情绪状态的精准感知，通过对脑网络建模探索不同状态下个体间的有效表示，实现对情感的精确判断。</p>
               </div>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">详细内容</a></p>
             </div>
@@ -228,9 +228,9 @@
           </div>
           <div class="container">
             <div class="carousel-caption">
-              <h1>动作识别</h1>
+              <h1>动作量化计算</h1>
               <!-- <div style="background:rgba(82, 82, 82, 0.603);border-radius:10px"> -->
-                <p>动作识别技术的目的是对一段视频中人的动作行为类型进行识别，对于实现人行为进一步理解和分析有着重要意义。</p>
+                <p>通过人体局部信息提取与分析实现动作精细量化计算，获得行为状态数值表示，可有效辅助帕金森等疾病的精准客观评估及状态趋势量化分析。</p>
               <!-- </div> -->
               <p><a class="btn btn-lg btn-primary" href="#" role="button">详细内容</a></p>
             </div>
@@ -245,9 +245,9 @@
           </div>
           <div class="container">
             <div class="carousel-caption">
-              <h1>陨石坑</h1>
+              <h1>月球陨石坑检测</h1>
               <div style="background:rgba(82, 82, 82, 0.603);border-radius:10px">
-              <p>深度学习的方法可以帮助识别月球上的陨石坑。了解陨石坑在月球上的大小，形状，位置和年龄非常重要，可以为太阳系历史提供了一个窗口并且更好地了解太阳系早期发生的物质分布和物理现象。</p>
+              <p>基于深度神经网络进行月球上陨石坑检测，实现陨石坑大小、形状及位置的精确计算，为航天器着陆、行星观测与分析提供技术支撑。</p>
               </div>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">详细内容</a></p>
             </div>
