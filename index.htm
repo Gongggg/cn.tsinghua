@@ -530,9 +530,9 @@
           // console.log("test3test3");
         });
 
-        $("#news1 img").attr("src", jsondata[0].imgurl)
-        $("#news2 img").attr("src", jsondata[1].imgurl)
-        $("#news3 img").attr("src", jsondata[2].imgurl)
+        $("#news1 img").attr("src", jsondata[0].imgurl.split(",")[0])
+        $("#news2 img").attr("src", jsondata[1].imgurl.split(",")[0])
+        $("#news3 img").attr("src", jsondata[2].imgurl.split(",")[0])
 
         // $("#news1 a").attr("href","javascript:mdjump('" + jsondata[0].url + "')")
         // $("#news2 a").attr("href","javascript:mdjump('" + jsondata[1].url + "')")
