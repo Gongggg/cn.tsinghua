@@ -26,7 +26,7 @@
   <div class="container">
     <div class="header-container">
       <a class="header-logo" href="../index.htm" aria-label="Yue's Group"><img src="../static/img/logos/nlp-logo-small.png"
-          alt="" style="width: 30px;height: 30px;">&nbsp &nbsp 清华大学 - Yue's Group</a>
+          alt="" style="width: 30px;height: 30px;">&nbsp &nbsp iMoon: 智能媒体与认知研究组</a>
       <div class="main-menu">
         <ul>
           <li>
@@ -81,25 +81,27 @@
           <br>
           <h2>研究方向</h2>
           <br>
-          <p class="caption"><span class="caption-text">计算机视觉</span></p>
+          <p class="caption"><span class="caption-text">立体视觉</span></p>
           <ul>
-            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 三维物体识别与检索</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 动作识别</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 社交媒体与计算机视觉</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 3D数据生成</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 3D数据表示</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 3D对象识别与检索</a></li>
           </ul>
 
-          <p class="caption"><span class="caption-text">医疗影像分析</span></p>
+          <p class="caption"><span class="caption-text">脑科学</span></p>
           <ul>
-            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 脑退化疾病诊疗</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 高维度的脑网络</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 心血管疾病诊疗</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 医疗影像分割</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 图像情感预测与图像情感分布的差异</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 基于多超图神经网路的情感识别</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 基于多模态物理信号的情感识别 </a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 脑网络建模与挖掘（高阶脑网络）</a></li>
+			<li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 基于动态超图学习的小儿自闭症诊断</a></li>
           </ul>
 
-          <p class="caption"><span class="caption-text">机器学习</span></p>
+          <p class="caption"><span class="caption-text">复杂网络</span></p>
           <ul>
-            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 超图学习</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 度量学习</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 超图结构学习模型</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 超图神经网络模型</a></li>
+			<li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 网络安全态势感知</a></li>
           </ul>
 
           <!-- <p class="caption"><span class="caption-text">工业互联网安全</span></p>
@@ -132,7 +134,7 @@
                     研究方向
                   </a> &gt;
                 </li>
-                <li>计算机视觉</li>
+                <li>立体视觉 3D Vision</li>
               </ul>
 
 
@@ -151,134 +153,94 @@
             <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
               <article itemprop="articleBody" class="pytorch-article">
                 <div class="sphx-glr-example-title section" id="finetuning-torchvision-models">
-                  <span id="sphx-glr-beginner-finetuning-torchvision-models-tutorial-py"></span>
+                    <span id="sphx-glr-beginner-finetuning-torchvision-models-tutorial-py"></span>
 
 
 
 
 
-                  <h1>计算机视觉<a class="headerlink" href="#" title="Computer-Vision">¶</a></h1>
+                    <h1>立体视觉 3D Vision<a class="headerlink" href="#" title="Computer-Vision">¶</a></h1>
 
-                  <p>在计算机视觉领域，如何观测和理解世界是一项重要的任务，我们组致力于三维立体视觉理解，特别是在三维物体识别和检索。目前的项目包括自动驾驶中的多视图目标识别，三维多模态(点云，多视图，体素和立体网格数据)融合，高速视觉重建和视觉检测。</p>
+                    <p>立体视觉是双眼观察景物能分辨物体远近形态的感觉。立体视觉是计算机视觉领域的一个重要课题，它的目的在于重构场景的三维几何信息。立体视觉的研究具有重要的应用价值，其应用包括移动机器人的自主导航系统，航空及遥感测量，工业自动化系统等。立体视觉的基本表示模态包括：多视图或视频、点云、网格、体素。</p>
 
 
-                  <div class="section" id="3D-Object-Recognition-and-Retrieval">
-                    <h2>三维物体识别和检索<a class="headerlink" href="#3D-Object-Recognition-and-Retrieval"
-                        title="Permalink to this headline">¶</a></h2>
-                    <p>计算机视觉领域，三维数据识别和分析是非常基础和重要的问题。随着三维传感器的兴起，三维数据处理从环境理解到自动驾驶有着广泛的应用。因此，如何理解三维数据，例如分类和检索三维物体，近几年已经吸引了众多的研究兴趣。三维数据主要有四种表示方式：体素，多视图，点云和网格。我们的方法主要集中于上述模态的分类和检索任务。</p>
 
-                    <div class="section" id="GVCNN">
-                      <h3>GVCNN: 组视图卷积神经网络<a class="headerlink" href="#GVCNN" title="Permalink to this headline">¶</a></h3>
-                      <img src="gvcnn.jpg" style="width:90%;height: 90%;margin: 6px;">
-                      <p></p>
-                      <p>近几年，三维物体的识别吸引力很多科研工作者的注意力。而随着深度学习的发展，基于深度学习的特征在很多任务上有了越来越显著的优势。目前主流的三维物体的表示形式有多视图，点云，体素和多边形网格。多视图由于其数据获取便捷且易于从现有模型迁移学习等优势受到了广泛的关注。然而现存的基于多视图的三维物体特征表示都是直接从视图特征映射到物体特征，这种方法并没有考虑到不同视图之间的关联及视图本身的可辨别度。为了解决这些问题，我们提出了组视图卷积神经网络（GVCNN）的架构来建模三维物体识别中的层级关联特征从而获得更有可辨别性的三维物体的特征表示。GVCNN的层级架构由多视图-组视图-三维物体三个层级组成，中间通过我们设计的组视图表示的策略来衔接。总体来说，我们先使用卷积神经网络提取每个视图的特征，然后通过分组模块来或者每个视图的可辨别度，基于这个可辨别度输入的多视图被分到了不同的组，在每个组里直接通过平均池化或者每个组的唯一特征表示，同时我们把每个组的特征表示根据每个组里面视图的可辨别度融合成最终的三维物体的特征表示。在ModelNet数据上的实验结果表明，与当前最好的方法相比较，我们提出的方法在三维物体的识别和检索两个任务上都有非常显著的提升。</p>
+
+
+                    <div class="section" id="3D-Data-Generate">
+						<h2>3D数据生成<a class="headerlink" href="#3D-Data-Generate"
+							title="Permalink to this headline">¶</a></h2>
+						<p>随着信息时代各行各业对空间数据需求的日益增长，常规的数据获取方式和数据处理模式已经不能满足信息化需要，测量的视觉数据从二维形式向三维形式转换，三维数据获取作为系统的基础成为必不可少的部分。三维数据的采集和模型重建在计算机视觉领域具有广泛且重要的作用，由于采集设备的性能限制，难以在常规场景下获得高质量数据，且不同模态之间均具有各自对三维表示打优势。为此，我们提出了一种跨模态的点云增强框架，即基于视觉信息的点云增强（IPCE）。在我们的框架中，我们设计了一种适用于点云增强的对抗式结构，其中使用单视角视图用作辅助输入。我们利用多阶段嵌入式融合机制，通过将两种模态的高阶特征注入低阶特征并用于后续计算，可以更好地利用低阶特征所表达的几何信息和高阶特征所表达的语义信息。</p>
+
+						<div class="section" id="3D-Data-Generate-Img">
+						  <h3>3D数据生成-1<a class="headerlink" href="#3D-Data-Generate-Img" title="Permalink to this headline">¶</a></h3>
+						  <img src="3D-Data-Generate.png" style="width:90%;height: 90%;margin: 6px;">
+						  <p></p>
+						</div>
                     </div>
 
-                    <div class="section" id="MLVCNN">
-                      <h3>多环路卷积神经网络<a class="headerlink" href="#MLVCNN" title="Permalink to this headline">¶</a></h3>
-                      <img src="mlvcnn.jpg" style="width:90%;height: 90%;margin: 6px;">
-                      <p></p>
-                      <p>多环路卷积神经网络框架是一个引入了从视图到环路，再到模型的层次化立体对象表示框架，可以从多个尺度层面提取立体视觉对象的表示特征。该方法提出了环路正则化和基于此设计的环路正则化模块，同时利用长短时记忆神经网络提取了同环路内多个视图的关联特征，考虑视图间的差异性以生成更鲁棒的特征表示。该方法在立体视觉识别检索的基准数据集ModelNet40上取得了当前最优的检索结果和分类精度。</p>
-                    </div>
+                    
+                    <div class="section" id="3D-Data-Representation">
+						<h2>3D数据表示<a class="headerlink" href="#3D-Data-Representation"
+							title="Permalink to this headline">¶</a></h2>
+						
+						<div class="section" id="Multi-Perspective-Representation">
+							<h3>多视角的表示<a class="headerlink" href="#Multi-Perspective-Representation" title="Permalink to this headline">¶</a></h3>
+							<p>多视图是表征立体对象的有效方法，它既可以是3d 对象的多个投影视图，也可以是真实对象不同角度拍摄得到的照片。这样的数据在现实生活中普遍存在，也是人类视觉系统获取、分析、理解这个三维世界的方式。研究多视图表征，不仅有利于3d对象的识别任务，也将为探索人类大脑是如何理解感知周围环境提供帮助。</p>
+							<p>以MVCNN为代表的众多基于多视图3D对象识别和检索方法都取得了令人瞩目的性能表现，但是按照MVCNN的设定，他们要求固定的视图采集位置为了提高三维检索任务中的精度并提高模型的通用性，我们提出了基于多环路多视图三维物体表示框架的神经网络模型，该模型首先使用多个正交的环路进行多视图投影得到多组具有强时序关系的试图序列，示意图如上，为三个环路示意。在视图层级中全卷积神经网络被用于视图级粗糙特征抽取，将得到的特征经过环路正则化模块得到了环路区分的视图级特征。在这基础上我们使用长短时记忆神经网络对同一个环路内的视图进行时序建模得到环路级视图特征，然后融合多个环路特征得到全局物体表示。</p>
+							<img src="multiloop-view-cnn.png" style="width:90%;height: 90%;margin: 6px;">
+							<p>除了固定视角会产生通用性难题外，也会产生了严重的过拟合问题，针对这一过拟合问题，我们提出了高效的特征增强方法---DropMax，即以一定概率drop掉高响应的特征，使得弱的特征能被学习和强化，使得网络能够应对测试时缺失的特征。</p>
+							<img src="DropMax.png" style="width:90%;height: 90%;margin: 6px;">
+						</div>
+						
+						<div class="section" id="Point-Cloud-Representation">
+							<h3>点云的表示<a class="headerlink" href="#Point-Cloud-Representation"
+								title="Permalink to this headline">¶</a></h2>
+							<p>点云是用于表示多维点集的数据结构，常用于表示三维数据，在3D点云中，点通常表示物体表面的几何坐标。当一束激光照射到物体表面时，所反射的激光会携带方位、距离等信息。若将激光束按照某种轨迹进行扫描，便会边扫描边记录到反射的激光点信息，由于扫描极为精细，则能够得到大量的激光点，因而就可形成激光点云。</p>
+						</div>
 
-                    <div class="section" id="MeshNet">
-                      <h3>MeshNet<a class="headerlink" href="#MeshNet" title="Permalink to this headline">¶</a></h3>
-                      <img src="meshnet.jpg" style="width:90%;height: 90%;margin: 6px;">
-                      <p></p>
-                      <p>网格（mesh）是三维物体的一类重要且有效的数据类型。而基于网格数据的研究却非常缺乏，这主要是由网格自身的复杂性和不规则性造成的。在本篇文章中，我们提出了一种名为 MeshNet 的网格神经网络，它能够直接基于网格数据进行三维物体表示。我们提出了以面为单元和分割面特征的方法以解决复杂性和不规则性问题。我们把该方法应用到了三维物体的分类和检索任务中，实验结果及同其他当前最优方法的对比表明，MeshNet 能够达到令人满意的分类和识别效果，从而表明了其在表示三维物体方面的有效性。</p>
-                        <img src="meshnet2.jpg" style="width:90%;height: 90%;margin: 6px;">
+						<div class="section" id="Mesh-Representation">
+							<h3>Mesh的表示<a class="headerlink" href="#Mesh-Representation"
+								title="Permalink to this headline">¶</a></h2>
+							<p>立体网格作为三维物体的一类重要且有效的数据类型，在计算机视觉和计算机图形学领域得到了广泛的关注和研究。在表示三维物体的任务中，近年来已经有许多基于体素、多视图和点云的三维物体表示方法研究，而基于网格数据的研究却非常缺乏，网格数据是一系列点、边、面的集合，不同元素间连接关系复杂，元素数量不固定且无序，由此带来的复杂性和不规则性都为基于网格数据的学习带来了困难。我们提出了一种名为 MeshNet 的网格神经网络，它能够直接基于网格数据进行三维物体表示。在该方法中，我们提出了以面为单元和分割面特征的方法，通过逐面处理和全局池化的方法解决无序性问题，并将面的特征划分为空间特征和结构特征以细化学习，此外还提出了用于扩大感受区域的网格卷积结构。通过我们的方法，MeshNet 能够解决网格数据的复杂性和不规则性问题，从而进行良好的三维物体表示。我们把该方法应用到了三维物体的分类和检索任务中，实验结果及同其他当前最优方法的对比表明，MeshNet 能够达到令人满意的分类和识别效果，从而表明了其在表示三维物体方面的有效性。</p>
+							<img src="Mesh.png" style="width:90%;height: 90%;margin: 6px;">
+						</div>
+					  
+						<div class="section" id="Fusion-Representation">
+							<h3>融合表示<a class="headerlink" href="#Fusion-Representation"
+								title="Permalink to this headline">¶</a></h2>
+							<p>三维物体的语义理解在计算机视觉和多媒体领域一直收到广泛的研究关注，近年来随着深度学习的广泛应用，各种不同模态下具有不同表现形式的深度模型已达到优秀的性能，视图和点云对三维物体的表示均具有各自的优势，但是很少有人将点云数据和多视图数据联合用于三维表示，我们提出首个点云与视图数据融合的三维立体视觉表征学习算法。同一三维物体可以由一个点云和多视图两种数据类型进行描述，核心思路是融合点云和视图这两种模态数据，我们发现现有的方法在点云局部特征的提取上面表现较好，但是没有考虑到各个局部特征的可辨别能力，不同的局部特征在表征物体时重要程度不同，因此我们引入视图的全局特征与点云的局部特征融合得到注意力掩膜，表征不同局部特征的重要性，然后将注意力掩膜以残差连接的方式对点云特征进行增强。最后，我们将增强后的点云特征和多视图特征融合为两个模态的统一表征。我们取最后的特征进行三维物体的分类识别和检索，并获得了相较于点云和多视图单独模态的性能提升，同时在数据缺失的情况下，我们的模型有助于两种模态之间的互补，展现出了较优的鲁棒性。</p>
+							<img src="Fusion-Representation.png" style="width:90%;height: 90%;margin: 6px;">
+							<p>除了基本的点云视图融合表示模型外，我们又提出一种点云与视图多模态融合的新型三维立体视觉表征学习算法。对于同一三维物体，通常由一个点云和若干个视图共同描述，核心思路是建模点云与视图之间的关系，并利用其关系进一步组合两个模态的融合方式。首先，我们提出关系得分网络用于学习每个视图的关系分数，不同的视图包含不同的局部特征，因此在融合时与整个点云的关系不同，有些视图更有区分性，而有些视图信息含量少不适合进行融合，我们的关系得分网络学习到不同视图与点云融合时的关系分数，表征其是否适合与点云数据进行融合。然后在不同视图关系分数不同的基础上，我们进一步建立了点云-单视图融合网络和点云-多视图融合网络，点云-单视图融合网络建模一对一的点云-视图关系并进行融合获得特征，点云-多视图融合网络则建模一对多的点云-多视图关系，仅选择关系分数高的视图进行融合活的特征。最终，我们集联两种融合网络得到的特征作为点云和多视图的有效融合的统一表征，送入多层感知器进行分类。我们所提出的模型在三维物体的分类识别和检索等任务上，均取得了较好的性能提高。</p>
+						</div>
+					  
+						<div class="section" id="Rotation-Invariant-Equivalent-Representation">
+							<h3>面向旋转不变等鲁棒表示<a class="headerlink" href="#Rotation-Invariant-Equivalent-Representation"
+								title="Permalink to this headline">¶</a></h2>
+							<p>3D数据表示是3D视觉中的重要且基本的过程，其在过去几年中萌发了许多深度卷积神经网络 （CNN）方法。我们注意到大多数3D数据，例如点云，网格和视图，都是不规则且无序的。并且3D数据表示在实际应用中还需要保持排列不变性。传统的3D数据表示方法采用经典卷积或池化方法。值得注意的是，经典卷积可以更好地利用网格中表示的数据的空间局部相关性，但在无序数据中可能导致对形状信息和数据顺序的过拟合。池化方法可以聚合局部特征并保持置换不变性，但忽略局部区域中的3D数据之间的相关性。</p>
+							<p>为了解决这个问题，我们提出了一种无序的关联卷积（UR-Conv）流程图如上其具有信息流动与信息聚集两个步骤，它将类似卷积的操作应用于无序的3D数据，并且对输入数据的顺序不敏感。我们的方法捕获数据之间的局部依赖性，这增强了模型的表示能力和鲁棒性。我们将我们提出的方法应用于3D物体分类和检索任务，并与最先进的方法进行比较。实验结果表明，我们的UR-Conv实现了更好的性能和更好的鲁棒性。</p>
+							<img src="Rotation-Invariant-Equivalent.png" style="width:90%;height: 90%;margin: 6px;">
+						</div>
+				    </div>
 
-                    </div>
+					<div class="section" id="3D-Object-Retrieval-And-Recognition">
+						<h2>3D对象识别与检索<a class="headerlink" href="#3D-Object-Retrieval-And-Recognition"
+							title="Permalink to this headline">¶</a></h2>
+						<p>检索，就是在数据库中查找到想要的东西。对于3d对象的检索任务，我们希望输入3d对象，检索到相似的对象。在这个深度学习的时代，深度特征的天下，如何设计和提取方便比较3d对象相似性的特征是我们共同面对的挑战。为此，我们做过许多探索。</p>
+						<p>哈希是通过将高维特征描述符嵌入低维度的、能够保持对象相似特性的汉明空间中，以在大规模数据集中进行最近邻搜索的有效方法。然而，现有的使用卷积神经网络学习哈希映射的方法，在探索视图之间的关系和处理三维多模态数据方面，仍然存在挑战，这限制了检索性能的进一步提升，以及制约了哈希方法在三维多模态数据上的推广。我们的工作主要分为两个部分：1.利用多视图哈希方法增强传统深度哈希学习模型；2.利用统一的汉明空间映射实现三维多模态信息融合，以及高效的三维单(跨)模态检索。</p>
 
-                    <div class="section" id="PVNet">
-                      <h3>PVNet<a class="headerlink" href="#PVNet" title="Permalink to this headline">¶</a></h3>
-                      <img src="pvnet.jpg" style="width:90%;height: 90%;margin: 6px;">
-                      <p></p>
-                      <p>点云和多视图数据分别是两种典型的三维物体的表示方式。最近，不同的处理他们的深度网络模型涌现出来。我们的PVNet是第一种同时使用点云和多视图数据的三维物体分类神经网络。我们提出嵌入注意力融合来利用两种模态的互补性。我们的方法在ModelNet40数据库上验证。实验结果和与其他方法的对比证明我们的框架可以实现更佳的性能。</p>
-                    </div>
+					</div>
 
-
-                    <div class="section" id="retrieval">
-                      <h3>DeepCCFV: Camera Constraint-Free Multi-View Convolutional Neural Network for 3D Object
-                        Retrieval<a class="headerlink" href="#retrieval" title="Permalink to this headline">¶</a></h3>
-                      <img src="ccfv.jpg" style="width:90%;height: 90%;margin: 6px;">
-                      <p></p>
-                      <p>以MVCNN为代表的众多基于多视图3D对象识别和检索方法都取得了令人瞩目的性能表现，但是按照MVCNN的设定，他们要求固定的视图采集位置。固定的视图采集位置是很方便训练的，但在实际应用中仍然要求固定相机位置却是不合理的。真实应用场景中多视图的采集可能来自任何位置。但是，由于固定视图位置和自由视图位置输入分布的差异，直接将固定相机视图位置训练的网络迁移到自由相机位置的真实场景中会带来性能的下降，特别是当视图数目较少时我们观察到了明显的性能下降。
-                        这种性能下降本质上反映的是固定视图位置上训练产生的过拟合问题。我们推测过拟合问题可能来自两个方面：（1）过拟合训练时固定的视图位置，不能适应真实场景中随机的视图位置（2）过拟合训练时相对完整的信息，不能适应真实场景中信息不足的情况。考虑到训练时视图位置的采集已经是很密集的采样，本文认为影响更大的是第二方面的过拟合问题。
-                        针对这个问题，本文提出了高效的特征增强方法---DropMax，即以一定概率drop掉高响应的特征，使得弱的特征能被学习和强化，使得网络能够应对测试时损失的特征。
-                        为了验证方法的有效性，本文设计了单模态（仅多视图）和跨模态（多视图和点云）的检索实验。实验结果表明本文提出方法DropMax在自由相机位置设定时，特别是视图明显缺失时相比其他方法有明显的性能提升。
-                        </p>
-                    </div>
-
-                  </div>
-
-
-
-
-
-                  <div class="section" id="Activity-Recognition">
-                    <h2>ActivityNet Spatio-temporal Action Localization (AVA)<a class="headerlink" href="#Activity-Recognition"
-                        title="Permalink to this headline">¶</a></h2>
-                    <p>我们的队伍拿下了在CVPR 2018上举办的ActivityNet挑战赛中AVA任务的两个赛道(分别是视觉赛道和全模态赛道)的冠军。该赛事是由Google和UC Berkeley同时承办，旨在评估当前算法在定位人类时空行为动作上的准确率。其比赛数据由电影片段组成，每个片段中包含多个需要识别对象，每个识别对象包含多个标签动作。任务的目的是需要对每个从电影中抽取的15分钟片段中的每一帧的所有对象和其正在进行的所有动作进行检测。</p>
-                    <img src="ava.jpg" style="width:90%;height: 90%;margin: 6px;">
-                  </div>
-
-
-
-
-                  <div class="section" id="Computer-Vision-in-Social-Media">
-                    <h2>社交媒体中的计算机视觉<a class="headerlink" href="#Computer-Vision-in-Social-Media"
-                        title="Permalink to this headline">¶</a></h2>
-                    <p>图像是人们生活中重要的部分，在图像及视频信息爆炸的时代，其重要性不断得到增强。计算机视觉算法的创新可以降低以图像和视频用作数据处理对象的成本。我们从社交媒体流中收集和过滤数据，然后基于计算机视觉算法实现对社交数据的事件分类和个性化情感识别。</p>
-
-                    <div class="section" id="Data-collection">
-                      <h3>基于实时社交媒体流所收集的品牌数据<a class="headerlink" href="#Data-collection"
-                          title="Permalink to this headline">¶</a></h3>
-                      <img src="bsndataset.jpg" style="width:90%;height: 90%;margin: 6px;">
-                      <p></p>
-                      <p>我们在本文中提出了一种从社交媒体流中收集数据的新方法，并制作了一个大规模的微博数据集进行评估。
-                      </p>
-                      <img src="bdg.jpg" style="width:90%;height: 90%;margin: 6px;">
-                      <p>由于多媒体形式的社交帖子数量不断增长，我们的多方位品牌跟踪方法不仅基于动态关键词（传统关键词方法），还收集社交影响因素（用户、社交关系和位置）以及视觉多媒体内容数据。 为了评估方法的有效性，我们制作了一个包含品牌和产品信息的大型微博数据集，其共有300万个微博帖子，100个知名品牌的超过120万幅图像。</p>
-                    </div>
-
-                    <div class="section" id="Data-filtering">
-                      <h3>基于平滑社交多视图的品牌相关微博过滤<a class="headerlink"
-                          href="#Data-filtering" title="Permalink to this headline">¶</a></h3>
-                      <img src="mfm.jpg" style="width:90%;height: 90%;margin: 6px;">
-                      <p></p>
-                      <p>我们研发了一种通过考虑多媒体内容和社会品牌特征来过滤噪声的精确分类器。</p>
-                      <p>特别是，我们开发了一种基于多视图和判别性社会意识的微博筛选方法，并且除了传统的基于内容的特征外，还将微博之间的品牌和社会关系结合起来，以学习区分性和社交特征。</p>
-                      <p>此外，我们训练了包括SVM在内的现有分类器，通过对比实验验证了我们的方法在Brand-Social-Net数据集上的品牌数据收集任务中方法对噪声过滤的有效性，我们的方法可以显著提高噪声过滤性能并提高在品牌收集任务中的数据质量。</p>
-
-                    </div>
-
-                    <div class="section" id="Event-classification">
-                      <h3>事件分类<a class="headerlink" href="#Event-classification" title="Permalink to this headline">¶</a></h3>
-                      <img src="ec.jpg" style="width:90%;height: 90%;margin: 6px;">
-                      <p></p>
-                      <p>随着社交媒体平台的快速发展，大规模社交媒体数据迅速增加。从实时社交媒体流中提取重大事件有着卓越的社会和营销价值。 我们利用深度学习和社交跟踪来解决事件分类任务的两个主要挑战，即短篇/会话、社交帖子中文本与相应图像之间不相符的矛盾，以及快速变化的内容。 我们首先提出了一种多模式多实例深度网络（M2DN）架构来处理弱标记的微博数据。 然后我们采用社交跟踪来丰富测试样本。 实验结果表明，与现有技术相比M2DN在事件分类任务中具有更好的性能。 相关工作发表在ACM Transactions on Intelligent Systems and Technology。</p>
-                    </div>
-
-
-                    <div class="section" id="Emotional-calculation">
-                      <h3>情绪识别<a class="headerlink" href="#Emotional-calculation" title="Permalink to this headline">¶</a></h3>
-                      <img src="emotioncal.jpg" style="width:90%;height: 90%;margin: 6px;">
-                      <p></p>
-                      <p>情绪识别（ER）在人际交往和人机交互中起着重要作用。 由于人类情绪表达的多样性，许多ER方法通过采用多模态框架区同时处理多种生理信号。 与现有方法不同，我们提出在超图学习框架中研究人格对情绪行为的影响。 首先，我们将受试者和所接受的刺激生成复合元组顶点（受试者，刺激）。 其次，我们构建了多模态超边界，以形成不同受试者之间的人格相关性以及相应刺激之间的生理相关性。 最后，我们获得了顶点加权多模态多任务超图的联合学习后的个性化情感识别（PER）结果。 实验结果证明了该方法的优越性。 相关工作发表在IJCAI-18上。</p>
-                    </div>
-
-                  </div>
-
-
-
-
-
-
-
-
-
-
+						<table class="table " role="grid" style="width: 100%;"> 
+						<tbody>
+						
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Zhengyue Huang, Zhehui Zhao, Hengguang Zhou, Xibin Zhao, Yue Gao. <br><b><strong>DeepCCFV: Camera Constraint-Free Multi-View Convolutional Neural Network for 3D Object Retrieval.</strong></b><br>AAAI, 2019.<br>[<a href="http://gaoyue.org/paper/DeepCCFV.pdf">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Jianwen Jiang, Di Bao, Ziqiang Chen, Xibin Zhao, Yue Gao. <br><b><strong>MLVCNN: Multi-Loop-View Convolutional Neural Network for 3D Shape Retrieval.</strong></b><br>AAAI, 2019.<br>[<a href="http://gaoyue.org/paper/mlvcnn.pdf">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Haoxuan You, Yifan Feng, Xibin Zhao, Changqing Zou, Rongrong Ji, Yue Gao. <br><b><strong>PVRNet: Point-View Relation Neural Network for 3D Shape Recognition.</strong></b><br>AAAI, 2019.<br>[<a href="http://gaoyue.org/paper/PVRNet.pdf">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Haoxuan You#, Yifan Feng#, Rongrong Ji, Yue Gao*. <br><b><strong>PVNet: A Joint Convolutional Network of Point Cloud and Multi-View for 3D Shape Recognition.</strong></b><br>ACM Conference on Multimedia, 2018.<br>[<a href="http://gaoyue.org/paper/PVNet.pdf">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Yifan Feng, Zizhao Zhang, Xibin Zhao, Rongrong Ji, Yue Gao*. <br><b><strong>GVCNN: Group-View Convolutional Neural Networks for 3D Shape Recognition.</strong></b><br>CVPR, 2018.<br>[<a href="http://gaoyue.org/paper/Feng_GVCNN_Group-View_Convolutional_CVPR_2018_paper.pdf">paper</a>]</p></td></tr>
+						</tbody>
+						</table>
 
                 </div>
 
@@ -305,32 +267,39 @@
 
 
               <ul>
-                <li><a class="reference internal" href="#">计算机视觉</a>
+                <li><a class="reference internal" href="#Computer-Vision">立体视觉 3D Vision</a>
                   <ul>
 
 
-                    <li><a class="reference internal" href="#3D-Object-Recognition-and-Retrieval">三维物体识别和检索</a>
-                      <ul>
+                    <li><a class="reference internal" href="#3D-Data-Generate">3D数据生成</a>
+                     <!--  <ul>
                         <li><a class="reference internal" href="#GVCNN">GVCNN</a></li>
                         <li><a class="reference internal" href="#MLVCNN">MLVCNN</a></li>
                         <li><a class="reference internal" href="#MeshNet">MeshNet</a></li>
                         <li><a class="reference internal" href="#PVNet">PVNet</a></li>
                         <li><a class="reference internal" href="#retrieval">DeepCCFV</a></li>
+                      </ul> -->
+                    </li>
+
+                    <li><a class="reference internal" href="#3D-Data-Representation">3D数据表示</a>
+					   <ul>
+                        <li><a class="reference internal" href="#Multi-Perspective-Representation">多视角的表示</a></li>
+                        <li><a class="reference internal" href="#Point-Cloud-Representation">点云的表示</a></li>
+                        <li><a class="reference internal" href="#Mesh-Representation">Mesh的表示</a></li>
+                        <li><a class="reference internal" href="#Fusion-Representation">融合表示</a></li>
+                        <li><a class="reference internal" href="#Rotation-Invariant-Equivalent-Representation">面向旋转不变等鲁棒表示</a></li>
                       </ul>
                     </li>
 
-                    <li><a class="reference internal" href="#Activity-Recognition">动作识别</a>
-                    </li>
 
 
-
-                    <li><a class="reference internal" href="#Computer-Vision-in-Social-Media">社交媒体中的计算机视觉</a>
-                      <ul>
+                    <li><a class="reference internal" href="#3D-Object-Retrieval-And-Recognition">3D对象识别与检索</a>
+                      <!-- <ul>
                         <li><a class="reference internal" href="#Data-collection">数据获取</a></li>
                         <li><a class="reference internal" href="#Data-filtering">数据过滤</a></li>
                         <li><a class="reference internal" href="#Event-classification">事件分类</a></li>
                         <li><a class="reference internal" href="#Emotional-calculation">情绪识别</a></li>
-                      </ul>
+                      </ul> -->
                     </li>
                   </ul>
                 </li>

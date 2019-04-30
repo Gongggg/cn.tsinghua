@@ -25,7 +25,7 @@
   <div class="container">
     <div class="header-container">
       <a class="header-logo" href="../index.htm" aria-label="Yue's Group"><img src="../static/img/logos/nlp-logo-small.png"
-          alt="" style="width: 30px;height: 30px;">&nbsp &nbsp 清华大学 - Yue's Group</a>
+          alt="" style="width: 30px;height: 30px;">&nbsp &nbsp iMoon: 智能媒体与认知研究组</a>
       <div class="main-menu">
         <ul>
           <li>
@@ -37,7 +37,7 @@
           </li>
 
           <li class="active">
-            <a href="../resrc/index">研究方向</a>
+            <a href="../resrc/index.htm">研究方向</a>
           </li>
 
           <li>
@@ -80,25 +80,27 @@
           <br>
           <h2>研究方向</h2>
           <br>
-          <p class="caption"><span class="caption-text">计算机视觉</span></p>
+          <p class="caption"><span class="caption-text">立体视觉</span></p>
           <ul>
-            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 三维物体识别与检索</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 动作识别</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 社交媒体与计算机视觉</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 3D数据生成</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 3D数据表示</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 3D对象识别与检索</a></li>
           </ul>
 
-          <p class="caption"><span class="caption-text">医疗影像分析</span></p>
+          <p class="caption"><span class="caption-text">脑科学</span></p>
           <ul>
-            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 脑退化疾病诊疗</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 高维度的脑网络</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 心血管疾病诊疗</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 医疗影像分割</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 图像情感预测与图像情感分布的差异</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 基于多超图神经网路的情感识别</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 基于多模态物理信号的情感识别 </a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 脑网络建模与挖掘（高阶脑网络）</a></li>
+			<li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 基于动态超图学习的小儿自闭症诊断</a></li>
           </ul>
 
-          <p class="caption"><span class="caption-text">机器学习</span></p>
+          <p class="caption"><span class="caption-text">复杂网络</span></p>
           <ul>
-            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 超图学习</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 度量学习</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 超图结构学习模型</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 超图神经网络模型</a></li>
+			<li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 网络安全态势感知</a></li>
           </ul>
 
           <!-- <p class="caption"><span class="caption-text">工业互联网安全</span></p>
@@ -131,7 +133,7 @@
                     研究方向
                   </a> &gt;
                 </li>
-                <li>医疗影像分析</li>
+                <li>脑科学</li>
               </ul>
 
 
@@ -156,61 +158,77 @@
 
 
 
-                  <h1>医疗影像分析<a class="headerlink" href="#" title="Computer-Vision">¶</a></h1>
+                  <h1>脑科学<a class="headerlink" href="#" title="Computer-Vision">¶</a></h1>
 
-                  <p>本部分工作主要侧重于医学图像处理和计算机辅助诊断。 在医学图像处理中，我们为脑图像分割和识别设计了快速且有效的深度学习方法。我们的研究设计了中国国家重点研发计划支持的脑出血性疾病诊断新方法，如阿尔茨海默病和心血管疾病。</p>
-
-
-
-
-
-
-
-
-
-
-                  <div class="section" id="dbdd">
-                    <h2>脑退化疾病诊断<a class="headerlink" href="#dbdd" title="Permalink to this headline">¶</a></h2>
-                    <img src="mia3.1.jpg" style="width:90%;height: 90%;margin: 6px;">
-                    <p></p>
-                    <p>脑退化疾病，尤其是阿尔茨海默病，已经给如今的老龄化社会造成了严重的影响。然而与阿尔茨海默病的轻度认知障碍这一危险期相关的脑部轻微变化的检测仍是一个十分具有挑战性的任务。与现有的使用磁共振成像数据和正电子发射断层成像数据等多模态数据进行轻度认知障碍检测的方法不同，我们提出了一种使用T1加权成像数据、弥散张量成像数据、静息态功能磁共振数据和动脉自旋标记磁共振灌注成像数据这四种MRI序列进行检测的方法。由于这些磁共振序列可以在临床的常规扫描中捕捉大脑各个方面的结构和功能，所以可以通过融合这些序列之间的信息寻找物体间的关系。为此，我们提出了集中超图学习方法，该方法可以通过使用多种磁共振成像数据更好地建模对象之间的关系以实现更准确的轻度认知障碍诊断。</p>
+                  <div class="section" id="emotion-prediction">
+                    <h2>图像情感预测与图像情感分布的差异<a class="headerlink" href="#emotion-prediction" title="Permalink to this headline">¶</a></h2>
+                    <img src="emotion-prediction.png" style="width:90%;height: 90%;margin: 6px;">
+                    
+					<p align="center">单词a和单词b是图像分类对于测试图像的目标结果；饼状图显示了通过情感预测对八种情感的目标分布。</p>
+					<p>旨在消除情绪鸿沟的具有识别度的图像特征已经有了显著的进步。基于观众对于图像的情绪能够达成共识，现有的工作主要将主导情感类别或情绪状态的平均值作为图像情感的标签。然而观众所感知的情绪受到个人和情景因素共同影响，往往是主观个性化的。因此我们提出将图像的分类转为离散的概率分布来更好的表征图像所隐含的情感信息。此外，我们的方法优化权重来显式的表达不同特征的重要性。</p>
+					<p></p>
+                    
 
 
                   </div>
 
 
-                  <div class="section" id="hobn">
-                    <h2>高阶脑网络<a class="headerlink" href="#hobn" title="Permalink to this headline">¶</a></h2>
-                    <img src="mia3.2.jpg" style="width:90%;height: 90%;margin: 6px;">
-                    <p></p>
-                    <p>通过使用静息态功能磁共振估计的脑功能连接网络已经成为一种有前景的神经退化疾病精准诊断方法。然而传统的功能连接网络的本质是一个低阶网络，仅考虑了大脑区域之间的相关性。由这类网络得到的特征可以无法作为有效的生物疾病标志。为了克服这一困难，我们提取新的高阶功能连接相关性，该相关性表征了低阶相关性在不同脑区对之间的相互作用。我们通过实验验证了高阶功能连接网络在疾病诊断上的有效性。</p>
+                  <div class="section" id="emotion-recognition-multi-hypergraph">
+                    <h2>基于多超图神经网路的情感识别<a class="headerlink" href="#emotion-recognition-multi-hypergraph" title="Permalink to this headline">¶</a></h2>
+                    <img src="emotion-recognition-multi-hypergraph.png" style="width:90%;height: 90%;margin: 6px;">
+                    <p align="center">Valence度量下正例与负例在不同脑区的，gamma频段脑电信号的方差</p>
+                    <p>在关键领域的核心人工操作中，人员的情绪状态对于任务的完成有着巨大的影响。为了能够实时对人员的情绪状态进行评估，我们使用了多模态超图神经网络对多模态生理信号进行建模，最终将情绪识别任务转化为图结构的顶点分类问题。在这种结构中，不同模态生理信号之间以及不同样本（测试者，刺激）之间的复杂关联被有效的建模。此外，我们选取了不同频率段的脑电信号对情绪与脑电之间的相关性进行量化计算，已有的生物学的结论也和我们的计算结果一致。</p>
                   </div>
 
 
 
-                  <div class="section" id="cdd">
-                    <h2>心血管疾病诊断<a class="headerlink" href="#cdd" title="Permalink to this headline">¶</a></h2>
-                    <img src="cdd.jpg" style="width:90%;height: 90%;margin: 6px;">
-                    <p></p>
-                    <p>心血管疾病诊断是医学领域中非常重要的问题。 在诊断过程中，医学图像处理和病变区域检测是人工智能应用的领域。 目前，我们研究的主要疾病包括心脏病（ASD），心室功能障碍（VSD），冠心病，脑出血和脑梗塞。</p>
+                  <div class="section" id="Emotion-Recognition-Multimodel">
+                    <h2>基于多模态物理信号的情感识别<a class="headerlink" href="#Emotion-Recognition-Multimodel" title="Permalink to this headline">¶</a></h2>
+                    <img src="Emotion-Recognition-Multimodel.png" style="width:90%;height: 90%;margin: 6px;">
+                    <p align="center">传统情绪识别 和 个性化情绪识别</p>
+                    <p>传统情绪识别将来自不同测试者的样本在测试集和训练集平等对待，而没有考虑训练集和测试集中来自同一测试者的样本之间是否存在更强的关联，来自不同测试者之间的样本存在哪些个人的生理属性中的差异。在这种情景下，我们将个人的生理和心理特征在超图结构中建模，并且对不同模态的生理信号所揭示的样本间的复杂关联通过中间层融合机制自适应进行融合。从而达到个性化精确情绪感知。</p>
                   </div>
 
 
 
-                  <div class="section" id="mis">
-                    <h2>医学图像分割<a class="headerlink" href="#mis" title="Permalink to this headline">¶</a></h2>
-                    <img src="mia3.4.jpg" style="width:90%;height: 90%;margin: 6px;">
+                  <div class="section" id="Network-Model-And-Mining">
+                    <h2>脑网络建模与挖掘（高阶脑网络）<a class="headerlink" href="#Network-Model-And-Mining" title="Permalink to this headline">¶</a></h2>
                     <p></p>
-                    <p>脑解剖结构的精准分割在各种不同的神经成像应用中至关重要，例如可以将其应用在神经退化疾病的生物标志物成像研究。尽管多图谱分割技术已经在医学图像领域中取得了不错的效果，但是该方法在对对比度较差的图像进行解剖结构分割时仍有一定的局限性。为此，我们针对磁共振成像中低对比度区域的小解剖结构的分割问题，提出了使用层次超图学习的全新多图谱分割框架。我们将提出的方法与其他三个目前最优的基于块的标签融合方法在老年人脑图像中的深层灰质结构和阿尔茨海默病神经影像学倡议（ADNI）数据集中的海马体上进行分割实验，实验结果表明我们的方法有显著的提升。</p>
-                  </div>
+                    <p>由静息态功能核磁共振成像技术估测得到的脑功能连接网络已经成为神经退化疾病精确诊断中一种比较具有前景的方法。然而传统的功能连接网络仅仅考虑了大脑区域之间的相关性，因此其本质是一个低阶网络。由这类脑网络得到的特征可能无法作为有效的疾病生物标记。针对这个问题，我们提出一种新的高阶功能连接相关性提取方法，该方法可以建模不同脑区对之间低阶相关性的相互作用。最后，我们通过实验验证了高阶功能连接网络在疾病诊断上的有效性。</p>
+					<img src="Low-Order-Connection-Network.png" style="width:90%;height: 90%;margin: 6px;">
+                    <img src="High-Order-Connection-Network.png" style="width:90%;height: 90%;margin: 6px;">
+					<img src="Time-Order-Average.png" style="width:90%;height: 90%;margin: 6px;">
+					<p align="center"> 时序均值对诊断比较重要的连接</p>
+					<img src="Time-Order-Variance.png" style="width:90%;height: 90%;margin: 6px;">
+					<p align="center"> 时序方差对诊断比较重要的连接</p>
+				  </div>
 
 
 
 
+					<div class="section" id="Autism-Diagnosis-Dynamic-HyperGraph">
+                    <h2>基于动态超图学习的小儿自闭症诊断<a class="headerlink" href="#Autism-Diagnosis-Dynamic-HyperGraph" title="Permalink to this headline">¶</a></h2>
+                    <p></p>
+                    <p>自闭症是一种由于神经系统失调导致的发育障碍，其病征包括不正常的社交能力、沟通能力、兴趣和行为模式。近年来许多研究发现自闭症与脑网络中某些连接的动态特性之间存在一定关联。本工作提出了一种小儿自闭症诊断算法，首先通过Lasso提取脑网络的动态特性，进一步通过动态超图学习实现自闭症诊断。我们在167个被试上进行了实验，5次交叉验证下诊断正确率达到76%，我们进一步提取出了对自闭症诊断比较重要的脑网络连接，这与之前的研究发现相一致。</p>
+				  </div>
 
 
 
-
+				<table id="paperlist" class="table " role="grid" style="width: 100%;"> 
+						<tbody>
+						
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Junjie Zhu, Yuanbiao Wang, Yifan Feng, Sicheng Zhao, Xibin Zhao, Yue Gao<br><b><strong>Individual-Specific Emotion Recognition from Multimodal Physiological Signals</strong></b><br>ACM MM 2019 投稿中<br>[<a href="#paperlist">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Junjie Zhu , Xibin Zhao , Han Hu , Yue Gao<br><b><strong>Emotion Recognition from Physiological Signals Using Multi-Hypergraph Neural Network</strong></b><br>ICME 2019<br>[<a href="#paperlist">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Junjie Zhu, Yuxuan Wei, Yifan Feng, Xibin Zhao, Yue Gao<br><b><strong>Emotion Recognition with Multi-hypergraph Neural Networks Combining Multimodal Physiological Signals</strong></b><br>ACM Transactions on Multimedia Computing, Communications, and Applications 投稿中<br>[<a href="#paperlist">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Guiguang Ding, Yue Gao, Xin Zhao, Youbao Tang, Jungong Han, Hongxun Yao, Qingming Huang<br><b><strong>Discrete Probability Distribution Prediction of Image Emotions With Shared Sparse Learning.</strong></b><br>IEEE Transactions on Affective Computing (TAFFC), 2019.<br>[<a href="#paperlist">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Amir Gholaminejad, Guiguang Ding, Yue Gao, Jungong Han, Kurt Keutzer. <br><b><strong>Personalized Emotion Recognition by Personality-aware High-order Learning of Physiological Signals.</strong></b><br>ACM Transactions on Multimedia Computing Communications and Applications (TOMM) 2019<br>[<a href="#paperlist">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Hongxun Yao, Yue Gao, Guiguang Ding, Tat-Seng Chua. <br><b><strong>Predicting Personalized Image Emotion Perceptions in Social Networks. </strong></b><br>IEEE Transactions on Affective Computing (TAFFC) 2018<br>[<a href="#paperlist">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Yue Gao, Guiguang Ding, Tat-Seng Chua. <br><b><strong>Real-Time Multimedia Social Event Detection in Microblog. </strong></b><br>IEEE Transactions on Cybernetics (TCYB) 2018<br>[<a href="#paperlist">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Hongxun Yao, Yue Gao, Rongrong Ji, Guiguang Ding.  <br><b><strong>Continuous Probability Distribution Prediction of Image Emotions via Multi-Task Shared Sparse Regression. </strong></b><br>IEEE Transactions on Multimedia (TMM) 2017<br>[<a href="#paperlist">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Guiguang Ding, Yue Gao, Jungong Han. <br><b><strong>Learning Visual Emotion Distributions via Multi-Modal Features Fusion. </strong></b><br>ACM International Conference on Multimedia 2017<br>[<a href="#paperlist">paper</a>]</p></td></tr>
+						<tr  ><td><p style="line-height:20px;margin-bottom:0rem">Zizhao Zhang, Shoujun Xu, Sichao Shen, Lei Wei, Baojuan Li, Yue Gao <br><b><strong>Diagnosis of Childhood Autism using Dynamic Hypergraph Learning</strong></b><br>MICCAI 2019<br>[<a href="#paperlist">paper</a>]</p></td></tr>
+						</tbody>
+						</table>
 
 
 
@@ -238,22 +256,24 @@
           <div class="pytorch-right-menu" id="pytorch-right-menu">
             <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
 
-
               <ul>
-                <li><a class="reference internal" href="#">医疗影像分析</a>
+                <li><a class="reference internal" href="#">脑科学</a>
                   <ul>
-
-                    <li><a class="reference internal" href="#dbdd">脑退化疾病诊断</a>
+					
+					<li><a class="reference internal" href="#emotion-prediction">图像情感预测与图像情感分布的差异</a>
+					</li>
+					
+                    <li><a class="reference internal" href="#emotion-recognition-multi-hypergraph">基于多超图神经网路的情感识别</a>
                     </li>
 
 
-                    <li><a class="reference internal" href="#hobn">高阶脑网络</a>
+                    <li><a class="reference internal" href="#Emotion-Recognition-Multimodel">基于多模态物理信号的情感识别</a>
                     </li>
 
-                    <li><a class="reference internal" href="#cdd">心血管疾病诊断</a>
+                    <li><a class="reference internal" href="#Network-Model-And-Mining">脑网络建模与挖掘（高阶脑网络）</a>
                     </li>
 
-                    <li><a class="reference internal" href="#mis">医学图像分割</a>
+                    <li><a class="reference internal" href="#Autism-Diagnosis-Dynamic-HyperGraph">基于动态超图学习的小儿自闭症诊断</a>
                     </li>
 
 
