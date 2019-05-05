@@ -12,11 +12,11 @@ navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:
 p.clean {
     text-indent: 0px;
 }
-h1 a {
+/* h1 a {
     
-    text-shadow: 2px 2px #000000 !important;
-    color: #ffffff !important;
-}
+    text-shadow: 0px 0px #000000 !important;
+    color: #f00000 !important;
+} */
 
 footer {
   background-color: #171f24;
