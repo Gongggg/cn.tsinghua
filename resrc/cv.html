@@ -25,9 +25,13 @@
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
-      <a class="header-logo" href="../index.htm" aria-label="Yue's Group"><img
-          src="../static/img/logos/nlp-logo-small.png" alt="" style="width: 30px;height: 30px;">&nbsp &nbsp iMoon:
-        智能媒体与认知研究组</a>
+
+      <a class="header-logo" href="../index.htm" aria-label="Yue's Group" style="font-size:18px;font-weight:bold;width: 400px;">
+        <!-- <img src="../static/img/logos/nlp-logo-small.png" alt="" style="width: 40px;height: 40px;"> -->
+        智能媒体与认知研究组 
+        <p style="font-size:13px;font-weight:lighter">iMoon: Intelligent Media and Cognition Group</p> 
+      </a>
+      
       <div class="main-menu">
         <ul>
           <li>
@@ -39,7 +43,7 @@
           </li>
 
           <li class="active">
-            <a href="../resrc/index.htm">研究方向</a>
+            <a href="../resrc/index">研究方向</a>
           </li>
 
           <li>
@@ -89,6 +93,14 @@
             <li class="toctree-l1"><a class="reference internal" href="cv.html">&#8226 3D对象识别与检索</a></li>
           </ul>
 
+          <p class="caption"><span class="caption-text">复杂网络</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 超图结构学习模型</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 超图神经网络模型</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 网络安全态势感知</a></li>
+          </ul>
+
+
           <p class="caption"><span class="caption-text">脑科学</span></p>
           <ul>
             <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 图像情感预测与图像情感分布的差异</a></li>
@@ -97,14 +109,7 @@
             <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 脑网络建模与挖掘（高阶脑网络）</a></li>
             <li class="toctree-l1"><a class="reference internal" href="mia.html">&#8226 基于动态超图学习的小儿自闭症诊断</a></li>
           </ul>
-
-          <p class="caption"><span class="caption-text">复杂网络</span></p>
-          <ul>
-            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 超图结构学习模型</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 超图神经网络模型</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="ml.html">&#8226 网络安全态势感知</a></li>
           </ul>
-
           <!-- <p class="caption"><span class="caption-text">工业互联网安全</span></p>
           <ul>
             <li class="toctree-l1"><a class="reference internal" href="iis.html">TIE submission</a></li>
@@ -155,6 +160,9 @@
               <article itemprop="articleBody" class="pytorch-article">
                 <div class="sphx-glr-example-title section" id="finetuning-torchvision-models">
                   <span id="sphx-glr-beginner-finetuning-torchvision-models-tutorial-py"></span>
+
+
+
 
 
                   <h1>立体视觉 3D Vision<a class="headerlink" href="#" title="Computer-Vision">¶</a></h1>
@@ -254,10 +262,10 @@
                     <p>
                       检索，就是在数据库中查找到想要的东西。对于3d对象的检索任务，我们希望输入3d对象，检索到相似的对象。在这个深度学习的时代，深度特征的天下，如何设计和提取方便比较3d对象相似性的特征是我们共同面对的挑战。为此，我们做过许多探索。
                     </p>
-                    <img src="retrieval.png" style="width:50%;margin: 6px;">
                     <p>
-                      随着图像数据的爆炸式增长，许多任务迫切需要高效的大规模图像检索算法。近似最近邻搜索在大规模数据集上平衡检索的耗时和效率，已引起越来越多的关注。端到端的深度学习模型是一种新兴的、具有很高效率的ANN搜索方法，但其精度相较于非哈希方法略有不足。哈希是通过将高维特征描述符嵌入低维度的、能够保持对象相似特性的汉明空间中，以在大规模数据集中进行最近邻搜索的有效方法。然而，现有的使用卷积神经网络学习哈希映射的方法，在探索视图之间的关系和处理三维多模态数据方面，仍然存在挑战，这限制了检索性能的进一步提升，以及制约了哈希方法在三维多模态数据上的推广。我们的工作主要分为两个部分：1.利用多视图哈希方法增强传统深度哈希学习模型；2.利用统一的汉明空间映射实现三维多模态信息融合，以及高效的三维单(跨)模态检索。
+                      哈希是通过将高维特征描述符嵌入低维度的、能够保持对象相似特性的汉明空间中，以在大规模数据集中进行最近邻搜索的有效方法。然而，现有的使用卷积神经网络学习哈希映射的方法，在探索视图之间的关系和处理三维多模态数据方面，仍然存在挑战，这限制了检索性能的进一步提升，以及制约了哈希方法在三维多模态数据上的推广。我们的工作主要分为两个部分：1.利用多视图哈希方法增强传统深度哈希学习模型；2.利用统一的汉明空间映射实现三维多模态信息融合，以及高效的三维单(跨)模态检索。
                     </p>
+
                   </div>
 
                   <table class="table " role="grid" style="width: 100%;">

@@ -9691,8 +9691,8 @@ pre {
 }
 
 .header-logo {
-  height: 30px;
-  width: 500px;
+  height: 40px;
+  width: 400px;
   background-image: url("../../static/img/logos/nlp-logo-small.png");
   background-repeat: no-repeat;
   background-size: 200px 30px;
@@ -9705,7 +9705,7 @@ pre {
     position: absolute;
     height: 30px;
     width: 300px;
-    top: 0px;
+    top: -10px;
     float: none;
   }
 }
