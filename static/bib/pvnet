@@ -1,0 +1,8 @@
+@inproceedings{you2018pvnet,
+  title={Pvnet: A joint convolutional network of point cloud and multi-view for 3d shape recognition},
+  author={You, Haoxuan and Feng, Yifan and Ji, Rongrong and Gao, Yue},
+  booktitle={2018 ACM Multimedia Conference on Multimedia Conference},
+  pages={1310--1318},
+  year={2018},
+  organization={ACM}
+}

@@ -1,0 +1,7 @@
+@inproceedings{feng2018gvcnn,
+  title={GVCNN: Group-view convolutional neural networks for 3D shape recognition},
+  author={Feng, Yifan and Zhang, Zizhao and Zhao, Xibin and Ji, Rongrong and Gao, Yue},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={264--272},
+  year={2018}
+}
