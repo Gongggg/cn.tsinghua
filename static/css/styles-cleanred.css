@@ -86,8 +86,12 @@ body {
   -moz-box-shadow: inset 1px 3px 1px -2px #e2e1e1;
   box-shadow: inset 1px 3px 1px -2px #e2e1e1;
 }
+
+#drump {color:#5c307d}
+
 .widewrapper.pagetitle {
-  background-color: rgb(108, 23, 134);
+  background-color: #5c307d;
+  /* rgb(108, 23, 134); */
   -webkit-box-shadow: inset 1px 3px 1px -2px #620F0F;
   -moz-box-shadow: inset 1px 3px 1px -2px #620F0F;
   box-shadow: inset 0px 0px 2px 1px #620F0F;
@@ -455,7 +459,7 @@ footer .indent30 {
     float: none;
     top: inherit;
     left: inherit;
-    margin: ;
+    /* margin: ; */
     background-color: transparent;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
