@@ -11,14 +11,25 @@ body {
   background-color: #ffffff;
 }
 
+.navbar .nav>li .dropdown-menu {
+  margin-top: -12px;
+}
+
+.navbar .nav>li:hover .dropdown-menu {
+  display: block;
+  background-color: rgba(92, 48, 125, 0.93)
+}
+
+
 #imoonbignav{
   background:#5c307d;
   border-radius:0px;
   margin-bottom: 0px;
-  height: 90px;
+  /* height: 90px; */
+  padding-bottom: 10px;
 }
 #imoonmidnav{
-  margin-top:5px;
+  margin-top:4px;
 }
 #imoonnav{
   font-size: 16px;
