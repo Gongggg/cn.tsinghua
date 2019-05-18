@@ -10,6 +10,42 @@ body {
   color: #646464;
   background-color: #ffffff;
 }
+
+#imoonbignav{
+  background:#5c307d;
+  border-radius:0px;
+  margin-bottom: 0px;
+  height: 90px;
+}
+#imoonmidnav{
+  margin-top:5px;
+}
+#imoonnav{
+  font-size: 16px;
+  margin-top: 28px;  
+}
+#imoonlogo{
+  padding-top: 14px;
+  width: 80px;
+  height: auto;
+}
+#imoontitle{
+  /* style="color:white;margin-top: 0px; font-size: 23px; margin-top: 16px" */
+  color:white;
+  margin-top: 0px; 
+  font-size: 23px; 
+  margin-top: 16px;
+}
+#imoontitle p{
+  /* style="font-size:17px;font-weight:lighter;margin-top: 4px" */
+  font-size:17px;
+  font-weight:lighter;
+  margin-top: 4px;
+}
+
+
+
+
 a {
   color: #7694a7;
 }
@@ -67,7 +103,7 @@ hr {
   color: #ffffff;
 }
 body {
-  padding-top: 14px;
+  padding-top: 0px;
   line-height: 23px;
 }
 .masthead {
@@ -87,7 +123,7 @@ body {
   box-shadow: inset 1px 3px 1px -2px #e2e1e1;
 }
 
-#drump {color:#5c307d}
+#drump {color:#ffffff}
 
 .widewrapper.pagetitle {
   background-color: #5c307d;
@@ -346,7 +382,7 @@ footer .indent30 {
   background-color: transparent;
 }
 .grove-navbar .grove-nav .nav > li > a {
-  color: #939393;
+  color: #ffffff;
   padding: 0;
   text-shadow: none;
 }
