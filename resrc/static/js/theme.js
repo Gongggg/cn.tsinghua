@@ -729,3 +729,17 @@ $(".sphx-glr-thumbcontainer").removeAttr("tooltip");
 $("table").removeAttr("border");
 
 },{"jquery":"jquery"}]},{},[1,2,3,4,5,6,7,8,"pytorch-sphinx-theme"]);
+
+
+
+
+$("#dropDownCur1").hide();
+$("#dropdownMenu1").hover(
+  function () {
+    $("#dropDownCur1").show();
+  });//为了鼠标可以进入下拉框
+$("#dropDownCur1").hover(function () {
+  $(this).show();//鼠标进入下拉框
+}, function () {
+  $(this).hide();//鼠标离开下拉框后，就会消失
+});
