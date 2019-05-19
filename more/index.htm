@@ -189,31 +189,26 @@
 						<div class="col-sm-10">
 							<section id="blog-posts">
 
+
+
+
+
+
+								<!-- 内容加这里 -->
+
+
+
+
+
+
+
+
 							</section>
 						</div>
-
-
 					</div>
-
-
 				</div>
 			</div>
-
-
-
 		</div>
-
-
-		<!--
-    <div class="widewrapper strong-highlight">
-      <div class="container calltoaction">
-        <span>Click on this button to offer us high-paying and world-changing jobs.</span>
-        <a href="#" class="btn btn-grove-one btn-xlg btn-bold">IT'S THE RIGHT CHOICE</a>
-      </div>
-    </div>
-    -->
-
-
 	</div>
 
 	<footer class="widewrapper footer">
@@ -304,110 +299,7 @@
 		$('ul.nav > li > a[href="' + document.location.pathname + '"]').parent().addClass('active');
 	</script>
 
-	<script>
 
-		function mdjump(mdurl) {
-			var mddata = "# test \n\n test \n test \n\n ## test";
-
-			$.getJSON(mdurl, function (data, status) {
-				mddata = data.news_detail;
-				console.log("结果为：" + mddata);
-			});
-
-			var converter = new showdown.Converter();
-			var html = converter.makeHtml(mddata);
-			$("#showmarkdown").empty();
-			$("#showmarkdown")[0].innerHTML = html;
-
-			pushHistory();
-			window.addEventListener("popstate", function (e) {
-				// alert("我监听到了浏览器的返回按钮事件啦");//根据自己的需求实现自己的功能 
-				history.go(0);
-			}, false);
-			function pushHistory() {
-				var state = {
-					title: "title",
-					url: "#"
-				};
-				window.history.pushState(state, "title", "#");
-			}
-
-		}
-
-		$('document').ready(function () {
-			var jsondata = [
-
-				{
-					"title": "test",
-					"brief": "ttttt",
-					"author": "ttttttt",
-					"year": "2014",
-					"month": "07",
-					"day": "03",
-					"imgurl": "static/img/logos/nlp-logo-small.png,static/img/logos/nlp-logo-small.png,static/img/logos/nlp-logo-small.png",
-					"url": ""
-				},
-				{
-					"title": "test",
-					"brief": "ttttt",
-					"author": "ttttttt",
-					"year": "2014",
-					"month": "07",
-					"day": "03",
-					"imgurl": "static/img/logos/nlp-logo-small.png",
-					"url": ""
-				}
-			];
-
-
-
-			$.ajaxSettings.async = false;
-			$.getJSON("news.json", function (data, status) {
-
-				jsondata = data;
-				// console.log(jsondata);
-
-			});
-
-
-
-
-			$.each(jsondata, function () {
-				$("section#blog-posts").append(
-					'<article class=\"blog-post\"><header><h2 class=\"title\"><a href=\"javascript:mdjump(\'' + this.url + '\')\">' +
-					this.title + '</a></h2></header><p>' + this.brief + '</p><div class="briefimg"></div><p>Posted on ' +
-					this.day + '/' + this.month + '/' + this.year + ' by ' + this.author +
-					'</p></article><hr><br>'
-				);
-				if (this.imgurl.length >= 1) {
-					$.each(this.imgurl.split(","), function () {
-						$("section#blog-posts div:last").append('<img style=" display:inline-block;" class="leadimage img-responsive" width="100" height="100" src=' + this + '> ');
-					});
-				}
-			});
-
-		});
-
-	</script>
-	<!-- 
-	<script>
-		$(function () {
-			console.log(inmarkdown);
-			if (inmarkdown == true) {
-				pushHistory();
-				window.addEventListener("popstate", function (e) {
-					alert("我监听到了浏览器的返回按钮事件啦");//根据自己的需求实现自己的功能 
-				}, false);
-				function pushHistory() {
-					var state = {
-						title: "title",
-						url: "#"
-					};
-					window.history.pushState(state, "title", "#");
-				}
-			}
-		}); 
-	</script> -->
 
 </body>
 
