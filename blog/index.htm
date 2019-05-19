@@ -131,8 +131,7 @@
 								<div style="width: 400px;height:65px"></div>
 							</a>
 						</div>
-						<div
-							style="position:absolute;top:5px;right:10px;border:1.5px solid rgb(255, 255, 255);border-radius: 5px;padding-left: 10px;padding-right: 10px">
+						<div id="language">
 							<a id='drump' href="#"><b>中 / </b></a><a id='drump' href="../../en_tsinghua/index.htm"><b>En</b></a>
 						</div>
 
@@ -306,6 +305,7 @@
 	</script>
 
 	<script>
+
 		function mdjump(mdurl) {
 			var mddata = "# test \n\n test \n test \n\n ## test";
 
@@ -319,7 +319,19 @@
 			$("#showmarkdown").empty();
 			$("#showmarkdown")[0].innerHTML = html;
 
-			$("#back h1").html("最新资讯 <a href=\"../blog/index.htm\"><button type=\"button\" class=\"btn btn-default\">返回</button></a>")
+			pushHistory();
+			window.addEventListener("popstate", function (e) {
+				// alert("我监听到了浏览器的返回按钮事件啦");//根据自己的需求实现自己的功能 
+				history.go(0);
+			}, false);
+			function pushHistory() {
+				var state = {
+					title: "title",
+					url: "#"
+				};
+				window.history.pushState(state, "title", "#");
+			}
+
 		}
 
 		$('document').ready(function () {
@@ -377,8 +389,25 @@
 		});
 
 	</script>
-
-
+	<!-- 
+	<script>
+		$(function () {
+			console.log(inmarkdown);
+			if (inmarkdown == true) {
+				pushHistory();
+				window.addEventListener("popstate", function (e) {
+					alert("我监听到了浏览器的返回按钮事件啦");//根据自己的需求实现自己的功能 
+				}, false);
+				function pushHistory() {
+					var state = {
+						title: "title",
+						url: "#"
+					};
+					window.history.pushState(state, "title", "#");
+				}
+			}
+		}); 
+	</script> -->
 
 </body>
 

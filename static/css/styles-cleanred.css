@@ -20,6 +20,16 @@ body {
   background-color: rgba(92, 48, 125, 0.93)
 }
 
+#language{
+  /* style="position:absolute;top:10px;right:10px;border:1.5px solid rgb(255, 255, 255);border-radius: 5px;padding-left: 10px;padding-right: 10px"> */
+  position:absolute;
+  top:10px;right:10px;
+  border:1.5px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
 
 #imoonbignav{
   background:#5c307d;
@@ -33,7 +43,7 @@ body {
 }
 #imoonnav{
   font-size: 16px;
-  margin-top: 28px;  
+  margin-top: 30px;  
 }
 #imoonlogo{
   padding-top: 14px;
