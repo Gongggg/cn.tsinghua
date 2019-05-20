@@ -890,7 +890,7 @@ div.showroom {
   padding-bottom: 30px;
 }
 div.showroom-controls {
-  background: url(../img/showroom-bg.png)/*tpa=https://nlp.stanford.edu/static/img/showroom-bg.png*/;
+  background: url(../img/showroom-bg.png);
   margin-bottom: 12px;
   height: 24px;
 }
