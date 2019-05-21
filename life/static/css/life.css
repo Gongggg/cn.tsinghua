@@ -12,11 +12,11 @@
 .card {
     padding: 15px;
     text-align: center;
-    max-width: 400px;
     border-radius: 5px;
     margin-bottom: 20px;
-    width: 300px;
-    min-height: 300px;
+    width: 340px;
+    max-width: 400px;
+    min-height: 340px;
     max-height: auto;
 }
 
@@ -28,7 +28,7 @@
 .card-body img {
     border-radius: 5px;
     max-width: 100%;
-    height: auto;
+    height: 310px;
 }
 
 .card:hover .card-body img {
@@ -50,6 +50,7 @@
     line-height: normal;
     font-weight: 300;
     color: #633991;
+    height: 96px;
 }
 
 .card-body {
@@ -58,6 +59,7 @@
 
 .news-content {
     margin: 5px 0;
+    height: 69px;
 }
 
 .news-inscription {
@@ -75,4 +77,68 @@
     border: 0;
     padding: 1rem 1rem;
     font-size: 15px;
+}
+
+.group-gallery {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.owl-carousel .owl-item img.client-img {
+    width: 110px;
+    margin: 30px auto;
+    border-radius: 50%;
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.07);
+}
+
+.testimonials-single {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.blockquote {
+    color: #7a767a;
+    font-weight: 300;
+}
+
+.owl-next.disabled,
+.owl-prev.disabled {
+    opacity: 0.5;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-prev {
+    left: 0;
+}
+
+.owl-next {
+    right: 0;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    background: #e7d9eb;
+    width: 35px;
+    height: 8px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #ff487e;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    background: #ff487e;
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.07);
 }
