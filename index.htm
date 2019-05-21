@@ -640,6 +640,24 @@
 
 
     <script>
+
+      function isMobile() {
+        if (navigator.userAgent.match(/Android/i)
+          || navigator.userAgent.match(/webOS/i)
+          || navigator.userAgent.match(/iPhone/i)
+          // || navigator.userAgent.match(/iPad/i)
+          // || navigator.userAgent.match(/iPod/i)
+          || navigator.userAgent.match(/BlackBerry/i)
+          || navigator.userAgent.match(/Windows Phone/i)
+        ) return true;
+        return false;
+      }
+
+      if (isMobile()) {
+        window.location.href = "index_mobile.htm";
+      }
+
+
       function mdjump(mdurl) {
         var mddata = "#test";
 
@@ -711,6 +729,7 @@
         $("#news1 p").text(jsondata[0].brief)
         $("#news2 p").text(jsondata[1].brief)
         $("#news3 p").text(jsondata[2].brief)
+
 
 
 
