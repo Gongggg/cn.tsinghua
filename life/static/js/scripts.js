@@ -60,58 +60,41 @@ $container.imagesLoaded(function () {
     });
 });
 
-// owl carousel
-var $galleryDiv = $('.group-gallery');
-if ($galleryDiv.length && $.fn.owlCarousel) {
-    $galleryDiv.owlCarousel({
-        items: 1,
-        nav: false,
-        center: true,
-        loop: true,
-        autoplay: true,
-        dots: true,
-        navText: ['<span class="ti-arrow-left"></span>', '<span class="ti-arrow-right"></span>'],
-        // responsive: {
-        //     0: {
-        //         items: 1
-        //     },
-        //     768: {
-        //         items: 3
-        //     }
-        // }
-    });
-}
+Vue.use(VueAgile)
 
-// var group_gallery = new Vue({
-//     el: '#v-group-gallery',
-//     data: {
-//         // TODO: data should be pulled from back-end when page loaded.
-//         // TODO: if there is more data, please use vue-infinite-scroll.
-//         items: [
-//             {
-//                 title: '2019 实验室聚餐合影',
-//                 img: 'static/img/group-photo_2019.jpg',
-//                 inscription: 'Posted on 19/5/2019 by 陈瑜峰',
-//                 src: '#'
-//             },
-//             {
-//                 title: '2019 实验室聚餐合影',
-//                 img: 'static/img/group-photo_2019.jpg',
-//                 inscription: 'Posted on 19/5/2019 by 陈瑜峰',
-//                 src: '#'
-//             },
-//             {
-//                 title: '2019 实验室聚餐合影',
-//                 img: 'static/img/group-photo_2019.jpg',
-//                 inscription: 'Posted on 19/5/2019 by 陈瑜峰',
-//                 src: '#'
-//             },
-//             {
-//                 title: '2019 实验室聚餐合影',
-//                 img: 'static/img/group-photo_2019.jpg',
-//                 inscription: 'Posted on 19/5/2019 by 陈瑜峰',
-//                 src: '#'
-//             },
-//         ]
-//     }
-// });
+var group_gallery = new Vue({
+    el: '#v-group-gallery',
+    components: {
+        agile: VueAgile,
+    },
+    data: {
+        // TODO: data should be pulled from back-end when page loaded.
+        // TODO: if there is more data, please use vue-infinite-scroll.
+        items: [
+            {
+                title: '2019 实验室聚餐合影',
+                img: 'static/img/group-photo_2019.jpg',
+                inscription: 'Posted on 19/5/2019 by 陈瑜峰',
+                src: '#'
+            },
+            {
+                title: '2019 实验室聚餐合影',
+                img: 'static/img/group-photo_2019.jpg',
+                inscription: 'Posted on 19/5/2019 by 陈瑜峰',
+                src: '#'
+            },
+            {
+                title: '2019 实验室聚餐合影',
+                img: 'static/img/group-photo_2019.jpg',
+                inscription: 'Posted on 19/5/2019 by 陈瑜峰',
+                src: '#'
+            },
+            {
+                title: '2019 实验室聚餐合影',
+                img: 'static/img/group-photo_2019.jpg',
+                inscription: 'Posted on 19/5/2019 by 陈瑜峰',
+                src: '#'
+            },
+        ]
+    }
+});

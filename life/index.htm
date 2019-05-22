@@ -21,7 +21,7 @@
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../static/carousel.css" rel="stylesheet">
+    <!-- <link href="../static/carousel.css" rel="stylesheet"> -->
 
 
 
@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="../static/css/nlp.css" id="nlp-styles">
 
     <!-- css for this life page -->
-    <link rel="stylesheet" href="static/css/owl.carousel.min.css" id="nlp-styles">
+    <link rel="stylesheet" href="static/css/VueAgile.css">
     <link rel="stylesheet" href="static/css/life.css">
 
 
@@ -179,20 +179,25 @@
 
             <div class="widewrapper" style="margin-top: 90px">
                 <div class="container content">
+
+                    <!-- group photo banner -->
+                    <div id="v-group-gallery">
+                        <agile :autoplay="false" :center-mode="true">
+                            <div v-for="item in items">
+                                <img class="slide" :src="item.img" alt="image">
+                            </div>
+                            <template slot="prevButton"><i class="fas fa-chevron-left"></i></template>
+                            <template slot="nextButton"><i class="fas fa-chevron-right"></i></template>
+                        </agile>
+                    </div>
+
                     <div id="showmarkdown" class="row">
                         <div class="col-sm-10">
                             <section id="blog-posts">
 
                                 <!-- 内容加这里 -->
-                                <div class="section light-bg" id="gallery">
+                                <div class="section light-bg">
                                     <div class="container">
-
-                                        <div class="group-gallery owl-carousel owl-theme">
-                                                <img src="static/img/group-photo_2019.jpg" alt="image">
-                                                <img src="static/img/group-photo_2019.jpg" alt="image">
-                                                <img src="static/img/group-photo_2019.jpg" alt="image">
-                                                <img src="static/img/group-photo_2019.jpg" alt="image">
-                                        </div>
 
                                         <div class="row grid" id="v-news-cards">
 
@@ -309,7 +314,7 @@
         tppabs="https://nlp.stanford.edu/static/js/vendor/modernizr/modernizr.js"></script>
     <script src="../static/showdown/dist/showdown.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/VueAgile.umd.min.js"></script>
     <script src="static/js/imagesloaded.pkgd.min.js"></script>
     <script src="static/js/masonry.pkgd.min.js"></script>
     <script src="static/js/scripts.js"></script>

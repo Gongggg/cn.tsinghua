@@ -22,7 +22,7 @@
 
 .card:hover {
     transition: .3s;
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }
 
 .card-body img {
@@ -37,7 +37,7 @@
 }
 
 .card:hover .btn-primary {
-    background-image: linear-gradient( 120deg, #5c307d 0%, #e54595 100%);
+    background-image: linear-gradient(120deg, #5c307d 0%, #e54595 100%);
     box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.3);
     color: #FFF;
 }
@@ -71,7 +71,7 @@
 
 .btn-primary {
     border-radius: 3px;
-    background-image: linear-gradient( 120deg, #fd378e 0%, #e54595 100%);
+    background-image: linear-gradient(120deg, #fd378e 0%, #e54595 100%);
     box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
     font-weight: 500;
     border: 0;
@@ -80,65 +80,65 @@
 }
 
 .group-gallery {
-    text-align: center;
-    margin: 10px 0;
-}
-
-.owl-carousel .owl-item img.client-img {
-    width: 110px;
-    margin: 30px auto;
-    border-radius: 50%;
-    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.07);
-}
-
-.testimonials-single {
-    text-align: center;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.blockquote {
-    color: #7a767a;
     font-weight: 300;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 30px;
 }
 
-.owl-next.disabled,
-.owl-prev.disabled {
-    opacity: 0.5;
+.agile__actions {
+    margin-top: 20px;
 }
 
-.owl-prev,
-.owl-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.agile__nav-button {
+    background: transparent;
+    border: none;
+    color: #e7d9eb;
+    cursor: pointer;
+    font-size: 24px;
+    transition-duration: 0.3s;
+    visibility: hidden;
 }
 
-.owl-prev {
-    left: 0;
+.agile__nav-button:hover {
+    color: #ff487e;
 }
 
-.owl-next {
-    right: 0;
+.agile__dot {
+    margin: 0 10px;
 }
 
-.owl-theme .owl-nav.disabled+.owl-dots {
-    margin-top: 30px;
-}
-
-.owl-theme .owl-dots .owl-dot span {
+.agile__dot button {
     background: #e7d9eb;
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.07);
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
     width: 35px;
     height: 8px;
     border-radius: 10px;
     transition: all 0.3s ease-in;
 }
 
-.owl-theme .owl-dots .owl-dot:hover span {
-    background: #ff487e;
+.agile__dot--current button,
+.agile__dot:hover button {
+    background-color: #ff487e;
 }
 
-.owl-theme .owl-dots .owl-dot.active span {
-    background: #ff487e;
-    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.07);
+.slide {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    height: 380px;
+    width: auto;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.slide img {
+    height: 100%;
 }
