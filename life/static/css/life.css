@@ -23,6 +23,7 @@
 .card:hover {
     transition: .3s;
     box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    transform: translate3d(0, -2px, 0);
 }
 
 .card-body img {
@@ -32,7 +33,7 @@
 }
 
 .card:hover .card-body img {
-    transform: scale(1.04);
+    transform: scale(1.04) translate3d(0, -2px, 0);
     transition: ease .3s;
 }
 
@@ -40,6 +41,7 @@
     background-image: linear-gradient(120deg, #5c307d 0%, #e54595 100%);
     box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.3);
     color: #FFF;
+    transform: translate3d(0, -2px, 0);
 }
 
 .card-head {
@@ -79,11 +81,11 @@
     font-size: 15px;
 }
 
-.group-gallery {
+#v-group-gallery {
     font-weight: 300;
     margin: 0 auto;
     max-width: 900px;
-    padding: 30px;
+    margin-bottom: 30px;
 }
 
 .agile__actions {
@@ -139,6 +141,31 @@
     margin: 0 auto;
 }
 
-.slide img {
-    height: 100%;
+img.slide {
+    border-radius: 5px;
+}
+
+.slide-content {
+    height: 0;
+    transition: height 0.5s ease-in-out;
+    position: absolute;
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 850px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#v-group-gallery:hover .slide-content {
+    height: 40px;
 }

@@ -78,19 +78,19 @@ var group_gallery = new Vue({
                 src: '#'
             },
             {
-                title: '2019 实验室聚餐合影',
+                title: '2018 实验室聚餐合影',
                 img: 'static/img/group-photo_2019.jpg',
                 inscription: 'Posted on 19/5/2019 by 陈瑜峰',
                 src: '#'
             },
             {
-                title: '2019 实验室聚餐合影',
+                title: '2017 实验室聚餐合影',
                 img: 'static/img/group-photo_2019.jpg',
                 inscription: 'Posted on 19/5/2019 by 陈瑜峰',
                 src: '#'
             },
             {
-                title: '2019 实验室聚餐合影',
+                title: '2016 实验室聚餐合影',
                 img: 'static/img/group-photo_2019.jpg',
                 inscription: 'Posted on 19/5/2019 by 陈瑜峰',
                 src: '#'

@@ -184,7 +184,10 @@
                     <div id="v-group-gallery">
                         <agile :autoplay="false" :center-mode="true">
                             <div v-for="item in items">
-                                <img class="slide" :src="item.img" alt="image">
+                                <div style="position: relative;">
+                                    <img class="slide" :src="item.img" alt="image">
+                                    <div class="slide-content">{{item.title}}</div>
+                                </div>
                             </div>
                             <template slot="prevButton"><i class="fas fa-chevron-left"></i></template>
                             <template slot="nextButton"><i class="fas fa-chevron-right"></i></template>
