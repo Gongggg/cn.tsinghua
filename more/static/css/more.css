@@ -1,0 +1,18 @@
+blockquote {
+    font-size: 105%;
+}
+
+blockquote ul, ol {
+    padding-inline-start: 20px;
+}
+
+blockquote > .mrgbotm > li {
+    margin-bottom: 20px;
+}
+
+.author {
+    color: #5c307d;
+    font-size: medium;
+    font-weight: 600;
+    text-decoration: underline;
+}
