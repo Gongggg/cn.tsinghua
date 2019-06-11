@@ -16,3 +16,47 @@ blockquote > .mrgbotm > li {
     font-weight: 600;
     text-decoration: underline;
 }
+
+.head_image {
+    text-align: center;
+}
+
+.head_image img {
+    width: 62%;
+}
+
+@media only screen and (max-width: 500px) {
+    .head_image img {
+        width: 100%;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .hg_image video {
+        width: 100%;
+    }
+
+    .hg_image img {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .footer {
+        color: #ffffff;
+        background-color: #171f24;
+    }
+}
+
+.hg_image {
+    float: right;
+    margin-top: 5%;
+}
