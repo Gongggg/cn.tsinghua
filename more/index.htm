@@ -293,6 +293,8 @@
 
 
     <script>
+        history.pushState({}, 0, 'http://' + window.location.host + '/miccai19-hypergraph');
+
         $('ul.nav > li > a[href="' + document.location.pathname + '"]').parent().addClass('active');
 
         function isIOS() {
