@@ -26,7 +26,25 @@ blockquote > .mrgbotm > li {
     width: 62%;
 }
 
+@media only screen and (max-width: 993px) {
+    .head_image {
+        margin-top: 154px !important;
+    }
+
+    .head_image img {
+        width: 100%;
+    }
+
+    .row {
+        margin: 0;
+    }
+}
+
 @media only screen and (max-width: 500px) {
+    .head_image {
+        margin-top: 90px !important;
+    }
+
     .head_image img {
         width: 100%;
     }
