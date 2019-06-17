@@ -270,22 +270,9 @@
 
 
     <script>
-        // history.pushState({}, 0, 'http://' + window.location.host + '/miccai19-hypergraph');
+        history.pushState({}, 0, 'http://' + window.location.host + '/MMTC-MMIG');
 
         $('ul.nav > li > a[href="' + document.location.pathname + '"]').parent().addClass('active');
-
-        function isIOS() {
-            if (navigator.userAgent.match(/Mac/i)
-            || navigator.userAgent.match(/iPhone/i)
-            || navigator.userAgent.match(/iPad/i)
-            || navigator.userAgent.match(/iPod/i)
-            ) return true;
-            return false;
-        }
-
-        // if (isIOS()) {
-        //     $('.hg_image').html('<img src="http://' + window.location.host + '/cn_tsinghua/more/static/image/2.gif">');
-        // }
     </script>
 
 
