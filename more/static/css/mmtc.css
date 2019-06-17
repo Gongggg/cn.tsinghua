@@ -49,7 +49,7 @@
     font-weight: bold;
 }
 
-li {
+.IG li {
     list-style-image: url(../image/list.png);
     margin-bottom: 3px;
 }
