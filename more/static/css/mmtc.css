@@ -1,0 +1,95 @@
+.widewrapper {
+    font-size: medium;
+}
+
+.title {
+    margin-top: 90px;
+}
+
+.IG {
+    margin-top: 40px;
+}
+
+.IG div {
+    margin-bottom: 20px;
+}
+
+.people {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'chair advisors'
+                         'co-chairs .';
+}
+
+.people-chair {
+    grid-area: chair;
+}
+
+.people-co-chairs {
+    grid-area: co-chairs;
+}
+
+.people-advisors {
+    grid-area: advisors;
+}
+
+.people-row>p:first-child {
+    padding-left: 0;
+    font-size: large;
+    font-weight: bold;
+}
+
+.people-row>p:not(:first-child) {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.IG-title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+li {
+    list-style-image: url(../image/list.png);
+    margin-bottom: 3px;
+}
+
+@media only screen and (max-width: 993px) {
+    .title {
+        margin-top: 133px !important;
+    }
+
+    .row {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .people {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'chair'
+                             'co-chairs'
+                             'advisors';
+    }
+
+    .title {
+        margin-top: 58px !important;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .footer {
+        color: #ffffff;
+        background-color: #171f24;
+    }
+}
