@@ -1,3 +1,11 @@
+.row {
+    margin-left: 0;
+}
+
+footer {
+    font-size: 13px !important;
+}
+
 .widewrapper {
     font-size: medium;
 }
