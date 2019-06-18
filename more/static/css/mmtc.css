@@ -2,6 +2,28 @@
     margin-left: 0;
 }
 
+.people div {
+    margin-bottom: 20px;
+}
+
+.head {
+    color: #fff;
+    text-align: center;
+    background-color: #5c307d;
+}
+
+.head-small {
+    display: none;
+}
+
+.head td {
+    background-color: #5c307d;
+}
+
+td p {
+    text-align: center;
+}
+
 footer {
     font-size: 13px !important;
 }
@@ -10,35 +32,12 @@ footer {
     font-size: medium;
 }
 
-.title {
-    margin-top: 90px;
-}
-
 .IG {
     margin-top: 40px;
 }
 
 .IG div {
     margin-bottom: 20px;
-}
-
-.people {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'chair advisors'
-                         'co-chairs .';
-}
-
-.people-chair {
-    grid-area: chair;
-}
-
-.people-co-chairs {
-    grid-area: co-chairs;
-}
-
-.people-advisors {
-    grid-area: advisors;
 }
 
 .people-row>p:first-child {
@@ -63,25 +62,18 @@ footer {
 }
 
 @media only screen and (max-width: 993px) {
-    .title {
-        margin-top: 133px !important;
-    }
-
     .row {
         margin: 0;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .people {
-        grid-template-columns: 1fr;
-        grid-template-areas: 'chair'
-                             'co-chairs'
-                             'advisors';
+    .head-small {
+        display: block;
     }
 
-    .title {
-        margin-top: 58px !important;
+    .head-large {
+        display: none;
     }
 
     .row {
