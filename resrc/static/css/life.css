@@ -1,0 +1,171 @@
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-h3 {
+    color: #633991;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.card {
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 340px;
+    max-width: 400px;
+    min-height: 340px;
+    max-height: auto;
+}
+
+.card:hover {
+    transition: .3s;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    transform: translate3d(0, -2px, 0);
+}
+
+.card-body img {
+    border-radius: 5px;
+    max-width: 100%;
+    height: 310px;
+}
+
+.card:hover .card-body img {
+    transform: scale(1.04) translate3d(0, -2px, 0);
+    transition: ease .3s;
+}
+
+.card:hover .btn-primary {
+    background-image: linear-gradient(120deg, #5c307d 0%, #e54595 100%);
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    transform: translate3d(0, -2px, 0);
+}
+
+.card-head {
+    text-align: center;
+    padding: 15px 5px 15px;
+    display: block;
+    font-size: 25px;
+    line-height: normal;
+    font-weight: 300;
+    color: #633991;
+    height: 96px;
+}
+
+.card-body {
+    margin: 5px 0;
+}
+
+.news-content {
+    margin: 5px 0;
+    height: 69px;
+}
+
+.news-inscription {
+    color: #aaa;
+    font-size: 10px;
+    text-align: left;
+    margin: 5px 0 10px;
+}
+
+.btn-primary {
+    border-radius: 3px;
+    background-image: linear-gradient(120deg, #fd378e 0%, #e54595 100%);
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    border: 0;
+    padding: 1rem 1rem;
+    font-size: 15px;
+}
+
+#v-group-gallery {
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 900px;
+    margin-bottom: 30px;
+}
+
+.agile__actions {
+    margin-top: 20px;
+}
+
+.agile__nav-button {
+    background: transparent;
+    border: none;
+    color: #e7d9eb;
+    cursor: pointer;
+    font-size: 24px;
+    transition-duration: 0.3s;
+    visibility: hidden;
+}
+
+.agile__nav-button:hover {
+    color: #ff487e;
+}
+
+.agile__dot {
+    margin: 0 10px;
+}
+
+.agile__dot button {
+    background: #e7d9eb;
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.07);
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    width: 35px;
+    height: 8px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.agile__dot--current button,
+.agile__dot:hover button {
+    background-color: #ff487e;
+}
+
+.slide {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    height: 380px;
+    width: auto;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+img.slide {
+    border-radius: 5px;
+}
+
+.slide-content {
+    height: 0;
+    transition: height 0.5s ease-in-out;
+    position: absolute;
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 850px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#v-group-gallery:hover .slide-content {
+    height: 40px;
+}
