@@ -1,0 +1,119 @@
+.whole {
+    /* Full screen width and height */
+    /* width: 70%; */
+    /* min-height: 100%;
+    max-width: 100%; */
+ 
+    /* Centers the container in the middle of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ 
+    margin: 0;
+    background-color: #FAF5F5;
+}
+
+/* #body_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} */
+/* #container {
+    min-height: 300px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    margin: 10px;
+    background-color: rgb(0, 0, 220);
+
+} */
+
+
+
+
+#container {
+    perspective: 30px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+#inner {
+    width: 19em;
+    height: 19em;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    text-align:center;
+}
+
+
+#container1 {
+    perspective: 30px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+#inner1 {
+    width: 19em;
+    height: 19em;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    text-align:center;
+}
+
+
+
+#container2 {
+    perspective: 30px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+#inner2 {
+    width: 19em;
+    height: 19em;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    text-align:center;
+}
+
+
+#container3 {
+    perspective: 30px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+#inner3 {
+    width: 19em;
+    height: 19em;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    text-align:center;
+}
+
+
+

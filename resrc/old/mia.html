@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMoon-Lab: Research-BrainScience</title>
+  <link rel="stylesheet" href="static/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/gallery.css" type="text/css" />
+  <script src="static/js/modernizr.min.js"></script>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bee6e9034f83599f524d47d96877e93c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</head>
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+
+      <a class="header-logo" href="../../index.htm" aria-label="Yue's Group"
+        style="font-size:18px;font-weight:bold;width: 400px;">
+        <!-- <img src="../../static/img/logos/nlp-logo-small.png" alt="" style="width: 40px;height: 40px;"> -->
+        智能媒体与认知实验室
+        <p style="font-size:13px;font-weight:lighter">iMoon: Intelligent Media and Cognition Lab</p>
+      </a>
+
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="../../index.htm">主页</a>
+          </li>
+
+          <li>
+            <a href="../../people/index.htm">团队</a>
+          </li>
+
+          <li class="active">
+            <a href="../../resrc/index.htm">研究方向</a>
+          </li>
+
+          <li>
+            <a href="../../pubs/index.htm">论文</a>
+          </li>
+
+          <li>
+            <a href="../../blog/index.htm">新闻</a>
+          </li>
+
+          <li>
+            <a href="#">生活</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" id="dropdownMenu1">更多信息</a>
+            <ul class="dropdown-menu" id="dropDownCur1">
+              <a href="../../more/index.htm">MICCAI19 Tutorial</a>
+              <a href="#">MICCAI19 挑战赛</a>
+            </ul>
+          </li>
+          <li>
+            <a style="font-weight:bold" href="#"><b>English</b></a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+
+  </div>
+</div>
+
+
+<body class="pytorch-body">
+
+
+  <div>
+
+
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="pytorch-left-menu" id="pytorch-left-menu">
+      <div class="pytorch-side-scroll">
+        <div class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+          <br>
+          <br>
+          <h2>研究方向</h2>
+          <br>
+          <a href="cv.html">
+            <p class="caption"><span class="caption-text">立体视觉</span></p>
+          </a>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">立体数据获取与增强</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">立体视觉表示</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">立体视觉对象检索</a></li>
+          </ul>
+
+          <a href="ml.html">
+            <p class="caption"><span class="caption-text">复杂网络</span></p>
+          </a>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">超图结构学习模型</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">超图神经网络模型</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">网络安全态势感知</a></li>
+          </ul>
+
+
+          <a href="mia.html">
+            <p class="caption"><span class="caption-text">脑科学</span></p>
+          </a>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">脑网络建模</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">情感计算</a></li>
+          </ul>
+          </ul>
+
+          <!-- <p class="caption"><span class="caption-text">工业互联网安全</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">TIE submission</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">基于代价敏感学习的分类方法（AAAI）</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">不平衡数据分类（IJCAI）</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">SDP</a></li>
+          </ul> -->
+
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="pytorch-container">
+
+      <section data-toggle="wy-nav-shift" class="pytorch-content-wrap">
+        <div class="pytorch-page-level-bar" id="pytorch-page-level-bar">
+          <div class="pytorch-breadcrumbs-wrapper">
+
+            <div role="navigation" aria-label="breadcrumbs navigation">
+
+              <ul class="pytorch-breadcrumbs">
+
+                <li>
+                  <a href="#">
+                    研究方向
+                  </a> &gt;
+                </li>
+                <li>脑科学</li>
+              </ul>
+
+
+            </div>
+          </div>
+
+          <div class="pytorch-shortcuts-wrapper" id="pytorch-shortcuts-wrapper">
+            目录
+          </div>
+        </div>
+
+        <div class="pytorch-content-left">
+
+          <div class="rst-content">
+
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+              <article itemprop="articleBody" class="pytorch-article">
+                <div class="sphx-glr-example-title section" id="finetuning-torchvision-models">
+                  <span id="sphx-glr-beginner-finetuning-torchvision-models-tutorial-py"></span>
+
+
+
+
+
+                  <h1>脑科学 Brain Science<a class="headerlink" href="#" title="Computer-Vision">¶</a></h1>
+                  <p>
+                    脑科学旨在探索人类大脑中产生情感、思想、意识的各种脑区结构和功能，利用目前的各种成像技术及电生理信号在各个层面建立脑网络高阶连接的拓扑结构，为人类的行为和心理活动提供可解释性，从而更好的控制脑发育和衰老的过程，预防各项神经性的脑部疾病，提高人类的生活品质。在该方向中，本实验室主要探索脑网络的建模、脑疾病的诊断及情感计算等研究方向。
+                  </p>
+
+                  <div class="section" id="emotion-prediction">
+                    <h2>1.脑网络建模<a class="headerlink" href="#emotion-prediction" title="Permalink to this headline">¶</a>
+                    </h2>
+                    <div class="section" id="Multi-Perspective-Representation">
+                      <h3>1.1.高阶脑网络<a class="headerlink" href="#Multi-Perspective-Representation"
+                          title="Permalink to this headline">¶</a></h3>
+                      <p>
+                        由静息态功能核磁共振成像技术估测得到的脑功能连接网络已经成为神经退化疾病诊断中的重要方法。然而，传统的功能连接网络仅仅考虑了大脑区域之间的相关性，对时间具有较高的敏感性。针对这个问题，我们提出一种高阶功能连接相关性提取方法，可以建模不同脑区对之间低阶相关性的相互作用，通过各脑区之间关联在时间上的相关性来对脑功能连接网络进行鲁棒表示。图1
+                        给出了正常人和轻度认知障碍患者在低阶功能连接网络和高阶功能连接网络上的对比。从图中可以看出，高阶功能连接网络能够更好的对不同类型人群进行划分。
+                      </p>
+                      <div align=center>
+
+                        <img src="High-Order-Connection-Network.png" style="width:60%;height:50% ;margin: 6px;">
+                        <p>图1 正常人和轻度认知障碍患者在低阶功能连接网络和高阶功能连接网络上的对比</p>
+                      </div>
+                    </div>
+
+                    <div class="section" id="emotion-recognition-multi-hypergraph">
+                      <h3>1.2.基于脑功能连接网络的小儿自闭症诊断<a class="headerlink" href="#emotion-recognition-multi-hypergraph"
+                          title="Permalink to this headline">¶</a></h2>
+                        <p>
+                          自闭症是一种由于神经系统失调导致的发育障碍，其病征包括不正常的社交能力、沟通能力、兴趣和行为模式。近年来许多研究发现自闭症与脑网络中某些连接的动态特性之间存在一定关联。我们提出了一种小儿自闭症诊断算法，通过Lasso提取脑网络的动态特性，并通过超图结构进行对象关联建模，进一步通过动态超图学习实现自闭症诊断。我们提取出了对自闭症诊断比较重要的脑网络连接，如图2和图3所示，与早期的医学研究发现相一致。
+                        </p>
+                        <div align=center>
+                          <img src="Time-Order-Average.png" style="width:50%;height: auto;margin: 6px;">
+                          <p> 图2 检测获得的时序均值中对诊断相对重要的脑功能连接</p>
+                          <img src="Time-Order-Variance.png" style="width:50%;height: auto;margin: 6px;">
+                          <p align="center"> 图3 检测获得的时序方差中对诊断相对重要的脑功能连接</p>
+                        </div>
+
+                    </div>
+                  </div>
+
+
+
+
+
+
+                  <div class="section" id="Emotion-Recognition-Multimodel">
+                    <h2>2.情感计算<a class="headerlink" href="#Emotion-Recognition-Multimodel"
+                        title="Permalink to this headline">¶</a></h2>
+
+                    <div class="section" id="picture-emotion-perception">
+                      <h3>2.1.图像情绪感知<a class="headerlink" href="#picture-emotion-perception"
+                          title="Permalink to this headline">¶</a></h3>
+                      <p>
+                        由静息态功能核磁共振成像技术估测得到的脑功能连接网络已经成为神经退化疾病诊断中的重要方法。然而，传统的功能连接网络仅仅考虑了大脑区域之间的相关性，对时间具有较高的敏感性。针对这个问题，我们提出一种高阶功能连接相关性提取方法，可以建模不同脑区对之间低阶相关性的相互作用，通过各脑区之间关联在时间上的相关性来对脑功能连接网络进行鲁棒表示。图4给出了正常人和轻度认知障碍患者在低阶功能连接网络和高阶功能连接网络上的对比。从图中可以看出，高阶功能连接网络能够更好的对不同类型人群进行划分。
+                      </p>
+                      <p>
+                        旨在消除情绪鸿沟的具有识别度的图像特征已经有了显著的进步，而观众所感知的情绪受到个人和情景因素共同影响，往往是主观个性化的。针对这一问题，我们提出将图像的分类转为离散的概率分布来更好的表征图像所隐含的情感信息，通过优化权重来显式的表达不同特征的重要性。
+                      </p>
+                      <div align=center>
+
+                        <img src="emotion-classification.png" style="width:80%;height: auto;margin: 6px;">
+
+                        <p>图4 图像情绪分类结果与目标分布</p>
+                      </div>
+                    </div>
+
+
+                    <div class="section" id="Physiological-Signals-Emotion-perception">
+                      <h3>2.2.生理信号情绪感知<a class="headerlink" href="#Physiological-Signals-Emotion-perception"
+                          title="Permalink to this headline">¶</a></h3>
+                      <p>
+                        在关键领域的核心人工操作中，人员的情绪状态对于任务的完成有着巨大的影响。为了能够实时对人员的情绪状态进行评估，我们通过多模态超图神经网络对多模态生理信号进行建模，将情绪识别任务转化为超图结构中的顶点分类问题。在这种结构中，不同模态生理信号之间以及不同样本（测试者，刺激）之间的复杂关联被有效的建模。我们选取了不同频率段的脑电信号对情绪与脑电之间的相关性进行量化计算，其对比效果（如图5所示）也与已有的生物学的结论相一致。
+                      </p>
+                      <div align=center>
+
+                        <img src="emotion-recognition-multi-hypergraph.png" style="width:70%;height: auto;margin: 6px;">
+
+                        <p>图5 Valence度量下正例与负例在不同脑区的gamma频段脑电信号的方差对比</p>
+                      </div>
+                      <p>
+                        传统情绪识别将来自不同测试者的样本在测试集和训练集平等对待，而没有考虑训练集和测试集中来自同一测试者的样本之间是否存在更强的关联，来自不同测试者之间的样本存在个人的生理属性中的差异。在这种情景下，我们将个人的生理和心理特征在超图结构中建模，并且对不同模态的生理信号所揭示的样本间的复杂关联通过中间层融合机制自适应进行融合，从而达到个性化精确情绪感知。图6给出了传统情绪识别与个性化情绪识别的对比。
+                      </p>
+
+                      <div align=center>
+
+                        <img src="emotion-comparison.png" style="width:70%;height: auto;margin: 6px;">
+
+                        <p>图6 传统情绪识别和个性化情绪识别的对比</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="section" id="PAPERlIST" style="margin-top:80px">
+                    <p style="font-size:30px"><b><strong>论文列表</strong></b></p>
+                    <table id="paperlist" class="table " role="grid" style="width: 100%;">
+                      <tbody>
+
+                        <!-- <tr  ><td><p style="line-height:20px;margin-bottom:0rem">Junjie Zhu, Yuanbiao Wang, Yifan Feng, Sicheng Zhao, Xibin Zhao, Yue Gao<br><b><strong>Individual-Specific Emotion Recognition from Multimodal Physiological Signals</strong></b><br>ACM MM 2019 投稿中<br>[<a href="#paperlist">paper</a>]</p></td></tr> -->
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Junjie Zhu, Yuxuan Wei, Yifan Feng, Xibin
+                              Zhao, Yue Gao<br><b><strong>Emotion Recognition with Multi-hypergraph Neural Networks
+                                  Combining Multimodal Physiological Signals</strong></b><br>ACM Transactions on
+                              Multimedia Computing, Communications, and Applications (TOMM) 2019<br>[<a
+                                href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Junjie Zhu , Xibin Zhao , Han Hu , Yue
+                              Gao<br><b><strong>Emotion Recognition from Physiological Signals Using Multi-Hypergraph
+                                  Neural Network</strong></b><br>ICME 2019<br>[<a href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Guiguang Ding, Yue Gao, Xin
+                              Zhao, Youbao Tang, Jungong Han, Hongxun Yao, Qingming Huang<br><b><strong>Discrete
+                                  Probability Distribution Prediction of Image Emotions With Shared Sparse
+                                  Learning.</strong></b><br>IEEE Transactions on Affective Computing (TAFFC),
+                              2019.<br>[<a href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Amir Gholaminejad, Guiguang
+                              Ding, Yue Gao, Jungong Han, Kurt Keutzer. <br><b><strong>Personalized Emotion Recognition
+                                  by Personality-aware High-order Learning of Physiological Signals.</strong></b><br>ACM
+                              Transactions on Multimedia Computing Communications and Applications (TOMM) 2019<br>[<a
+                                href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Hongxun Yao, Yue Gao, Guiguang
+                              Ding, Tat-Seng Chua. <br><b><strong>Predicting Personalized Image Emotion Perceptions in
+                                  Social Networks. </strong></b><br>IEEE Transactions on Affective Computing (TAFFC)
+                              2018<br>[<a href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Jiayang Guo, Kun Yang, Hongyi Liu, Chunli
+                              Yin, Jing Xiang, Hailong Li, Rongrong Ji, Yue Gao. <br><b><strong>A Stacked Sparse
+                                  Autoencoder-based Detector for Diagnosis of Neuromagnetic High Frequency Oscillations
+                                  in Epilepsy. </strong></b><br>IEEE Transactions on Medical Imaging 2018<br>[<a
+                                href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Yue Gao, Guiguang Ding,
+                              Tat-Seng Chua. <br><b><strong>Real-Time Multimedia Social Event Detection in Microblog.
+                                </strong></b><br>IEEE Transactions on Cybernetics (TCYB) 2018<br>[<a
+                                href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Hongxun Yao, Yue Gao, Rongrong
+                              Ji, Guiguang Ding. <br><b><strong>Continuous Probability Distribution Prediction of Image
+                                  Emotions via Multi-Task Shared Sparse Regression. </strong></b><br>IEEE Transactions
+                              on Multimedia (TMM) 2017<br>[<a href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Sicheng Zhao, Guiguang Ding, Yue Gao, Jungong
+                              Han. <br><b><strong>Learning Visual Emotion Distributions via Multi-Modal Features Fusion.
+                                </strong></b><br>ACM International Conference on Multimedia 2017<br>[<a
+                                href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Minggxia Liu, Yue Gao, Pew-Thian Yap,
+                              Dinggang Shen. <br><b><strong>Multi-Hypergraph Learning for Incomplete Multi-Modality
+                                  Data. </strong></b><br>IEEE Journal of Biomedical and Health Informatics 2017<br>[<a
+                                href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Jun Zhang, Yue Gao, Yaozong Gao, Brent
+                              Mussell, and Dinggang Shen. <br><b><strong>Detecting Anatomical Landmarks for Fast
+                                  Alzheimer's Disease Diagnosis. </strong></b><br>IEEE Transactions on Medical Imaging
+                              2016<br>[<a href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Xiaobo Chen, Han Zhang, Yue Gao, Chong-Yaw
+                              Wee, Gang Li, Dinggang Shen. <br><b><strong>High-Order Resting-State Functional
+                                  Connectivity Network for MCI Classification. </strong></b><br>Human Brain Mapping
+                              2016<br>[<a href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Brent C. Munsell, Guorong Wu, Yue Gao,
+                              Nicholas Desisto, Martin Styner. <br><b><strong>Identifying Relationships in Functional
+                                  and Structural Connectome Data using a Hypergraph Learning Method.
+                                </strong></b><br>International Conference on Medical Image Computing and Computer
+                              Assisted Intervention 2016<br>[<a href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Yue Gao, Chong-Yaw Wee, Minjeong Kim,
+                              Panteleimon Giannakopoulos, Marie-Louise Montandon, Sven Haller, Dinggang Shen.
+                              <br><b><strong>MCI identification by joint learning on multiple MRI data.
+                                </strong></b><br>International Conference on Medical Image Computing and Computer
+                              Assisted Intervention 2015<br>[<a href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="line-height:20px;margin-bottom:0rem">Yue Gao, Ehsan Adeli-M, Minjeong Kim,
+                              Panteleimon Giannakopoulos, Sven Haller, Dinggang Shen. <br><b><strong>Medical image
+                                  retrieval using multi-graph learning for MCI diagnostic assistance.
+                                </strong></b><br>International Conference on Medical Image Computing and Computer
+                              Assisted Intervention 2015<br>[<a href="#paperlist">paper</a>]</p>
+                          </td>
+                        </tr>
+                        <!-- <tr  ><td><p style="line-height:20px;margin-bottom:0rem">Zizhao Zhang, Shoujun Xu, Sichao Shen, Lei Wei, Baojuan Li, Yue Gao <br><b><strong>Diagnosis of Childhood Autism using Dynamic Hypergraph Learning</strong></b><br>MICCAI 2019<br>[<a href="#paperlist">paper</a>]</p></td></tr> -->
+                      </tbody>
+                    </table>
+                  </div>
+
+
+
+                </div>
+
+
+              </article>
+
+            </div>
+            <footer>
+              <hr />
+
+              <div role="contentinfo">
+                <p>
+                  &copy; Copyright 2018-2020, iMoon-Lab @ Tsinghua University.
+                </p>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+
+        <div class="pytorch-content-right" id="pytorch-content-right">
+          <div class="pytorch-right-menu" id="pytorch-right-menu">
+            <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
+
+              <ul>
+                <li><a class="reference internal" href="#">脑科学</a>
+                  <ul>
+
+                    <li><a class="reference internal" href="#emotion-prediction">1.脑网络建模</a>
+                      <ul>
+                        <li><a class="reference internal" href="#Multi-Perspective-Representation">1.1.高阶脑网络</a></li>
+                        <li><a class="reference internal"
+                            href="#emotion-recognition-multi-hypergraph">1.2.基于脑功能连接网络的小儿自闭症诊断</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a class="reference internal" href="#Emotion-Recognition-Multimodel">2.情感计算</a>
+                      <ul>
+                        <li><a class="reference internal" href="#picture-emotion-perception">2.1.图像情绪感知</a></li>
+                        <li><a class="reference internal"
+                            href="#Physiological-Signals-Emotion-perception">2.2.生理信号情绪感知</a></li>
+                      </ul>
+                    </li>
+
+
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+
+
+  <script type="text/javascript" src="static/js/jquery.js"></script>
+  <script type="text/javascript" src="static/js/underscore.js"></script>
+  <script type="text/javascript" src="static/js/doctools.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+  <script type="text/javascript" src="static/js/popper.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="static/js/theme.js"></script>
+
+  <script type="text/javascript">
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+    });
+  </script>
+
+
+
+  <!-- Begin Footer -->
+
+  <div class="container-fluid docs-tutorials-resources" id="docs-tutorials-resources">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h4>iMoon: Intelligent Media and Cognition Lab</h4>
+          School of Software
+          <br> Tsinghua, Beijing 100084
+          <br>
+          <a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-3-3.html">Directions</a>
+        </div>
+        <div class="col-sm-3">
+          <div class="indent30">
+            <h4>Copyright</h4>
+            All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+  <script type="text/javascript" src="static/js/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    mobileMenu.bind();
+    mobileTOC.bind();
+    pytorchAnchors.bind();
+
+    $(window).on("load", function () {
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+    })
+
+    // Add class to links that have code blocks, since we cannot create links in code blocks
+    $("article.pytorch-article a span.pre").each(function (e) {
+      $(this).closest("a").addClass("has-code");
+    });
+  </script>
+</body>
+
+</html>
