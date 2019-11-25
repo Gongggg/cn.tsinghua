@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>MeshNet: Mesh Neural Network for 3D Shape Representation</title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/glyphicons.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/filetypes.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/social.css">
+    <link href="../../../fonts.googleapis.com/css-family=Open+Sans-400,700,600.css" rel='stylesheet' type='text/css'>
+    <link href="../../static/trans.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/bootstrap-markdown.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/vendor/layerslider/layerslider.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/styles-cleanred.css" id="grove-styles">
+    <link rel="stylesheet" href="../../../cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/nlp.css" id="nlp-styles">
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../static/js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="../../static/js/vendor/layerslider/greensock.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.transitions.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.kreaturamedia.jquery.js"
+        type="text/javascript"></script>
+    <script src="../../static/js/markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/to-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/bootstrap-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/grove-slider.js" type="text/javascript"></script>
+    <script src="../../../cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script
+        src="../../../cdn.datatables.net/plug-ins/1.10.7/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+    <script src="../../../bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+    <link href="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link href="static/css/c5e0117592e540848259ae6882d93f52.css" rel="stylesheet" />
+    <script src="static/js/d46d827d0f604446b58cc8d38bdbd84e.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default grove-navbar navbar-fixed-top" id="imoonbignav">
+            <div class="container" id="imoonmidnav">
+                <div class="navbar-header">
+                    <a href="#" class="grove-toggle collapsed" data-toggle="collapse" data-target=".grove-nav">
+                        <i class="glyphicons show_lines"></i>
+                    </a>
+                    <img class="navbar-brand navbar-left hidden-xs" src="../../static/img/logos/nlp-logo-small.png"
+                        alt="" id="imoonlogo">
+                    <a class="navbar-brand navbar-left" href="../index.htm">
+                        <h3 class="hidden-xs" id="imoontitle" style="font-weight: 600;margin-top: 15px">智能媒体与认知实验室<p
+                                style="margin-top: 5px">
+                                iMoon: Intelligent
+                                Media and Cognition Lab</p>
+                        </h3>
+                        <h3 class="hidden-sm hidden-md hidden-lg hidden-xl" style="color: white">iMoon-Lab</h3>
+                    </a>
+                </div>
+
+                <div class="navbar-collapse grove-nav collapse" style="position: relative">
+                    <ul class="nav navbar-nav" id="imoonnav">
+
+                        <div style="position:absolute;top:5px;left:10px;border:0px solid rgb(255, 255, 255);">
+                            <a href="../../index.htm">
+                                <div style="width: 400px;height:65px"></div>
+                            </a>
+                        </div>
+                        <!-- <div id="language">
+                            <a id='drump' href="#"><b>中 / </b></a><a id='drump'
+                                href="../../../en_tsinghua/resrc/index.htm"><b>En</b></a>
+                        </div> -->
+                        <li style="margin-top: 1px;">
+                            <a href="../../index.htm">主页</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../people/index.htm">团队</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../resrc/index.htm">研究方向</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../pubs/index.htm">论文</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../blog/index.htm">新闻</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="#">生活</a>
+                        </li>
+                        <li class="dropdown" style="margin-top: 1px;">
+                            <a href="#">更多信息</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../more/index.htm">MICCAI19 Tutorial</a></li>
+                                <li><a href="#">MICCAI19 挑战赛</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container body-content" style="margin-top:90px;">
+
+        <body>
+            <h1 align="center" style="font-size:40px;"><b>MeshNet: Mesh Neural Network for 3D Shape Representation
+            </h1>
+            <div class="row">
+                <br>
+                <p align="center" style="font-size:20px;">
+                    Yutong Feng,
+                    Yifan Feng,
+                    Haoxuan You
+                    <!-- ,
+                    Xibin Zhao and
+                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a> -->
+                </p>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
+                    <!-- <h2><b>Abstract</b></h2> -->
+                    <p style="font-size:20px;" wrap="soft">Mesh is an important and powerful type of data for 3D shapesand widely studied in the field of computer vision and com-puter graphics. Regarding the task of 3D shape representa-tion, there have been extensive research efforts concentratingon how to represent 3D shapes well using volumetric grid,multi-view and point cloud. However, there is little effort onusing mesh data in recent years, due to the complexity andirregularity of mesh data. In this paper, we propose a meshneural network, named MeshNet, to learn 3D shape represen-tation from mesh data. In this method, face-unit and featuresplitting are introduced, and a general architecture with avail-able and effective blocks are proposed. In this way, MeshNetis able  to solve the  complexity and irregularity  problem ofmesh and conduct 3D shape representation well. We have ap-plied the proposed MeshNet method in the applications of 3Dshape  classification  and  retrieval.  Experimental  results  andcomparisons  with  the  state-of-the-art  methods  demonstratethat the proposed MeshNet can achieve satisfying 3D shapeclassification and retrieval performance, which indicates theeffectiveness of the proposed method on 3D shape represen-tation.
+                    </p>
+                    <p style="text-align:center;"><img style="width: 80%;" src="research_meshnet/pipeline.png"
+                            alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 1. The architecture of MeshNet.The input is a list of faces with initial values, which are fed into the spatial andstructural descriptors to generate initial spatial and structural features. The features are then aggregated with neighboring in-formation in the mesh convolution blocks labeled as “Mesh Conv”, and fed into a pooling function to output the global featureused for further tasks. </p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Feature of triangular faces </b></h2>
+                    <p style="text-align:center;"><img style="width: 80%;" src="research_meshnet/vis.png" alt="xxxx"
+                            class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 2. Feature  visualization  of  structural  feature.Models from the same column are colored with their val-ues of the same channel in features.Left: Features from theface rotate convolution.Right: Features from the face kernelcorrelation.</p>
+
+                    <p style="font-size:20px" wrap="hard">
+                        To figure out whether the structural descriptors successfullycapture our features of faces as expected, we visualize thetwo  types  of  structural  features  from  face  rotate  convolu-tion and face kernel correlation. We randomly choose sev-eral  channels  of  these  features,  and  for  each  channel,  wepaint faces with colors of different depth corresponding totheir values in this channel.
+
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Method </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                    <p style="font-size:20px" wrap="hard">
+                        The overall archi-tecture of MeshNet is illustrated in Fig 1. A list of faces withinitial values is fed into two blocks, namedspatial descrip-torandstructural descriptor, to generate the initial spatialand structural features of faces. The features are then passedthrough somemesh convolutionblocks to aggregate neigh-boring information, which get features of two types as inputand output new features of them. It is noted that all the pro-cesses above work on each face respectively and share thesame parameters. After these processes, a pooling functionis applied to features of all faces for generating global fea-ture, which is used for further tasks. The above blocks willbe discussed in following sections.
+                    </p>
+
+
+                    <p style="text-align:center;"><img style="width: 40%;"  src="research_meshnet/rc.png" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 3. The face rotate convolution block. Kernels rotatethrough the face and are applied to pairs of corner vectors forthe convolution operation.
+                    </p>
+
+                    <p style="font-size:20px" wrap="hard">
+                        The face rotate convolution block is proposed to captures the “inner”structure  of  faces  and  focus  on  the  shape  information  of faces. This process is similar to a convolution operation, with two vectors as the kernel size, one vector as the stride, except that translation of kernelsis replaced by rotation. The kernels rotates through the face and works on two vectors each time.
+                    </p>
+                    
+
+                    <p style="text-align:center;"><img style="width: 60%;"  src="research_meshnet/meshconv.png" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 4. The  mesh  convolution.“Combination”  donatesthe combination of spatial and structural feature. “Aggrega-tion” denotes the aggregation of structural feature, in which“Gathering” denotes the process of getting neighbors’ fea-tures and “Aggregation for one face” denotes different meth-ods of aggregating features.
+                    </p>
+
+
+                    <p style="font-size:20px" wrap="hard">
+                        The mesh convolution block is designed to expand the re-ceptive  field  of  faces,  which  denotes  the  number  of  facesperceived by each face, by aggregating information of neigh-boring faces. In this process, features related to spatial po-sitions should not be included directly because we focus onfaces in a local area and should not be influenced by wherethe  area  locates.  In  the  2D  convolutional  neural  network,both  the  convolution  and  pooling  operations  do  not  intro-duce any positional information directly while aggregatingwith neighboring pixels’ features. Since we have taken outthe structural feature that is irrelevant to positions, we onlyaggregate them in this block.
+                    </p>
+
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Citation (BibTeX) </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    @inproceedings{feng2019meshnet,<br />
+  title={MeshNet: mesh neural network for 3D shape representation},<br />
+  author={Feng, Yutong and Feng, Yifan and You, Haoxuan and Zhao, Xibin and Gao, Yue},<br />
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},<br />
+  volume={33},<br />
+  pages={8279--8286},<br />
+  year={2019}<br />
+}
+                    <br>
+                    <br>
+                    <p style="font-size=40px">
+                        <a class="btn btn-default" href="http://gaoyue.org/paper/MeshNet.pdf"> <b> Paper &raquo;</b></a>  
+                        <a class="btn btn-default" href="https://github.com/iMoonLab/MeshNet"> <b> Code &raquo;</b></a>
+                    </p>
+                </div>
+
+
+                <div class="col-md-1"></div>
+            </div>
+
+
+
+
+        </body>
+
+
+
+        <hr />
+        <footer style="background-color: #ffffff">
+            <p>&copy; 2020 - iMoonLab 智能媒体与认知实验室 Tsinghua</p>
+        </footer>
+    </div>
+    <script src="static/js/77c25eff67b24c0aa003ead7859d1511.js"></script>
+
+    <script src="static/js/1a59a27fb4484e89ab0510a5871211bd.js"></script>
+
+    <script src="static/js/jquery-ui.min.js"></script>
+
+    <link href="static/css/jquery-ui.min.css" rel="stylesheet" />
+
+    <script src="static/js/shortcut.js"></script>
+
+    <script src="static/js/suggest.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -6,16 +6,16 @@ var news_cards = new Vue({
         // TODO: if there is more data, please use vue-infinite-scroll.
         items: [
             {
-                title: '实验室在第三届世界智能驾驶挑战赛中再获佳绩',
+                title: 'Survival Prediction on Whole Slide Histopathological Images',
                 img: 'static/img/news_1.png',
-                content: '实验室参加了虚拟场景组挑战赛，并既2018年获得该项挑战赛第一名之后，再度夺得本届比赛的第一名。',
-                inscription: 'Posted on 19/5/2019 by 陈瑜峰',
-                src: '#'
+                content: 'Survival Prediction on Whole Slide Histopathological Images',
+                inscription: 'Posted on 19/5/2019 by Biao Gong',
+                src: 'detail/research_AMFNet.html'
             },
             {
-                title: '冯玉彤入选清华大学“未来学者”计划',
-                img: 'static/img/news_2.jpg',
-                content: '实验室冯玉彤同学负责的项目“基于动作识别技术的运动障碍疾病诊断”入选清华大学2019年“未来学者”计划第一批，首批全校仅4个项目入选。',
+                title: 'Attention-based Multi-modal Fusion Network for Semantic Scene Completion',
+                img: 'static/img/amfnet.png',
+                content: 'Attention-based Multi-modal Fusion Network for Semantic Scene Completion.',
                 inscription: 'Posted on 6/3/2019 by 陈瑜峰',
                 src: '#'
             },
@@ -73,13 +73,13 @@ var group_gallery = new Vue({
         items: [
             {
                 title: '2019 实验室聚餐合影',
-                img: 'static/img/group-photo_2019.jpg',
+                img: '../static/img/group2.jpg',
                 inscription: 'Posted on 19/5/2019 by 陈瑜峰',
                 src: '#'
             },
             {
                 title: '2018 实验室聚餐合影',
-                img: 'static/img/group-photo_2019.jpg',
+                img: '../static/img/group1.jpg',
                 inscription: 'Posted on 19/5/2019 by 陈瑜峰',
                 src: '#'
             },

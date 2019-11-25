@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>
+        Survival Prediction on Whole Slide Histopathological Images
+    </title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/glyphicons.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/filetypes.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/social.css">
+    <link href="../../../fonts.googleapis.com/css-family=Open+Sans-400,700,600.css" rel='stylesheet' type='text/css'>
+    <link href="../../static/trans.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/bootstrap-markdown.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/vendor/layerslider/layerslider.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/styles-cleanred.css" id="grove-styles">
+    <link rel="stylesheet" href="../../../cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/nlp.css" id="nlp-styles">
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../static/js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="../../static/js/vendor/layerslider/greensock.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.transitions.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.kreaturamedia.jquery.js"
+        type="text/javascript"></script>
+    <script src="../../static/js/markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/to-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/bootstrap-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/grove-slider.js" type="text/javascript"></script>
+    <script src="../../../cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script
+        src="../../../cdn.datatables.net/plug-ins/1.10.7/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+    <script src="../../../bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+    <link href="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link href="static/css/c5e0117592e540848259ae6882d93f52.css" rel="stylesheet" />
+    <script src="static/js/d46d827d0f604446b58cc8d38bdbd84e.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default grove-navbar navbar-fixed-top" id="imoonbignav">
+            <div class="container" id="imoonmidnav">
+                <div class="navbar-header">
+                    <a href="#" class="grove-toggle collapsed" data-toggle="collapse" data-target=".grove-nav">
+                        <i class="glyphicons show_lines"></i>
+                    </a>
+                    <img class="navbar-brand navbar-left hidden-xs" src="../../static/img/logos/nlp-logo-small.png"
+                        alt="" id="imoonlogo">
+                    <a class="navbar-brand navbar-left" href="../index.htm">
+                        <h3 class="hidden-xs" id="imoontitle" style="font-weight: 600;margin-top: 15px">智能媒体与认知实验室<p
+                                style="margin-top: 5px">
+                                iMoon: Intelligent
+                                Media and Cognition Lab</p>
+                        </h3>
+                        <h3 class="hidden-sm hidden-md hidden-lg hidden-xl" style="color: white">iMoon-Lab</h3>
+                    </a>
+                </div>
+
+                <div class="navbar-collapse grove-nav collapse" style="position: relative">
+                    <ul class="nav navbar-nav" id="imoonnav">
+
+                        <div style="position:absolute;top:5px;left:10px;border:0px solid rgb(255, 255, 255);">
+                            <a href="../../index.htm">
+                                <div style="width: 400px;height:65px"></div>
+                            </a>
+                        </div>
+                        <!-- <div id="language">
+                            <a id='drump' href="#"><b>中 / </b></a><a id='drump'
+                                href="../../../en_tsinghua/resrc/index.htm"><b>En</b></a>
+                        </div> -->
+                        <li style="margin-top: 1px;">
+                            <a href="../../index.htm">主页</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../people/index.htm">团队</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../resrc/index.htm">研究方向</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../pubs/index.htm">论文</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../blog/index.htm">新闻</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="#">生活</a>
+                        </li>
+                        <li class="dropdown" style="margin-top: 1px;">
+                            <a href="#">更多信息</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../more/index.htm">MICCAI19 Tutorial</a></li>
+                                <li><a href="#">MICCAI19 挑战赛</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container body-content" style="margin-top:90px;">
+
+        <body>
+            <h1 align="center" style="font-size:40px;"><b>
+                Survival Prediction on Whole Slide </br>
+                Histopathological Images
+            </b></h1>
+            <div class="row">
+                <br>
+                <p align="center" style="font-size:20px;">
+                    Donglin Di,
+                    Yifan Feng
+                    <!-- ,
+                    Qiuhong Ke,
+                    Changqing Zou,
+                    Rongrong Ji and
+                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a> -->
+                </p>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
+                    <!-- <h2><b>Abstract</b></h2> -->
+                    <p style="font-size:20px;" wrap="soft">
+                        Survival prediction for patients based on their gigapixel whole-slide histopathological images (WSIs) has been drawing increasing attention in recent years.
+                        One key challenge of this task is how to explore informative survival-specific features reflecting the patient's survival status effectively.
+                        In this paper, we introduce a hypergraph regression framework, called HyperGraph Regression Network (HGRNet), to tackle this challenge for survival prediction.
+                        HGRNet is capable of mining the pathological topological patterns affecting the survival status by a hierarchical representation built upon a hypergraph structure.
+                        We conduct extensive experiments on three popular carcinoma datasets (the LUSC and GBM datasets, and the NLST dataset.
+                        Quantitative results show that the proposed method consistently outperforms state-of-the-art methods by a large margin (8.19% on LUSC, 5.56% on GBM, and 7.70% on NLST).
+                        We demonstrate the proposed method's potential to work as a survival status analysis tool that can facilitate exploring the co-relationship between the survival status and different pathological topological patterns.
+                    </p>
+                    <p style="text-align:center;"><img style="width: 80%;" src="research_hgrnet/HyperEdgeVis.png"
+                            alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">
+                        Fig 1. Visualization of the co-relationship between the survival status
+                        and different pathological patterns </br>
+                        which include topological patterns or attribute patterns</p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Data </b></h2>
+                    <p style="text-align:center;"><img style="width: 100%;" src="research_hgrnet/datasets.jpg" alt="datasets"
+                            class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 2. Harmonized Cancer Datasets Genomic Data Commons Data</p>
+
+                    <p style="font-size:20px" wrap="hard">
+                        We mainly evaluate the proposed method on three datasets:
+                        the lung cancer dataset LUSC and the brain carcinoma dataset GBM
+                        from the generic cancer patient dataset TCGA, and the lung cancer dataset NLST.
+                        These three datasets are used in two modes.
+                        In the first mode, we follow the experimental settings of previous methods
+                        and select parts of the whole-slide histopathological images from the three datasets for the evaluation.
+                        The datasets used in this mode are called the ``selected'' datasets.
+                        In the other mode, we evaluate the proposed method with its competitors on the complete data from these three datasets.
+                        We denote the datasets used in this mode as the ``complete'' datasets.
+                        In our implementation, 5-fold cross-validation is employed to investigate the optimal parameter setting.
+                        To validate the stability of the proposed method, we run 5 times for each set of parameter setting and the mean performance is computed for the comparison.
+
+                        <br><br>You could download TCGA-LUSC and TCGA-GBM by clicking following button.(~1.3 TB)
+                    </p>
+                    <p style="font-size=40px"><a class="btn btn-default" href="https://portal.gdc.cancer.gov/"> <b> Download
+                            &raquo;</b></a></p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Hypergraph Regression Network </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                    <p style="font-size:20px" wrap="hard">
+                        In this section, we introduce the structure of the proposed HyperGraph Regression Network (HGRNet).
+                        As shown in Fig. 3, the pipeline of HGRNet mainly consists of three sequential steps.
+                        In the first step, we extract raw patch-level features from patches sampled from the input original WSI data.
+                        After that, we feed the patch-level features to a representation module based on the hypergraph structure to learn higher-order representation.
+                        Last, we use a regression module to produce the final result of the survival status from those of higher-order features.
+                        We next detail each individual step.
+                    </p>
+
+
+                    <p style="text-align:center;"><img style="width: 100%;"  src="research_hgrnet/framework.jpg" alt="framework" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 3. Illustration of our pipeline hypergraph regression network (HGRNet).
+                        Firstly, we utilize a backbone model to extract raw patch-level features then the hypergraph signal matrix
+                        <b>X</b> and the hyperedges incidence matrix <b>H</b> are generated.
+                        After training the survival-specific hypergraph by several hypergraph spectral convolutional layers,
+                        the regression module leverages the higher-order representation and masters the skills to predict the risk of given WSIs.
+                    </p>
+
+
+
+                    <p style="font-size:20px" wrap="hard">
+                        To overcome the weakness of pair-wise graph structure and learn the effects on the health of each factor, it is an inevitable choice to give the hypergraph structure a shot, which was proved has the ability to handling complex correlations and grouping information effectively.
+                        In this work, we adopt and modify the hypergraph to learn the higher-order representation from patches extracted from the former stage, and propose a regression network based on which furthermore.
+                    </p>
+                    
+
+                    <p style="text-align:center;"><img style="width: 40%;"  src="research_hgrnet/aggregation.jpg" alt="aggregation" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">
+                        Fig 4. The illustration of generating global representation from fine-tuned patch representation.
+                        The attribute-sensitive aggregating is pooling all patch feature into one for a specific channel(each column). Each value of the final vector is selected from the most remarkable value of all patch feature in the same column.
+                        And the pattern-sensitive aggregating is compressing each patch feature into one that can mostly represent the pattern of the patch, so that to explore the correlation between the potential pattern and the survival time.
+                    </p>
+
+
+                    <p style="font-size:20px" wrap="hard">
+                        Predict survival status using the fine-tuned patch-level features, i.e. the higher-order representations.
+                        A translational global feature is generated from distributed patch-level features, which are fed into a traditional/deep-based model for final survival regression.
+                        And the final step is fitting the aggregated features and predicting survival status.
+                    </p>
+
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+            
+
+        </body>
+
+
+
+        <hr />
+        <footer style="background-color: #ffffff">
+            <p>&copy; 2020 - iMoonLab 智能媒体与认知实验室 Tsinghua</p>
+        </footer>
+    </div>
+    <script src="static/js/77c25eff67b24c0aa003ead7859d1511.js"></script>
+
+    <script src="static/js/1a59a27fb4484e89ab0510a5871211bd.js"></script>
+
+    <script src="static/js/jquery-ui.min.js"></script>
+
+    <link href="static/css/jquery-ui.min.css" rel="stylesheet" />
+
+    <script src="static/js/shortcut.js"></script>
+
+    <script src="static/js/suggest.js"></script>
+
+
+
+
+</body>
+
+</html>

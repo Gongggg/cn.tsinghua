@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Attention-based Multi-modal Fusion Network for Semantic Scene Completion</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/glyphicons.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/filetypes.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/social.css">
+    <link href="../../../fonts.googleapis.com/css-family=Open+Sans-400,700,600.css" rel='stylesheet' type='text/css'>
+    <link href="../../static/trans.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/bootstrap-markdown.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/vendor/layerslider/layerslider.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/styles-cleanred.css" id="grove-styles">
+    <link rel="stylesheet" href="../../../cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/nlp.css" id="nlp-styles">
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../static/js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="../../static/js/vendor/layerslider/greensock.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.transitions.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.kreaturamedia.jquery.js"
+        type="text/javascript"></script>
+    <script src="../../static/js/markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/to-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/bootstrap-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/grove-slider.js" type="text/javascript"></script>
+    <script src="../../../cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script
+        src="../../../cdn.datatables.net/plug-ins/1.10.7/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+    <script src="../../../bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+    <link href="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link href="static/css/c5e0117592e540848259ae6882d93f52.css" rel="stylesheet" />
+    <script src="static/js/d46d827d0f604446b58cc8d38bdbd84e.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default grove-navbar navbar-fixed-top" id="imoonbignav">
+            <div class="container" id="imoonmidnav">
+                <div class="navbar-header">
+                    <a href="#" class="grove-toggle collapsed" data-toggle="collapse" data-target=".grove-nav">
+                        <i class="glyphicons show_lines"></i>
+                    </a>
+                    <img class="navbar-brand navbar-left hidden-xs" src="../../static/img/logos/nlp-logo-small.png"
+                        alt="" id="imoonlogo">
+                    <a class="navbar-brand navbar-left" href="../index.htm">
+                        <h3 class="hidden-xs" id="imoontitle" style="font-weight: 600;margin-top: 15px">智能媒体与认知实验室<p
+                                style="margin-top: 5px">
+                                iMoon: Intelligent
+                                Media and Cognition Lab</p>
+                        </h3>
+                        <h3 class="hidden-sm hidden-md hidden-lg hidden-xl" style="color: white">iMoon-Lab</h3>
+                    </a>
+                </div>
+
+                <div class="navbar-collapse grove-nav collapse" style="position: relative">
+                    <ul class="nav navbar-nav" id="imoonnav">
+
+                        <div style="position:absolute;top:5px;left:10px;border:0px solid rgb(255, 255, 255);">
+                            <a href="../../index.htm">
+                                <div style="width: 400px;height:65px"></div>
+                            </a>
+                        </div>
+                        <!-- <div id="language">
+                            <a id='drump' href="#"><b>中 / </b></a><a id='drump'
+                                href="../../../en_tsinghua/resrc/index.htm"><b>En</b></a>
+                        </div> -->
+                        <li style="margin-top: 1px;">
+                            <a href="../../index.htm">主页</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../people/index.htm">团队</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../resrc/index.htm">研究方向</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../pubs/index.htm">论文</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../blog/index.htm">新闻</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="#">生活</a>
+                        </li>
+                        <li class="dropdown" style="margin-top: 1px;">
+                            <a href="#">更多信息</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../more/index.htm">MICCAI19 Tutorial</a></li>
+                                <li><a href="#">MICCAI19 挑战赛</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container body-content" style="margin-top:90px;">
+
+        <body>
+            <h1 align="center" style="font-size:40px;"><b>Attention-based Multi-modal Fusion Network <br>for Semantic
+                    Scene Completion
+            </h1>
+            <div class="row">
+                <br>
+                <p align="center" style="font-size:20px;">
+                    Siqi Li
+                    <!-- , 
+                    Changqing Zou, 
+                    Yipeng Li, 
+                    Xibin Zhao, 
+                    and
+                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a> -->
+                </p>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
+                    <!-- <h2><b>Abstract</b></h2> -->
+                    <p style="font-size:20px;" wrap="soft">This paper presents an end-to-end 3D convolutional network
+                        named attention-based multi-modal fusion network (AMFNet) for the semantic scene completion
+                        (SSC) task of
+                        inferring the occupancy and semantic labels of a volumetric 3D scene from single-view RGB-D
+                        images. Compared with
+                        previous methods which use only the semantic features extracted from RGB-D images, the proposed
+                        AMFNet learns to
+                        perform effective 3D scene completion and semantic segmentation simultaneously via leveraging
+                        the experience of inferring
+                        2D semantic segmentation from RGB-D images as well as the reliable depth cues in spatial
+                        dimension. It is achieved
+                        by employing a multi-modal fusion architecture boosted from 2D semantic segmentation and a 3D
+                        semantic completion network
+                        empowered by residual attention blocks. We validate our method on both the synthetic SUNCG-RGBD
+                        dataset and
+                        the real NYUv2 dataset and the results show that our method respectively achieves the gains of
+                        2.5% and 2.6% on the synthetic
+                        SUNCG-RGBD dataset and the real NYUv2 dataset against the state-of-the-art method.
+                    </p>
+                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/network.png" alt="xxxx"
+                            class="center"></p>
+                    <p style="font-size:15px; text-align:center">Figure 1. Architecture of AMFNet. Taking RGB-D images
+                        (separated to a RGB and a HHA image) as input, AMFNet predicts
+                        voxel occupancy and object labels of the scene simultaneously. It boosts the 3D completion and
+                        segmentation from an initial
+                        3D semantic feature volume produced by computing the 2D-3D projection of the results of a 2D
+                        segmentation network.</p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Method </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                    <p style="font-size:20px" wrap="hard">
+                        The proposed AMFNet, as illustrated in Figure 1, mainly contains three sequential modules: a 2D
+                        segmentation network,
+                        a 2D-3D projection layer, and a two-branch 3D volume network. This network takes single-view
+                        RGB-D images
+                        as input and outputs occupancy and semantic labels for all voxels in the scene. The whole
+                        network can be trained
+                        in an end-to-end manner. We next introduce each module in the sequence of the flow of data
+                        processing. <br><br>
+
+                        The 2D segmentation network extracts 2D geometry features and performs 2D semantic segment-ation
+                        from the input RGB-D images.
+                        <br>
+                        The 2D-3D projection layer projects every feature tensor and semantic label into the 3D volume
+                        at the location with the same depth value.<br>
+                        The 3D volume network, which takes the output of the 2D-3D projection layer as input, contains
+                        two branches: one
+                        for 3D guidance information and the other for 3D semantic completion.
+                    </p>
+
+
+                    <p style="text-align:center;"><img style="width: 60%;" src="research_AMFNet/RAB.png" alt="xxxx"
+                            class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Figure 2. Illustration of the proposed residual
+                        attention block
+                        (RAB). RAB has a structure similar to the DDR block but with both channel-wise and spatial-wise
+                        attention injected.
+                    </p>
+                    <br>
+
+                    <p style="font-size:20px" wrap="hard">
+                        The 3D-guidance branch is used to provide the guidance information for the branch of 3D semantic
+                        completion, which is boosted from an initial 3D semantic volumetric scene where visible voxels
+                        have initial
+                        semantic labels. The initial 3D semantic volume is encoded by a one-hot encoder to achieve an
+                        ROI region (3D
+                        bounding box) for a specific category from the initial 3D semantic volume. The one-hot encoding
+                        introduces spatial
+                        boundary constraints into the network for each category, which improves the prediction of 3D
+                        semantic volume. <br><br>
+
+                        The 3D-semantic completion branch, which takes the initial 3D feature volume as input, is mainly
+                        used to infer the voxel occupancy
+                        of the 3D scene. The RAB block used in the 3D-completion branch is shown in Figure 2.
+
+                    </p>
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
+                    <h2><b>Results</b></h2>
+
+                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/table.png" alt="xxxx"
+                            class="center"></p>
+                    <br>
+                    <p style="font-size:20px;" wrap="soft">
+                        Table 1 and Table 2 presents the comparison results of both the scene completion and the
+                        semantic
+                        scene completion on the NYUv2 dataset and SUNCG-RGBD dataset, respectivly. Compared with
+                        previous methods,
+                        our model achieves state-of-the-art performance on the task of semantic scene completion and
+                        scene completion.
+                    </p>
+
+                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/result.png" alt="xxxx"
+                            class="center"></p>
+                    <p style="font-size:15px; text-align:center">
+                        Figure 4. Qualitative results on the NYUv2 dataset.
+                        From left to right: RGB image, ground truth of 2D segmentation result, ground truth of SSC task,
+                        results generated by SSCNet, SATNet, our approach, our approach with attention block removed,
+                        our approach with 3D-guidance branch removed, and our approach with the result of the 2D
+                        semantic segmentation module replaced by the ground truth.</p>
+                    <br>
+                    <p style="font-size:20px;" wrap="soft">
+                        The visualization of the qualitative results of the semantic scene completion task generated by
+                        the proposed method
+                        and two previous methods, SSCNet and SATNet, on a set of representative samples from the NYUv2
+                        dataset is shown in Figure 4.
+                        It can be easily seen that our method has achieved better performance than SSCNet and SATNet.
+                    </p>
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+
+            <!--             
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Citation </b></h2>
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                    <br>
+                    <br>
+                    <p style="font-size=40px">
+                        <a class="btn btn-default" href="#"> <b> Paper &raquo;</b></a>
+                        <a class="btn btn-default" href="#"> <b> Code &raquo;</b></a>
+                    </p>
+                </div>
+
+
+                <div class="col-md-1"></div>
+            </div> -->
+
+
+
+
+        </body>
+
+
+
+        <hr />
+        <footer style="background-color: #ffffff">
+            <p>&copy; 2020 - iMoonLab 智能媒体与认知实验室 Tsinghua</p>
+        </footer>
+    </div>
+    <script src="static/js/77c25eff67b24c0aa003ead7859d1511.js"></script>
+
+    <script src="static/js/1a59a27fb4484e89ab0510a5871211bd.js"></script>
+
+    <script src="static/js/jquery-ui.min.js"></script>
+
+    <link href="static/css/jquery-ui.min.css" rel="stylesheet" />
+
+    <script src="static/js/shortcut.js"></script>
+
+    <script src="static/js/suggest.js"></script>
+
+
+
+
+</body>
+
+</html>

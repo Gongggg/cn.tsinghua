@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>DeepCCFV: Camera Constraint-Free Multi-View Convolutional Neural Network for 3D Object Retrieval</title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/glyphicons.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/filetypes.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/social.css">
+    <link href="../../../fonts.googleapis.com/css-family=Open+Sans-400,700,600.css" rel='stylesheet' type='text/css'>
+    <link href="../../static/trans.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/bootstrap-markdown.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/vendor/layerslider/layerslider.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/styles-cleanred.css" id="grove-styles">
+    <link rel="stylesheet" href="../../../cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/nlp.css" id="nlp-styles">
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../static/js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="../../static/js/vendor/layerslider/greensock.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.transitions.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.kreaturamedia.jquery.js"
+        type="text/javascript"></script>
+    <script src="../../static/js/markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/to-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/bootstrap-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/grove-slider.js" type="text/javascript"></script>
+    <script src="../../../cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script
+        src="../../../cdn.datatables.net/plug-ins/1.10.7/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+    <script src="../../../bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+    <link href="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link href="static/css/c5e0117592e540848259ae6882d93f52.css" rel="stylesheet" />
+    <script src="static/js/d46d827d0f604446b58cc8d38bdbd84e.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default grove-navbar navbar-fixed-top" id="imoonbignav">
+            <div class="container" id="imoonmidnav">
+                <div class="navbar-header">
+                    <a href="#" class="grove-toggle collapsed" data-toggle="collapse" data-target=".grove-nav">
+                        <i class="glyphicons show_lines"></i>
+                    </a>
+                    <img class="navbar-brand navbar-left hidden-xs" src="../../static/img/logos/nlp-logo-small.png"
+                        alt="" id="imoonlogo">
+                    <a class="navbar-brand navbar-left" href="../index.htm">
+                        <h3 class="hidden-xs" id="imoontitle" style="font-weight: 600;margin-top: 15px">智能媒体与认知实验室<p
+                                style="margin-top: 5px">
+                                iMoon: Intelligent
+                                Media and Cognition Lab</p>
+                        </h3>
+                        <h3 class="hidden-sm hidden-md hidden-lg hidden-xl" style="color: white">iMoon-Lab</h3>
+                    </a>
+                </div>
+
+                <div class="navbar-collapse grove-nav collapse" style="position: relative">
+                    <ul class="nav navbar-nav" id="imoonnav">
+
+                        <div style="position:absolute;top:5px;left:10px;border:0px solid rgb(255, 255, 255);">
+                            <a href="../../index.htm">
+                                <div style="width: 400px;height:65px"></div>
+                            </a>
+                        </div>
+                        <!-- <div id="language">
+                            <a id='drump' href="#"><b>中 / </b></a><a id='drump'
+                                href="../../../en_tsinghua/resrc/index.htm"><b>En</b></a>
+                        </div> -->
+                        <li style="margin-top: 1px;">
+                            <a href="../../index.htm">主页</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../people/index.htm">团队</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../resrc/index.htm">研究方向</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../pubs/index.htm">论文</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../blog/index.htm">新闻</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="#">生活</a>
+                        </li>
+                        <li class="dropdown" style="margin-top: 1px;">
+                            <a href="#">更多信息</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../more/index.htm">MICCAI19 Tutorial</a></li>
+                                <li><a href="#">MICCAI19 挑战赛</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container body-content" style="margin-top:90px;">
+
+        <body>
+            <h1 align="center" style="font-size:40px;"><b>DeepCCFV: Camera Constraint-Free Multi-View Convolutional Neural Network for 3D Object Retrieval</b>
+            </h1>
+            <div class="row">
+                <br>
+                <p align="center" style="font-size:20px;">
+                    Zhengyue Huang,
+                    Zhehui Zhao
+                    and
+                    Hengguang Zhou
+                    <!-- ,
+                    Xibin Zhao,
+                    and
+                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a> -->
+                </p>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
+                    <!-- <h2><b>Abstract</b></h2> -->
+                    <p style="font-size:20px;" wrap="soft">3D object retrieval has a compelling demand in the ﬁeld of computer vision with the rapid development of 3D vision technology and increasing applications of 3D objects. 3D objects can be described in different ways such as voxel, point cloud, and multi-view. Among them, multi-view based approaches proposed in recent years show promising results. Most of them require a ﬁxed predeﬁned camera position setting which provides a complete and uniform sampling of views for objects in the training stage. However, this causes heavy over-ﬁtting problems which make the models failed to generalize well in free camera setting applications, particularly when insufﬁcient views are provided. Experiments show the performance drastically drops when the number of views reduces, hindering these methods from practical applications. In this paper, we investigate the over-ﬁtting issue and remove the constraint of the camera setting. First, two basic feature augmentation strategies Dropout and Dropview are introduced to solve the over-ﬁtting issue, and a more precise and more efﬁcient method named DropMax is proposed after analyzing the drawback of the basic ones. Then, by reducing the over-ﬁtting issue, a camera constraint-free multi-view convolutional neural network named DeepCCFV is constructed. Extensive experiments on both single-modal and cross-modal cases demonstrate the effectiveness of the proposed method in free camera settings comparing with existing state-of-the-art 3D object retrieval methods.
+                    </p>
+                    <!-- figure -->
+                    <p style="text-align:center;"><img id="pattern_gap_demo" style="width: 55%;" src="research_deepccfv/demo.png"
+                            alt="pattern_gap_demo" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Figure 1. The pattern gap between training and test stage. This makes the deep models trained in complete dataset
+                        hard to generalize well in practical scenarios where the data is missing or incomplete.
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <br>
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Method </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <!-- problem introduction -->
+                    <p style="font-size:20px" wrap="hard">
+                        A  complete training set of views is supposed to make the deep models perform better in practical scenarios where the input views are uncertain. However, we observe that the network may suffer from overfitting issues when trained in a complete training set. This makes the networks perform even worse than that trained in missing view datasets. This unexpected result is mainly caused by the pattern gap between the complete and missing view datasets (<a href="#pattern_gap_demo">Figure 1</a>). To tackle this issue, we can augment the training set by randomly dropping the views  (denoted as Dropview). Though easy to apply, this simple strategy is not efficient and precise enough to close the pattern gap. In this way, both the dominated strong features and weak features are dropped and hence the dropped weak feature can not be enhanced.  Considering this, we propose a method named <b>DropMax</b> which precisely drops the dominated features in the networks. The formal definition of DropMax is given as follows:
+                    </p>
+
+                    <!-- figure -->
+                    <p style="text-align:center;"><img style="width: 28%;"  src="research_deepccfv/dropmax_formula.png" alt="dropmax_formula" class="center"></p>
+                    <!-- <p style="font-size:15px; text-align:center;">Fig 3.  -->
+                    </p>
+        
+
+                    <p style="font-size:20px" wrap="hard">
+                        where TopkMask represents a function to generate the topk mask at probability p, l denotes the corresponding layer, y(l) is the original output of layer l, \tilde{y}^{(l)} represents the masked output after DropMax. In a large range, the selection of hyper parameters k and p leads to stable performance. 
+                    </p>
+
+                    <br>
+
+                    <p style="font-size:20px" wrap="hard">
+                        In MVCNN-like models, DropMax is inserted before and after the aggregation layer (<a href="#dropmax">Figure 2</a>). 
+                    </p>
+
+                    <!-- figure -->
+                    <p id="dropmax" style="text-align:center;"><img style="width: 40%;"  src="research_deepccfv/dropmax.png" alt="dropmax" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Figure 2. DeepCCFV architecture, DropMax block is added before and after the aggregation operation (denoted as M is this ﬁgure) </p>
+
+
+                    <p style="font-size:20px" wrap="hard">
+                        The overall pipeline for cross-modal retrieval is shown in <a href="#pipeline">Figure 3</a>
+                    </p>
+
+                    <!-- figure -->
+                    <p id="pipline" style="text-align:center;"><img style="width: 85%;"  src="research_deepccfv/pipeline.png" alt="pipeline" class="center"></p>
+                    <div style="text-align:center;">
+                        <p style="font-size:15px; text-align:center;">Figure 3.The architecture of our cross-modal retrieval network. The input multi-view data and point cloud data is ﬁrst passed through the feature extractors. Then the extracted features are passed to the embedding networks to generate two features for each modality. </p>
+                    </div>
+                    
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+
+
+            <br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Experimental Results </b></h2>
+                    <p style="font-size:20px;color:#823c3b" wrap="hard">
+                        DropMax makes MVCNN maintain about <b>90%</b> of the performance when about <b>90%</b> of the data is missed.
+                    </p>
+            
+                    <p style="text-align:center;"><img style="width: 60%;" src="research_deepccfv/retreival result.png" alt="retrieval"
+                            class="center"></p>
+
+                    <div style="text-align:center;">
+                        <p style="font-size:15px; text-align:center;">Figure 4. The retrieval mAP of comparing approaches using VGG11-BN and ResNet50 as the CNN backbone in random camera positions. The proposed DeepCCFV had the best performance among the methods listed in the ﬁgure. The retrieval mAP of DeepCCFV using single view achieved 74.49% and 78.63%, which were 13.69% and 32.02% higher than MVCNN. The retrieval mAP of the proposed DeepCCFV using 12 views achieved 82.87% and 87.98% ,which were 6.91% and 11.75% higher than MVCNN.</p>
+                    </div>
+
+                    
+                    <p style="text-align:center;"><img style="width: 70%;" src="research_deepccfv/result_cross_modal.png" alt="retrieval"
+                        class="center"></p>
+
+                    <div style="text-align:center;">
+                        <p style="font-size:15px; text-align:center;">Figure 5. The results of cross-modal retrieval experiment in terms of mAP. Above the middle line, results show the original single-modal retrieval results for different methods. Below the middle line, results show the cross-modal retrieval result. For all cases, the method with DeepCCFV performs the best.</p>
+                    </div>
+
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+
+            <br>
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Citation (BibTeX) </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    @inproceedings{Huang2019DeepCCFV,<br>
+                        title={DeepCCFV: Camera Constraint-Free Multi-View Convolutional Neural Network for 3D Object Retrieval},<br>
+                        author={Zhengyue Huang and Zhehui Zhao and Hengguang Zhou and Xibin Zhao and Yue Gao},<br>
+                        booktitle={AAAI},<br>
+                        year={2019}<br>
+                    }
+                    <br>
+                    <br>
+                    <p style="font-size:40px">
+                        <a class="btn btn-default" href="http://gaoyue.org/paper/DeepCCFV.pdf"> <b> Paper &raquo;</b></a>  
+                        <!-- <a class="btn btn-default" href="https://github.com/iMoonLab"> <b> Code &raquo;</b></a> -->
+                    </p>
+                </div>
+
+
+                <div class="col-md-1"></div>
+            </div>
+
+            
+
+
+
+
+        </body>
+
+
+
+        <hr />
+        <footer style="background-color: #ffffff">
+            <p>&copy; 2020 - iMoonLab 智能媒体与认知实验室 Tsinghua</p>
+        </footer>
+    </div>
+    <script src="static/js/77c25eff67b24c0aa003ead7859d1511.js"></script>
+
+    <script src="static/js/1a59a27fb4484e89ab0510a5871211bd.js"></script>
+
+    <script src="static/js/jquery-ui.min.js"></script>
+
+    <link href="static/css/jquery-ui.min.css" rel="stylesheet" />
+
+    <script src="static/js/shortcut.js"></script>
+
+    <script src="static/js/suggest.js"></script>
+
+
+
+
+</body>
+
+</html>
