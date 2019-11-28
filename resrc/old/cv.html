@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMoon-Lab: Research-ComputerVision</title>
+  <link rel="stylesheet" href="static/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/gallery.css" type="text/css" />
+  <script src="static/js/modernizr.min.js"></script>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bee6e9034f83599f524d47d96877e93c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</head>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+
+      <a class="header-logo" href="../../index.htm" aria-label="Yue's Group"
+        style="font-size:18px;font-weight:bold;width: 400px;">
+        <!-- <img src="../../static/img/logos/nlp-logo-small.png" alt="" style="width: 40px;height: 40px;"> -->
+        智能媒体与认知实验室
+        <p style="font-size:13px;font-weight:lighter">iMoon: Intelligent Media and Cognition Lab</p>
+      </a>
+
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="../../index.htm">主页</a>
+          </li>
+
+          <li>
+            <a href="../../people/index.htm">团队</a>
+          </li>
+
+          <li class="active">
+            <a href="../../resrc/index.htm">研究方向</a>
+          </li>
+
+          <li>
+            <a href="../../pubs/index.htm">论文</a>
+          </li>
+
+          <li>
+            <a href="../../blog/index.htm">新闻</a>
+          </li>
+
+          <li>
+            <a href="#">生活</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" id="dropdownMenu1">更多信息</a>
+            <ul class="dropdown-menu" id="dropDownCur1">
+              <a href="../../more/index.htm">MICCAI19 Tutorial</a>
+              <a href="#">MICCAI19 挑战赛</a>
+            </ul>
+          </li>
+          <li>
+            <a style="font-weight:bold" href="#"><b>English</b></a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+
+  </div>
+</div>
+
+
+<body class="pytorch-body">
+
+
+  <div>
+
+
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="pytorch-left-menu" id="pytorch-left-menu">
+      <div class="pytorch-side-scroll">
+        <div class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+          <br>
+          <br>
+          <h2>研究方向</h2>
+          <br>
+          <a href="cv.html">
+            <p class="caption"><span class="caption-text">立体视觉</span></p>
+          </a>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">立体数据获取与增强</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">立体视觉表示</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="cv.html">立体视觉对象检索</a></li>
+          </ul>
+
+          <a href="ml.html">
+            <p class="caption"><span class="caption-text">复杂网络</span></p>
+          </a>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">超图结构学习模型</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">超图神经网络模型</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="ml.html">网络安全态势感知</a></li>
+          </ul>
+
+
+          <a href="mia.html">
+            <p class="caption"><span class="caption-text">脑科学</span></p>
+          </a>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">脑网络建模</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="mia.html">情感计算</a></li>
+          </ul>
+          </ul>
+          <!-- <p class="caption"><span class="caption-text">工业互联网安全</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">TIE submission</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">基于代价敏感学习的分类方法（AAAI）</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">不平衡数据分类（IJCAI）</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="iis.html">SDP</a></li>
+          </ul> -->
+
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="pytorch-container">
+
+      <section data-toggle="wy-nav-shift" class="pytorch-content-wrap">
+        <div class="pytorch-page-level-bar" id="pytorch-page-level-bar">
+          <div class="pytorch-breadcrumbs-wrapper">
+
+            <div role="navigation" aria-label="breadcrumbs navigation">
+
+              <ul class="pytorch-breadcrumbs">
+
+                <li>
+                  <a href="#">
+                    研究方向
+                  </a> &gt;
+                </li>
+                <li>立体视觉 3D Vision</li>
+              </ul>
+
+
+            </div>
+          </div>
+
+          <div class="pytorch-shortcuts-wrapper" id="pytorch-shortcuts-wrapper">
+            目录
+          </div>
+        </div>
+
+        <div class="pytorch-content-left">
+
+          <div class="rst-content">
+
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+              <article itemprop="articleBody" class="pytorch-article">
+                <div class="sphx-glr-example-title section" id="finetuning-torchvision-models">
+                  <span id="sphx-glr-beginner-finetuning-torchvision-models-tutorial-py"></span>
+
+
+
+
+
+                  <h1>立体视觉 3D Vision<a class="headerlink" href="#" title="Computer-Vision">¶</a></h1>
+
+                  <p>
+                    随着信息时代各行各业对立体数据需求的快速增长，立体视觉数据的应用日趋广泛，通过点云、网格、体素及视图等多模态数据进行立体场景的表示，其研究在机器人自主导航、航空及遥感测量、工业自动化系统等领域具有重要应用价值。在立体视觉领域，本实验室主要关注于立体数据的获取与增强、立体视觉表示、检索与识别等研究内容。
+                  </p>
+
+
+
+
+
+                  <div class="section" id="3D-Data-Generate">
+                    <h2>1.立体数据获取与增强<a class="headerlink" href="#3D-Data-Generate"
+                        title="Permalink to this headline">¶</a>
+                    </h2>
+                    <p>
+                      立体数据的获取与增强主要通过获取目标场景或物体的深度信息，形成点云数据，实现场景的三维建模。点云作为视觉环境表示的基本模态，可以通过激光雷达等硬件设备直接采集，在各个领域均具有广泛的应用。但受到采集设备的性能限制，高密度、高精度的点云数据通常难以在常规场景下获得。因此，如何在现有设备约束的前提下，基于相对低密度、低精度的点云数据进行立体数据的增强已成为一个日益重要的问题。然而，由于点云数据自身的无序特性，使得这个问题极具挑战性。为了解决这个问题，我们提出了一种跨模态点云增强框架，即基于视觉信息的点云增强。在该框架中，我们设计了一种适用于点云增强的对抗式结构，使用单视角视图用作辅助输入，用于增强点云数据。通过多阶段嵌入式融合机制将两种模态的高阶特征注入低阶特征，利用低阶特征所表达的几何信息和高阶特征所表达的语义信息进行数据增强。该方法能够从点云、像素级别进行多模态数据（点云与视图）的冲突消解及增强。针对跨模态的立体数据增强任务，基于ShapeNet数据集我们构建了一个新的大型立体残缺数据集。该数据集由2087K+个不完整的点云和1043K+个完整的点云组成，同时包含13个类别35658个对象的多角度视图。下图给出了基于视图的残缺点云增强效果，从图中可以看出该框架能够有效增强原始残缺点云数据。
+                    </p>
+
+                    <div class="section" id="3D-Data-Generate-Img" align="center">
+
+                      <img src="3D-Data-Generate.png" style="width:90%;height: 90%;margin: 6px;">
+                      <p>图1 基于视图的残缺点云增强</p>
+                    </div>
+
+
+                    <div class="section" id="3D-Data-Representation">
+                      <h2>2.立体视觉表示<a class="headerlink" href="#3D-Data-Representation"
+                          title="Permalink to this headline">¶</a></h2>
+
+                      <div class="section" id="Multi-Perspective-Representation">
+                        <h3>2.1.基于多视图的立体视觉表示<a class="headerlink" href="#Multi-Perspective-Representation"
+                            title="Permalink to this headline">¶</a></h3>
+                        <p>
+                          二维图像是立体世界在人眼中的表征方式，既可以通过立体对象的多个投影视图、也可以通过真实对象不同角度拍摄得到的照片进行对象描述。早期的基于多视图的立体对象表示方法多需要预设固定的视图获取角度及数量，对实际应用造成了极大的限制。。为提高立体视觉应用中的模型通用性，针对基于多视图的立体内容表示，提出了“视图-视图组-模型”三层架构模型，通过视图的辨识能力进行分组，从而弱化具体视图在立体对象的表示作用，形成相对更加鲁棒的表示效果。图2给出了基于视图组神经网络模型的立体对象表示示意图。
+                        </p>
+                        <div align=center>
+
+                          <img src="3D-Data-Representation.png" style="width:90%;height: 90%;margin: 6px;">
+                          <p>图2 基于视图组神经网络模型的立体对象表示示意图</p>
+                        </div>
+
+                      </div>
+
+                      <div class="section" id="Point-Cloud-Representation">
+                        <h3>2.2.基于点云的立体视觉表示<a class="headerlink" href="#Point-Cloud-Representation"
+                            title="Permalink to this headline">¶</a></h3>
+                        <p>
+                          点云是用于表示多维点集的数据结构，可通过激光雷达等硬件设备进行采集。点云数据具有无序性，在实际应用中也面临对象数据的排列变化、旋转等问题。因此，点云数据表示需要具备排列不变性和旋转不变性。针对点云数据表示的旋转问题，如图3所示的旋转点云，我们提出了旋转不变点云表示方法。为了实现点云数据的旋转，首先寻找点云的旋转等价类，通过SO(3)群的参数表示，我们在点云等价类中找到最佳旋转表示，实现点云的旋转不变性。当点云数据具有旋转角度时，该方法可以直接处理旋转数据，效果等同于处理旋转对齐数据，实现了点云数据表示的旋转不变性。
+                        </p>
+
+                        <div align=center>
+
+                          <img src="Ponit-Cloud-Data.png" style="width:70%;height: auto;margin: 6px;">
+                          <p>图3 原始点云(灰色)与旋转后的点云数据(蓝色)</p>
+                        </div>
+                      </div>
+
+                      <div class="section" id="Mesh-Representation">
+                        <h3>2.3.基于网格的立体视觉表示<a class="headerlink" href="#Mesh-Representation"
+                            title="Permalink to this headline">¶</a></h3>
+                        <p>
+                          网格数据是一系列点、边、面的集合，不同元素间连接关系复杂，元素数量不固定且无序，由此带来的复杂性和不规则性都为基于网格数据的立体视觉表示带来了困难。针对网格表示的难题，我们提出了网格神经网络模型（MeshNet），基于网格数据进行立体对象表示。该方法以面为单元的特征表示方法，通过逐面处理和全局池化的方法解决网格无序性问题，并将面的特征划分为空间特征和结构特征，并提出了用于扩大感受区域的网格卷积结构，从而解决网格数据的复杂性和不规则性问题，获得精确的立体数据表示。图4给出了通过网格神经网络获得的网格数据的显著性特征区域。从图中可以看出，对立体对象表示具有较重要内容的部分，如飞机的机翼、机尾等区域，均已被显著标记。
+                        </p>
+                        <div align=center>
+                          <img src="Mesh.png" style="width:90%;height: 90%;margin: 6px;">
+                          <p>图4 基于网格神经网络获取的网格数据显著性特征区域</p>
+                        </div>
+                      </div>
+
+                      <div class="section" id="Fusion-Representation">
+                        <h3>2.4.基于多模态的立体视觉融合表示<a class="headerlink" href="#Fusion-Representation"
+                            title="Permalink to this headline">¶</a></h3>
+                        <p>
+                          不同模态的立体数据具有各自的特性，同时也具备一定的局限性。因此，融合多模态数据进行立体视觉的融合表示具有重要意义。针对这一问题，我们提出点云与视图数据融合的立体视觉表征学习方法。点云在局部特征表示方面具有较好性能，但是缺乏局部特征的可辨别能力，而不同的局部特征在表征物体时重要程度不同。因此，我们引入视图的全局特征，与点云的局部特征融合得到注意力掩膜，用于表征不同局部特征的重要性，并将注意力掩膜以残差连接的方式对点云特征进行增强。最后，增强后的点云特征和多视图特征融合为立体对象的统一表征。图5给出了融合点云和视图特征的立体对象的注意力掩膜示意图。
+                        </p>
+                        <div align=center>
+                          <img src="Fusion-Representation.png" style="width:90%;height: 90%;margin: 6px;">
+                          <p>图5 融合点云和视图特征的立体对象的注意力掩膜示意图</p>
+                        </div>
+                        <p>
+                          虽然在特征层面进行点云与视图融合能够增强立体对象的表示能力，但是缺乏更精确的视图与点云的对应关系，从而限制了更加精细化的多模态融合性能。进一步，我们提出了一种点云与视图关联性学习的融合表示方法，建立点云与每个视图之间的关系，通过关系得分网络学习每个视图与点云的关系分数，在数据融合时更加侧重相关性更强的视图数据，实现多模态的数据融合表示。图6给出了通过该方法计算所得的点云与视图的关系对应示意图。
+                        </p>
+
+                        <div align=center>
+                          <img src="relation-of-pointcloud-and-multiview.png"
+                            style="width:90%;height: 90%;margin: 6px;">
+                          <p>图6 点云与视图的关系对应示意图</p>
+                        </div>
+                      </div>
+
+                      <div class="section" id="Rotation-Invariant-Equivalent-Representation">
+                        <h3>2.5.立体数据无序表示<a class="headerlink" href="#Rotation-Invariant-Equivalent-Representation"
+                            title="Permalink to this headline">¶</a></h3>
+                        <p>
+                          在实际应用中，许多立体数据，例如点云、网格和视图，都是不规则和无序的。针对这些非标准立体数据，传统的立体视觉表示方法采用经典卷积或池化方法，分别具有各自的局限性。经典卷积可以更好地利用网格中表示的数据的空间局部相关性，但可能导致形状信息的导致和数据顺序的变化；池化方法可以聚合局部特征并保持置换不变性，但忽略局部区域中的立体视觉数据之间的相关性。
+                        </p>
+                        <p>
+                          为了解决这个问题，我们提出了一种无序关联卷积(Relation Convolution
+                          UR-Conv)，将类似卷积的操作应用于无序的3D数据，并且对输入数据的顺序不敏感。该方法捕获了数据之间的局部依赖性，增强了模型的表示能力和鲁棒性。UR-Conv可以使用不同的模态并轻松集成到现有的立体数据处理方法中，具有极佳的可应用性。图7给出了UR-Conv的流程示意。
+                        </p>
+                        <div align=center>
+                          <img src="UR-Conv-flowchart.png" style="width:90%;height: 90%;margin: 6px;">
+                          <p>图7 UR-Conv的流程示意图</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="section" id="3D-Object-Retrieval-And-Recognition">
+                      <h2>3.立体视觉对象检索<a class="headerlink" href="#3D-Object-Retrieval-And-Recognition"
+                          title="Permalink to this headline">¶</a></h2>
+                      <p>
+                        针对大规模立体视觉数据的检索需求，需要设计面向立体视觉数据索引方法。考虑到立体视觉数据的多模态特点，我们设计了HESNet，实现了在多视图空间和网格空间下的统一哈希码生成，获得了精确的立体视觉对象的检索性能。图8给出了该多模态立体视觉数据索引的示意图。
+                      </p>
+                      <div align=center>
+                        <img src="3D-Data-Retrieval.png" style="width:50%;margin: 6px;">
+                        <p>图8 多模态立体视觉数据索引示意图</p>
+                      </div>
+                      <p>
+                        传统的多模态信息融合方法从各个模态中分别提取的特征的关联性较低，且常用的利用注意力机制来学习多模态特征融合的联合深度网络模型的泛化能力较弱。为了解决这些问题，我们提出了一种新颖的基于汉明嵌入灵敏度算法和数据隐藏模块的多模态特征融合网络HESNet，实现有效的、更通用的多模态立体视觉深度特征融合。数据隐藏模块的基本思想，是在融合的早期阶段，通过汉明嵌入来重新加权每个模态的特征，随后应用二进制代码片段直方图的直方图交集来计算汉明嵌入灵敏度。图9给出了汉明嵌入灵敏度的计算流程示意。
+                      </p>
+
+                      <div align=center>
+                        <img src="hanming-sensitivity-computation.png" style="width:40%;margin: 6px;">
+                        <p>图9 汉明嵌入灵敏度计算示意图</p>
+                      </div>
+
+                    </div>
+
+                    <div class="section" id="PAPERlIST" style="margin-top:80px">
+
+                      <p style="font-size:30px"><b><strong>论文列表</strong></b></p>
+
+                      <table class="table " role="grid" style="width: 100%;">
+                        <tbody>
+
+                          <tr>
+                            <td>
+                              <p style="line-height:20px;margin-bottom:0rem">Zhengyue Huang, Zhehui Zhao, Hengguang
+                                Zhou,
+                                Xibin Zhao, Yue Gao. <br><b><strong>DeepCCFV: Camera Constraint-Free Multi-View
+                                    Convolutional Neural Network for 3D Object Retrieval.</strong></b><br>AAAI,
+                                2019.<br>[<a href="http://gaoyue.org/paper/DeepCCFV.pdf">paper</a>]</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p style="line-height:20px;margin-bottom:0rem">Yutong Feng, Yifan Feng, Haoxuan You, Xibin
+                                Zhao, Yue Gao.
+                                <br><b><strong>MeshNet: Mesh Neural Network for 3D Shape
+                                    Representation.</strong></b><br>AAAI, 2019.<br>[<a
+                                  href="http://gaoyue.org/paper/MeshNet.pdf">paper</a>]</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p style="line-height:20px;margin-bottom:0rem">Jianwen Jiang, Di Bao, Ziqiang Chen, Xibin
+                                Zhao, Yue Gao. <br><b><strong>MLVCNN: Multi-Loop-View Convolutional Neural Network for
+                                    3D
+                                    Shape Retrieval.</strong></b><br>AAAI, 2019.<br>[<a
+                                  href="http://gaoyue.org/paper/mlvcnn.pdf">paper</a>]</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p style="line-height:20px;margin-bottom:0rem">Haoxuan You, Yifan Feng, Xibin Zhao,
+                                Changqing
+                                Zou, Rongrong Ji, Yue Gao. <br><b><strong>PVRNet: Point-View Relation Neural Network for
+                                    3D
+                                    Shape Recognition.</strong></b><br>AAAI, 2019.<br>[<a
+                                  href="http://gaoyue.org/paper/PVRNet.pdf">paper</a>]</p>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p style="line-height:20px;margin-bottom:0rem">Minjie Cai, Feng Lu, Yue Gao.
+                                <br><b><strong>Desktop Action Recognition from First-Person
+                                    Point-of-View.</strong></b><br>IEEE Transactions on Cybernetics, 2018.<br>[<a
+                                  href="http://gaoyue.org/en_tsinghua/index">paper</a>]</p>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p style="line-height:20px;margin-bottom:0rem">Yifan Feng, Zizhao Zhang, Xibin Zhao,
+                                Rongrong
+                                Ji, Yue Gao*. <br><b><strong>GVCNN: Group-View Convolutional Neural Networks for 3D
+                                    Shape
+                                    Recognition.</strong></b><br>CVPR, 2018.<br>[<a
+                                  href="http://gaoyue.org/paper/Feng_GVCNN_Group-View_Convolutional_CVPR_2018_paper.pdf">paper</a>]
+                              </p>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p style="line-height:20px;margin-bottom:0rem">Guanglin Xu, Shaoyi Du, Dixiao Cui, Sirui
+                                Zhang, Xuetao Zhang, Jianru Xue, Yue Gao.
+                                <br><b><strong>Precise Point Set Registration Using Point-to-Plane Distance and
+                                    Correntropy for Lidar Based Localization.</strong></b>
+                                <br>IEEE Intelligent Vehicles Symposium, 2018.<br>[<a
+                                  href="http://gaoyue.org/paper/Precise%20Point%20Set%20Registration%20Using%20Point-to-Plane%20Distance%20and%20Correntropy%20for%20Lidar%20Based%20Localization.pdf">paper</a>]
+                              </p>
+                            </td>
+                          </tr>
+
+
+
+                          <tr>
+                            <td>
+                              <p style="line-height:20px;margin-bottom:0rem">Haoxuan You, Yifan Feng, Rongrong Ji, Yue
+                                Gao.
+                                <br><b><strong>PVNet: A Joint Convolutional Network of Point Cloud and Multi-View for
+                                    3D Shape Recognition.</strong></b><br>ACM Conference on Multimedia, 2018.<br>[<a
+                                  href="http://gaoyue.org/paper/PVNet.pdf">paper</a>]</p>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p style="line-height:20px;margin-bottom:0rem">Zizhao Zhang, Haojie Lin, Xibin Zhao,
+                                Rongrong Ji, Yue Gao.
+                                <br><b><strong>Inductive Multi-Hypergraph Learning for View-Based 3D Object
+                                    Classification.</strong></b>
+                                <br>IEEE Transactions on Image Processing, 2018.<br>[<a
+                                  href="http://gaoyue.org/paper/Inductive%20Multi-Hypergraph%20Learning%20and%20Its%20Application%20on%20View-Based%203D%20Object%20Classification.pdf">paper</a>]
+                              </p>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p style="line-height:20px;margin-bottom:0rem">Xibin Zhao, Nan Wang, Yubo Zhang, Shaoyi
+                                Du, Yue Gao, Jiaguang Sun.
+                                <br><b><strong>Beyond Pairwise Matching: Person Re-identification via High-Order
+                                    Relevance Learning.</strong></b>
+                                <br>IEEE Transactions on Neural Networks and Learning Systems, 2017.<br>[<a
+                                  href="http://localhost/cn_tsinghua/pubs/null">paper</a>]
+                              </p>
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+
+                    </div>
+
+
+              </article>
+
+            </div>
+            <footer>
+              <hr />
+
+              <div role="contentinfo">
+                <p>
+                  &copy; Copyright 2018-2020, iMoon-Lab @ Tsinghua University.
+                </p>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+
+        <div class="pytorch-content-right" id="pytorch-content-right">
+          <div class="pytorch-right-menu" id="pytorch-right-menu">
+            <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
+
+
+              <ul>
+                <li><a class="reference internal" href="#Computer-Vision">立体视觉 3D Vision</a>
+                  <ul>
+
+
+                    <li><a class="reference internal" href="#3D-Data-Generate">1.立体数据获取与增强</a>
+                      <!--  <ul>
+                        <li><a class="reference internal" href="#GVCNN">GVCNN</a></li>
+                        <li><a class="reference internal" href="#MLVCNN">MLVCNN</a></li>
+                        <li><a class="reference internal" href="#MeshNet">MeshNet</a></li>
+                        <li><a class="reference internal" href="#PVNet">PVNet</a></li>
+                        <li><a class="reference internal" href="#retrieval">DeepCCFV</a></li>
+                      </ul> -->
+                    </li>
+
+                    <li><a class="reference internal" href="#3D-Data-Representation">2.立体视觉表示</a>
+                      <ul>
+                        <li><a class="reference internal" href="#Multi-Perspective-Representation">2.1.基于多视图的立体视觉表示</a>
+                        </li>
+                        <li><a class="reference internal" href="#Point-Cloud-Representation">2.2.基于点云的立体视觉表示</a></li>
+                        <li><a class="reference internal" href="#Mesh-Representation">2.3.基于网格的立体视觉表示</a></li>
+                        <li><a class="reference internal" href="#Fusion-Representation">2.4.基于多模态的立体视觉融合表示</a></li>
+                        <li><a class="reference internal"
+                            href="#Rotation-Invariant-Equivalent-Representation">2.5.立体数据无序表示</a></li>
+                      </ul>
+                    </li>
+
+
+
+                    <li><a class="reference internal" href="#3D-Object-Retrieval-And-Recognition">3.立体视觉对象检索</a>
+                      <!-- <ul>
+                        <li><a class="reference internal" href="#Data-collection">数据获取</a></li>
+                        <li><a class="reference internal" href="#Data-filtering">数据过滤</a></li>
+                        <li><a class="reference internal" href="#Event-classification">事件分类</a></li>
+                        <li><a class="reference internal" href="#Emotional-calculation">情绪识别</a></li>
+                      </ul> -->
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+
+
+
+  <script type="text/javascript" src="static/js/jquery.js"></script>
+  <script type="text/javascript" src="static/js/underscore.js"></script>
+  <script type="text/javascript" src="static/js/doctools.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+  <script type="text/javascript" src="static/js/popper.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="static/js/theme.js"></script>
+
+  <script type="text/javascript">
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+    });
+  </script>
+
+
+  <!-- Begin Footer -->
+
+  <div class="container-fluid docs-tutorials-resources" id="docs-tutorials-resources">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h4>iMoon: Intelligent Media and Cognition Lab</h3>
+          School of Software
+          <br> Tsinghua, Beijing 100084
+          <br>
+          <a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-3-3.html">Directions</a>
+        </div>
+        <div class="col-sm-3">
+          <div class="indent30">
+            <h4>Copyright</h4>
+            All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+  <script type="text/javascript" src="static/js/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    mobileMenu.bind();
+    mobileTOC.bind();
+    pytorchAnchors.bind();
+
+    $(window).on("load", function () {
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+    })
+
+    // Add class to links that have code blocks, since we cannot create links in code blocks
+    $("article.pytorch-article a span.pre").each(function (e) {
+      $(this).closest("a").addClass("has-code");
+    });
+  </script>
+
+
+</body>
+
+</html>
