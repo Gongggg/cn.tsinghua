@@ -46,13 +46,13 @@
 
 .card-head {
     text-align: center;
-    padding: 15px 5px 15px;
+    padding: 5px;
     display: block;
-    font-size: 25px;
+    font-size: 22px;
     line-height: normal;
-    font-weight: 300;
+    font-weight: 400;
     color: #633991;
-    height: 96px;
+    height: 105px;
 }
 
 .card-body {
@@ -61,7 +61,19 @@
 
 .news-content {
     margin: 5px 0;
-    height: 69px;
+    height: 120px;
+    text-align: left;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;         /* 将对象作为弹性伸缩盒子模型显示 */
+    -webkit-box-orient: vertical; /* 设置盒子内排列顺序为纵向 */
+    -webkit-line-clamp: 5;        /* 限制块元素显示的文本的行数 */
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .news-inscription {

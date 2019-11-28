@@ -6,16 +6,16 @@ var news_cards = new Vue({
         // TODO: if there is more data, please use vue-infinite-scroll.
         items: [
             {
-                title: 'Survival Prediction on Whole Slide Histopathological Images',
+                title: 'Survival Prediction on Whole Slide Histo-pathological Images',
                 img: 'static/img/news_1.png',
-                content: 'Survival Prediction on Whole Slide Histopathological Images',
+                content: 'This paper presents an end-to-end 3D convolutional network named attention-based multi-modal fusion network (AMFNet) for the semantic scene completion (SSC) task of inferring the occupancy and semantic labels of a volumetric 3D scene from single-view RGB-D images.',
                 inscription: 'Posted on 19/5/2019 by Biao Gong',
                 src: 'detail/research_AMFNet.html'
             },
             {
                 title: 'Attention-based Multi-modal Fusion Network for Semantic Scene Completion',
                 img: 'static/img/amfnet.png',
-                content: 'Attention-based Multi-modal Fusion Network for Semantic Scene Completion.',
+                content: 'This paper presents an end-to-end 3D convolutional network named attention-based multi-modal fusion network (AMFNet) for the semantic scene completion (SSC) task of inferring the occupancy.',
                 inscription: 'Posted on 6/3/2019 by 陈瑜峰',
                 src: '#'
             },
