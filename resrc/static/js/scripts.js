@@ -16,8 +16,22 @@ var news_cards = new Vue({
                 title: 'Survival Prediction on Whole Slide Histo-pathological Images',
                 img: 'static/img/donglin.png',
                 content: 'Survival prediction for patients based on their gigapixel whole-slide histopathological images (WSIs) has been drawing increasing attention in recent years. One key challenge of this task is how to explore informative survivalspeciﬁc features reﬂecting the patient’s survival status effectively. In this paper, we introduce a hypergraph regression framework, called HyperGraph Regression Network (HGRNet), to tackle this challenge for survival prediction. HGRNet is capable of mining the pathological topological patterns affecting the survival status by a hierarchical representation built upon a hypergraph structure.',
-                inscription: 'Posted on 6/3/2019 by Biao Gong',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_hgrnet.html'
+            },
+            {
+                title: 'MeshNet: Mesh Neural Network for 3D Shape Representation',
+                img: 'static/img/yutong.png',
+                content: 'This paper proposes a neural network using mesh for 3D shape representation and design blocks for capturing and aggregating features of polygon faces in 3D shapes.',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
+                src: 'detail/research_meshnet.html'
+            },
+            {
+                title: 'Towards Camera-Setting-Robust Multi-View Representation',
+                img: 'static/img/zhengyue.png',
+                content: 'This paper presents a method that remedies a overfitting problem caused by the pattern gap between a complete and missing view dataset, making it possible to train a network that is robust in camera-constraint free settings.',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
+                src: 'detail/research_deepccfv.html'
             }
             // ,
             // {
@@ -73,17 +87,35 @@ var group_gallery = new Vue({
         // TODO: if there is more data, please use vue-infinite-scroll.
         items: [
             {
+                title: 'MeshNet: Mesh Neural Network for 3D Shape Representation',
+                img: 'static/img/lunbo_yutong2.png',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
+                src: 'detail/research_meshnet.html'
+            },            
+            {
                 title: 'Attention-based Multi-modal Fusion Network for Semantic Scene Completion',
                 img: 'static/img/lunbo_siqi.png',
-                inscription: 'Posted on 19/5/2019 by Biao Gong',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_AMFNet.html'
             },
             {
                 title: 'Survival Prediction on Whole Slide Histo-pathological Images',
                 img: 'static/img/lunbo_donglin.jpg',
-                inscription: 'Posted on 19/5/2019 by Biao Gong',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_hgrnet.html'
             },
+            {
+                title: 'MeshNet: Mesh Neural Network for 3D Shape Representation',
+                img: 'static/img/lunbo_yutong.png',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
+                src: 'detail/research_meshnet.html'
+            },
+            {
+                title: 'Towards Camera-Setting-Robust Multi-View Representation',
+                img: 'static/img/lunbo_zhengyue.png',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
+                src: 'detail/research_hgrnet.html'
+            },                                    
             //,
             // {
             //     title: '2016 实验室聚餐合影',
