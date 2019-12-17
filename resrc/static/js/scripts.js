@@ -32,6 +32,13 @@ var news_cards = new Vue({
                 content: 'This paper presents a method that remedies a overfitting problem caused by the pattern gap between a complete and missing view dataset, making it possible to train a network that is robust in camera-constraint free settings.',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_deepccfv.html'
+            },
+            {
+                title: 'High-Order Resting-State Functional Connectivity Network for MCI Classification',
+                img: 'static/img/yifan.png',
+                content: 'Brain functional connectivity (FC) network, estimated with resting-state functional magnetic resonance imaging (RS-fMRI) technique, has emerged as a promising approach for accurate diagnosis of neurodegenerative diseases.',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
+                src: 'detail/research_HFCNet.html'
             }
             // ,
             // {
@@ -91,7 +98,7 @@ var group_gallery = new Vue({
                 img: 'static/img/lunbo_yutong2.png',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_meshnet.html'
-            },            
+            },
             {
                 title: 'Attention-based Multi-modal Fusion Network for Semantic Scene Completion',
                 img: 'static/img/lunbo_siqi.png',
@@ -115,7 +122,7 @@ var group_gallery = new Vue({
                 img: 'static/img/lunbo_zhengyue.png',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_hgrnet.html'
-            },                                    
+            },
             //,
             // {
             //     title: '2016 实验室聚餐合影',
