@@ -34,10 +34,10 @@ var news_cards = new Vue({
                 src: 'detail/research_deepccfv.html'
             },
             {
-                title: 'High-Order Resting-State Functional Connectivity Network for MCI Classification',
+                title: 'High-Order Resting-State FC Network for MCI Classification',
                 img: 'static/img/yifan.png',
                 content: 'Brain functional connectivity (FC) network, estimated with resting-state functional magnetic resonance imaging (RS-fMRI) technique, has emerged as a promising approach for accurate diagnosis of neurodegenerative diseases.',
-                inscription: 'Posted on 03/12/2019 by Biao Gong',
+                inscription: 'Posted on 12/12/2019 by Chaoyang Xia',
                 src: 'detail/research_HFCNet.html'
             }
             // ,
