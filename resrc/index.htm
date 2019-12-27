@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>iMoon-Lab: Research</title>
+    <title>iMoon-Lab: 研究方向</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -64,7 +64,7 @@
     <![endif]-->
 
     <!-- <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <!-- jQuery with jQuery Easing, and jQuery Transit JS -->
 
     <!-- LayerSlider from Kreatura Media with Transitions -->
@@ -181,7 +181,7 @@
                 <div class="container content">
 
                     <!-- group photo banner -->
-                    <div id="v-group-gallery">
+                    <!-- <div id="v-group-gallery">
                         <agile :autoplay="false" :center-mode="true">
                             <div v-for="item in items">
                                 <div style="position: relative;">
@@ -192,7 +192,7 @@
                             <template slot="prevButton"><i class="fas fa-chevron-left"></i></template>
                             <template slot="nextButton"><i class="fas fa-chevron-right"></i></template>
                         </agile>
-                    </div>
+                    </div> -->
 
                     <div id="showmarkdown" class="row">
                         <div class="col-sm-10">
@@ -202,23 +202,166 @@
                                 <div class="section light-bg">
                                     <div class="container">
 
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item">
+                                                <a class="nav-link all_research" data-toggle="tab" href="#all_research">
+                                                    <div class="tab-name">
+                                                        <img src="static/img/all2.png" alt="all_research icon" title="all_research icon">
+                                                        <h2>所有方向</h2>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a class="nav-link threed_vision" data-toggle="tab" href="#threed_vision">
+                                                    <div class="tab-name">
+                                                        <img src="static/img/3d2.png" alt="threed_vision icon" title="threed_vision icon">
+                                                        <h2>立体视觉</h2>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link complex_network" data-toggle="tab" href="#complex_network">
+                                                    <div class="tab-name">
+                                                        <img src="static/img/network3.png" alt="complex_network icon" title="complex_network icon">
+                                                        <h2>复杂网络</h2>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link brain_science" data-toggle="tab" href="#brain_science">
+                                                    <div class="tab-name">
+                                                        <img src="static/img/brain2.png" alt="brain_science icon" title="brain_science icon">
+                                                        <h2>脑科学</h2>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+
                                         <div class="row grid" id="v-news-cards">
 
-                                            <div class="grid-item col-xs-12 col-sm-6 col-md-4" v-for="item in items">
-                                                <div class="card center-block">
-                                                    <div class="card-head">{{item.title}}</div>
-                                                    <div class="card-body">
-                                                        <img v-bind:src="item.img" alt="image">
+                                            <div class="tab-content">
+
+                                                <div class="tab-pane container" id="all_research">
+                                                    <div class="grid-item col-xs-12 col-sm-6 col-md-4 threed_vision"
+                                                         v-for="(item, idx) in threed_vision_cards"
+                                                         v-bind:class="{'rborder': idx % 3 == 0 && threed_vision_cards.length > 1 || idx % 3 == 1 && threed_vision_cards.length > 2}">
+                                                        <div class="card center-block">
+                                                            <div class="card-head">{{item.title}}</div>
+                                                            <div class="card-body">
+                                                                <img v-bind:src="item.img" alt="image">
+                                                            </div>
+                                                            <div class="card-foot">
+                                                                <hr>
+                                                                <div class="news-content">{{item.content}}</div>
+                                                                <!-- <div class="news-inscription">{{item.inscription}}</div> -->
+                                                                <a v-bind:href="item.src" class="btn btn-primary btn-lg btn-block">Details</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="card-foot">
-                                                        <hr>
-                                                        <div class="news-content">{{item.content}}</div>
-                                                        <div class="news-inscription">{{item.inscription}}</div>
-                                                        <a v-bind:href="item.src" class="btn btn-primary btn-lg btn-block">Details</a>
+                                                    <!-- end card -->
+
+                                                    <div class="grid-item col-xs-12 col-sm-6 col-md-4 complex_network"
+                                                         v-for="(item, idx) in complex_network_cards"
+                                                         v-bind:class="{'rborder': idx % 3 == 0 && complex_network_cards.length > 1 || idx % 3 == 1 && complex_network_cards.length > 2}">
+                                                        <div class="card center-block">
+                                                            <div class="card-head">{{item.title}}</div>
+                                                            <div class="card-body">
+                                                                <img v-bind:src="item.img" alt="image">
+                                                            </div>
+                                                            <div class="card-foot">
+                                                                <hr>
+                                                                <div class="news-content">{{item.content}}</div>
+                                                                <!-- <div class="news-inscription">{{item.inscription}}</div> -->
+                                                                <a v-bind:href="item.src" class="btn btn-primary btn-lg btn-block">Details</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                    <!-- end card -->
+
+                                                    <div class="grid-item col-xs-12 col-sm-6 col-md-4 brain_science"
+                                                         v-for="(item, idx) in brain_science_cards"
+                                                         v-bind:class="{'rborder': idx % 3 == 0 && brain_science_cards.length > 1 || idx % 3 == 1 && brain_science_cards.length > 2}">
+                                                        <div class="card center-block">
+                                                            <div class="card-head">{{item.title}}</div>
+                                                            <div class="card-body">
+                                                                <img v-bind:src="item.img" alt="image">
+                                                            </div>
+                                                            <div class="card-foot">
+                                                                <hr>
+                                                                <div class="news-content">{{item.content}}</div>
+                                                                <!-- <div class="news-inscription">{{item.inscription}}</div> -->
+                                                                <a v-bind:href="item.src" class="btn btn-primary btn-lg btn-block">Details</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end card -->
                                                 </div>
+                                                <!-- end tab all_research -->
+
+                                                <div class="tab-pane active container" id="threed_vision">
+                                                    <div class="grid-item col-xs-12 col-sm-6 col-md-4 threed_vision"
+                                                         v-for="(item, idx) in threed_vision_cards"
+                                                         v-bind:class="{'rborder': idx % 3 == 0 && threed_vision_cards.length > 1 || idx % 3 == 1 && threed_vision_cards.length > 2}">
+                                                        <div class="card center-block">
+                                                            <div class="card-head">{{item.title}}</div>
+                                                            <div class="card-body">
+                                                                <img v-bind:src="item.img" alt="image">
+                                                            </div>
+                                                            <div class="card-foot">
+                                                                <hr>
+                                                                <div class="news-content">{{item.content}}</div>
+                                                                <!-- <div class="news-inscription">{{item.inscription}}</div> -->
+                                                                <a v-bind:href="item.src" class="btn btn-primary btn-lg btn-block">Details</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end card -->
+                                                </div>
+                                                <!-- end tab threed_vision -->
+
+                                                <div class="tab-pane fade container" id="complex_network">
+                                                    <div class="grid-item col-xs-12 col-sm-6 col-md-4 complex_network"
+                                                         v-for="(item, idx) in complex_network_cards"
+                                                         v-bind:class="{'rborder': idx % 3 == 0 && complex_network_cards.length > 1 || idx % 3 == 1 && complex_network_cards.length > 2}">
+                                                        <div class="card center-block">
+                                                            <div class="card-head">{{item.title}}</div>
+                                                            <div class="card-body">
+                                                                <img v-bind:src="item.img" alt="image">
+                                                            </div>
+                                                            <div class="card-foot">
+                                                                <hr>
+                                                                <div class="news-content">{{item.content}}</div>
+                                                                <!-- <div class="news-inscription">{{item.inscription}}</div> -->
+                                                                <a v-bind:href="item.src" class="btn btn-primary btn-lg btn-block">Details</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end card -->
+                                                </div>
+                                                <!-- end tab complex_network -->
+
+                                                <div class="tab-pane fade container" id="brain_science">
+                                                    <div class="grid-item col-xs-12 col-sm-6 col-md-4 brain_science"
+                                                         v-for="(item, idx) in brain_science_cards"
+                                                         v-bind:class="{'rborder': idx % 3 == 0 && brain_science_cards.length > 1 || idx % 3 == 1 && brain_science_cards.length > 2}">
+                                                        <div class="card center-block">
+                                                            <div class="card-head">{{item.title}}</div>
+                                                            <div class="card-body">
+                                                                <img v-bind:src="item.img" alt="image">
+                                                            </div>
+                                                            <div class="card-foot">
+                                                                <hr>
+                                                                <div class="news-content">{{item.content}}</div>
+                                                                <!-- <div class="news-inscription">{{item.inscription}}</div> -->
+                                                                <a v-bind:href="item.src" class="btn btn-primary btn-lg btn-block">Details</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end card -->
+                                                </div>
+                                                <!-- end tab brain_science -->
+
                                             </div>
-                                            <!-- end card -->
 
                                         </div>
                                         <!-- end row -->
@@ -316,7 +459,7 @@
     <script src="../static/js/vendor/modernizr/modernizr.js"
         tppabs="https://nlp.stanford.edu/static/js/vendor/modernizr/modernizr.js"></script>
     <script src="../static/showdown/dist/showdown.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
     <script src="static/js/VueAgile.umd.min.js"></script>
     <script src="static/js/imagesloaded.pkgd.min.js"></script>
     <script src="static/js/masonry.pkgd.min.js"></script>

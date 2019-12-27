@@ -9,11 +9,26 @@
     font-weight: 500;
 }
 
+h2 {
+    font-size: 20px;
+}
+
+.nav > li > a {
+    padding: 5px 15px;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+}
+
+.rborder {
+    border-right: 1px dashed #d1d1d1;
+}
+
 .card {
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     border-radius: 5px;
-    margin-bottom: 20px;
     width: 340px;
     max-width: 400px;
     min-height: 340px;
@@ -29,7 +44,7 @@
 .card-body img {
     border-radius: 5px;
     max-width: 100%;
-    height: 310px;
+    height: 244px;
 }
 
 .card:hover .card-body img {
@@ -37,38 +52,31 @@
     transition: ease .3s;
 }
 
-.card:hover .btn-primary {
-    background-image: linear-gradient(120deg, #5c307d 0%, #e54595 100%);
-    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.3);
-    color: #FFF;
-    transform: translate3d(0, -2px, 0);
-}
-
 .card-head {
     text-align: center;
     padding: 5px;
     display: block;
-    font-size: 22px;
+    font-size: 18px;
     line-height: normal;
-    font-weight: 400;
+    font-weight: bold;
     color: #633991;
-    height: 105px;
+    height: 50px;
 }
 
 .card-body {
-    margin: 5px 0;
+    margin-top: 10px;
 }
 
 .news-content {
-    margin: 5px 0;
-    height: 120px;
+    margin: 5px 0 15px;
+    height: 70px;
     text-align: left;
     overflow: hidden;
     word-break: break-all;
     text-overflow: ellipsis;
     display: -webkit-box;         /* 将对象作为弹性伸缩盒子模型显示 */
     -webkit-box-orient: vertical; /* 设置盒子内排列顺序为纵向 */
-    -webkit-line-clamp: 5;        /* 限制块元素显示的文本的行数 */
+    -webkit-line-clamp: 3;        /* 限制块元素显示的文本的行数 */
 }
 
 hr {
@@ -83,14 +91,87 @@ hr {
     margin: 5px 0 10px;
 }
 
+/*different tab btn effect*/
+.card:hover .btn-primary {
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    transform: translate3d(0, -2px, 0);
+}
+
 .btn-primary {
     border-radius: 3px;
-    background-image: linear-gradient(120deg, #fd378e 0%, #e54595 100%);
     box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
     font-weight: 500;
     border: 0;
     padding: 1rem 1rem;
     font-size: 15px;
+}
+
+a.all_research,
+.nav-tabs > li.active > a.all_research,
+.nav-tabs > li.active > a.all_research:focus,
+.nav-tabs > li.active > a.all_research:hover {
+    color: #6db33f;
+}
+
+/* threed_vision */
+.threed_vision .btn-primary {
+    background-image: linear-gradient(120deg, #00a1f1 0%, #0078d7 100%);
+}
+
+.threed_vision .card:hover .btn-primary {
+    background-image: linear-gradient(120deg, #0078d7 0%, #00a1f1 100%);
+}
+
+a.threed_vision,
+.nav-tabs > li.active > a.threed_vision,
+.nav-tabs > li.active > a.threed_vision:focus,
+.nav-tabs > li.active > a.threed_vision:hover {
+    color: #0078d7;
+}
+
+.threed_vision .card-head {
+    color: #0078d7;
+}
+
+/* complex_network */
+.complex_network .btn-primary {
+    background-image: linear-gradient(120deg, #fa7921 0%, #e55934 100%);
+}
+
+.complex_network .card:hover .btn-primary {
+    background-image: linear-gradient(120deg, #e55934 0%, #fa7921 100%);
+}
+
+a.complex_network,
+.nav-tabs > li.active > a.complex_network,
+.nav-tabs > li.active > a.complex_network:focus,
+.nav-tabs > li.active > a.complex_network:hover {
+    color: #e55934;
+}
+
+.complex_network .card-head {
+    color: #e55934;
+}
+
+/* brain_science */
+.brain_science .btn-primary {
+    background-image: linear-gradient(120deg, #bc63ff 0%, #764dc3 100%);
+}
+
+.brain_science .card:hover .btn-primary {
+    background-image: linear-gradient(120deg, #764dc3 0%, #bc63ff 100%);
+}
+
+a.brain_science,
+.nav-tabs > li.active > a.brain_science,
+.nav-tabs > li.active > a.brain_science:focus,
+.nav-tabs > li.active > a.brain_science:hover {
+    color: #764dc3;
+}
+
+.brain_science .card-head {
+    color: #764dc3;
 }
 
 #v-group-gallery {
@@ -180,4 +261,19 @@ img.slide {
 
 #v-group-gallery:hover .slide-content {
     height: 40px;
+}
+
+#v-news-cards {
+    margin-top: 15px;
+}
+
+.tab-name {
+    display: flex;
+    align-items: center;
+}
+
+.tab-name img {
+    margin-right: 7px;
+    width: 32px;
+    height: 32px;
 }
