@@ -16,7 +16,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>iMoon-Lab: News</title>
+	<title>iMoon-Lab: Code&Data</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -132,7 +132,7 @@
 							</a>
 						</div>
 						<div id="language">
-							<a id='drump' href="#"><b>中 / </b></a><a id='drump' href="../../en_tsinghua/blog/index.htm"><b>En</b></a>
+							<a id='drump' href="#"><b>中 / </b></a><a id='drump' href="../../en_tsinghua/code/index.htm"><b>En</b></a>
 						</div>
 
 						<li>
@@ -151,7 +151,7 @@
 							<a href="../blog/index.htm">新闻</a>
 						</li>
 						<li>
-							<a href="../code/index.htm">源码&数据</a>
+							<a href="#">源码&数据</a>
 						</li>
 						<li class="dropdown">
 							<a href="#">更多信息</a>
@@ -362,7 +362,7 @@
 
 
 			$.ajaxSettings.async = false;
-			$.getJSON("news.json", function (data, status) {
+			$.getJSON("code.json", function (data, status) {
 
 				jsondata = data;
 				// console.log(jsondata);
