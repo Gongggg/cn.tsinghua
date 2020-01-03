@@ -379,11 +379,11 @@
 					this.day + '/' + this.month + '/' + this.year + ' by ' + this.author +
 					'</p></article><hr><br>'
 				);
-				if (this.imgurl.length >= 2) {
-					$.each(this.imgurl.split(","), function () {
-						$("section#blog-posts div:last").append('<img style=" display:inline-block;" class="leadimage img-responsive" width="100" height="100" src=' + this + '> ');
-					});
-				}
+				// if (this.imgurl.length >= 1) {
+				// 	$.each(this.imgurl.split(","), function () {
+				// 		$("section#blog-posts div:last").append('<img style=" display:inline-block;" class="leadimage img-responsive" width="100" height="100" src=' + this + '> ');
+				// 	});
+				// }
 			});
 
 		});
