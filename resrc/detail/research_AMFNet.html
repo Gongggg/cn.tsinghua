@@ -135,7 +135,8 @@
                     </p>
                     <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/network.png"
                             alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:left">Figure 1. AMFNet网络结构图</p>
+                    <p style="font-size:15px; text-align:left">Figure 1. AMFNet网络结构图。AMFNet以RGB-D图像（分为RGB和HHA图像）为输入，
+                        同时预测场景的体素占用率和对象标签。它通过计算二维分割网络结果的二维-三维投影，从初始的三维语义特征体中加速三维完成和分割。</p>
                     <!-- <p style="font-size:15px; text-align:left">Figure 1. Architecture of AMFNet. Taking RGB-D images (separated to a RGB and a HHA image) as input, AMFNet predicts
                         voxel occupancy and object labels of the scene simultaneously. It boosts the 3D completion and segmentation from an initial
                         3D semantic feature volume produced by computing the 2D-3D projection of the results of a 2D segmentation network.</p> -->
@@ -148,83 +149,20 @@
 
             <br>
             
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <h2><b> 方法 </b></h2>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-
-                    <p style="font-size:20px" wrap="hard">
-                        The proposed AMFNet, as illustrated in Figure 1, mainly contains three sequential modules: a 2D segmentation network,
-                        a 2D-3D projection layer, and a two-branch 3D volume network. This network takes single-view RGB-D images
-                        as input and outputs occupancy and semantic labels for all voxels in the scene. The whole network can be trained
-                        in an end-to-end manner. We next introduce each module in the sequence of the flow of data processing.
-                        The 2D segmentation network extracts 2D geometry features and performs 2D semantic segment-ation from the input RGB-D images.
-                        The 2D-3D projection layer projects every feature tensor and semantic label into the 3D volume at the location with the same depth value.
-                        The 3D volume network, which takes the output of the 2D-3D projection layer as input, contains two branches: one
-                        for 3D guidance information and the other for 3D semantic completion.
-                    </p>
-
-
-                    <p style="text-align:center;"><img style="width: 60%;"  src="research_AMFNet/RAB.png" alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:left;">Figure 2. Illustration of the proposed residual attention block
-                        (RAB). RAB has a structure similar to the DDR block but with both channel-wise and spatial-wise
-                        attention injected.
-                    </p>
-                    <br>
-
-                    <p style="font-size:20px" wrap="hard">
-                        The 3D-guidance branch is used to provide the guidance information for the branch of 3D semantic
-                        completion, which is boosted from an initial 3D semantic volumetric scene where visible voxels have initial
-                        semantic labels. The initial 3D semantic volume is encoded by a one-hot encoder to achieve an ROI region (3D
-                        bounding box) for a specific category from the initial 3D semantic volume. The one-hot encoding introduces spatial
-                        boundary constraints into the network for each category, which improves the prediction of 3D semantic volume. <br><br>
-
-                        The 3D-semantic completion branch, which takes the initial 3D feature volume as input, is mainly used to infer the voxel occupancy
-                        of the 3D scene. The RAB block used in the 3D-completion branch is shown in Figure 2.
-
-                    </p>
-
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-            <br>
-
+            
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
-                    <h2><b>实验结果</b></h2>
+                    <h2><b>可视化结果</b></h2>
 
-                    <p style="text-align:center;"><img style="width: 100%;margin-top: 30px;" src="research_AMFNet/table.png"
-                                                       alt="xxxx" class="center"></p>
-                    <br>
-                    <p style="font-size:20px;" wrap="soft">
-                        Table 1 and Table 2 presents the comparison results of both the scene completion and the semantic
-                        scene completion on the NYUv2 dataset and SUNCG-RGBD dataset, respectivly. Compared with previous methods,
-                        our model achieves state-of-the-art performance on the task of semantic scene completion and scene completion.
-                    </p>
 
                     <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/result.png"
                                                        alt="xxxx" class="center"></p>
                     <p style="font-size:15px; text-align:left">
-                        Figure 4. Qualitative results on the NYUv2 dataset.
-                        From left to right: RGB image, ground truth of 2D segmentation result, ground truth of SSC task,
-                        results generated by SSCNet, SATNet, our approach, our approach with attention block removed,
-                        our approach with 3D-guidance branch removed, and our approach with the result of the 2D
-                        semantic segmentation module replaced by the ground truth.</p>
+                        Figure 4. NYUv2数据集的定性结果。从左到右依次为：RGB图像、2D分割结果的地面GT、
+                        SSC任务的地面GT、SSCNet、SATNet生成的结果、我们的方法、去除注意块的方法、去除3D引导分支的方法、用地面GT代替2D语义分割模块的结果的方法。</p>
                     <br>
-                    <p style="font-size:20px;" wrap="soft">
-                        The visualization of the qualitative results of the semantic scene completion task generated by the proposed method
-                        and two previous methods, SSCNet and SATNet, on a set of representative samples from the NYUv2 dataset is shown in Figure 4.
-                        It can be easily seen that our method has achieved better performance than SSCNet and SATNet.
-                    </p>
+
 
                 </div>
                 <div class="col-md-1"></div>
