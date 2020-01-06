@@ -22,7 +22,7 @@ var news_cards = new Vue({
             {
                 title: '用于3D对象检索的无相机无约束多视图卷积神经网络',
                 img: 'static/img/zhengyue.png',
-                content: 'This paper presents a method that remedies a overfitting problem caused by the pattern gap between a complete and missing view dataset, making it possible to train a network that is robust in camera-constraint free settings.',
+                content: '基于多视图的立体对象表征被广泛用在分类和检索等识别任务上。我们关注立体对象的检索任务，目前的方法在训练时通常会使用一个对象相对完整的视图信息进行训练，但是我们发现这样完整的训练数据并不能让网络在仅有部分视图的环境下获得好的泛化能力，甚至不如使用不完整的视图训练集得到的效果好，这显然不是我们想要的结果，它妨碍我们实现自由相机位置设定下的检索系统，使得我们不能仅通过扩充完整的训练集达到目的。我们猜想，导致这个问题的原因时缺失视图的特征分布与完整视图时的特征分布存在差异(图1)导致训练时过拟合。为了解决这个问题我们提出了DropMax特征增强模块，它在很大程度上解决了这个问题，让我们有可能高效实现Camera-Constraint-Free的检索系统。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_deepccfv.html'
             },

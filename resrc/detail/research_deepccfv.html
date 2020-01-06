@@ -129,87 +129,39 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
                     <!-- <h2><b>Abstract</b></h2> -->
-                    <p style="font-size:20px;" wrap="soft">3D object retrieval has a compelling demand in the ﬁeld of computer vision with the rapid development of 3D vision technology and increasing applications of 3D objects. 3D objects can be described in different ways such as voxel, point cloud, and multi-view. Among them, multi-view based approaches proposed in recent years show promising results. Most of them require a ﬁxed predeﬁned camera position setting which provides a complete and uniform sampling of views for objects in the training stage. However, this causes heavy over-ﬁtting problems which make the models failed to generalize well in free camera setting applications, particularly when insufﬁcient views are provided. Experiments show the performance drastically drops when the number of views reduces, hindering these methods from practical applications. In this paper, we investigate the over-ﬁtting issue and remove the constraint of the camera setting. First, two basic feature augmentation strategies Dropout and Dropview are introduced to solve the over-ﬁtting issue, and a more precise and more efﬁcient method named DropMax is proposed after analyzing the drawback of the basic ones. Then, by reducing the over-ﬁtting issue, a camera constraint-free multi-view convolutional neural network named DeepCCFV is constructed. Extensive experiments on both single-modal and cross-modal cases demonstrate the effectiveness of the proposed method in free camera settings comparing with existing state-of-the-art 3D object retrieval methods.
+                    <p style="font-size:20px;" wrap="soft">
+                        基于多视图的立体对象表征被广泛用在分类和检索等识别任务上。本文关注立体对象的检索任务，目前的方法在训练时通常会使用一个对象相对完整的视图信息进行训练，但是我们发现这样完整的训练数据并不能让网络在仅有部分视图的环境下获得好的泛化能力，甚至不如使用不完整的视图训练集得到的效果好，这显然不是我们想要的结果，它妨碍我们实现自由相机位置设定下的检索系统，使得我们不能仅通过扩充完整的训练集达到目的。我们猜想，导致这个问题的原因时缺失视图的特征分布与完整视图时的特征分布存在差异(图1)导致训练时过拟合。为了解决这个问题我们提出了DropMax特征增强模块，它在很大程度上解决了这个问题，让我们有可能高效实现Camera-Constraint-Free的检索系统。
                     </p>
                     <!-- figure -->
                     <p style="text-align:center;"><img id="pattern_gap_demo" style="width: 55%;" src="research_deepccfv/demo.png"
                             alt="pattern_gap_demo" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Figure 1. The pattern gap between training and test stage. This makes the deep models trained in complete dataset
-                        hard to generalize well in practical scenarios where the data is missing or incomplete.
+                    <p style="font-size:15px; text-align:center;">Figure 1. 训练和测试时的特征分布差异，这使得深度模型在完整视图数据上训练的结果难以泛化到真实场景中视图缺失/不完整的情况。
+
+
                     </p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
             <br>
             
+
+
+
+
+
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Method </b></h2>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <!-- problem introduction -->
-                    <p style="font-size:20px" wrap="hard">
-                        A  complete training set of views is supposed to make the deep models perform better in practical scenarios where the input views are uncertain. However, we observe that the network may suffer from overfitting issues when trained in a complete training set. This makes the networks perform even worse than that trained in missing view datasets. This unexpected result is mainly caused by the pattern gap between the complete and missing view datasets (<a href="#pattern_gap_demo">Figure 1</a>). To tackle this issue, we can augment the training set by randomly dropping the views  (denoted as Dropview). Though easy to apply, this simple strategy is not efficient and precise enough to close the pattern gap. In this way, both the dominated strong features and weak features are dropped and hence the dropped weak feature can not be enhanced.  Considering this, we propose a method named <b>DropMax</b> which precisely drops the dominated features in the networks. The formal definition of DropMax is given as follows:
-                    </p>
-
-                    <!-- figure -->
-                    <p style="text-align:center;"><img style="width: 28%;"  src="research_deepccfv/dropmax_formula.png" alt="dropmax_formula" class="center"></p>
-                    <!-- <p style="font-size:15px; text-align:center;">Fig 3.  -->
-                    </p>
-        
-
-                    <p style="font-size:20px" wrap="hard">
-                        where TopkMask represents a function to generate the topk mask at probability p, l denotes the corresponding layer, y(l) is the original output of layer l, \tilde{y}^{(l)} represents the masked output after DropMax. In a large range, the selection of hyper parameters k and p leads to stable performance. 
-                    </p>
-
-                    <br>
-
-                    <p style="font-size:20px" wrap="hard">
-                        In MVCNN-like models, DropMax is inserted before and after the aggregation layer (<a href="#dropmax">Figure 2</a>). 
-                    </p>
-
-                    <!-- figure -->
-                    <p id="dropmax" style="text-align:center;"><img style="width: 40%;"  src="research_deepccfv/dropmax.png" alt="dropmax" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Figure 2. DeepCCFV architecture, DropMax block is added before and after the aggregation operation (denoted as M is this ﬁgure) </p>
-
-
-                    <p style="font-size:20px" wrap="hard">
-                        The overall pipeline for cross-modal retrieval is shown in <a href="#pipeline">Figure 3</a>
-                    </p>
-
-                    <!-- figure -->
-                    <p id="pipline" style="text-align:center;"><img style="width: 85%;"  src="research_deepccfv/pipeline.png" alt="pipeline" class="center"></p>
-                    <div style="text-align:center;">
-                        <p style="font-size:15px; text-align:center;">Figure 3.The architecture of our cross-modal retrieval network. The input multi-view data and point cloud data is ﬁrst passed through the feature extractors. Then the extracted features are passed to the embedding networks to generate two features for each modality. </p>
-                    </div>
-                    
-
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-
-
-            <br>
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <h2><b> Experimental Results </b></h2>
+                    <h2><b> 实验结果 </b></h2>
                     <p style="font-size:20px;color:#823c3b" wrap="hard">
-                        DropMax makes MVCNN maintain about <b>90%</b> of the performance when about <b>90%</b> of the data is missed.
+                        DropMax使原有方法在缺失90%数据的情况下，仍然保持原来90%的性能。
                     </p>
             
                     <p style="text-align:center;"><img style="width: 60%;" src="research_deepccfv/retreival result.png" alt="retrieval"
                             class="center"></p>
 
                     <div style="text-align:center;">
-                        <p style="font-size:15px; text-align:center;">Figure 4. The retrieval mAP of comparing approaches using VGG11-BN and ResNet50 as the CNN backbone in random camera positions. The proposed DeepCCFV had the best performance among the methods listed in the ﬁgure. The retrieval mAP of DeepCCFV using single view achieved 74.49% and 78.63%, which were 13.69% and 32.02% higher than MVCNN. The retrieval mAP of the proposed DeepCCFV using 12 views achieved 82.87% and 87.98% ,which were 6.91% and 11.75% higher than MVCNN.</p>
+                        <p style="font-size:15px; text-align:center;">Figure 2. 设定随机的相机位置，不同方法在ModelNet40上检索的结果（mAP作为指标）。在测试时只有一个视图的情况下（数据严重缺失）DeepCCFV在使用VGG11-BN和ResNet50的backbone上分别达到74.49% and 78.63%的性能, 这比MVCNN高了13.69%和32.02%。在12视图（视图相对完整）时，我们的方法达到 82.87% 和 87.98% 的性能，这比MVCNN高了6.91%和11.75%。可以看到我们的方法能使原有方法更具鲁棒性，尤其是在视图数据严重缺失的时候。</p>
                     </div>
 
                     
@@ -217,7 +169,9 @@
                         class="center"></p>
 
                     <div style="text-align:center;">
-                        <p style="font-size:15px; text-align:center;">Figure 5. The results of cross-modal retrieval experiment in terms of mAP. Above the middle line, results show the original single-modal retrieval results for different methods. Below the middle line, results show the cross-modal retrieval result. For all cases, the method with DeepCCFV performs the best.</p>
+                        <p style="font-size:15px; text-align:center;">Figure 3. 视图--点云跨模态检索的情况，可以看到我们的方法在跨模态检索中仍然能有很好的性能表现。
+
+                        </p>
                     </div>
 
 
@@ -228,10 +182,13 @@
 
             <br>
             
+
+
+
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Citation (BibTeX) </b></h2>
+                    <h2><b>Publications </b></h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
