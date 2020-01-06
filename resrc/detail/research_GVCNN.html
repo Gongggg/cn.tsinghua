@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 
-    <title>GVCNN: Group-View Convolutional Neural Networks for 3D Shape Recognition</title>
+    <title>用于3D形状识别的组视图卷积神经网络</title>
 
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -94,7 +94,7 @@
                             <a href="../../blog/index.htm">新闻</a>
                         </li>
                         <li style="margin-top: 1px;">
-                            <a href="#">生活</a>
+                            <a href="../../code/index.htm">源码&数据</a>
                         </li>
                         <li class="dropdown" style="margin-top: 1px;">
                             <a href="#">更多信息</a>
@@ -112,16 +112,13 @@
     <div class="container body-content" style="margin-top:90px;">
 
         <body>
-            <h1 align="center" style="font-size:40px;"><b>GVCNN: Group-View Convolutional Neural Networks for 3D Shape Recognition
+            <h1 align="center" style="font-size:40px;"><b>用于3D形状识别的组视图卷积神经网络
             </h1>
             <div class="row">
                 <br>
                 <p align="center" style="font-size:20px;">
-                    Yifan Feng,
-                    Zizhao Zhang,
-                    Xibin Zhao,
-                    <a href="http://mac.xmu.edu.cn/rrji-cn.html"> Rongrong Ji</a>,
-                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a>
+                    <a href="https://scholar.google.com/citations?user=WntYF-sAAAAJ&hl=zh-CN&oi=sra">丰一帆</a>,
+                    <a href="https://zzz14.github.io/">张子昭</a>
                 </p>
             </div>
 
@@ -130,7 +127,7 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
-                    <h2><b>摘要</b></h2>
+                    <!-- <h2><b>摘要</b></h2> -->
                     <p style="font-size:20px;" wrap="soft">3D形状识别近年来广受关注。但是，现有的用于3D形状识别的深层特征仅限于视图表示直接到形状表示的特征变换，该变换直接从视图级特征中学习形状描述符。尽管在基于视图的3D形状描述方面取得了很多进步，但是视图之间的固有层次相关性和可辨别性尚未得到很好的挖掘，然而这对于3D形状表示非常重要。为了解决这个问题，我们提出了一种可辩别性的3D形状描述的用于分层相关建模的组视图卷积神经网络（GVCNN）框架。我们提出的GVCNN框架由分层的视图描述符-组特征-形状体系结构组成，即从视图级别，组级别和形状级别开始，它们使用分组策略进行组织。具体而言，我们首先使用扩展的CNN提取视图级别描述符。然后，引入分组模块来估计每个视图的可辩别度，基于此模块，可以根据所有视图的可辩别度将所有视图分为不同的组。通过从视图描述符中进行合并，可以进一步生成组级别的描述。最后，所有组级别描述符根据其权重融合到整体的形状级别描述符中。实验结果和与最先进方法的比较表明，我们提出的GVCNN方法可以在3D形状分类和检索任务上实现显着的性能提升。
                     </p>
                     <p style="text-align:center;"><img style="width: 80%;" src="research_GVCNN/results.png"
@@ -210,21 +207,14 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Citation (BibTeX) </b></h2>
+                    <h2><b> Publications </b></h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-					@inproceedings{inproceedings,<br>
-							title = {GVCNN: Group-View Convolutional Neural Networks for 3D Shape Recognition},<br>
-							author = {Feng, Yifan and Zizhao, Zhang and Z hao, Xibin and Ji, Rongrong and Gao, Yue},<br>
-							year = {2018},<br>
-							month = {06},<br>
-							pages = {264-272},<br>
-							doi = {10.1109/CVPR.2018.00035}<br>
-						}
+                    <td>Yifan Feng, Zizhao Zhang, Xibin Zhao, Rongrong Ji, Yue Gao. <br><b>GVCNN: Group-View Convolutional Neural Networks for 3D Shape Recognition.</b><br>The Conference on Computer Vision and Pattern Recognition (CVPR), 2018.</td>
                     
                     <br>
                     <br>

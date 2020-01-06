@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 
-    <title>Attention-based Multi-modal Fusion Network for Semantic Scene Completion</title>
+    <title>基于注意力的多模态融合网络在场景语义分割上的应用</title>
 
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -94,7 +94,7 @@
                             <a href="../../blog/index.htm">新闻</a>
                         </li>
                         <li style="margin-top: 1px;">
-                            <a href="#">生活</a>
+                            <a href="../../code/index.htm">源码&数据</a>
                         </li>
                         <li class="dropdown" style="margin-top: 1px;">
                             <a href="#">更多信息</a>
@@ -112,13 +112,12 @@
     <div class="container body-content" style="margin-top:90px;">
 
         <body>
-            <h1 align="center" style="font-size:40px;"><b>Attention-based Multi-modal Fusion Network <br>for Semantic Scene Completion
+            <h1 align="center" style="font-size:40px;"><b>基于注意力的多模态融合网络在场景语义分割上的应用
             </h1>
             <div class="row">
                 <br>
                 <p align="center" style="font-size:20px;">
-                    Siqi Li, Changqing Zou, Yipeng Li, Xibin Zhao, and
-                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a>
+                    李思奇
                 </p>
             </div>
 
@@ -127,7 +126,7 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
-                    <h2><b>Abstract</b></h2>
+                    <!-- <h2><b>Abstract</b></h2> -->
                     <p style="font-size:20px;" wrap="soft">
                         我们提出了一种基于注意力机制的三维卷积网络(AMFNet)用于语义场景补全(SSC)任务，即使用单视角RGB-D图像实现场景完成与语义分割。
                         已有的方法仅使用从RGB-D图像中提取的语义特征实现场景完成，而我们提出的AMFNet可以充分使用2D语义分割信息来同时提升场景完成与语义分割的效果。
@@ -151,7 +150,7 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Method </b></h2>
+                    <h2><b> 方法 </b></h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -164,13 +163,9 @@
                         The proposed AMFNet, as illustrated in Figure 1, mainly contains three sequential modules: a 2D segmentation network,
                         a 2D-3D projection layer, and a two-branch 3D volume network. This network takes single-view RGB-D images
                         as input and outputs occupancy and semantic labels for all voxels in the scene. The whole network can be trained
-                        in an end-to-end manner. We next introduce each module in the sequence of the flow of data processing. <br><br>
-
+                        in an end-to-end manner. We next introduce each module in the sequence of the flow of data processing.
                         The 2D segmentation network extracts 2D geometry features and performs 2D semantic segment-ation from the input RGB-D images.
-                        <br><br>
-
-                        The 2D-3D projection layer projects every feature tensor and semantic label into the 3D volume at the location with the same depth value.<br><br>
-
+                        The 2D-3D projection layer projects every feature tensor and semantic label into the 3D volume at the location with the same depth value.
                         The 3D volume network, which takes the output of the 2D-3D projection layer as input, contains two branches: one
                         for 3D guidance information and the other for 3D semantic completion.
                     </p>
@@ -204,9 +199,9 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
-                    <h2><b>Results</b></h2>
+                    <h2><b>实验结果</b></h2>
 
-                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/table.png"
+                    <p style="text-align:center;"><img style="width: 100%;margin-top: 30px;" src="research_AMFNet/table.png"
                                                        alt="xxxx" class="center"></p>
                     <br>
                     <p style="font-size:20px;" wrap="soft">
@@ -240,19 +235,19 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Citation (BibTeX) </b></h2>
+                    <h2><b> Publications </b></h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-
+                    <td>Siqi Li, Changqing Zou, Yipeng Li, Xibin Zhao, Yue Gao. <br><b>Attention Based Multi-modal Fused Network for Semantic Scene Completion.</b><br>AAAI Conference on Artificial Intelligence (AAAI), 2020.</td>
                     <br>
                     <br>
                     <p style="font-size=40px">
                         <a class="btn btn-default" href="#"> <b> Paper &raquo;</b></a>
-                        <a class="btn btn-default" href="#"> <b> Code &raquo;</b></a>
+                        <!-- <a class="btn btn-default" href="#"> <b> Code &raquo;</b></a> -->
                     </p>
                 </div>
 
