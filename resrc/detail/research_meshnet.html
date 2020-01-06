@@ -129,11 +129,18 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
                     <!-- <h2><b>Abstract</b></h2> -->
-                    <p style="font-size:20px;" wrap="soft">网格是三维物体的一类重要的数据类型，在计算机视觉和计算机图形学领域得到了广泛的关注和研究。在三维物体表示任务上，近年来已经出现了大量基于体素、网格和多视图的研究工作，但由于网格数据的复杂性和不规则性，基于网格数据的研究相对稀缺。在本文中，我们提出了名为 MeshNet 的网格神经网络，用于直接在三维网格数据进行表示学习。我们提出了逐三角面片处理和特征划分的学习方法，并提出了相应的处理模块来解决网格数据的复杂性和不规则性问题。我们在三维模型的分类和检索任务上进行了充分实验，实验结果及与最优方法的对比表明，我们的网络能够有效实现三维模型的分类与检索，证明了所提表示方法的有效性。
+                    <p style="font-size:20px;" wrap="soft">
+                        网格是三维物体的一类重要的数据类型，在计算机视觉和计算机图形学领域得到了广泛的关注和研究。在三维物体表示任务上，近年来已经出现了大量基于体素、网格和多视图的研究工作，但由于网格数据的复杂性和不规则性，基于网格数据的研究相对稀缺。在本文中，我们提出了名为
+                        MeshNet
+                        的网格神经网络，用于直接在三维网格数据进行表示学习。我们提出了逐三角面片处理和特征划分的学习方法，并提出了相应的处理模块来解决网格数据的复杂性和不规则性问题。我们在三维模型的分类和检索任务上进行了充分实验，实验结果及与最优方法的对比表明，我们的网络能够有效实现三维模型的分类与检索，证明了所提表示方法的有效性。
                     </p>
                     <p style="text-align:center;"><img style="width: 80%;" src="research_meshnet/pipeline.png"
                             alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 1. The architecture of MeshNet.The input is a list of faces with initial values, which are fed into the spatial andstructural descriptors to generate initial spatial and structural features. The features are then aggregated with neighboring in-formation in the mesh convolution blocks labeled as “Mesh Conv”, and fed into a pooling function to output the global featureused for further tasks. </p>
+                    <p style="font-size:15px; text-align:center;">Fig 1. The architecture of MeshNet.The input is a list
+                        of faces with initial values, which are fed into the spatial andstructural descriptors to
+                        generate initial spatial and structural features. The features are then aggregated with
+                        neighboring in-formation in the mesh convolution blocks labeled as “Mesh Conv”, and fed into a
+                        pooling function to output the global featureused for further tasks. </p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -146,10 +153,17 @@
                     <h2><b> 三角形面的特征 </b></h2>
                     <p style="text-align:center;"><img style="width: 80%;" src="research_meshnet/vis.png" alt="xxxx"
                             class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 2. Feature  visualization  of  structural  feature.Models from the same column are colored with their val-ues of the same channel in features.Left: Features from theface rotate convolution.Right: Features from the face kernelcorrelation.</p>
+                    <p style="font-size:15px; text-align:center;">Fig 2. Feature visualization of structural
+                        feature.Models from the same column are colored with their val-ues of the same channel in
+                        features.Left: Features from theface rotate convolution.Right: Features from the face
+                        kernelcorrelation.</p>
 
                     <p style="font-size:20px" wrap="hard">
-                        To figure out whether the structural descriptors successfullycapture our features of faces as expected, we visualize thetwo  types  of  structural  features  from  face  rotate  convolu-tion and face kernel correlation. We randomly choose sev-eral  channels  of  these  features,  and  for  each  channel,  wepaint faces with colors of different depth corresponding totheir values in this channel.
+                        To figure out whether the structural descriptors successfullycapture our features of faces as
+                        expected, we visualize thetwo types of structural features from face rotate convolu-tion and
+                        face kernel correlation. We randomly choose sev-eral channels of these features, and for each
+                        channel, wepaint faces with colors of different depth corresponding totheir values in this
+                        channel.
 
                     </p>
                 </div>
@@ -157,7 +171,7 @@
             </div>
 
             <br>
-            
+
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
@@ -171,26 +185,50 @@
                 <div class="col-md-10">
 
                     <p style="font-size:20px" wrap="hard">
-                        The overall archi-tecture of MeshNet is illustrated in Fig 1. A list of faces withinitial values is fed into two blocks, namedspatial descrip-torandstructural descriptor, to generate the initial spatialand structural features of faces. The features are then passedthrough somemesh convolutionblocks to aggregate neigh-boring information, which get features of two types as inputand output new features of them. It is noted that all the pro-cesses above work on each face respectively and share thesame parameters. After these processes, a pooling functionis applied to features of all faces for generating global fea-ture, which is used for further tasks. The above blocks willbe discussed in following sections.
+                        The overall archi-tecture of MeshNet is illustrated in Fig 1. A list of faces withinitial values
+                        is fed into two blocks, namedspatial descrip-torandstructural descriptor, to generate the
+                        initial spatialand structural features of faces. The features are then passedthrough somemesh
+                        convolutionblocks to aggregate neigh-boring information, which get features of two types as
+                        inputand output new features of them. It is noted that all the pro-cesses above work on each
+                        face respectively and share thesame parameters. After these processes, a pooling functionis
+                        applied to features of all faces for generating global fea-ture, which is used for further
+                        tasks. The above blocks willbe discussed in following sections.
                     </p>
 
 
-                    <p style="text-align:center;"><img style="width: 40%;"  src="research_meshnet/rc.png" alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 3. The face rotate convolution block. Kernels rotatethrough the face and are applied to pairs of corner vectors forthe convolution operation.
+                    <p style="text-align:center;"><img style="width: 40%;" src="research_meshnet/rc.png" alt="xxxx"
+                            class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 3. The face rotate convolution block. Kernels
+                        rotatethrough the face and are applied to pairs of corner vectors forthe convolution operation.
                     </p>
 
                     <p style="font-size:20px" wrap="hard">
-                        The face rotate convolution block is proposed to captures the “inner”structure  of  faces  and  focus  on  the  shape  information  of faces. This process is similar to a convolution operation, with two vectors as the kernel size, one vector as the stride, except that translation of kernelsis replaced by rotation. The kernels rotates through the face and works on two vectors each time.
+                        The face rotate convolution block is proposed to captures the “inner”structure of faces and
+                        focus on the shape information of faces. This process is similar to a convolution operation,
+                        with two vectors as the kernel size, one vector as the stride, except that translation of
+                        kernelsis replaced by rotation. The kernels rotates through the face and works on two vectors
+                        each time.
                     </p>
-                    
 
-                    <p style="text-align:center;"><img style="width: 60%;"  src="research_meshnet/meshconv.png" alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 4. The  mesh  convolution.“Combination”  donatesthe combination of spatial and structural feature. “Aggrega-tion” denotes the aggregation of structural feature, in which“Gathering” denotes the process of getting neighbors’ fea-tures and “Aggregation for one face” denotes different meth-ods of aggregating features.
+
+                    <p style="text-align:center;"><img style="width: 60%;" src="research_meshnet/meshconv.png"
+                            alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 4. The mesh convolution.“Combination” donatesthe
+                        combination of spatial and structural feature. “Aggrega-tion” denotes the aggregation of
+                        structural feature, in which“Gathering” denotes the process of getting neighbors’ fea-tures and
+                        “Aggregation for one face” denotes different meth-ods of aggregating features.
                     </p>
 
 
                     <p style="font-size:20px" wrap="hard">
-                        The mesh convolution block is designed to expand the re-ceptive  field  of  faces,  which  denotes  the  number  of  facesperceived by each face, by aggregating information of neigh-boring faces. In this process, features related to spatial po-sitions should not be included directly because we focus onfaces in a local area and should not be influenced by wherethe  area  locates.  In  the  2D  convolutional  neural  network,both  the  convolution  and  pooling  operations  do  not  intro-duce any positional information directly while aggregatingwith neighboring pixels’ features. Since we have taken outthe structural feature that is irrelevant to positions, we onlyaggregate them in this block.
+                        The mesh convolution block is designed to expand the re-ceptive field of faces, which denotes
+                        the number of facesperceived by each face, by aggregating information of neigh-boring faces. In
+                        this process, features related to spatial po-sitions should not be included directly because we
+                        focus onfaces in a local area and should not be influenced by wherethe area locates. In the 2D
+                        convolutional neural network,both the convolution and pooling operations do not intro-duce any
+                        positional information directly while aggregatingwith neighboring pixels’ features. Since we
+                        have taken outthe structural feature that is irrelevant to positions, we onlyaggregate them in
+                        this block.
                     </p>
 
 
@@ -199,7 +237,7 @@
             </div>
 
             <br>
-            
+
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
@@ -218,10 +256,17 @@
   pages={8279--8286},<br />
   year={2019}<br />
 } -->
+
+
+                    <tr role="row" class="odd">
+                        <td>Yutong Feng, Yifan Feng, Haoxuan You, Xibin Zhao, Yue Gao. <br><b>MeshNet: Mesh Neural
+                                Network for 3D Shape Representation.</b><br>AAAI Conference on Artificial Intelligence
+                            (AAAI), 2019.</td>
+                    </tr>
                     <br>
                     <br>
                     <p style="font-size=40px">
-                        <a class="btn btn-default" href="http://gaoyue.org/paper/MeshNet.pdf"> <b> Paper &raquo;</b></a>  
+                        <a class="btn btn-default" href="http://gaoyue.org/paper/MeshNet.pdf"> <b> Paper &raquo;</b></a>
                         <a class="btn btn-default" href="https://github.com/iMoonLab/MeshNet"> <b> Code &raquo;</b></a>
                     </p>
                 </div>
