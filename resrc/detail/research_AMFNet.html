@@ -133,7 +133,7 @@
                         AMFNet基于2D语义分割实现多模态融合，使用基于残差注意力模块的3D语义场景补全网络提升模型性能。我们在虚拟合成的SUNCG-RGBD数据集
                         和真实采集的NYUv2数据集上进行了验证。实验结果表明，与现有的最佳方法相比，AMFNet在两个数据集上分别实现了2.5%和2.6%的性能提升。
                     </p>
-                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/network.png"
+                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/Network.png"
                             alt="xxxx" class="center"></p>
                     <p style="font-size:15px; text-align:left">Figure 1. AMFNet网络结构图。AMFNet以RGB-D图像（分为RGB和HHA图像）为输入，
                         同时预测场景的体素占用率和对象标签。它通过计算二维分割网络结果的二维-三维投影，从初始的三维语义特征体中加速三维完成和分割。</p>
@@ -159,7 +159,7 @@
                     <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/result.png"
                                                        alt="xxxx" class="center"></p>
                     <p style="font-size:15px; text-align:left">
-                        Figure 4. NYUv2数据集的定性结果。从左到右依次为：RGB图像、2D分割结果的地面GT、
+                        Figure 2. NYUv2数据集的定性结果。从左到右依次为：RGB图像、2D分割结果的地面GT、
                         SSC任务的地面GT、SSCNet、SATNet生成的结果、我们的方法、去除注意块的方法、去除3D引导分支的方法、用地面GT代替2D语义分割模块的结果的方法。</p>
                     <br>
 
