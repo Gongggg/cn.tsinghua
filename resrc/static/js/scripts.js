@@ -6,21 +6,21 @@ var news_cards = new Vue({
         // TODO: if there is more data, please use vue-infinite-scroll.
         threed_vision_cards: [
             {
-                title: 'Attention-based Multi-modal Fusion Network',
+                title: '基于注意力的多模态融合网络在场景语义分割上的应用',
                 img: 'static/img/siqi.jpg',
                 content: 'This paper presents an end-to-end 3D convolutional network named attention-based multi-modal fusion network (AMFNet) for the semantic scene completion (SSC) task of inferring the occupancy and semantic labels of a volumetric 3D scene from single-view RGB-D images.',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_AMFNet.html'
             },
             {
-                title: 'MeshNet: Mesh Neural Network for 3D Shape Representation',
+                title: 'Mesh卷积神经网络',
                 img: 'static/img/yutong.png',
                 content: 'This paper proposes a neural network using mesh for 3D shape representation and design blocks for capturing and aggregating features of polygon faces in 3D shapes.',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_meshnet.html'
             },
             {
-                title: 'Towards Camera-Setting-Robust Multi-View Representation',
+                title: '用于3D对象检索的无相机无约束多视图卷积神经网络',
                 img: 'static/img/zhengyue.png',
                 content: 'This paper presents a method that remedies a overfitting problem caused by the pattern gap between a complete and missing view dataset, making it possible to train a network that is robust in camera-constraint free settings.',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
@@ -33,14 +33,14 @@ var news_cards = new Vue({
 
         brain_science_cards: [
             {
-                title: 'Survival Prediction on Whole Slide Histo-pathological Images',
+                title: '基于全尺寸组织医学病理图像的生存预测',
                 img: 'static/img/donglin.png',
                 content: 'Survival prediction for patients based on their gigapixel whole-slide histopathological images (WSIs) has been drawing increasing attention in recent years. One key challenge of this task is how to explore informative survivalspeciﬁc features reﬂecting the patient’s survival status effectively. In this paper, we introduce a hypergraph regression framework, called HyperGraph Regression Network (HGRNet), to tackle this challenge for survival prediction. HGRNet is capable of mining the pathological topological patterns affecting the survival status by a hierarchical representation built upon a hypergraph structure.',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_hgrnet.html'
             },
             {
-                title: 'High-Order Resting-State FC Network for MCI Classification',
+                title: '用于MCI分类的高阶静止状态功能连接网络',
                 img: 'static/img/yifan.png',
                 content: 'Brain functional connectivity (FC) network, estimated with resting-state functional magnetic resonance imaging (RS-fMRI) technique, has emerged as a promising approach for accurate diagnosis of neurodegenerative diseases.',
                 inscription: 'Posted on 12/12/2019 by Chaoyang Xia',
