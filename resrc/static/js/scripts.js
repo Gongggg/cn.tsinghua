@@ -67,7 +67,21 @@ var news_cards = new Vue({
                 content: '针对传统单帧视图立体重建算法存在的缺陷，提出了VSGNet（视图-几何-结构联合的单视图重建算法），融合视图（View）、结构（Structure）、几何（Geometry）三方面信息进行立体重建。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_vsgnet.html'
-            },                                                                            
+            },     
+            {
+                title: '跨模态Hash索引',
+                img: 'detail/research_hash/suoluetu.png',
+                content: '跨模态Hash索引，是为了解决由于多模态信息的异构而导致的模态之间信息难以准确映射的问题，而衍生出的一类解决方法。',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
+                src: 'detail/research_hash.html'
+            },
+            {
+                title: '动作识别',
+                img: 'detail/research_activity/dongzuoshibie.png',
+                content: '',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
+                src: 'detail/research_activity.html'
+            },
         ],
 
         complex_network_cards: [
