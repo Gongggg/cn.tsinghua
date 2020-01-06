@@ -132,6 +132,7 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
                     <!-- <h2><b>摘要</b></h2> -->
+                    <br>
                     <p style="font-size:20px;" wrap="soft">通过静息态功能磁共振成像（RS-fMRI）技术估算的脑功能连通性（FC）网络已经成为准确诊断神经退行性疾病的一种有效的方法。然而，从仅考虑大脑区域之间的相关性（就RS-fMRI时间序列而言）的角度上，常规FC网络本质上是低阶的。从这种类型的大脑网络派生的功能可能无法充当有效的疾病生物标记。为了克服此缺点，我们建议提取新颖的高阶FC相关性，以表征不同对大脑区域之间的低阶相关性如何相互作用。具体而言，对于每个大脑区域，首先在整个RS-fMRI时间序列上执行滑动窗口方法，以生成多个短重叠段。对于每个段，构建一个低阶FC网络，以测量大脑区域之间的短期相关性。这些低阶网络（从所有分段获得）描述了短期FC随时间变化的动态，因此也形成了每对大脑区域的相关时间序列。为了克服维数的诅咒，我们将相关时间序列根据其固有的通用模式进一步分为少量的不同簇。然后，计算不同聚类的各个平均相关时间序列之间的相关性，以表示不同对大脑区域之间的高阶相关性。最后，我们通过组合低阶和高阶FC网络的特征来设计模式分类器。实验结果证明了高阶FC网络在疾病诊断中的有效性。
                     </p>
                     <p style="text-align:center;"><img style="width: 80%;" src="research_HFCNet/results.png"
@@ -224,7 +225,7 @@
                     <br>
                     <p style="font-size=40px">
                         <a class="btn btn-default" href="http://gaoyue.org/paper/MCI%20classification.pdf"> <b> Paper &raquo;</b></a>  
-                        <a class="btn btn-default" href="https://github.com/iMoonLab"> <b> Code &raquo;</b></a>
+                        <!-- <a class="btn btn-default" href="https://github.com/iMoonLab"> <b> Code &raquo;</b></a> -->
                     </p>
                 </div>
 
