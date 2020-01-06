@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>(paper title) 复杂网络建模与分析</title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/glyphicons.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/filetypes.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/social.css">
+    <link href="../../../fonts.googleapis.com/css-family=Open+Sans-400,700,600.css" rel='stylesheet' type='text/css'>
+    <link href="../../static/trans.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/bootstrap-markdown.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/vendor/layerslider/layerslider.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/styles-cleanred.css" id="grove-styles">
+    <link rel="stylesheet" href="../../../cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/nlp.css" id="nlp-styles">
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../static/js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="../../static/js/vendor/layerslider/greensock.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.transitions.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.kreaturamedia.jquery.js"
+        type="text/javascript"></script>
+    <script src="../../static/js/markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/to-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/bootstrap-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/grove-slider.js" type="text/javascript"></script>
+    <script src="../../../cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script
+        src="../../../cdn.datatables.net/plug-ins/1.10.7/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+    <script src="../../../bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+    <link href="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link href="static/css/c5e0117592e540848259ae6882d93f52.css" rel="stylesheet" />
+    <script src="static/js/d46d827d0f604446b58cc8d38bdbd84e.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default grove-navbar navbar-fixed-top" id="imoonbignav">
+            <div class="container" id="imoonmidnav">
+                <div class="navbar-header">
+                    <a href="#" class="grove-toggle collapsed" data-toggle="collapse" data-target=".grove-nav">
+                        <i class="glyphicons show_lines"></i>
+                    </a>
+                    <img class="navbar-brand navbar-left hidden-xs" src="../../static/img/logos/nlp-logo-small.png"
+                        alt="" id="imoonlogo">
+                    <a class="navbar-brand navbar-left" href="../index.htm">
+                        <h3 class="hidden-xs" id="imoontitle" style="font-weight: 600;margin-top: 15px">智能媒体与认知实验室<p
+                                style="margin-top: 5px">
+                                iMoon: Intelligent
+                                Media and Cognition Lab</p>
+                        </h3>
+                        <h3 class="hidden-sm hidden-md hidden-lg hidden-xl" style="color: white">iMoon-Lab</h3>
+                    </a>
+                </div>
+
+                <div class="navbar-collapse grove-nav collapse" style="position: relative">
+                    <ul class="nav navbar-nav" id="imoonnav">
+
+                        <div style="position:absolute;top:5px;left:10px;border:0px solid rgb(255, 255, 255);">
+                            <a href="../../index.htm">
+                                <div style="width: 400px;height:65px"></div>
+                            </a>
+                        </div>
+                        <!-- <div id="language">
+                            <a id='drump' href="#"><b>中 / </b></a><a id='drump'
+                                href="../../../en_tsinghua/resrc/index.htm"><b>En</b></a>
+                        </div> -->
+                        <li style="margin-top: 1px;">
+                            <a href="../../index.htm">主页</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../people/index.htm">团队</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../resrc/index.htm">研究方向</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../pubs/index.htm">论文</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../blog/index.htm">新闻</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="#">生活</a>
+                        </li>
+                        <li class="dropdown" style="margin-top: 1px;">
+                            <a href="#">更多信息</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../more/index.htm">MICCAI19 Tutorial</a></li>
+                                <li><a href="#">MICCAI19 挑战赛</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container body-content" style="margin-top:90px;">
+
+        <body>
+            <h1 align="center" style="font-size:40px;"><b>复杂网络建模与分析
+            </h1>
+            <div class="row">
+                <br>
+                <p align="center" style="font-size:20px;">
+                    <a href="https://zzz14.github.io/">Zizhao Zhang</a>,
+                    <a href="https://scholar.google.com/citations?user=WntYF-sAAAAJ&hl=zh-CN&oi=sra">Yifan Feng</a>,
+                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a>
+                </p>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
+                    <h2><b>Abstract</b></h2>
+                    <p style="font-size:20px;" wrap="soft">在社交网络、生物信息、视觉处理等任务和应用中，数据之间往往存在着复杂关联，分析数据间的复杂关联对于分类、分割、识别等任务有着重要意义。现实世界中，由于数据往往存在着噪声、不完备、动态等问题，应用环境的复杂化带来数据关联建模的困难，传统静态关联结构表示难以描述复杂数据关联，亟需具有更好适应性的动态数据关联建模方法。针对数据的复杂关联建模难题，我们采用超图结构进行数据复杂关联建模，提出了超图动态学习方法和超图神经网络。与传统的超图学习方法不同，这些方法具备更好的数据适应性，从而可以获得更佳的数据建模及分析性能。
+
+                    </p>
+                    <!-- <p style="text-align:center;"><img style="width: 80%;" src="research_gvcnn/gvcnn.png"
+                            alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 1. xxxx xxxxx xxxxxx xxxxx xxxxxx x xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx.</p> -->
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+
+            <!-- <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Data </b></h2>
+                    <p style="text-align:center;"><img style="width: 80%;" src="research_gvcnn/multiview.png" alt="xxxx"
+                            class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 2. xxxx xxxxx xxxxxx xxxxx xxxxxx .</p>
+
+                    <p style="font-size:20px" wrap="hard">
+                        (Data) xxx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx
+                        xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx
+                        xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx
+                        xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx
+                        xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx
+                        xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx
+                        xxxxxx xx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxx
+                        xxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx
+                        xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxxxxxxxx xx
+
+                        <br><br>You could download xxxx by clicking following button.(~6.5 Gb)
+                    </p>
+                    <p style="font-size=40px"><a class="btn btn-default" href="#"> <b> Download
+                            &raquo;</b></a></p>
+                </div>
+                <div class="col-md-1"></div>
+            </div> -->
+
+            <br>
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> 复杂关联建模 </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                    <p style="font-size:20px" wrap="hard">
+                        超图结构是今年受到广泛关注和应用的一种复杂关联建模方法，他是简单图的拓展。在超图中，每个顶点代表一个样本，超边表示样本间的关联，与简单图不同的是，一条超边可以连接多个顶点，因此超图可以表示数据的复杂高阶关联。基于超图结构的学习方法可以认为是在超图结构上进行标签传播的过程，超图上连接比较紧密的点应该有相似的标签，距离较远的点标签则应该不同。超图学习方法在多媒体推荐、图像分割、视觉追踪等任务上都有着广泛应用。需要注意的是，在已有的研究工作中，超图结构代表了数据间的关联性，在学习过程中起到了决定性的作用。一个好的超图结构可以准确地建模数据间的关联性，从而得到更好的分类性能，而一个不好的超图结构则会得到相反的结果。因此如何从数据建立一个好的超图结构是一个至关重要的问题。
+
+                    </p>
+
+
+                    <p style="text-align:center;"><img style="width: 60%;"  src="research_complexnetwork/hypergraphvsgraph.png" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 1. 超图 vs 简单图
+                    </p>
+
+
+
+                    <p style="font-size:20px" wrap="hard">
+                        传统的建立超图结构的方法包括基于k近邻建图、基于稀疏表示建图等方法，这些方法根据数据的特征表示或者稀疏表示建立静态超图结构，在之后的超图学习过程中超图结构保持不变。显然，这种静态超图结构并不能保证是最优的。也有方法在超图学习的过程中调整超边的权重，因为不同的连接可能有不同的重要性。然而，这种调整并不能完全修复不合适甚至错误的连接，因此对性能的提升微乎其微。
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+			
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> 动态超图结构学习 </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                    <p style="font-size:20px" wrap="hard">
+                        
+                        为了更好地建模数据之间的复杂关联，我们提出了动态超图结构学习方法，其基本思想是在传统的超图学习的过程中不断更新优化超图结构。具体来说，给定部分有标签的数据，我们的目标是学习得到更优化、更适合数据的超图结构，以更好地表征数据之间的高阶关联，同时得到标签映射矩阵，实现无标签数据的分类。提取数据特征后，我们首先建立初始超图结构来表征数据关联性，这里使用基于k近邻的建图方式。然后提出对偶优化框架，同步学习标签映射矩阵及超图结构。我们同时考虑了标签空间和特征空间的数据关联性，以实现超图结构的动态更新。
+                    </p>
+
+
+                    <p style="text-align:center;"><img style="width: 90%;"  src="research_complexnetwork/framework.jpg" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 2. 动态超图结构学习框架图
+                    </p>
+
+
+
+                    <p style="font-size:20px" wrap="hard">
+                        在已有的工作中，超图往往通过邻接矩阵表示。邻接矩阵的表示形式有以下三个问题：1.当超图结构在动态演变时，其超边数和超边权重是在不断变化的，而邻接矩阵在动态超图结构学习过程中的维数是固定的，并不能很好地表示超图结构的动态更新。2.基于邻接矩阵的超图结构学习方法时间复杂度和空间复杂度都非常高。3.基于邻接矩阵的超图结构学习方法的目标函数是非凸的，现有算法难以有效求得最优解。针对这几个问题，我们提出了超图结构的张量表示，来构建数据的完全阶关联。
+                    </p>
+					
+					<p style="text-align:center;"><img style="width: 70%;"  src="research_complexnetwork/representation.png" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 3. 超图的邻接矩阵表示 vs 张量表示
+                    </p>
+					
+					<p style="font-size:20px" wrap="hard">
+                        我们进一步提出了基于张量表示的动态超图学习算法，与已有方法相比，该模型的目标函数是双凸的，可以通过交替迭代算法有效求得最优解。我们在四个数据集上进行了实验，结果证明我们的方法可以有效提高准确率，同时将速度提升1700多倍。
+                    </p>
+					
+					<p style="text-align:center;"><img style="width: 70%;"  src="research_complexnetwork/framework_tdhl.png" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 4. 基于张量表示的动态超图学习框架图
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+			
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> 超图神经网络 </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                    <p style="font-size:20px" wrap="hard">
+                        深度神经网络相比与传统算法在结构规则的数据（如：图片，视频等）取了举世瞩目的结果。然而面对非结构化数据，如图结构，并不能直接使用经典的卷积神经网络。虽然图网络的出现可以在一定程度上解决非结构化数据学习的问题，但是现有的图网络都被只能建模成对的连接关系，这极大的限制了现有图网络的建模和学习能力。
+                    </p>
+
+
+                    <p style="text-align:center;"><img style="width: 90%;"  src="research_complexnetwork/hgnn_framework.png" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 5. 超图神经网络框架图
+                    </p>
+
+
+                    <p style="font-size:20px" wrap="hard">
+                        因此，针对非规则的非成对连接的高阶数据关联，我们提出使用超图神经网络去表征和学习。相比与图结构，超图结构有天然的建立高阶关联的能力，并且面对多模态数据的时候，超图可以直接通过拼接不同模态的超图关联矩阵达到目的。给定原始高阶关联的原始数据，我们首先在其上建立多组不同模态的超边，然后将不同模态的超边拼在一起构建全局的超图结构。全局超图结构与节点特征一起输入到超图神经网络中去做节点的预测。
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+			
+            <br>
+
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Citation (BibTeX) </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    @inproceedings{feng2018gvcnn,<br>
+                        title={GVCNN: Group-view convolutional neural networks for 3D shape recognition},<br>
+                        author={Feng, Yifan and Zhang, Zizhao and Zhao, Xibin and Ji, Rongrong and Gao, Yue},<br>
+                        booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},<br>
+                        pages={264--272},<br>
+                        year={2018}<br>
+                    }
+                    <br>
+                    <br>
+                    <p style="font-size=40px">
+                        <a class="btn btn-default" href="http://gaoyue.org/paper/Feng_GVCNN_Group-View_Convolutional_CVPR_2018_paper.pdf"> <b> Paper &raquo;</b></a>  
+                        <a class="btn btn-default" href="https://github.com/iMoonLab"> <b> Code &raquo;</b></a>
+                    </p>
+                </div>
+
+
+                <div class="col-md-1"></div>
+            </div>
+
+
+
+
+        </body>
+
+
+
+        <hr />
+        <footer style="background-color: #ffffff">
+            <p>&copy; 2020 - iMoonLab 智能媒体与认知实验室 Tsinghua</p>
+        </footer>
+    </div>
+    <script src="static/js/77c25eff67b24c0aa003ead7859d1511.js"></script>
+
+    <script src="static/js/1a59a27fb4484e89ab0510a5871211bd.js"></script>
+
+    <script src="static/js/jquery-ui.min.js"></script>
+
+    <link href="static/css/jquery-ui.min.css" rel="stylesheet" />
+
+    <script src="static/js/shortcut.js"></script>
+
+    <script src="static/js/suggest.js"></script>
+
+
+
+
+</body>
+
+</html>

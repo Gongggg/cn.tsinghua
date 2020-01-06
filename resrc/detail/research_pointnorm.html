@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 
-    <title>MeshNet: Mesh Neural Network for 3D Shape Representation</title>
+    <title>Towards Transformation-Invariant Point Cloud Representation</title>
 
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -44,6 +44,14 @@
     <script src="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <link href="static/css/c5e0117592e540848259ae6882d93f52.css" rel="stylesheet" />
     <script src="static/js/d46d827d0f604446b58cc8d38bdbd84e.js"></script>
+    <style>
+         .img_p{
+            font-weight:normal;font-size:15px; text-align:center;padding: 20px;
+         }
+         .normal_p{
+            font-weight:normal;font-size:16px;
+         }
+    </style>
 </head>
 
 <body>
@@ -74,10 +82,6 @@
                                 <div style="width: 400px;height:65px"></div>
                             </a>
                         </div>
-                        <!-- <div id="language">
-                            <a id='drump' href="#"><b>中 / </b></a><a id='drump'
-                                href="../../../en_tsinghua/resrc/index.htm"><b>En</b></a>
-                        </div> -->
                         <li style="margin-top: 1px;">
                             <a href="../../index.htm">主页</a>
                         </li>
@@ -112,16 +116,12 @@
     <div class="container body-content" style="margin-top:90px;">
 
         <body>
-            <h1 align="center" style="font-size:40px;"><b>MeshNet: Mesh Neural Network for 3D Shape Representation
+            <h1 align="center" style="font-size:40px;"><b>点云的不变性表征
             </h1>
             <div class="row">
                 <br>
                 <p align="center" style="font-size:20px;">
-                    Yutong Feng,
-                    Yifan Feng,
-                    Haoxuan You,
-                    Xibin Zhao and
-                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a>
+                    黄正跃，从业臻，金昕祈等</a>
                 </p>
             </div>
 
@@ -130,12 +130,16 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
-                    <h2><b>Abstract</b></h2>
-                    <p style="font-size:20px;" wrap="soft">网格是三维物体的一类重要的数据类型，在计算机视觉和计算机图形学领域得到了广泛的关注和研究。在三维物体表示任务上，近年来已经出现了大量基于体素、网格和多视图的研究工作，但由于网格数据的复杂性和不规则性，基于网格数据的研究相对稀缺。在本文中，我们提出了名为 MeshNet 的网格神经网络，用于直接在三维网格数据进行表示学习。我们提出了逐三角面片处理和特征划分的学习方法，并提出了相应的处理模块来解决网格数据的复杂性和不规则性问题。我们在三维模型的分类和检索任务上进行了充分实验，实验结果及与最优方法的对比表明，我们的网络能够有效实现三维模型的分类与检索，证明了所提表示方法的有效性。
+                    <h2><b>简介</b></h2>
+                    <p class="normal_p">
+                        由于采集设备的位置、姿态不同，真实采集到的点云数据在存在旋转、尺度多种变换，这种数据的变换为机器学习模型带来了不要的困难，探索对空间变换不变的点云表征有重要意义。
                     </p>
-                    <p style="text-align:center;"><img style="width: 80%;" src="research_meshnet/pipeline.png"
-                            alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 1. The architecture of MeshNet.The input is a list of faces with initial values, which are fed into the spatial andstructural descriptors to generate initial spatial and structural features. The features are then aggregated with neighboring in-formation in the mesh convolution blocks labeled as “Mesh Conv”, and fed into a pooling function to output the global featureused for further tasks. </p>
+                    <div>
+                        <img src="scale_variance.png" alt="" style="width:49%" >
+                        <img src="rotation_variance.png" alt="" style="width:49%">
+                    </div>
+                    
+                    <p class="img_p">图1 由于采集的角度、位置不同，真实数据中往往存在许多空间变换的干扰，例如左表示的尺度变换，右图表示的旋转变换。这些空间变换既存在于整体，又存在于局部，这为诸多具有层级局部特征提取结构的神经网络模型提出了巨大的挑战.</p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -145,15 +149,29 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Feature of triangular faces </b></h2>
-                    <p style="text-align:center;"><img style="width: 80%;" src="research_meshnet/vis.png" alt="xxxx"
-                            class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 2. Feature  visualization  of  structural  feature.Models from the same column are colored with their val-ues of the same channel in features.Left: Features from theface rotate convolution.Right: Features from the face kernelcorrelation.</p>
-
-                    <p style="font-size:20px" wrap="hard">
-                        To figure out whether the structural descriptors successfullycapture our features of faces as expected, we visualize thetwo  types  of  structural  features  from  face  rotate  convolu-tion and face kernel correlation. We randomly choose sev-eral  channels  of  these  features,  and  for  each  channel,  wepaint faces with colors of different depth corresponding totheir values in this channel.
-
+                    <h2><b> 实现尺度不变的表征: PointNorm </b></h2>
+                    <p style="font-weight:normal;font-size:16px;text-indent: 2em;">
+                        现有方法多采用数据预处理（全局normalize）或者数据增强（data augmentation）的方式克服数据中可能存在的尺度变化问题。
+                        数据增强是很暴力的方法，它潜在要求网络具有更大的容量和更多参数，这会为网络学习收敛带来新的困难。在数据预处理阶段对数据进行标准化是另一常用的方法，它在干净的单一对象上有较好的效果，但是会在诸多场景下失效（<a href="#solution_scale">如下图左边所示</a>）。考虑到全局归一化数据的困难，并且考虑到大多数网络都是类似CNN那样层级局部提取特征的，<span style="color: darkred">我们将大问题转化为小问题，将全局的问题转化为局部的问题</span>, 提出了基于局部归一化，并保留关键相对尺度信息的<span>PointNorm</span>。
                     </p>
+                    <br>
+                    <div style="text-align: center">
+                        <img id="solution_scale" src="solution_scale.png" alt="" style="width:83%">
+                    </div>
+                    
+                    <p class="img_p">图2 局部点相比全局点更不容易受到噪音/不相关背景干扰，使用局部归一化能保证大多数物体上的局部结构被正确规正。基于这样的想法PointNorm 对局部点云进行归一化，并保留相对尺度信息，它适用于大多数基于层级局部窗口提取特征的网络。
+                    </p>
+
+                    <h3><b>实验结果</b></h3>
+                    <div style="text-align: center">
+                        <img src="scale_exp.png" alt="" style="width:49%">
+                    </div>
+                    <p class="img_p">图3  PN表示PointNorm, 可以看到我们的方法使PointNet++ 和PointCNN达到了相当稳定的尺度不变的结果</p>
+
+                    <div style="text-align: center">
+                        <img src="pn_data_aug.png" alt="" style="width:80%">
+                    </div>
+                    <p class="img_p">图3  PN表示PointNorm, 可以看到我们的方法使PointNet++ 和PointCNN在不使用数据增强时达到比原始方法数据增强更好的效果</p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -163,76 +181,46 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Method </b></h2>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-
-                    <p style="font-size:20px" wrap="hard">
-                        The overall archi-tecture of MeshNet is illustrated in Fig 1. A list of faces withinitial values is fed into two blocks, namedspatial descrip-torandstructural descriptor, to generate the initial spatialand structural features of faces. The features are then passedthrough somemesh convolutionblocks to aggregate neigh-boring information, which get features of two types as inputand output new features of them. It is noted that all the pro-cesses above work on each face respectively and share thesame parameters. After these processes, a pooling functionis applied to features of all faces for generating global fea-ture, which is used for further tasks. The above blocks willbe discussed in following sections.
+                    <h2><b>实现旋转不变的表征: PointAlign</b></h2>
+                    <p class="normal_p">
+                        采用类似的思路，将全局旋转规正的复杂问题转化为局部旋转规正的问题。点云的局部可以近似看作一个平面，因此可以考虑使用其法向量规正局部点云结构。
                     </p>
+    
+                    <div>
+                        <img src="pa-d1.png" alt="" style="width:49%">
+                        <img src="pa-d2.png" alt="" style="width:49%">
+                    </div>
+                    <p class="img_p">图4 PointAlign方法示意图</p>
 
-
-                    <p style="text-align:center;"><img style="width: 40%;"  src="research_meshnet/rc.png" alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 3. The face rotate convolution block. Kernels rotatethrough the face and are applied to pairs of corner vectors forthe convolution operation.
-                    </p>
-
-                    <p style="font-size:20px" wrap="hard">
-                        The face rotate convolution block is proposed to captures the “inner”structure  of  faces  and  focus  on  the  shape  information  of faces. This process is similar to a convolution operation, with two vectors as the kernel size, one vector as the stride, except that translation of kernelsis replaced by rotation. The kernels rotates through the face and works on two vectors each time.
-                    </p>
+                    <h3><b>实验结果</b></h3>
+                    <div style="text-align:center">
+                        <img src="pa-exp.png" alt="" style="width:60%">
+                    </div>
+                    <p class="img_p">图5 PointAlign 使方法在没有数据增强的情况下可能让现有方法达到稳定的旋转不变效果。</p>
+                    <div style="text-align:center">
+                        <img src="pa-vis.png" alt="" style="width:60%">
+                    </div>
+                    <p class="img_p">图6 ShapeNet Parts上带旋转后的数据分割可视化。</p>
                     
 
-                    <p style="text-align:center;"><img style="width: 60%;"  src="research_meshnet/meshconv.png" alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 4. The  mesh  convolution.“Combination”  donatesthe combination of spatial and structural feature. “Aggrega-tion” denotes the aggregation of structural feature, in which“Gathering” denotes the process of getting neighbors’ fea-tures and “Aggregation for one face” denotes different meth-ods of aggregating features.
-                    </p>
-
-
-                    <p style="font-size:20px" wrap="hard">
-                        The mesh convolution block is designed to expand the re-ceptive  field  of  faces,  which  denotes  the  number  of  facesperceived by each face, by aggregating information of neigh-boring faces. In this process, features related to spatial po-sitions should not be included directly because we focus onfaces in a local area and should not be influenced by wherethe  area  locates.  In  the  2D  convolutional  neural  network,both  the  convolution  and  pooling  operations  do  not  intro-duce any positional information directly while aggregatingwith neighboring pixels’ features. Since we have taken outthe structural feature that is irrelevant to positions, we onlyaggregate them in this block.
-                    </p>
-
-
                 </div>
+
+                
+                
+
+
                 <div class="col-md-1"></div>
             </div>
 
-            <br>
-            
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Citation (BibTeX) </b></h2>
+
+
+
                 </div>
                 <div class="col-md-1"></div>
             </div>
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    @inproceedings{feng2019meshnet,<br />
-  title={MeshNet: mesh neural network for 3D shape representation},<br />
-  author={Feng, Yutong and Feng, Yifan and You, Haoxuan and Zhao, Xibin and Gao, Yue},<br />
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},<br />
-  volume={33},<br />
-  pages={8279--8286},<br />
-  year={2019}<br />
-}
-                    <br>
-                    <br>
-                    <p style="font-size=40px">
-                        <a class="btn btn-default" href="http://gaoyue.org/paper/MeshNet.pdf"> <b> Paper &raquo;</b></a>  
-                        <a class="btn btn-default" href="https://github.com/iMoonLab/MeshNet"> <b> Code &raquo;</b></a>
-                    </p>
-                </div>
-
-
-                <div class="col-md-1"></div>
-            </div>
-
-
 
 
         </body>

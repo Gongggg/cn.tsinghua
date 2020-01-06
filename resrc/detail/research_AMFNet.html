@@ -12,6 +12,7 @@
 
     <title>Attention-based Multi-modal Fusion Network for Semantic Scene Completion</title>
 
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../static/carousel.css" rel="stylesheet">
     <link rel="stylesheet" href="../../static/css/vendor/glyphicons/glyphicons.css">
@@ -43,7 +44,6 @@
     <script src="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <link href="static/css/c5e0117592e540848259ae6882d93f52.css" rel="stylesheet" />
     <script src="static/js/d46d827d0f604446b58cc8d38bdbd84e.js"></script>
-
 </head>
 
 <body>
@@ -112,19 +112,13 @@
     <div class="container body-content" style="margin-top:90px;">
 
         <body>
-            <h1 align="center" style="font-size:40px;"><b>Attention-based Multi-modal Fusion Network <br>for Semantic
-                    Scene Completion
+            <h1 align="center" style="font-size:40px;"><b>Attention-based Multi-modal Fusion Network <br>for Semantic Scene Completion
             </h1>
             <div class="row">
                 <br>
                 <p align="center" style="font-size:20px;">
-                    Siqi Li
-                    <!-- , 
-                    Changqing Zou, 
-                    Yipeng Li, 
-                    Xibin Zhao, 
-                    and
-                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a> -->
+                    Siqi Li, Changqing Zou, Yipeng Li, Xibin Zhao, and
+                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a>
                 </p>
             </div>
 
@@ -133,34 +127,18 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
-                    <!-- <h2><b>Abstract</b></h2> -->
-                    <p style="font-size:20px;" wrap="soft">This paper presents an end-to-end 3D convolutional network
-                        named attention-based multi-modal fusion network (AMFNet) for the semantic scene completion
-                        (SSC) task of
-                        inferring the occupancy and semantic labels of a volumetric 3D scene from single-view RGB-D
-                        images. Compared with
-                        previous methods which use only the semantic features extracted from RGB-D images, the proposed
-                        AMFNet learns to
-                        perform effective 3D scene completion and semantic segmentation simultaneously via leveraging
-                        the experience of inferring
-                        2D semantic segmentation from RGB-D images as well as the reliable depth cues in spatial
-                        dimension. It is achieved
-                        by employing a multi-modal fusion architecture boosted from 2D semantic segmentation and a 3D
-                        semantic completion network
-                        empowered by residual attention blocks. We validate our method on both the synthetic SUNCG-RGBD
-                        dataset and
-                        the real NYUv2 dataset and the results show that our method respectively achieves the gains of
-                        2.5% and 2.6% on the synthetic
-                        SUNCG-RGBD dataset and the real NYUv2 dataset against the state-of-the-art method.
+                    <h2><b>Abstract</b></h2>
+                    <p style="font-size:20px;" wrap="soft">
+                        我们提出了一种基于注意力机制的三维卷积网络(AMFNet)用于语义场景补全(SSC)任务，即使用单视角RGB-D图像实现场景完成与语义分割。
+                        已有的方法仅使用从RGB-D图像中提取的语义特征实现场景完成，而我们提出的AMFNet可以充分使用2D语义分割信息来同时提升场景完成与语义分割的效果。
+                        AMFNet基于2D语义分割实现多模态融合，使用基于残差注意力模块的3D语义场景补全网络提升模型性能。我们在虚拟合成的SUNCG-RGBD数据集
+                        和真实采集的NYUv2数据集上进行了验证。实验结果表明，与现有的最佳方法相比，AMFNet在两个数据集上分别实现了2.5%和2.6%的性能提升。
                     </p>
-                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/Network.png" alt="xxxx"
-                            class="center"></p>
-                    <p style="font-size:15px; text-align:center">Figure 1. Architecture of AMFNet. Taking RGB-D images
-                        (separated to a RGB and a HHA image) as input, AMFNet predicts
-                        voxel occupancy and object labels of the scene simultaneously. It boosts the 3D completion and
-                        segmentation from an initial
-                        3D semantic feature volume produced by computing the 2D-3D projection of the results of a 2D
-                        segmentation network.</p>
+                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/network.png"
+                            alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:left">Figure 1. Architecture of AMFNet. Taking RGB-D images (separated to a RGB and a HHA image) as input, AMFNet predicts
+                        voxel occupancy and object labels of the scene simultaneously. It boosts the 3D completion and segmentation from an initial
+                        3D semantic feature volume produced by computing the 2D-3D projection of the results of a 2D segmentation network.</p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -169,7 +147,7 @@
 
 
             <br>
-
+            
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
@@ -183,30 +161,23 @@
                 <div class="col-md-10">
 
                     <p style="font-size:20px" wrap="hard">
-                        The proposed AMFNet, as illustrated in Figure 1, mainly contains three sequential modules: a 2D
-                        segmentation network,
-                        a 2D-3D projection layer, and a two-branch 3D volume network. This network takes single-view
-                        RGB-D images
-                        as input and outputs occupancy and semantic labels for all voxels in the scene. The whole
-                        network can be trained
-                        in an end-to-end manner. We next introduce each module in the sequence of the flow of data
-                        processing. <br><br>
+                        The proposed AMFNet, as illustrated in Figure 1, mainly contains three sequential modules: a 2D segmentation network,
+                        a 2D-3D projection layer, and a two-branch 3D volume network. This network takes single-view RGB-D images
+                        as input and outputs occupancy and semantic labels for all voxels in the scene. The whole network can be trained
+                        in an end-to-end manner. We next introduce each module in the sequence of the flow of data processing. <br><br>
 
-                        The 2D segmentation network extracts 2D geometry features and performs 2D semantic segment-ation
-                        from the input RGB-D images.
-                        <br>
-                        The 2D-3D projection layer projects every feature tensor and semantic label into the 3D volume
-                        at the location with the same depth value.<br>
-                        The 3D volume network, which takes the output of the 2D-3D projection layer as input, contains
-                        two branches: one
+                        The 2D segmentation network extracts 2D geometry features and performs 2D semantic segment-ation from the input RGB-D images.
+                        <br><br>
+
+                        The 2D-3D projection layer projects every feature tensor and semantic label into the 3D volume at the location with the same depth value.<br><br>
+
+                        The 3D volume network, which takes the output of the 2D-3D projection layer as input, contains two branches: one
                         for 3D guidance information and the other for 3D semantic completion.
                     </p>
 
 
-                    <p style="text-align:center;"><img style="width: 60%;" src="research_AMFNet/RAB.png" alt="xxxx"
-                            class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Figure 2. Illustration of the proposed residual
-                        attention block
+                    <p style="text-align:center;"><img style="width: 60%;"  src="research_AMFNet/RAB.png" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:left;">Figure 2. Illustration of the proposed residual attention block
                         (RAB). RAB has a structure similar to the DDR block but with both channel-wise and spatial-wise
                         attention injected.
                     </p>
@@ -214,17 +185,12 @@
 
                     <p style="font-size:20px" wrap="hard">
                         The 3D-guidance branch is used to provide the guidance information for the branch of 3D semantic
-                        completion, which is boosted from an initial 3D semantic volumetric scene where visible voxels
-                        have initial
-                        semantic labels. The initial 3D semantic volume is encoded by a one-hot encoder to achieve an
-                        ROI region (3D
-                        bounding box) for a specific category from the initial 3D semantic volume. The one-hot encoding
-                        introduces spatial
-                        boundary constraints into the network for each category, which improves the prediction of 3D
-                        semantic volume. <br><br>
+                        completion, which is boosted from an initial 3D semantic volumetric scene where visible voxels have initial
+                        semantic labels. The initial 3D semantic volume is encoded by a one-hot encoder to achieve an ROI region (3D
+                        bounding box) for a specific category from the initial 3D semantic volume. The one-hot encoding introduces spatial
+                        boundary constraints into the network for each category, which improves the prediction of 3D semantic volume. <br><br>
 
-                        The 3D-semantic completion branch, which takes the initial 3D feature volume as input, is mainly
-                        used to infer the voxel occupancy
+                        The 3D-semantic completion branch, which takes the initial 3D feature volume as input, is mainly used to infer the voxel occupancy
                         of the 3D scene. The RAB block used in the 3D-completion branch is shown in Figure 2.
 
                     </p>
@@ -240,21 +206,18 @@
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
                     <h2><b>Results</b></h2>
 
-                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/table.png" alt="xxxx"
-                            class="center"></p>
+                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/table.png"
+                                                       alt="xxxx" class="center"></p>
                     <br>
                     <p style="font-size:20px;" wrap="soft">
-                        Table 1 and Table 2 presents the comparison results of both the scene completion and the
-                        semantic
-                        scene completion on the NYUv2 dataset and SUNCG-RGBD dataset, respectivly. Compared with
-                        previous methods,
-                        our model achieves state-of-the-art performance on the task of semantic scene completion and
-                        scene completion.
+                        Table 1 and Table 2 presents the comparison results of both the scene completion and the semantic
+                        scene completion on the NYUv2 dataset and SUNCG-RGBD dataset, respectivly. Compared with previous methods,
+                        our model achieves state-of-the-art performance on the task of semantic scene completion and scene completion.
                     </p>
 
-                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/result.png" alt="xxxx"
-                            class="center"></p>
-                    <p style="font-size:15px; text-align:center">
+                    <p style="text-align:center;"><img style="width: 100%;" src="research_AMFNet/result.png"
+                                                       alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:left">
                         Figure 4. Qualitative results on the NYUv2 dataset.
                         From left to right: RGB image, ground truth of 2D segmentation result, ground truth of SSC task,
                         results generated by SSCNet, SATNet, our approach, our approach with attention block removed,
@@ -262,10 +225,8 @@
                         semantic segmentation module replaced by the ground truth.</p>
                     <br>
                     <p style="font-size:20px;" wrap="soft">
-                        The visualization of the qualitative results of the semantic scene completion task generated by
-                        the proposed method
-                        and two previous methods, SSCNet and SATNet, on a set of representative samples from the NYUv2
-                        dataset is shown in Figure 4.
+                        The visualization of the qualitative results of the semantic scene completion task generated by the proposed method
+                        and two previous methods, SSCNet and SATNet, on a set of representative samples from the NYUv2 dataset is shown in Figure 4.
                         It can be easily seen that our method has achieved better performance than SSCNet and SATNet.
                     </p>
 
@@ -275,12 +236,11 @@
 
             <br>
 
-            <!--             
+            
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Citation </b></h2>
-
+                    <h2><b> Citation (BibTeX) </b></h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -298,7 +258,7 @@
 
 
                 <div class="col-md-1"></div>
-            </div> -->
+            </div>
 
 
 
@@ -308,8 +268,8 @@
 
 
         <hr />
-        <footer style="background-color: #ffffff;">
-                <p>&copy; 2020 - iMoonLab 智能媒体与认知实验室 Tsinghua</p>
+        <footer style="background-color: #ffffff">
+            <p>&copy; 2020 - iMoonLab 智能媒体与认知实验室 Tsinghua</p>
         </footer>
     </div>
     <script src="static/js/77c25eff67b24c0aa003ead7859d1511.js"></script>

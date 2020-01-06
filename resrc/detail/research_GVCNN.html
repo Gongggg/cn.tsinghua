@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 
-    <title>MeshNet: Mesh Neural Network for 3D Shape Representation</title>
+    <title>GVCNN: Group-View Convolutional Neural Networks for 3D Shape Recognition</title>
 
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -112,15 +112,15 @@
     <div class="container body-content" style="margin-top:90px;">
 
         <body>
-            <h1 align="center" style="font-size:40px;"><b>MeshNet: Mesh Neural Network for 3D Shape Representation
+            <h1 align="center" style="font-size:40px;"><b>GVCNN: Group-View Convolutional Neural Networks for 3D Shape Recognition
             </h1>
             <div class="row">
                 <br>
                 <p align="center" style="font-size:20px;">
-                    Yutong Feng,
                     Yifan Feng,
-                    Haoxuan You,
-                    Xibin Zhao and
+                    Zizhao Zhang,
+                    Xibin Zhao,
+                    <a href="http://mac.xmu.edu.cn/rrji-cn.html"> Rongrong Ji</a>,
                     <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a>
                 </p>
             </div>
@@ -130,12 +130,12 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
-                    <h2><b>Abstract</b></h2>
-                    <p style="font-size:20px;" wrap="soft">网格是三维物体的一类重要的数据类型，在计算机视觉和计算机图形学领域得到了广泛的关注和研究。在三维物体表示任务上，近年来已经出现了大量基于体素、网格和多视图的研究工作，但由于网格数据的复杂性和不规则性，基于网格数据的研究相对稀缺。在本文中，我们提出了名为 MeshNet 的网格神经网络，用于直接在三维网格数据进行表示学习。我们提出了逐三角面片处理和特征划分的学习方法，并提出了相应的处理模块来解决网格数据的复杂性和不规则性问题。我们在三维模型的分类和检索任务上进行了充分实验，实验结果及与最优方法的对比表明，我们的网络能够有效实现三维模型的分类与检索，证明了所提表示方法的有效性。
+                    <h2><b>摘要</b></h2>
+                    <p style="font-size:20px;" wrap="soft">3D形状识别近年来广受关注。但是，现有的用于3D形状识别的深层特征仅限于视图表示直接到形状表示的特征变换，该变换直接从视图级特征中学习形状描述符。尽管在基于视图的3D形状描述方面取得了很多进步，但是视图之间的固有层次相关性和可辨别性尚未得到很好的挖掘，然而这对于3D形状表示非常重要。为了解决这个问题，我们提出了一种可辩别性的3D形状描述的用于分层相关建模的组视图卷积神经网络（GVCNN）框架。我们提出的GVCNN框架由分层的视图描述符-组特征-形状体系结构组成，即从视图级别，组级别和形状级别开始，它们使用分组策略进行组织。具体而言，我们首先使用扩展的CNN提取视图级别描述符。然后，引入分组模块来估计每个视图的可辩别度，基于此模块，可以根据所有视图的可辩别度将所有视图分为不同的组。通过从视图描述符中进行合并，可以进一步生成组级别的描述。最后，所有组级别描述符根据其权重融合到整体的形状级别描述符中。实验结果和与最先进方法的比较表明，我们提出的GVCNN方法可以在3D形状分类和检索任务上实现显着的性能提升。
                     </p>
-                    <p style="text-align:center;"><img style="width: 80%;" src="research_meshnet/pipeline.png"
+                    <p style="text-align:center;"><img style="width: 80%;" src="research_GVCNN/results.png"
                             alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 1. The architecture of MeshNet.The input is a list of faces with initial values, which are fed into the spatial andstructural descriptors to generate initial spatial and structural features. The features are then aggregated with neighboring in-formation in the mesh convolution blocks labeled as “Mesh Conv”, and fed into a pooling function to output the global featureused for further tasks. </p>
+                    <p style="font-size:15px; text-align:center;">图1.分组模块输出的分组结果可视化。左边是分组模块的输入。每行的右边是该物体的多视图的分组结果以及每个分组的分数。</p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -145,15 +145,18 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Feature of triangular faces </b></h2>
-                    <p style="text-align:center;"><img style="width: 80%;" src="research_meshnet/vis.png" alt="xxxx"
+                    <h2><b> 数据 </b></h2>
+                    <p style="text-align:center;"><img style="width: 60%;" src="research_GVCNN/data.jpg" alt="xxxx"
                             class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 2. Feature  visualization  of  structural  feature.Models from the same column are colored with their val-ues of the same channel in features.Left: Features from theface rotate convolution.Right: Features from the face kernelcorrelation.</p>
+                    <p style="font-size:15px; text-align:center;">图2. ModelNet数据集可视化。</p>
 
                     <p style="font-size:20px" wrap="hard">
-                        To figure out whether the structural descriptors successfullycapture our features of faces as expected, we visualize thetwo  types  of  structural  features  from  face  rotate  convolu-tion and face kernel correlation. We randomly choose sev-eral  channels  of  these  features,  and  for  each  channel,  wepaint faces with colors of different depth corresponding totheir values in this channel.
+                        为了评估提出的GVCNN方法的性能，我们在Princeton ModelNet数据集上进行了3D形状分类和检索实验。 ModelNet由来自622个对象类别的127,915个3D CAD模型组成。 我们进一步采用了ModelNet的子集ModelNet40，其中包含40个常见的对象类别。 我们按照3D shapenet进行训练/测试。
 
+                        <br><br>可以通过点击下面的按钮来下载这个数据集。
                     </p>
+                    <p style="font-size=40px"><a class="btn btn-default" href="http://modelnet.cs.princeton.edu/"> <b> Download
+                            &raquo;</b></a></p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -163,7 +166,7 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Method </b></h2>
+                    <h2><b> 组视图卷积神经网络  </b></h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -173,26 +176,28 @@
                 <div class="col-md-10">
 
                     <p style="font-size:20px" wrap="hard">
-                        The overall archi-tecture of MeshNet is illustrated in Fig 1. A list of faces withinitial values is fed into two blocks, namedspatial descrip-torandstructural descriptor, to generate the initial spatialand structural features of faces. The features are then passedthrough somemesh convolutionblocks to aggregate neigh-boring information, which get features of two types as inputand output new features of them. It is noted that all the pro-cesses above work on each face respectively and share thesame parameters. After these processes, a pooling functionis applied to features of all faces for generating global fea-ture, which is used for further tasks. The above blocks willbe discussed in following sections.
+                        图3 描绘了我们提出的方法的详细流程图。 GVCNN采用GoogLeNet作为基础架构。 “FCN”部分是GoogLeNet的前五层卷积层。 “FC”部分已经出现过两次：一层是GVCNN的最后一层，用于执行分类器，另一层是在“组模块”中，用于从中级表示中提取组可辩别度得分（“FC”的输出）。组模块的输出将融合视图描述符以生成形状描述符。然后将形状描述符发送到一个“FC”层中以获得最终分类结果。给定3D形状，我们首先获取从不同角度捕获的一组视图。每个视图都经过网络的第一部分（FCN），以获取视图级别的原始描述符。然后，使用网络的第二部分（CNN）和组模块分别提取最终视图描述符和组辩别度分数。组辩别度分数用于对这些视图进行分组，并执行组内视图合并步骤以提取组级别描述符。最后，所有分组描述符根据分组模块产生的分组权重被组合为形状级别描述。
                     </p>
 
 
-                    <p style="text-align:center;"><img style="width: 40%;"  src="research_meshnet/rc.png" alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 3. The face rotate convolution block. Kernels rotatethrough the face and are applied to pairs of corner vectors forthe convolution operation.
+                    <p style="text-align:center;"><img style="width: 90%;"  src="research_GVCNN/framework.jpg" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">图3. GVCNN框架示意图
                     </p>
+
+
 
                     <p style="font-size:20px" wrap="hard">
-                        The face rotate convolution block is proposed to captures the “inner”structure  of  faces  and  focus  on  the  shape  information  of faces. This process is similar to a convolution operation, with two vectors as the kernel size, one vector as the stride, except that translation of kernelsis replaced by rotation. The kernels rotates through the face and works on two vectors each time.
+                        如图4所示，分组模块使用与GVCNN相同的输入视图。我们使用FC层从原始视图描述符中获得判别分数。然后，我们基于判别分数对这些视图进行分组，以获得分组方案和分组权重。组方案用于监督组内视图池。在组内视图合并之后，将分组权重用于与形状描述符的组组合。
                     </p>
                     
 
-                    <p style="text-align:center;"><img style="width: 60%;"  src="research_meshnet/meshconv.png" alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 4. The  mesh  convolution.“Combination”  donatesthe combination of spatial and structural feature. “Aggrega-tion” denotes the aggregation of structural feature, in which“Gathering” denotes the process of getting neighbors’ fea-tures and “Aggregation for one face” denotes different meth-ods of aggregating features.
+                    <p style="text-align:center;"><img style="width: 60%;"  src="research_GVCNN/grouping.png" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">图4. 分组机制的示意图
                     </p>
 
 
                     <p style="font-size:20px" wrap="hard">
-                        The mesh convolution block is designed to expand the re-ceptive  field  of  faces,  which  denotes  the  number  of  facesperceived by each face, by aggregating information of neigh-boring faces. In this process, features related to spatial po-sitions should not be included directly because we focus onfaces in a local area and should not be influenced by wherethe  area  locates.  In  the  2D  convolutional  neural  network,both  the  convolution  and  pooling  operations  do  not  intro-duce any positional information directly while aggregatingwith neighboring pixels’ features. Since we have taken outthe structural feature that is irrelevant to positions, we onlyaggregate them in this block.
+                        总的来说我们提出了用于3D形状识别的GVCNN框架。 在这种方法中，引入了分层的形状描述框架，包括视图，组和形状级别描述符。考虑每种形状的视图之间的相关性，并将分组信息用于形状表示。与传统方法相比，该方法不仅考虑了视图级别的合并，而且在合并过程中也考虑了组信息。实验结果和与最新方法的比较证明了该方法的有效性。我们还研究了不同数量的视图对3D形状表示的影响。 结果表明，更多且相对完整的视图可能更好地用于3D形状识别。
                     </p>
 
 
@@ -212,19 +217,20 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    @inproceedings{feng2019meshnet,<br />
-  title={MeshNet: mesh neural network for 3D shape representation},<br />
-  author={Feng, Yutong and Feng, Yifan and You, Haoxuan and Zhao, Xibin and Gao, Yue},<br />
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},<br />
-  volume={33},<br />
-  pages={8279--8286},<br />
-  year={2019}<br />
-}
+					@inproceedings{inproceedings,<br>
+							title = {GVCNN: Group-View Convolutional Neural Networks for 3D Shape Recognition},<br>
+							author = {Feng, Yifan and Zizhao, Zhang and Z hao, Xibin and Ji, Rongrong and Gao, Yue},<br>
+							year = {2018},<br>
+							month = {06},<br>
+							pages = {264-272},<br>
+							doi = {10.1109/CVPR.2018.00035}<br>
+						}
+                    
                     <br>
                     <br>
                     <p style="font-size=40px">
-                        <a class="btn btn-default" href="http://gaoyue.org/paper/MeshNet.pdf"> <b> Paper &raquo;</b></a>  
-                        <a class="btn btn-default" href="https://github.com/iMoonLab/MeshNet"> <b> Code &raquo;</b></a>
+                        <a class="btn btn-default" href="http://gaoyue.org/paper/MCI%20classification.pdf"> <b> Paper &raquo;</b></a>  
+                        <a class="btn btn-default" href="https://github.com/iMoonLab"> <b> Code &raquo;</b></a>
                     </p>
                 </div>
 

@@ -114,30 +114,29 @@
         <body>
             <h1 align="center" style="font-size:40px;"><b>High-Order Resting-State Functional Connectivity Network for MCI Classification
             </h1>
-            <div class="row">
+        <!--     <div class="row">
                 <br>
                 <p align="center" style="font-size:20px;">
-                    Xiaobo Chen and
-                    Han Zhang
-                    <!-- ,
+                    Xiaobo Chen,
+                    Han Zhang,
                     <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a>,
                     Chong-Yaw Wee,
                     Gang Li and
-                    Dinggang Shen -->
+                    Dinggang Shen
                 </p>
-            </div>
+            </div> -->
 
             <br>
 
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
-                    <!-- <h2><b>Abstract</b></h2> -->
-                    <p style="font-size:20px;" wrap="soft">Brain functional connectivity (FC) network, estimated with resting-state functional magnetic resonance imaging (RS-fMRI) technique, has emerged as a promising approach for accurate diagnosis of neurodegenerative diseases. However, the conventional FC network is essentially low-order in the sense that only the correlations among brain regions (in terms of RS-fMRI time series) are taken into account. The features derived from this type of brain network may fail to serve as an effective disease biomarker. To overcome this drawback, we propose extraction of novel high-order FC correlations that characterize how the low-order correlations between different pairs of brain regions interact with each other. Specifically, for each brain region, a sliding window approach is first performed over the entire RS-fMRI time series to generate multiple short overlapping segments. For each segment, a low-order FC network is constructed, measuring the short-term correlation between brain regions. These loworder networks (obtained from all segments) describe the dynamics of short-term FC along the time, thus also forming the correlation time series for every pair of brain regions. To overcome the curse of dimensionality, we further group the correlation time series into a small number of different clusters according to their intrinsic common patterns. Then, the correlation between the respective mean correlation time series of different clusters is calculated to represent the high-order correlation among different pairs of brain regions. Finally, we design a pattern classifier, by combining features of both loworder and high-order FC networks. Experimental results verify the effectiveness of the high-order FC network on disease diagnosis.
+                    <h2><b>摘要</b></h2>
+                    <p style="font-size:20px;" wrap="soft">通过静息态功能磁共振成像（RS-fMRI）技术估算的脑功能连通性（FC）网络已经成为准确诊断神经退行性疾病的一种有效的方法。然而，从仅考虑大脑区域之间的相关性（就RS-fMRI时间序列而言）的角度上，常规FC网络本质上是低阶的。从这种类型的大脑网络派生的功能可能无法充当有效的疾病生物标记。为了克服此缺点，我们建议提取新颖的高阶FC相关性，以表征不同对大脑区域之间的低阶相关性如何相互作用。具体而言，对于每个大脑区域，首先在整个RS-fMRI时间序列上执行滑动窗口方法，以生成多个短重叠段。对于每个段，构建一个低阶FC网络，以测量大脑区域之间的短期相关性。这些低阶网络（从所有分段获得）描述了短期FC随时间变化的动态，因此也形成了每对大脑区域的相关时间序列。为了克服维数的诅咒，我们将相关时间序列根据其固有的通用模式进一步分为少量的不同簇。然后，计算不同聚类的各个平均相关时间序列之间的相关性，以表示不同对大脑区域之间的高阶相关性。最后，我们通过组合低阶和高阶FC网络的特征来设计模式分类器。实验结果证明了高阶FC网络在疾病诊断中的有效性。
                     </p>
                     <p style="text-align:center;"><img style="width: 80%;" src="research_HFCNet/results.png"
                             alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 1. Averaged high-order FC networks for all eMCI subjects (a) and NC subjects (b), respectively.</p>
+                    <p style="font-size:15px; text-align:center;">图1. 平均高阶脑功能连接网络（左边：早期认知障碍，右边：正常人）</p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -148,27 +147,27 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <h2><b> Data </b></h2>
-                    <p style="text-align:center;"><img style="width: 80%;" src="research_HFCNet/adni.png" alt="xxxx"
+                    <p style="text-align:center;"><img style="width: 40%;" src="research_HFCNet/adni.png" alt="xxxx"
                             class="center"></p>
                     <p style="font-size:15px; text-align:center;">Fig 2. RS-fMRI examples .</p>
 
                     <p style="font-size:20px" wrap="hard">
-                        In this study, we used the publically available neuroimaging data from the Alzheimer’s Disease Neuroimaging Initiative (ADNI) database. ANDI was launched in 2003 by the National Institute on Aging, the National Institute of Biomedical Imaging and Bioengineering, the Food and Drug Administration, private pharmaceutical companies and nonprofit organizations. Initially, the goal of ADNI is to define biomarkers for use in clinical trials and to determine the best way to measure the treatment effects of AD therapeutics (adni.loni.ucla.edu). Now, its goal has been extended to detect AD at a pre-dementia stage using biomarkers. Multiple biomarkers, including MRI, PET, and related neuropsychological assessments are combined together to detect the progression of eMCI and early AD. Determining sensitive and specific biomarkers can facilitate the development of new treatments, reduce the time and cost of clinical trials, and promote our understanding of the biological underpinnings of AD/eMCI.
+                        我们使用了阿尔茨海默氏病神经影像计划（ADNI）数据库中公开的神经影像数据。 ANDI由美国国家老龄研究所，美国国家生物医学成像与生物工程研究所，食品药品管理局，私人制药公司和非营利组织于2003年发起。最初，ADNI的目标是定义用于临床试验的生物标记物，并确定衡量AD治疗剂治疗效果的最佳方法。现在，它的目标已经扩展到使用生物标记物在痴呆前期检测AD。 将包括MRI，PET和相关神经心理学评估在内的多种生物标记物结合在一起，以检测eMCI和早期AD的进展。确定敏感和特异性的生物标志物可以促进新疗法的开发，减少临床试验的时间和成本，并增进我们对AD / eMCI生物学基础的理解。
 
-                        <br><br>You could download ADNI by clicking following button.
+                        <br><br>可以通过点击下面的按钮来下载这个数据集.
                     </p>
-                    <p style="font-size=40px"><a class="btn btn-default" href="http://adni.loni.usc.edu/"> <b> Download
+                    <p style="font-size=40px"><a class="btn btn-default" href="http://adni.loni.usc.edu/"> <b> 下载
                             &raquo;</b></a></p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
 
             <br>
-
+            
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> High-Order Functional Connectivity Network </b></h2>
+                    <h2><b>高阶静息态功能磁共振成像网络</b></h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -178,28 +177,28 @@
                 <div class="col-md-10">
 
                     <p style="font-size:20px" wrap="hard">
-                        Typical procedures of FC-based eMCI classification usually include the following components: network construction, feature extraction and selection, and classification. This study mainly focuses on the first step, that is, network construction, and thus simple existing methods are applied to implement other steps.
+                        基于FC的eMCI分类的典型过程通常包括以下组件：网络构建，特征提取和选择以及分类。这项研究主要集中在第一步，即网络构建，因此采用简单的现有方法来实现其他步骤。
                     </p>
 
 
-                    <p style="text-align:center;"><img style="width: 40%;"  src="research_HFCNet/transform.png" alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 3. Calculation of the high-order correlation from the low-order correlation layer by layer.
+                    <p style="text-align:center;"><img style="width: 70%;"  src="research_HFCNet/transform.png" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">图3. 通过低阶关联来一层一层地构建高阶关联
                     </p>
 
 
 
                     <p style="font-size:20px" wrap="hard">
-                        applied to implement other steps. In Figure 4, we provide the flowchart of the high-order FC network construction and its application in eMCI identification. Specifically, the proposed framework includes the following eight steps: (1) partition the entire RS-fMRI time series into multiple overlapping segments of subseries; (2) construct a collection of temporal low-order FC networks/matrices, one for each segment; (3) stack all temporal low-order FC networks/matrices of all subjects together  to obtain a correlation time series for each element in the same location of those stacked matrices; (4) group all these correlation time series into different clusters using clustering algorithm; (5) construct a high-order FC network for each subject, by taking the mean correlation time series for each cluster as a new vertex and the pairwise Pearson’s correlation coefficient between each pair of these new vertices as weight; (6) calculate weighted-graph local clustering coefficients as a simple feature representation for the high-order FC networks; (7) select a subset of discriminative features from the high-order features (local clustering coefficients) with the sparse learning; and (8) construct a SVM model  on the selected subsets of high-order features for classification.
+                        在图4中，我们提供了高阶FC网络构建及其在eMCI识别中的应用的流程图。具体而言，提出的框架包括以下八个步骤：（1）将整个RS-fMRI时间序列划分为多个子序列的重叠部分；（2）构造时间低阶FC网络/矩阵的集合，每个分段一个。（3）将所有主题的所有时间低阶FC网络/矩阵堆叠在一起，以获得在这些堆叠矩阵的相同位置中每个元素的相关时间序列； （4）使用聚类算法将所有这些相关时间序列分组为不同的聚类； （5）通过将每个聚类的平均相关时间序列作为一个新的顶点，并以每对这些新的顶点之间的成对皮尔逊相关系数作为权重，为每个主题构建一个高阶FC网络； （6）计算加权图局部聚类系数，作为高阶FC网络的简单特征表示；（7）利用稀疏学习从高阶特征（局部聚类系数）中选择判别特征的子集； （8）在选定的高阶特征子集上构建SVM模型进行分类。
                     </p>
-
+                    
 
                     <p style="text-align:center;"><img style="width: 100%;"  src="research_HFCNet/framework.png" alt="xxxx" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 4. Framework for construction of high-order FC network.
+                    <p style="font-size:15px; text-align:center;">图4. 构建高阶脑功能连接网络的框架示意图
                     </p>
 
 
                     <p style="font-size:20px" wrap="hard">
-                        In addition to the construction of above high-order FC network, we also construct a conventional low-order FC network over the entire RS-fMRI time series for each subject. Then, following the same Steps (6)–(8), we extract low-order features (local clustering coefficients) from this low-order FC network, perform feature selection, and build another SVM model based on these low-order features. Finally, the classification scores of two SVM models are fused by the weighted averaging to produce the final classification.
+                        除了构建上面的高阶FC网络之外，我们还在每个对象的整个RS-fMRI时间序列上构建了一个常规的低阶FC网络。 然后，按照相同的步骤（6）-（8），我们从该低阶FC网络中提取低阶特征（局部聚类系数），进行特征选择，并基于这些低阶特征构建另一个SVM模型。 最后，将两个SVM模型的分类得分通过加权平均相融合以产生最终分类。
                     </p>
 
 
@@ -208,11 +207,11 @@
             </div>
 
             <br>
-
+            
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Citation </b></h2>
+                    <h2><b> Citation (BibTeX) </b></h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -229,11 +228,11 @@
 						  	year={2016},<br>
 						  	publisher={Wiley Online Library}<br>
 						}
-
+                    
                     <br>
                     <br>
                     <p style="font-size=40px">
-                        <a class="btn btn-default" href="http://gaoyue.org/paper/MCI%20classification.pdf"> <b> Paper &raquo;</b></a>
+                        <a class="btn btn-default" href="http://gaoyue.org/paper/MCI%20classification.pdf"> <b> Paper &raquo;</b></a>  
                         <a class="btn btn-default" href="https://github.com/iMoonLab"> <b> Code &raquo;</b></a>
                     </p>
                 </div>
