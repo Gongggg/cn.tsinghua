@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>(paper title) Hypergraph Label Propagation Network</title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/glyphicons.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/filetypes.css">
+    <link rel="stylesheet" href="../../static/css/vendor/glyphicons/social.css">
+    <link href="../../../fonts.googleapis.com/css-family=Open+Sans-400,700,600.css" rel='stylesheet' type='text/css'>
+    <link href="../../static/trans.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/bootstrap-markdown.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/vendor/layerslider/layerslider.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/styles-cleanred.css" id="grove-styles">
+    <link rel="stylesheet" href="../../../cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/nlp.css" id="nlp-styles">
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../static/js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="../../static/js/vendor/layerslider/greensock.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.transitions.js" type="text/javascript"></script>
+    <script src="../../static/js/vendor/layerslider/layerslider.kreaturamedia.jquery.js"
+        type="text/javascript"></script>
+    <script src="../../static/js/markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/to-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/bootstrap-markdown.js" type="text/javascript"></script>
+    <script src="../../static/js/grove-slider.js" type="text/javascript"></script>
+    <script src="../../../cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script
+        src="../../../cdn.datatables.net/plug-ins/1.10.7/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+    <script src="../../../bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+    <link href="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link href="static/css/c5e0117592e540848259ae6882d93f52.css" rel="stylesheet" />
+    <script src="static/js/d46d827d0f604446b58cc8d38bdbd84e.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default grove-navbar navbar-fixed-top" id="imoonbignav">
+            <div class="container" id="imoonmidnav">
+                <div class="navbar-header">
+                    <a href="#" class="grove-toggle collapsed" data-toggle="collapse" data-target=".grove-nav">
+                        <i class="glyphicons show_lines"></i>
+                    </a>
+                    <img class="navbar-brand navbar-left hidden-xs" src="../../static/img/logos/nlp-logo-small.png"
+                        alt="" id="imoonlogo">
+                    <a class="navbar-brand navbar-left" href="../index.htm">
+                        <h3 class="hidden-xs" id="imoontitle" style="font-weight: 600;margin-top: 15px">智能媒体与认知实验室<p
+                                style="margin-top: 5px">
+                                iMoon: Intelligent
+                                Media and Cognition Lab</p>
+                        </h3>
+                        <h3 class="hidden-sm hidden-md hidden-lg hidden-xl" style="color: white">iMoon-Lab</h3>
+                    </a>
+                </div>
+
+                <div class="navbar-collapse grove-nav collapse" style="position: relative">
+                    <ul class="nav navbar-nav" id="imoonnav">
+
+                        <div style="position:absolute;top:5px;left:10px;border:0px solid rgb(255, 255, 255);">
+                            <a href="../../index.htm">
+                                <div style="width: 400px;height:65px"></div>
+                            </a>
+                        </div>
+                        <!-- <div id="language">
+                            <a id='drump' href="#"><b>中 / </b></a><a id='drump'
+                                href="../../../en_tsinghua/resrc/index.htm"><b>En</b></a>
+                        </div> -->
+                        <li style="margin-top: 1px;">
+                            <a href="../../index.htm">主页</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../people/index.htm">团队</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../resrc/index.htm">研究方向</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../pubs/index.htm">论文</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="../../blog/index.htm">新闻</a>
+                        </li>
+                        <li style="margin-top: 1px;">
+                            <a href="#">生活</a>
+                        </li>
+                        <li class="dropdown" style="margin-top: 1px;">
+                            <a href="#">更多信息</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../more/index.htm">MICCAI19 Tutorial</a></li>
+                                <li><a href="#">MICCAI19 挑战赛</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container body-content" style="margin-top:90px;">
+
+        <body>
+            <h1 align="center" style="font-size:40px;"><b>超图标签传播网络
+            </h1>
+            <div class="row">
+                <br>
+                <p align="center" style="font-size:20px;">
+                    张宇博，王楠，陈瑜峰
+                </p>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
+                    <h2><b>Abstract</b></h2>
+                    <p style="font-size:20px;" wrap="soft">
+                        近年来，随着互联网规模的爆炸式增长，社交媒体平台上每天都产生大量的用户推文数据，对这些数据进行情感分析和预测在网络舆情监测中有广泛的应用价值。
+                        由于数据标记的成本很高，许多研究都集中在如何通过半监督学习来有效地对用户推文情感进行预测。
+                        这些方法中，基于图和超图的标签传播算法因其在用户推文数据等多模态数据上简单有效，已经被广泛使用。
+                        然而传统的超图学习方法计算复杂度高，在面对大规模数据时效率受限。
+                        针对此应用问题，本文提出了一种超图标签传播网络（Hypergraph Label Propagation Network, HLPN），该网络将超图标签传播算法和深度神经网络相结合，以优化特征嵌入，从而通过端到端的方式实现最优超图学习。
+                        与传统的超图学习方法相比，该方法在推文情感分类上效率更高，同时可以达到更高的准确率。
+                        我们在从新浪微博收集的真实微博数据上验证了此方法的性能。
+                    </p>
+                    <!-- <p style="text-align:center;"><img style="width: 80%;" src="research_gvcnn/gvcnn.png"
+                            alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 1. xxxx xxxxx xxxxxx xxxxx xxxxxx x xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx.</p>-->
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> 数据集 </b></h2>
+                    <p style="text-align:center;"><img style="width: 80%;" src="research_hlpn/dataset.png" alt="xxxx"
+                            class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 1. 数据示例 .</p>
+
+                    <p style="font-size:20px" wrap="hard">
+                        微博数据集的推文示例。 每个样本都包含图片，中文文本和表情符号，推文的情感共包含积极和消极两种情绪。
+                        经过数据清洗和预处理，我们总共获得了5550条带有干净标签的推文，包括4196个正样例和1354个负样例。 
+                        实验用10折交叉验证进行，随机选择4650个样本作为训练集，400个样本作为验证集和500个样本作为测试集。 
+                        我们采用10次结果正确率的均值作为准确率评估指标。
+
+
+                        <!--<br><br>You could download xxxx by clicking following button.(~6.5 Gb)-->
+                    </p>
+                    <!--<p style="font-size=40px"><a class="btn btn-default" href="#"> <b> Download
+                            &raquo;</b></a></p>-->
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> 方法 </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                    <p style="font-size:20px" wrap="hard">
+                        所提出的网络架构如图1所示。
+                        我们每次从整个数据集中随机抽样出一批样本，我们首先采用一个特征提取模块，其中针对每个模态的数据（图片、文本和表情符号），都有对应的词袋词典抽取模型，以提取其高阶语义信息。 
+                        在嵌入模块方面，我们采用多层感知机来提取其嵌入特征。同时，我们提出了一个尺度变换模块，输出每个样本的尺度参数，以在O(N)复杂度下自适应生成图的近邻矩阵。通过近邻矩阵采用KNN方法生成超图模型，最后进行标签传播获取预测结果。
+                    </p>
+
+
+                    <p style="text-align:center;"><img style="width: 80%;"  src="research_hlpn/framework.png" alt="xxxx" class="center"></p>
+                    <!--<p style="font-size:15px; text-align:center;">Fig 3. xxxx xxxxx xxxxxx xxxxx xxxxxx x xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx.
+                    </p>
+
+
+
+                    <p style="font-size:20px" wrap="hard">
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx
+                        xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx
+                        xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx
+                        xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx
+                        xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx
+                        xxxxxx xx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxx
+                        xxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx
+                        xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxxxxxxxx xx
+                    </p>
+                    
+
+                    <p style="text-align:center;"><img style="width: 100%;"  src="research_gvcnn/framework.png" alt="xxxx" class="center"></p>
+                    <p style="font-size:15px; text-align:center;">Fig 4. xxxx xxxxx xxxxxx xxxxx xxxxxx x xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxxxxxx
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx.
+                    </p>
+
+
+                    <p style="font-size:20px" wrap="hard">
+                        xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx
+                        xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx
+                        xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx
+                        xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx
+                        xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx
+                        xxxxxx xx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxx
+                        xxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx
+                        xxxx xxxxx xxxxxx xxxxx xxxxxx xx xxx xx xxxx xxxxx xxxxxx xxxxxxxxxxx xx
+                    </p>-->
+
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2><b> Publications </b></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+
+                    <!--@inproceedings{feng2018gvcnn,<br>
+                        title={GVCNN: Group-view convolutional neural networks for 3D shape recognition},<br>
+                        author={Feng, Yifan and Zhang, Zizhao and Zhao, Xibin and Ji, Rongrong and Gao, Yue},<br>
+                        booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},<br>
+                        pages={264--272},<br>
+                        year={2018}<br>
+                    }-->
+                    <br>
+                    <br>
+                    <!--<p style="font-size=40px">
+                        <a class="btn btn-default" href="http://gaoyue.org/paper/Feng_GVCNN_Group-View_Convolutional_CVPR_2018_paper.pdf"> <b> Paper &raquo;</b></a>  
+                        <a class="btn btn-default" href="https://github.com/iMoonLab"> <b> Code &raquo;</b></a>
+                    </p>-->
+                </div>
+
+
+                <div class="col-md-1"></div>
+            </div>
+
+
+
+
+        </body>
+
+
+
+        <hr />
+        <footer style="background-color: #ffffff">
+            <p>&copy; 2020 - iMoonLab 智能媒体与认知实验室 Tsinghua</p>
+        </footer>
+    </div>
+    <script src="static/js/77c25eff67b24c0aa003ead7859d1511.js"></script>
+
+    <script src="static/js/1a59a27fb4484e89ab0510a5871211bd.js"></script>
+
+    <script src="static/js/jquery-ui.min.js"></script>
+
+    <link href="static/css/jquery-ui.min.css" rel="stylesheet" />
+
+    <script src="static/js/shortcut.js"></script>
+
+    <script src="static/js/suggest.js"></script>
+
+
+
+
+</body>
+
+</html>
