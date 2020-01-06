@@ -60,23 +60,30 @@ var news_cards = new Vue({
                 content: '大场景视觉观测是利用立体测量仪器及相关算法，以非接触式测量快速获取地球表面自然形态、地表人工设施精确三维信息的手段， 大场景的视觉观测在地质勘探、灾害救援、军事侦察、航天测绘等战略领域均具有重要的应用前景。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_SceneRecognition.html'
-            },                                                           
+            },
+            {
+                title: '单帧视图三维重建',
+                img: 'detail/research_vsgnet/assemble2.png',
+                content: '针对传统单帧视图立体重建算法存在的缺陷，提出了VSGNet（视图-几何-结构联合的单视图重建算法），融合视图（View）、结构（Structure）、几何（Geometry）三方面信息进行立体重建。',
+                inscription: 'Posted on 03/12/2019 by Biao Gong',
+                src: 'detail/research_vsgnet.html'
+            },                                                                            
         ],
 
         complex_network_cards: [
             {
-                title: '针对三维无序数据的卷积表示方法',
-                img: 'detail/research_urconv/moti1.png',
+                title: '复杂网络建模与分析',
+                img: 'detail/research_complexnetwork/representation2.png',
                 content: '我们提出了一种无序关系卷积（UR-Conv），它对无序3D数据应用了类似卷积的运算，并且对输入数据的顺序不敏感。在我们的方法中，捕获了数据之间的局部依赖性，这增强了模型的表示能力和鲁棒性。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
-                src: 'detail/research_urconv.html'
+                src: 'detail/research_complexnetwork.html'
             },
             {
-                title: '大场景视觉观测',
-                img: 'detail/research_SceneRecognition/figure1.png',
-                content: '大场景视觉观测是利用立体测量仪器及相关算法，以非接触式测量快速获取地球表面自然形态、地表人工设施精确三维信息的手段， 大场景的视觉观测在地质勘探、灾害救援、军事侦察、航天测绘等战略领域均具有重要的应用前景。',
+                title: '超图标签传播网络',
+                img: 'detail/research_hlpn/dataset.png',
+                content: '近年来，随着互联网规模的爆炸式增长，社交媒体平台上每天都产生大量的用户推文数据，对这些数据进行情感分析和预测在网络舆情监测中有广泛的应用价值。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
-                src: 'detail/research_SceneRecognition.html'
+                src: 'detail/research_hlpn.html'
             },
 
 
