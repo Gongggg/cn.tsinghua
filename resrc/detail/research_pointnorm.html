@@ -150,9 +150,9 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <h2><b> 实现尺度不变的表征: PointNorm </b></h2>
-                    <p style="font-weight:normal;font-size:16px;text-indent: 2em;">
+                    <p style="font-weight:normal;font-size:16px;">
                         现有方法多采用数据预处理（全局normalize）或者数据增强（data augmentation）的方式克服数据中可能存在的尺度变化问题。
-                        数据增强是很暴力的方法，它潜在要求网络具有更大的容量和更多参数，这会为网络学习收敛带来新的困难。在数据预处理阶段对数据进行标准化是另一常用的方法，它在干净的单一对象上有较好的效果，但是会在诸多场景下失效（<a href="#solution_scale">如下图左边所示</a>）。考虑到全局归一化数据的困难，并且考虑到大多数网络都是类似CNN那样层级局部提取特征的，<span style="color: darkred">我们将大问题转化为小问题，将全局的问题转化为局部的问题</span>, 提出了基于局部归一化，并保留关键相对尺度信息的<span>PointNorm</span>。
+                        数据增强是很暴力的方法，它潜在要求网络具有更大的容量和更多参数，这会为网络学习收敛带来新的困难。在数据预处理阶段对数据进行标准化是另一常用的方法，它在干净的单一对象上有较好的效果，但是会在诸多场景下失效（<a href="#solution_scale">如下图左边所示</a>）。考虑到全局归一化数据的困难，并且考虑到大多数网络都是类似CNN那样层级局部提取特征的，<span style="color: darkred">我们将大问题转化为小问题，将全局的问题转化为局部的问题</span>, 提出了基于局部归一化，并保留关键相对尺度信息的<span>PointNorm</span>。
                     </p>
                     <br>
                     <div style="text-align: center">
@@ -166,12 +166,12 @@
                     <div style="text-align: center">
                         <img src="research_pointnorm/scale_exp.png" alt="" style="width:49%">
                     </div>
-                    <p class="img_p">图3  PN表示PointNorm, 可以看到我们的方法使PointNet++ 和PointCNN达到了相当稳定的尺度不变的结果</p>
+                    <p class="img_p">图3  PN表示PointNorm, 可以看到我们的方法使PointNet++ 和PointCNN达到了相当稳定的尺度不变的结果</p>
 
                     <div style="text-align: center">
                         <img src="research_pointnorm/pn_data_aug.png" alt="" style="width:80%">
                     </div>
-                    <p class="img_p">图3  PN表示PointNorm, 可以看到我们的方法使PointNet++ 和PointCNN在不使用数据增强时达到比原始方法数据增强更好的效果</p>
+                    <p class="img_p">图3  PN表示PointNorm, 可以看到我们的方法使PointNet++ 和PointCNN在不使用数据增强时达到比原始方法数据增强更好的效果</p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
