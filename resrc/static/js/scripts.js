@@ -6,28 +6,28 @@ var news_cards = new Vue({
         // TODO: if there is more data, please use vue-infinite-scroll.
         threed_vision_cards: [
             {
-                title: '基于注意力的多模态融合网络在场景语义分割上的应用',
+                title: '场景补全及语义分割',
                 img: 'static/img/siqi.jpg',
                 content: '我们提出了一种基于注意力机制的三维卷积网络(AMFNet)用于语义场景补全(SSC)任务，即使用单视角RGB-D图像实现场景完成与语义分割。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_AMFNet.html'
             },
             {
-                title: 'Mesh卷积神经网络',
+                title: '基于网格的立体对象表示',
                 img: 'static/img/yutong.png',
                 content: '网格（Mesh）是三维物体的一类重要的数据类型，在计算机视觉和计算机图形学领域得到了广泛的关注和研究。在三维物体表示任务上，近年来已经出现了大量基于体素、网格和多视图的研究工作，但由于网格数据的复杂性和不规则性，基于网格数据的研究相对稀缺。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_meshnet.html'
             },
             {
-                title: '用于3D对象检索的无相机无约束多视图卷积神经网络',
+                title: '用于立体对象的无相机无约束多视图卷积神经网络',
                 img: 'static/img/zhengyue.png',
                 content: '基于多视图的立体对象表征被广泛用在分类和检索等识别任务上。我们关注立体对象的检索任务，目前的方法在训练时通常会使用一个对象相对完整的视图信息进行训练，但是我们发现这样完整的训练数据并不能让网络在仅有部分视图的环境下获得好的泛化能力，甚至不如使用不完整的视图训练集得到的效果好，这显然不是我们想要的结果，它妨碍我们实现自由相机位置设定下的检索系统，使得我们不能仅通过扩充完整的训练集达到目的。我们猜想，导致这个问题的原因时缺失视图的特征分布与完整视图时的特征分布存在差异(图1)导致训练时过拟合。为了解决这个问题我们提出了DropMax特征增强模块，它在很大程度上解决了这个问题，让我们有可能高效实现Camera-Constraint-Free的检索系统。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
-                src: 'detail/research_deepccfv.html'
+                src: 'detail/research_deepccfv.html'    
             },
             {
-                title: '用于3D形状识别的组视图卷积神经网络',
+                title: '基于分组视图卷积神经网络的立体对象表示',
                 img: 'detail/research_GVCNN/results.png',
                 content: '我们提出了一种可辩别性的3D形状描述的用于分层相关建模的组视图卷积神经网络（GVCNN）框架。我们提出的GVCNN框架由分层的视图描述符-组特征-形状体系结构组成，即从视图级别，组级别和形状级别开始，它们使用分组策略进行组织。',
                 inscription: 'Posted on 01/06/2020 by Yifan Feng',
@@ -86,7 +86,7 @@ var news_cards = new Vue({
 
         complex_network_cards: [
             {
-                title: '复杂网络建模与分析',
+                title: '超图建模与分析',
                 img: 'detail/research_complexnetwork/representation2.png',
                 content: '我们提出了一种无序关系卷积（UR-Conv），它对无序3D数据应用了类似卷积的运算，并且对输入数据的顺序不敏感。在我们的方法中，捕获了数据之间的局部依赖性，这增强了模型的表示能力和鲁棒性。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
@@ -108,7 +108,7 @@ var news_cards = new Vue({
 
         brain_science_cards: [
             {
-                title: '基于全尺寸组织医学病理图像的生存预测',
+                title: '用于MCI诊断的基于全尺寸组织医学病理图像的生存预测',
                 img: 'static/img/donglin.png',
                 content: '近年来，基于数十亿像素的全尺寸组织医学病理图像（WSI）对患者进行生存预测已引起越来越多的关注。这项任务的主要挑战是探索如何能基于信息丰富的特征，来有效反映患者生存状况。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
