@@ -149,9 +149,8 @@
                     <p style="text-align:center;"><img style="width: 80%;" src="research_hgrnet/HyperEdgeVis.png"
                             alt="xxxx" class="center"></p>
                     <p style="font-size:15px; text-align:center;">
-                        Fig 1. Visualization of the co-relationship between the survival status
-                        and different pathological patterns </br>
-                        which include topological patterns or attribute patterns</p>
+                        Fig 1. 不同病理类型与存活状态关系的可视化研究
+                        ，包括拓扑模式和属性模式</p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -169,23 +168,9 @@
                         Data</p>
 
                     <p style="font-size:20px" wrap="hard">
-                        We mainly evaluate the proposed method on three datasets:
-                        the lung cancer dataset LUSC and the brain carcinoma dataset GBM
-                        from the generic cancer patient dataset TCGA, and the lung cancer dataset NLST.
-                        These three datasets are used in two modes.
-                        In the first mode, we follow the experimental settings of previous methods
-                        and select parts of the whole-slide histopathological images from the three datasets for the
-                        evaluation.
-                        The datasets used in this mode are called the ``selected'' datasets.
-                        In the other mode, we evaluate the proposed method with its competitors on the complete data
-                        from these three datasets.
-                        We denote the datasets used in this mode as the ``complete'' datasets.
-                        In our implementation, 5-fold cross-validation is employed to investigate the optimal parameter
-                        setting.
-                        To validate the stability of the proposed method, we run 5 times for each set of parameter
-                        setting and the mean performance is computed for the comparison.
+                        我们主要在三个数据集上评估所提出的方法：肺癌数据集LUSC和来自一般癌症患者数据集TCGA的脑癌数据集GBM，以及肺癌数据集NLST。
 
-                        <br><br>You could download TCGA-LUSC and TCGA-GBM by clicking following button.(~1.3 TB)
+                        <br><br>可以在此下载 TCGA-LUSC 和 TCGA-GBM 数据集(~1.3 TB)
                     </p>
                     <p style="font-size=40px"><a class="btn btn-default" href="https://portal.gdc.cancer.gov/"> <b>
                                 Download
@@ -209,66 +194,23 @@
                 <div class="col-md-10">
 
                     <p style="font-size:20px" wrap="hard">
-                        In this section, we introduce the structure of the proposed HyperGraph Regression Network
-                        (HGRNet).
-                        As shown in Fig. 3, the pipeline of HGRNet mainly consists of three sequential steps.
-                        In the first step, we extract raw patch-level features from patches sampled from the input
-                        original WSI data.
-                        After that, we feed the patch-level features to a representation module based on the hypergraph
-                        structure to learn higher-order representation.
-                        Last, we use a regression module to produce the final result of the survival status from those
-                        of higher-order features.
-                        We next detail each individual step.
+                        在这一部分中，我们介绍了所提出的超图回归网络（hgnet）的结构。如图3所示，HGRNet的管道主要由三个顺序步骤组成。
+                        在第一步中，我们从输入的原始WSI数据中提取原始的面片级特征。在此基础上，将patch-level特征输入到基于超图结构的表示模块中，学习高阶表示。
+                        最后，我们使用回归模块从高阶特征中产生生存状态的最终结果。
                     </p>
 
 
                     <p style="text-align:center;"><img style="width: 100%;" src="research_hgrnet/framework.jpg"
                             alt="framework" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">Fig 3. Illustration of our pipeline hypergraph
-                        regression network (HGRNet).
-                        Firstly, we utilize a backbone model to extract raw patch-level features then the hypergraph
-                        signal matrix
-                        <b>X</b> and the hyperedges incidence matrix <b>H</b> are generated.
-                        After training the survival-specific hypergraph by several hypergraph spectral convolutional
-                        layers,
-                        the regression module leverages the higher-order representation and masters the skills to
-                        predict the risk of given WSIs.
+                    <p style="font-size:15px; text-align:center;">Fig 3. Hypergraph Regression Network (HGRNet)的结构。
                     </p>
 
 
 
-                    <p style="font-size:20px" wrap="hard">
-                        To overcome the weakness of pair-wise graph structure and learn the effects on the health of
-                        each factor, it is an inevitable choice to give the hypergraph structure a shot, which was
-                        proved has the ability to handling complex correlations and grouping information effectively.
-                        In this work, we adopt and modify the hypergraph to learn the higher-order representation from
-                        patches extracted from the former stage, and propose a regression network based on which
-                        furthermore.
-                    </p>
+                   
 
 
-                    <p style="text-align:center;"><img style="width: 40%;" src="research_hgrnet/aggregation.jpg"
-                            alt="aggregation" class="center"></p>
-                    <p style="font-size:15px; text-align:center;">
-                        Fig 4. The illustration of generating global representation from fine-tuned patch
-                        representation.
-                        The attribute-sensitive aggregating is pooling all patch feature into one for a specific
-                        channel(each column). Each value of the final vector is selected from the most remarkable value
-                        of all patch feature in the same column.
-                        And the pattern-sensitive aggregating is compressing each patch feature into one that can mostly
-                        represent the pattern of the patch, so that to explore the correlation between the potential
-                        pattern and the survival time.
-                    </p>
-
-
-                    <p style="font-size:20px" wrap="hard">
-                        Predict survival status using the fine-tuned patch-level features, i.e. the higher-order
-                        representations.
-                        A translational global feature is generated from distributed patch-level features, which are fed
-                        into a traditional/deep-based model for final survival regression.
-                        And the final step is fitting the aggregated features and predicting survival status.
-                    </p>
-
+                   
 
                 </div>
                 <div class="col-md-1"></div>
