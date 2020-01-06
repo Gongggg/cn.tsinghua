@@ -410,10 +410,10 @@
 
         {
           "author": "test",
-          "title": "testtt",
+          "title": "test565tt",
           "booktitle": "aaai",
           "month": "October",
-          "year": "2014",
+          "year": "2011",
           "paper_url": "",
           "bib_url": "",
           "honor": "oral"
@@ -424,7 +424,7 @@
           "title": "testtt",
           "booktitle": "aaai",
           "month": "October",
-          "year": "2014",
+          "year": "2018",
           "paper_url": "",
           "bib_url": "",
           "honor": "best"
@@ -587,9 +587,8 @@
 
 
 
-
+      $("tbody").empty();
       $.each(jsondata, function () {
-
         $("tbody").append(
           "<tr><td>" + this.author + ". " +
           "<br /><b>" + this.title + ".</b><br />" + this.booktitle + ", " + this.year + "." +
@@ -795,10 +794,10 @@
             "visible": false
           }
         ],
-//         "order": [
-//           [3, "desc"],
-//           [4, "asc"]
-//         ],
+        "order": [
+          [3, "desc"],
+          [4, "asc"]
+        ],
         "dom": '<"wrapper"t>',
         "bPaginate": false
       });
@@ -861,6 +860,9 @@
 
       //$('#papers').fadeIn('slow'); // causes double flash with 'fade' class on tab switch
       $('#papers').show();
+
+      $("#btn1").click();
+
     });
 
   </script>

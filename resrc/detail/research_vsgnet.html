@@ -117,11 +117,11 @@
             <div class="row">
                 <br>
                 <p align="center" style="font-size:20px;">
-                    <a href="">Xuancheng Zhang</a>,
+                    张轩诚
                     <!-- <a href="#">XXXX</a>,
                     XXXX,
                     XXXX and -->
-                    <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a>
+                    <!-- <a href="http://gaoyue.org/cn_tsinghua/people/gaoyue_index.html">Yue Gao</a> -->
                 </p>
             </div>
 
@@ -134,7 +134,7 @@
                     <p style="font-size:20px;" wrap="soft">
                         针对传统单帧视图立体重建算法存在的缺陷，提出了VSGNet（视图-几何-结构联合的单视图重建算法），融合视图（View）、结构（Structure）、几何（Geometry）三方面信息进行立体重建。
                     </p>
-                    <p style="text-align:center;"><img style="width: 80%;" src="vsgnet/abstract.png"
+                    <p style="text-align:center;"><img style="width: 80%;" src="research_vsgnet/abstract.png"
                             alt="xxxx" class="center"></p>
                     <p style="font-size:15px; text-align:center;">Fig 1. 整体流程</p>
                 </div>
@@ -151,7 +151,7 @@
                         传统的单视图重建方法能够根据输入视图重建出整体轮廓清晰的三维点云，但当物体结构较为复杂时，无法清晰的描述物体的结构细节。针对这一问题，我们提出了视图-几何-结构联合的单视图重建网络，使用层次性图网络学习物体的结构信息，使用嵌入连接机制跨模态融合点云与视图特征，引入多角度投影损失提升几何重建精度，使得网络能够更好描述物体的结构细节。在ShapeNetPart数据集上的实验表明，该方法能够重建出具有出色结构细节的三维点云，并能够根据输入的结构块组装出合理的三维模型，这是传统算法完全无法实现的。
 
                     </p>
-                    <p style="text-align:center;"><img style="width: 80%;" src="vsgnet/pipeline.jpg" alt="xxxx"
+                    <p style="text-align:center;"><img style="width: 80%;" src="research_vsgnet/pipeline.jpg" alt="xxxx"
                             class="center"></p>
                     <p style="font-size:15px; text-align:center;">Fig 2. VSGNet整体结构</p>
 
@@ -173,8 +173,8 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
 
-                    <p style="font-size:20px" wrap="hard">
-                        视频
+                    <p style="font-size:20px;text-align: center;" wrap="hard">
+                        <iframe style="width: 50%;height: 300px;" src="//player.bilibili.com/player.html?aid=82179134&cid=140611213&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
                     </p>
 
                 </div>
@@ -198,7 +198,7 @@
                     <p style="font-size:20px" wrap="hard">
                         与3D-R2N2、PSG、Pixel2Mesh等主流算法对比，我们的方法均取得了最佳效果。
                     </p>
-                    <p style="text-align:center;"><img style="width: 80%;" src="vsgnet/compare.png" alt="xxxx"
+                    <p style="text-align:center;"><img style="width: 80%;" src="research_vsgnet/compare.png" alt="xxxx"
                         class="center"></p>
                 <p style="font-size:15px; text-align:center;">Fig 3. 对比效果</p>
 
@@ -223,7 +223,7 @@
                     <p style="font-size:20px" wrap="hard">
                         通过对结构信息的学习，我们的方法能够将不同的结构块组装成合理的模型，这在以前是完全不可能的。
                     </p>
-                    <p style="text-align:center;"><img style="width: 80%;" src="vsgnet/assemble.png" alt="xxxx"
+                    <p style="text-align:center;"><img style="width: 80%;" src="research_vsgnet/assemble.png" alt="xxxx"
                         class="center"></p>
                 <p style="font-size:15px; text-align:center;">Fig 4. 组装效果</p>
 
