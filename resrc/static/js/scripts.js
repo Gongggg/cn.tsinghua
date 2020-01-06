@@ -78,7 +78,7 @@ var news_cards = new Vue({
             {
                 title: '动作识别',
                 img: 'detail/research_activity/dongzuoshibie.png',
-                content: '',
+                content: '动作识别是计算机视觉在视频领域中的重要应用之一，我们在基于人体骨架的动作识别、帕金森患者行为量化、时序动作定位等任务上做了一些探索。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_activity.html'
             },
