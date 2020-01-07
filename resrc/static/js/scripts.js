@@ -88,7 +88,7 @@ var news_cards = new Vue({
             {
                 title: '超图建模与分析',
                 img: 'detail/research_complexnetwork/representation2.png',
-                content: '我们提出了一种无序关系卷积（UR-Conv），它对无序3D数据应用了类似卷积的运算，并且对输入数据的顺序不敏感。在我们的方法中，捕获了数据之间的局部依赖性，这增强了模型的表示能力和鲁棒性。',
+                content: '针对数据的复杂关联建模难题，我们采用超图结构进行数据复杂关联建模，提出了超图动态学习方法和超图神经网络。与传统的超图学习方法不同，这些方法具备更好的数据适应性，从而可以获得更佳的数据建模及分析性能。',
                 inscription: 'Posted on 03/12/2019 by Biao Gong',
                 src: 'detail/research_complexnetwork.html'
             },
