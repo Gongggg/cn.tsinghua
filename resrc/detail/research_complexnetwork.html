@@ -128,8 +128,9 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" style="word-wrap:break-word;hyphens:manual">
-                    <h2><b>Abstract</b></h2>
-                    <p style="font-size:20px;" wrap="soft">在社交网络、生物信息、视觉处理等任务和应用中，数据之间往往存在着复杂关联，分析数据间的复杂关联对于分类、分割、识别等任务有着重要意义。现实世界中，由于数据往往存在着噪声、不完备、动态等问题，应用环境的复杂化带来数据关联建模的困难，传统静态关联结构表示难以描述复杂数据关联，亟需具有更好适应性的动态数据关联建模方法。针对数据的复杂关联建模难题，我们采用超图结构进行数据复杂关联建模，提出了超图动态学习方法和超图神经网络。与传统的超图学习方法不同，这些方法具备更好的数据适应性，从而可以获得更佳的数据建模及分析性能。
+                    <!-- <h2><b>Abstract</b></h2> -->
+                    <p style="font-size:20px;" wrap="soft">
+                        在社交网络、生物信息、视觉处理等任务和应用中，数据之间往往存在着复杂关联，分析数据间的复杂关联对于分类、分割、识别等任务有着重要意义。现实世界中，由于数据往往存在着噪声、不完备、动态等问题，应用环境的复杂化带来数据关联建模的困难，传统静态关联结构表示难以描述复杂数据关联，亟需具有更好适应性的动态数据关联建模方法。针对数据的复杂关联建模难题，我们采用超图结构进行数据复杂关联建模，提出了超图动态学习方法和超图神经网络。与传统的超图学习方法不同，这些方法具备更好的数据适应性，从而可以获得更佳的数据建模及分析性能。
 
                     </p>
                     <!-- <p style="text-align:center;"><img style="width: 80%;" src="research_gvcnn/gvcnn.png"
@@ -172,7 +173,7 @@
             </div> -->
 
             <br>
-            
+
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
@@ -191,7 +192,8 @@
                     </p>
 
 
-                    <p style="text-align:center;"><img style="width: 60%;"  src="research_complexnetwork/hypergraphvsgraph.png" alt="xxxx" class="center"></p>
+                    <p style="text-align:center;"><img style="width: 60%;"
+                            src="research_complexnetwork/hypergraphvsgraph.png" alt="xxxx" class="center"></p>
                     <p style="font-size:15px; text-align:center;">Fig 1. 超图 vs 简单图
                     </p>
 
@@ -203,7 +205,7 @@
                 </div>
                 <div class="col-md-1"></div>
             </div>
-			
+
             <br>
 
             <div class="row">
@@ -219,12 +221,13 @@
                 <div class="col-md-10">
 
                     <p style="font-size:20px" wrap="hard">
-                        
+
                         为了更好地建模数据之间的复杂关联，我们提出了动态超图结构学习方法，其基本思想是在传统的超图学习的过程中不断更新优化超图结构。具体来说，给定部分有标签的数据，我们的目标是学习得到更优化、更适合数据的超图结构，以更好地表征数据之间的高阶关联，同时得到标签映射矩阵，实现无标签数据的分类。提取数据特征后，我们首先建立初始超图结构来表征数据关联性，这里使用基于k近邻的建图方式。然后提出对偶优化框架，同步学习标签映射矩阵及超图结构。我们同时考虑了标签空间和特征空间的数据关联性，以实现超图结构的动态更新。
                     </p>
 
 
-                    <p style="text-align:center;"><img style="width: 90%;"  src="research_complexnetwork/framework.jpg" alt="xxxx" class="center"></p>
+                    <p style="text-align:center;"><img style="width: 90%;" src="research_complexnetwork/framework.jpg"
+                            alt="xxxx" class="center"></p>
                     <p style="font-size:15px; text-align:center;">Fig 2. 动态超图结构学习框架图
                     </p>
 
@@ -233,22 +236,24 @@
                     <p style="font-size:20px" wrap="hard">
                         在已有的工作中，超图往往通过邻接矩阵表示。邻接矩阵的表示形式有以下三个问题：1.当超图结构在动态演变时，其超边数和超边权重是在不断变化的，而邻接矩阵在动态超图结构学习过程中的维数是固定的，并不能很好地表示超图结构的动态更新。2.基于邻接矩阵的超图结构学习方法时间复杂度和空间复杂度都非常高。3.基于邻接矩阵的超图结构学习方法的目标函数是非凸的，现有算法难以有效求得最优解。针对这几个问题，我们提出了超图结构的张量表示，来构建数据的完全阶关联。
                     </p>
-					
-					<p style="text-align:center;"><img style="width: 70%;"  src="research_complexnetwork/representation.png" alt="xxxx" class="center"></p>
+
+                    <p style="text-align:center;"><img style="width: 70%;"
+                            src="research_complexnetwork/representation.png" alt="xxxx" class="center"></p>
                     <p style="font-size:15px; text-align:center;">Fig 3. 超图的邻接矩阵表示 vs 张量表示
                     </p>
-					
-					<p style="font-size:20px" wrap="hard">
+
+                    <p style="font-size:20px" wrap="hard">
                         我们进一步提出了基于张量表示的动态超图学习算法，与已有方法相比，该模型的目标函数是双凸的，可以通过交替迭代算法有效求得最优解。我们在四个数据集上进行了实验，结果证明我们的方法可以有效提高准确率，同时将速度提升1700多倍。
                     </p>
-					
-					<p style="text-align:center;"><img style="width: 70%;"  src="research_complexnetwork/framework_tdhl.png" alt="xxxx" class="center"></p>
+
+                    <p style="text-align:center;"><img style="width: 70%;"
+                            src="research_complexnetwork/framework_tdhl.png" alt="xxxx" class="center"></p>
                     <p style="font-size:15px; text-align:center;">Fig 4. 基于张量表示的动态超图学习框架图
                     </p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
-			
+
             <br>
 
             <div class="row">
@@ -268,7 +273,8 @@
                     </p>
 
 
-                    <p style="text-align:center;"><img style="width: 90%;"  src="research_complexnetwork/hgnn_framework.png" alt="xxxx" class="center"></p>
+                    <p style="text-align:center;"><img style="width: 90%;"
+                            src="research_complexnetwork/hgnn_framework.png" alt="xxxx" class="center"></p>
                     <p style="font-size:15px; text-align:center;">Fig 5. 超图神经网络框架图
                     </p>
 
@@ -279,31 +285,64 @@
                 </div>
                 <div class="col-md-1"></div>
             </div>
-			
+
             <br>
 
-            
+
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2><b> Citation (BibTeX) </b></h2>
+                    <h2><b> Publications </b></h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    @inproceedings{feng2018gvcnn,<br>
-                        title={GVCNN: Group-view convolutional neural networks for 3D shape recognition},<br>
-                        author={Feng, Yifan and Zhang, Zizhao and Zhao, Xibin and Ji, Rongrong and Gao, Yue},<br>
-                        booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},<br>
-                        pages={264--272},<br>
-                        year={2018}<br>
-                    }
+
+                    <tbody>
+                        <tr role="row" class="odd">
+                            <td>Yifan Feng, Haoxuan You, Zizhao Zhang, Rongrong Ji, Yue Gao. <br><b>Hypergraph Neural
+                                    Networks.</b><br>AAAI Conference on Artificial Intelligence (AAAI), 2019.[<a
+                                    href="http://gaoyue.org/paper/HGNN.pdf">paper</a>]</td>
+                        </tr><br><br>
+                        <tr role="row" class="odd">
+                            <td>Zizhao Zhang, Haojie Lin, Xibin Zhao, Rongrong Ji, Yue Gao. <br><b>Inductive
+                                    Multi-Hypergraph Learning for View-Based 3D Object Classification.</b><br>IEEE
+                                Transactions on Image Processing, 2018.[<a
+                                    href="http://gaoyue.org/paper/Inductive Multi-Hypergraph Learning and Its Application on View-Based 3D Object Classification.pdf">paper</a>]
+                            </td>
+                        </tr><br><br>
+                        <tr role="row" class="even">
+                            <td>Zizhao Zhang, Haojie Lin, Yue Gao. <br><b>Dynamic Hypergraph Structure
+                                    Learning.</b><br>International Joint Conferences on Artificial Intelligence (IJCAI),
+                                2018.[<a
+                                    href="http://gaoyue.org/paper/Dynamic Hypergraph Structure Learning.pdf">paper</a>]
+                            </td>
+                        </tr><br><br>
+                        <tr role="row" class="odd">
+                            <td>Zizhao Zhang, Haojie Lin, Junjie Zhu, Xibin Zhao, Yue Gao. <br><b>Cross-Diffusion on
+                                    Multi-Hypergraph for Multi-Modal 3D Object Recognition.</b><br>Pacific Rim
+                                Conference on Multimedia (PCM), 2018.[<a href="null">paper</a>]</td>
+                        </tr><br><br>
+                        <tr role="row" class="odd">
+                            <td>Yue Gao, Meng Wang, Dacheng Tao, Rongrong Ji, Qionghai Dai. <br><b>3D Object Retrieval and Recognition with Hypergraph Analysis</b><br>Pacific Rim
+                                IEEE Transactions on Image Processing, 2012.[<a href="http://imt.xmu.edu.cn/publication/Image%20Processing-3D%20Object%20Retrieval%20and%20Recognition.pdf">paper</a>]</td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+
+
+
+
                     <br>
                     <br>
                     <p style="font-size=40px">
-                        <a class="btn btn-default" href="http://gaoyue.org/paper/Feng_GVCNN_Group-View_Convolutional_CVPR_2018_paper.pdf"> <b> Paper &raquo;</b></a>  
+
                         <a class="btn btn-default" href="https://github.com/iMoonLab"> <b> Code &raquo;</b></a>
                     </p>
                 </div>
